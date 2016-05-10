@@ -37,7 +37,12 @@ table {
 
 /*  ===========     General Rule & Styling     =============
 ===========================================================*/
-* {
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
   box-sizing: border-box; }
 
 *:focus {
@@ -45,6 +50,372 @@ table {
 
 body {
   overflow: scroll; }
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+title,
+html,
+div,
+button,
+input,
+select,
+textarea {
+  font-family: "MuseoSans", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+a {
+  text-decoration: none; }
+
+caption {
+  display: none; }
+
+.overlayStyle {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed; }
+
+/* -----------------------------------------------------------------------------
+
+  WRAPPER OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-wrapper {
+  transition: transform 0.3s; }
+
+/* -----------------------------------------------------------------------------
+
+  CONTAINER OBJECTS
+  
+----------------------------------------------------------------------------- */
+.o-container {
+  margin: 0 auto;
+  padding: 0 12px;
+  max-width: 960px; }
+
+@media all and (min-width: 480px) {
+  .o-container {
+    padding: 0 24px; } }
+@media all and (min-width: 720px) {
+  .o-container {
+    padding: 0 48px; } }
+/* -----------------------------------------------------------------------------
+
+  HEADER OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-header {
+  margin: 0;
+  padding: 0; }
+
+.o-header-nav {
+  display: flex;
+  justify-content: space-between; }
+
+.o-header-nav__link {
+  padding: 12px;
+  color: #fff; }
+
+.o-header-nav__link:hover {
+  color: #fff; }
+
+.o-header__title {
+  margin: 24px;
+  padding: 0;
+  color: #818181;
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center; }
+
+@media all and (min-width: 480px) {
+  .o-header__title {
+    margin: 36px;
+    font-size: 42px; } }
+/* -----------------------------------------------------------------------------
+
+  MAIN OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-main {
+  /**/ }
+
+/* -----------------------------------------------------------------------------
+
+  SUB-NAVIGATION OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-sub-nav {
+  margin: 0 0 24px 0;
+  padding: 0; }
+
+.o-sub-nav__items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.o-sub-nav__item {
+  margin: 0;
+  padding: 4px; }
+
+.o-sub-nav__link {
+  display: block;
+  margin: 0;
+  padding: 4px 24px; }
+
+.o-sub-nav__link:hover,
+.o-sub-nav__item.active .o-sub-nav__link {
+  color: #fff; }
+
+@media all and (min-width: 720px) {
+  .o-sub-nav {
+    margin: 0 0 48px 0; } }
+/* -----------------------------------------------------------------------------
+
+  FOOTER OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-footer {
+  padding: 12px 0;
+  text-align: center; }
+
+@media all and (min-width: 480px) {
+  .o-footer {
+    padding: 24px 0; } }
+@media all and (min-width: 720px) {
+  .o-footer {
+    padding: 48px 0; } }
+/* -----------------------------------------------------------------------------
+
+  SLIDE AND PUSH MENUS COMPONENT
+  
+----------------------------------------------------------------------------- */
+/**
+ * Menu overview.
+ */
+.c-menu {
+  position: fixed;
+  z-index: 200;
+  background-color: #333645;
+  transition: transform 0.3s; }
+
+.c-menu__items {
+  list-style: none;
+  padding: 0; }
+
+/**
+ * Left and right menus
+ *
+ * Slide and push menus coming in from the left and right inherit a lot of
+ * common styles. We'll start each of them off by doing up the common styles
+ * for each version, followed by individual styles.
+ *
+ * The various versions are governed by modifier classes.
+ */
+/**
+ * Common modifiers for left/right menus.
+ */
+.c-menu--slide-left,
+.c-menu--push-left {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; }
+  @media all and (min-width: 320px) {
+    .c-menu--slide-left,
+    .c-menu--push-left {
+      width: 300px; } }
+
+.c-menu--slide-left .c-menu__item,
+.c-menu--push-left .c-menu__item {
+  display: block; }
+
+.c-menu--slide-left .c-menu__link, .c-menu--slide-left .profile_info h3, .profile_info .c-menu--slide-left h3,
+.c-menu--push-left .c-menu__link,
+.c-menu--push-left .profile_info h3,
+.profile_info .c-menu--push-left h3 {
+  display: block;
+  padding: 12px 24px 12px 0;
+  color: #fff; }
+
+.c-menu--slide-left .c-menu__close,
+.c-menu--push-left .c-menu__close {
+  display: block;
+  float: right;
+  padding: 10px; }
+
+/**
+ * Slide/Push Menu Left.
+ */
+.c-menu--slide-left,
+.c-menu--push-left {
+  top: 0;
+  left: 0;
+  transform: translateX(-100%); }
+  @media all and (min-width: 320px) {
+    .c-menu--slide-left,
+    .c-menu--push-left {
+      transform: translateX(-300px); } }
+
+.c-menu--slide-left.is-active,
+.c-menu--push-left.is-active {
+  transform: translateX(0); }
+
+/**
+ * Wrapper states.
+ *
+ * Various wrapper states occur depending on if a menu is pushing into view, in
+ * which case, the wrapper has to be pushed by the respective distance.
+ */
+.o-wrapper.has-push-left {
+  transform: translateX(100%); }
+  @media all and (min-width: 320px) {
+    .o-wrapper.has-push-left {
+      transform: translateX(300px); } }
+
+/**
+ * Body states.
+ *
+ * When a menu is active, we want to hide the overflows on the body to prevent
+ * awkward document scrolling.
+ */
+body.has-active-menu {
+  overflow: hidden; }
+
+/**
+ * Close button resets.
+ */
+.c-menu__close {
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  border-radius: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer; }
+
+.c-menu__close:focus {
+  outline: none; }
+
+.profile_info {
+  margin-bottom: 20px; }
+  .profile_info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    margin-left: 45px; }
+  .profile_info h3 {
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s; }
+
+.c-menu__item {
+  position: relative; }
+  .c-menu__item h3::before,
+  .c-menu__item a::before {
+    position: absolute;
+    top: 1px;
+    cursor: pointer;
+    padding: 12px 0;
+    left: 18px; }
+
+.user h3::before {
+  content: url("../img/svg/gearSetting.svg"); }
+
+.meeting a::before {
+  content: url("../img/svg/pplMeeting.svg"); }
+
+.rooms a::before {
+  content: url("../img/svg/notepadRoombooking.svg"); }
+
+.availabilities a::before {
+  content: url("../img/svg/clockRoomavailability.svg"); }
+
+.search a::before {
+  content: url("../img/svg/loopSearchDark.svg"); }
+
+.c-menu__item {
+  padding-left: 45px;
+  transition: all 0.3s; }
+  .c-menu__item:hover {
+    background-color: #202334; }
+
+.room .c-menu__link, .room .profile_info h3, .profile_info .room h3 {
+  color: #9B9B9B;
+  padding: 8px 10px; }
+
+/* -----------------------------------------------------------------------------
+
+  MASK COMPONENT
+  
+----------------------------------------------------------------------------- */
+.c-mask {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s; }
+
+.c-mask.is-active {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: opacity 0.3s; }
+
+/* -----------------------------------------------------------------------------
+
+  BUTTONS
+  
+----------------------------------------------------------------------------- */
+.c-buttons {
+  margin-bottom: 48px;
+  text-align: center; }
+
+.c-button {
+  display: inline-block;
+  margin: 4px;
+  padding: 12px 24px;
+  color: white;
+  background: orange;
+  font-size: 14px;
+  border: solid 2px orange;
+  box-shadow: none;
+  border-radius: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer; }
+
+.c-button:focus {
+  outline: none; }
+
+.c-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed; }
 
 .phpdebugbar p {
   font-size: black; }

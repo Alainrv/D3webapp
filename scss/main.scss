@@ -13,8 +13,14 @@
 
 /*  ===========     General Rule & Styling     =============
 ===========================================================*/
-* {
-	box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 *:focus {
@@ -28,7 +34,7 @@ body {
 
 // Basic Styling
 @import "_global.scss";
-@import "_navigation.scss";
+@import "navigation/style.scss";
 
 
 // Pages  
