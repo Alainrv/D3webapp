@@ -209,6 +209,7 @@ body.has-active-menu {
 .occupied a::before {
   content: url("../img/svg/occupiedRoom.svg");
 }
+
 .menu_nav {
   padding-bottom: 12px;
 }
@@ -217,11 +218,6 @@ body.has-active-menu {
   padding-top: 12px;
   border-top: solid 0.5px #979797;
 }
-
-  
-
-
-
 
 .c-menu__item {
   padding-left: 45px;

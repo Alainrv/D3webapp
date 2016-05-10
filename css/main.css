@@ -397,36 +397,22 @@ body.has-active-menu {
   opacity: 0.7;
   transition: opacity 0.3s; }
 
-/* -----------------------------------------------------------------------------
-
-  BUTTONS
-  
------------------------------------------------------------------------------ */
-.c-buttons {
-  margin-bottom: 48px;
-  text-align: center; }
-
-.c-button {
-  display: inline-block;
-  margin: 4px;
-  padding: 12px 24px;
-  color: white;
-  background: orange;
-  font-size: 14px;
-  border: solid 2px orange;
-  box-shadow: none;
-  border-radius: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer; }
-
-.c-button:focus {
-  outline: none; }
-
-.c-button:disabled {
-  opacity: 0.3;
-  cursor: not-allowed; }
+.o-header-nav {
+  height: 50px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  padding: 0 20px; }
+  .o-header-nav svg {
+    cursor: pointer; }
 
 .phpdebugbar p {
   font-size: black; }

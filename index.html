@@ -49,8 +49,20 @@
 
 	<header class="o-header">
 		<nav class="o-header-nav">
-	        <button id="c-button--slide-left" class="c-button">Slide Left</button>
-	        <button id="c-button--push-left" class="c-button">Push Left</button>
+	        <div class="nav_menu">
+	        	<svg id="c-button--slide-left" width="25" height="20" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg">
+				    <title>
+				        hamburger
+				    </title>
+				    <g fill="#202334" fill-rule="evenodd">
+				        <path d="M0 1.343C.696 1.343 1.25.748 1.25 0h22.5c0 .748.554 1.343 1.25 1.343v1.15c-.696 0-1.25.596-1.25 1.345H1.25c0-.75-.554-1.344-1.25-1.344v-1.15zM0 9.018c.696 0 1.25-.595 1.25-1.343h22.5c0 .748.554 1.343 1.25 1.343v1.15c-.696 0-1.25.596-1.25 1.345H1.25c0-.75-.554-1.344-1.25-1.344V9.017zM0 16.693c.696 0 1.25-.595 1.25-1.343h22.5c0 .748.554 1.343 1.25 1.343v1.15c-.696 0-1.25.596-1.25 1.345H1.25c0-.75-.554-1.344-1.25-1.344v-1.15z"/>
+				    </g>
+				</svg>
+	        </div>
+	        <div class="nav_options ">
+	        
+
+	        </div>	     
 	    </nav>
 	    <div class="o-container">
 			
@@ -113,16 +125,6 @@
 	</ul>
 </nav><!-- /c-menu slide-left -->
 
-<nav id="c-menu--push-left" class="c-menu c-menu--push-left">
-	<button class="c-menu__close">&larr; Close Menu</button>
-	<ul class="c-menu__items">
-	    <li class="c-menu__item"><a href="#" class="c-menu__link">Home</a></li>
-	    <li class="c-menu__item"><a href="#" class="c-menu__link">About</a></li>
-	    <li class="c-menu__item"><a href="#" class="c-menu__link">Services</a></li>
-	    <li class="c-menu__item"><a href="#" class="c-menu__link">Work</a></li>
-	    <li class="c-menu__item"><a href="#" class="c-menu__link">Contact</a></li>
-	</ul>
-</nav><!-- /c-menu push-left -->
 
 <div id="c-mask" class="c-mask"></div>
 
@@ -149,22 +151,7 @@
     slideLeft.open();
   });
 
-  /**
-   * Push left instantiation and action.
-   */
-  var pushLeft = new Menu({
-    wrapper: '#o-wrapper',
-    type: 'push-left',
-    menuOpenerClass: '.c-button',
-    maskId: '#c-mask'
-  });
 
-  var pushLeftBtn = document.querySelector('#c-button--push-left');
-  
-  pushLeftBtn.addEventListener('click', function(e) {
-    e.preventDefault;
-    pushLeft.open();
-  });
 </script>
 
 

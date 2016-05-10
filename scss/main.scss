@@ -34,7 +34,8 @@ body {
 
 // Basic Styling
 @import "_global.scss";
-@import "navigation/style.scss";
+@import "sideMenu/style.scss";
+@import "_topNavigation.scss";
 
 
 // Pages  

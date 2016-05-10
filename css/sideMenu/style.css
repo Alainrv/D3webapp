@@ -1,7 +1,7 @@
 /*
 Error: Undefined variable: "$dark_background".
-        on line 19 of scss/navigation/_components.menus.scss
-        from line 27 of scss/navigation/style.scss
+        on line 19 of scss/sideMenu/_components.menus.scss
+        from line 27 of scss/sideMenu/style.scss
 
 14: //
 15: // -----------------------------------------------------------------------------
@@ -16,8 +16,8 @@ Error: Undefined variable: "$dark_background".
 24: //
 
 Backtrace:
-scss/navigation/_components.menus.scss:19
-scss/navigation/style.scss:27
+scss/sideMenu/_components.menus.scss:19
+scss/sideMenu/style.scss:27
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -83,4 +83,4 @@ scss/navigation/style.scss:27
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$dark_background\".\A         on line 19 of scss/navigation/_components.menus.scss\A         from line 27 of scss/navigation/style.scss\A \A 14: //\A 15: // -----------------------------------------------------------------------------\A 16: \A 17: @import \"objects.layout\";\A 18: \A 19: \A 20: \A 21: // -----------------------------------------------------------------------------\A 22: //\A 23: // COMPONENTS\A 24: //"; }
+  content: "Error: Undefined variable: \"$dark_background\".\A         on line 19 of scss/sideMenu/_components.menus.scss\A         from line 27 of scss/sideMenu/style.scss\A \A 14: //\A 15: // -----------------------------------------------------------------------------\A 16: \A 17: @import \"objects.layout\";\A 18: \A 19: \A 20: \A 21: // -----------------------------------------------------------------------------\A 22: //\A 23: // COMPONENTS\A 24: //"; }
