@@ -149,7 +149,6 @@ body.has-active-menu {
 //  ------------------------------------------------------------------------
 
 .profile_info {
-  margin-bottom: 20px;
 
   img {
     width: 100px;
@@ -202,6 +201,25 @@ body.has-active-menu {
 .search a::before {
   content: url("../img/svg/loopSearchDark.svg");
 }
+
+.available a::before {
+  content: url("../img/svg/availableRoom.svg");
+}
+
+.occupied a::before {
+  content: url("../img/svg/occupiedRoom.svg");
+}
+.menu_nav {
+  padding-bottom: 12px;
+}
+
+.menu_room {
+  padding-top: 12px;
+  border-top: solid 0.5px #979797;
+}
+
+  
+
 
 
 
