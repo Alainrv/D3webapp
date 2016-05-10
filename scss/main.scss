@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+//reset against browser agents
+@import "_reset.scss";
+
+// Definings Variables
+@import "_variables.scss";
+
+// Frameworks & mixins 
+@import "bourbon/bourbon";
+@import "_mixin.scss";
+
+
+/*  ===========     General Rule & Styling     =============
+===========================================================*/
+* {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+body {
+	overflow: scroll;
+}
+
+
+// Basic Styling
+@import "_global.scss";
+@import "_navigation.scss";
+
+
+// Pages  
+
+
+
+
+
+
+.phpdebugbar p {
+	font-size: black;
+}
