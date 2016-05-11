@@ -9,3 +9,27 @@
 		cursor: pointer;
 	}
 }
+
+.nav_options {
+	@include display(flex);
+	@include justify-content(space-between);
+	width: 70px;
+}
+
+#notification {
+	position: relative;
+}
+
+#notificationAlert {
+	background-color: #FF0000;
+	position: absolute;
+    top: -7px;
+	right: -4px;
+
+	p {
+		color: white;
+		padding: 2px;
+	    font-size: 0.6em;
+	    font-weight: 700;
+	}
+}

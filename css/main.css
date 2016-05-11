@@ -414,6 +414,39 @@ body.has-active-menu {
   .o-header-nav svg {
     cursor: pointer; }
 
+.nav_options {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  width: 70px; }
+
+#notification {
+  position: relative; }
+
+#notificationAlert {
+  background-color: #FF0000;
+  position: absolute;
+  top: -7px;
+  right: -4px; }
+  #notificationAlert p {
+    color: white;
+    padding: 2px;
+    font-size: 0.6em;
+    font-weight: 700; }
+
 .phpdebugbar p {
   font-size: black; }
 
