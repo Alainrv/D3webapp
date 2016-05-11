@@ -33,3 +33,53 @@
 	    font-weight: 700;
 	}
 }
+
+.notification_menu {
+	float: right;
+	width: 275px;
+	border: 0.5px solid $greyBorder;
+
+	.notification_header {
+		padding: 7px 4px;
+	}
+
+	.notification_item {
+		padding: 8px;
+		cursor: pointer;
+		@include display(flex);
+		border-top: solid 0.5px $greyBorder;
+		transition: all 0.3s;
+
+		&:hover {
+			background-color: $hoverOnWhite;
+		}
+
+		p {
+			display: inline;
+			line-height: 1.2em;
+
+			&:first-child {
+				margin-right: 8px;
+			}
+		}
+
+		img {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+		}
+
+		.notification_info {
+			margin-left: 15px;
+		}
+	}
+}
+
+
+
+.time_since {
+	&::before {
+		content: url("../img/svg/clockNotificationDelay.svg");
+		margin-right: 4px;
+	}
+}

@@ -70,7 +70,8 @@ textarea {
   font-family: "MuseoSans", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  color: #4A4A4A; }
 
 a {
   text-decoration: none; }
@@ -446,6 +447,42 @@ body.has-active-menu {
     padding: 2px;
     font-size: 0.6em;
     font-weight: 700; }
+
+.notification_menu {
+  float: right;
+  width: 275px;
+  border: 0.5px solid #979797; }
+  .notification_menu .notification_header {
+    padding: 7px 4px; }
+  .notification_menu .notification_item {
+    padding: 8px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: solid 0.5px #979797;
+    transition: all 0.3s; }
+    .notification_menu .notification_item:hover {
+      background-color: #FFF2DD; }
+    .notification_menu .notification_item p {
+      display: inline;
+      line-height: 1.2em; }
+      .notification_menu .notification_item p:first-child {
+        margin-right: 8px; }
+    .notification_menu .notification_item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%; }
+    .notification_menu .notification_item .notification_info {
+      margin-left: 15px; }
+
+.time_since::before {
+  content: url("../img/svg/clockNotificationDelay.svg");
+  margin-right: 4px; }
 
 .phpdebugbar p {
   font-size: black; }
