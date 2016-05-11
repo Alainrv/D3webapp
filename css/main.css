@@ -88,6 +88,9 @@ caption {
   height: 100vh;
   position: fixed; }
 
+p {
+  font-size: 0.8em; }
+
 /* -----------------------------------------------------------------------------
 
   WRAPPER OBJECT
@@ -449,11 +452,14 @@ body.has-active-menu {
     font-weight: 700; }
 
 .notification_menu {
+  display: none;
   float: right;
   width: 275px;
   border: 0.5px solid #979797; }
-  .notification_menu .notification_header {
+  .notification_menu .notification_header, .notification_menu .see_all {
     padding: 7px 4px; }
+    .notification_menu .notification_header p, .notification_menu .see_all p {
+      font-weight: 500; }
   .notification_menu .notification_item {
     padding: 8px;
     cursor: pointer;
@@ -464,13 +470,13 @@ body.has-active-menu {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    border-top: solid 0.5px #979797;
+    border-top: solid 0.5px #C7C7C7;
     transition: all 0.3s; }
     .notification_menu .notification_item:hover {
       background-color: #FFF2DD; }
     .notification_menu .notification_item p {
       display: inline;
-      line-height: 1.2em; }
+      line-height: 1.1em; }
       .notification_menu .notification_item p:first-child {
         margin-right: 8px; }
     .notification_menu .notification_item img {
@@ -478,7 +484,15 @@ body.has-active-menu {
       height: 40px;
       border-radius: 50%; }
     .notification_menu .notification_item .notification_info {
-      margin-left: 15px; }
+      margin-left: 15px;
+      margin-bottom: auto;
+      margin-top: auto; }
+  .notification_menu .see_all {
+    border-top: solid 0.5px #C7C7C7;
+    text-align: center;
+    cursor: pointer; }
+    .notification_menu .see_all:hover {
+      background-color: #FFF2DD; }
 
 .time_since::before {
   content: url("../img/svg/clockNotificationDelay.svg");

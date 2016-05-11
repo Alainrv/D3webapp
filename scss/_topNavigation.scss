@@ -35,19 +35,24 @@
 }
 
 .notification_menu {
+	display: none;
 	float: right;
 	width: 275px;
 	border: 0.5px solid $greyBorder;
 
 	.notification_header {
 		padding: 7px 4px;
+
+		p {
+			font-weight: 500;
+		}
 	}
 
 	.notification_item {
 		padding: 8px;
 		cursor: pointer;
 		@include display(flex);
-		border-top: solid 0.5px $greyBorder;
+		border-top: solid 0.5px $insideLines;
 		transition: all 0.3s;
 
 		&:hover {
@@ -56,7 +61,7 @@
 
 		p {
 			display: inline;
-			line-height: 1.2em;
+			line-height: 1.1em;
 
 			&:first-child {
 				margin-right: 8px;
@@ -71,6 +76,19 @@
 
 		.notification_info {
 			margin-left: 15px;
+		    margin-bottom: auto;
+		    margin-top: auto;
+		}
+	}
+
+	.see_all {
+		border-top: solid 0.5px $insideLines;
+		text-align: center;
+		@extend .notification_header;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $hoverOnWhite;
 		}
 	}
 }
