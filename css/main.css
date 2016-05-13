@@ -91,6 +91,9 @@ caption {
 p {
   font-size: 0.8em; }
 
+.o-content {
+  padding-top: 50px; }
+
 /* -----------------------------------------------------------------------------
 
   WRAPPER OBJECT
@@ -403,6 +406,8 @@ body.has-active-menu {
 
 .o-header-nav {
   height: 50px;
+  background-color: white;
+  position: fixed;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
   width: 100%;
   -webkit-box-align: center;
@@ -451,15 +456,23 @@ body.has-active-menu {
     font-size: 0.6em;
     font-weight: 700; }
 
+.notification_holder {
+  overflow: hidden; }
+
 .notification_menu {
-  display: none;
-  float: right;
+  position: absolute;
+  top: -500%;
+  right: 0;
   width: 275px;
-  border: 0.5px solid #979797; }
-  .notification_menu .notification_header, .notification_menu .see_all {
-    padding: 7px 4px; }
-    .notification_menu .notification_header p, .notification_menu .see_all p {
-      font-weight: 500; }
+  border: 0.5px solid #979797;
+  background-color: white;
+  transition: all 0.4s; }
+  .notification_menu--active {
+    top: 50px; }
+  .notification_menu .notification_header {
+    padding: 7px 7px; }
+    .notification_menu .notification_header p {
+      font-weight: 700; }
   .notification_menu .notification_item {
     padding: 8px;
     cursor: pointer;
@@ -490,9 +503,12 @@ body.has-active-menu {
   .notification_menu .see_all {
     border-top: solid 0.5px #C7C7C7;
     text-align: center;
+    padding: 7px;
     cursor: pointer; }
     .notification_menu .see_all:hover {
       background-color: #FFF2DD; }
+    .notification_menu .see_all p {
+      font-weight: 500; }
 
 .time_since::before {
   content: url("../img/svg/clockNotificationDelay.svg");
@@ -564,29 +580,38 @@ body.has-active-menu {
   background: #333645;
   border-top: 0.5px white solid;
   border-right: 0.5px white solid;
-  padding: 8px;
   -webkit-flex-grow: 1;
   -moz-flex-grow: 1;
   flex-grow: 1;
-  -ms-flex-positive: 1; }
+  -ms-flex-positive: 1;
+  transition: background 0.3s; }
   .profile_tabs .tab:last-child {
     border-right: none; }
   .profile_tabs .tab a {
     width: 100%;
     color: white;
     text-align: center;
-    display: block; }
+    display: block;
+    padding: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s; }
 .profile_tabs div.active {
-  margin-bottom: -1px;
-  padding-bottom: 6px;
   background: white; }
   .profile_tabs div.active a {
     color: #333645; }
+  .profile_tabs div.active:first-child {
+    border-left: 1px solid #979797; }
+  .profile_tabs div.active:last-child {
+    border-right: 1px solid #979797; }
 
 .tabInner {
   clear: both;
   height: 200px;
-  overflow: hidden; }
+  overflow: hidden;
+  border-right: 0.5px solid #979797;
+  border-left: 0.5px solid #979797;
+  border-bottom: 0.5px solid #979797; }
   .tabInner div {
     height: 200px;
     padding: 10px; }

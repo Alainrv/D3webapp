@@ -1,5 +1,7 @@
 .o-header-nav {
 	height: $navHeight;
+	background-color: white;
+	position: fixed;
 	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.30);
 	width: 100%;
 	@include align-items(center);
@@ -34,17 +36,29 @@
 	}
 }
 
+.notification_holder {
+	overflow: hidden;
+}
+
+
 .notification_menu {
-	display: none;
-	float: right;
+	position: absolute;
+	top: -500%;
+	right: 0;
 	width: 275px;
 	border: 0.5px solid $greyBorder;
+	background-color: white;
+	transition: all 0.4s;
+
+	&--active {
+		top: $navHeight;
+	}
 
 	.notification_header {
-		padding: 7px 4px;
+		padding: 7px 7px;
 
 		p {
-			font-weight: 500;
+			font-weight: 700;
 		}
 	}
 
@@ -84,11 +98,15 @@
 	.see_all {
 		border-top: solid 0.5px $insideLines;
 		text-align: center;
-		@extend .notification_header;
+		padding: 7px;
 		cursor: pointer;
 
 		&:hover {
 			background-color: $hoverOnWhite;
+		}
+
+		p {
+		    font-weight: 500;
 		}
 	}
 }
