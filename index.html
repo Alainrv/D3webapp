@@ -128,7 +128,7 @@
 	    <div class="o-container">
       
 
-			<p>Booya!!</p>
+			
       
 
 
@@ -160,7 +160,7 @@
 	<ul class="c-menu__items">
 		<div class="profile_info">
 			<img src="img/temp/profile.jpg">
-			<div class="c-menu__item user"><h3>FirstName lastName</h3></div>
+			<div class="c-menu__item user"><a href="views/profile.html"><h3>FirstName lastName</h3></a></div>
 		</div>
 		<div class="menu_nav">
 		    <li class="c-menu__item meeting"><a href="#" class="c-menu__link">My Meetings</a></li>
@@ -206,20 +206,12 @@
     slideLeft.open();
   });
 
-var notificationBtn = document.querySelector("#notification");
-var notificationMenu = document.querySelector("#notification_menu")
-	notificationBtn.addEventListener("click", function() {
-		
-	});
-
+$("#notification").click(function() {
+	$("#notification_menu").slidedown();
+});
 
 
 </script>
-
-
-
-
-
 </body>
 </html>
 
