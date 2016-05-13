@@ -100,7 +100,8 @@ p {
   
 ----------------------------------------------------------------------------- */
 .o-wrapper {
-  transition: transform 0.3s; }
+  transition: transform 0.3s;
+  overflow-x: hidden; }
 
 /* -----------------------------------------------------------------------------
 
@@ -608,13 +609,23 @@ body.has-active-menu {
 .tabInner {
   clear: both;
   height: 200px;
-  overflow: hidden;
   border-right: 0.5px solid #979797;
   border-left: 0.5px solid #979797;
-  border-bottom: 0.5px solid #979797; }
+  border-bottom: 0.5px solid #979797;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: scroll; }
   .tabInner div {
     height: 200px;
-    padding: 10px; }
+    padding: 10px;
+    min-width: 90%;
+    margin-right: 10px;
+    background: white; }
 
 .phpdebugbar p {
   font-size: black; }
