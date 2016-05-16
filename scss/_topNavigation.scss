@@ -6,6 +6,7 @@
 	width: 100%;
 	@include align-items(center);
 	padding: 0 20px;
+	z-index: 1000;
 
 	svg {
 		cursor: pointer;

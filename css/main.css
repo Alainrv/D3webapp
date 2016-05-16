@@ -420,7 +420,8 @@ body.has-active-menu {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  padding: 0 20px; }
+  padding: 0 20px;
+  z-index: 1000; }
   .o-header-nav svg {
     cursor: pointer; }
 
@@ -608,7 +609,6 @@ body.has-active-menu {
 
 .tabInner {
   clear: both;
-  height: 200px;
   border-right: 0.5px solid #979797;
   border-left: 0.5px solid #979797;
   border-bottom: 0.5px solid #979797;
@@ -620,12 +620,35 @@ body.has-active-menu {
   display: -ms-flexbox;
   display: flex;
   overflow-x: hidden; }
-  .tabInner div {
-    height: 200px;
+  .tabInner .tab {
     padding: 10px;
     min-width: 100%;
     margin-right: 10px;
     background: white; }
+
+.p-info {
+  margin-bottom: 20px; }
+  .p-info h3 {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 10px; }
+  .p-info p {
+    margin-bottom: 6px; }
+
+.degree p:before {
+  content: url("../img/svg/diploma.svg");
+  margin-right: 4px; }
+
+.expertise_container {
+  width: 100%;
+  padding: 10px; }
+  .expertise_container i {
+    border: solid 1px #333645;
+    border-radius: 2px;
+    padding: 2px 4px;
+    background: white;
+    font-size: 0.8em;
+    margin-right: 4px; }
 
 .phpdebugbar p {
   font-size: black; }
