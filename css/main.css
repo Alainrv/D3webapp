@@ -67,11 +67,34 @@ button,
 input,
 select,
 textarea {
-  font-family: "MuseoSans", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #4A4A4A; }
+  -moz-osx-font-smoothing: grayscale; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+title {
+  color: #202334;
+  letter-spacing: 1px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+a,
+p,
+span,
+title,
+html,
+div,
+button,
+input,
+select,
+textarea {
+  color: #4A4A4A;
+  font-family: "MuseoSans", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 a {
   text-decoration: none; }
@@ -89,7 +112,8 @@ caption {
   position: fixed; }
 
 p {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  letter-spacing: 0px; }
 
 .o-content {
   padding-top: 50px; }
@@ -217,7 +241,7 @@ p {
  */
 .c-menu {
   position: fixed;
-  z-index: 200;
+  z-index: 2000;
   background-color: #333645;
   transition: transform 0.3s; }
 
@@ -553,7 +577,7 @@ body.has-active-menu {
 .indHeader {
   width: 100%;
   height: 120px;
-  background-color: #333645;
+  background-color: #202334;
   text-align: center;
   position: relative;
   padding-top: 85px; }
@@ -578,8 +602,8 @@ body.has-active-menu {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
-.profile_tabs .tab {
-  background: #333645;
+.profile_tabs .top_tab {
+  background: #202334;
   border-top: 0.5px white solid;
   border-right: 0.5px white solid;
   -webkit-flex-grow: 1;
@@ -587,9 +611,9 @@ body.has-active-menu {
   flex-grow: 1;
   -ms-flex-positive: 1;
   transition: background 0.3s; }
-  .profile_tabs .tab:last-child {
+  .profile_tabs .top_tab:last-child {
     border-right: none; }
-  .profile_tabs .tab a {
+  .profile_tabs .top_tab a {
     width: 100%;
     color: white;
     text-align: center;
@@ -601,7 +625,7 @@ body.has-active-menu {
 .profile_tabs div.active {
   background: white; }
   .profile_tabs div.active a {
-    color: #333645; }
+    color: #202334; }
   .profile_tabs div.active:first-child {
     border-left: 1px solid #979797; }
   .profile_tabs div.active:last-child {
@@ -627,13 +651,14 @@ body.has-active-menu {
     background: white; }
 
 .p-info {
-  margin-bottom: 20px; }
+  margin-bottom: 18px; }
   .p-info h3 {
     font-size: 1em;
     font-weight: 700;
-    margin-bottom: 10px; }
-  .p-info p {
     margin-bottom: 6px; }
+  .p-info p {
+    margin-bottom: 6px;
+    line-height: 1.2em; }
 
 .degree p:before {
   content: url("../img/svg/diploma.svg");
@@ -643,11 +668,11 @@ body.has-active-menu {
   width: 100%;
   padding: 10px; }
   .expertise_container i {
-    border: solid 1px #333645;
+    border: solid 1px #202334;
     border-radius: 2px;
-    padding: 2px 4px;
+    padding: 2px 6px;
     background: white;
-    font-size: 0.8em;
+    font-size: 1em;
     margin-right: 4px; }
 
 .phpdebugbar p {

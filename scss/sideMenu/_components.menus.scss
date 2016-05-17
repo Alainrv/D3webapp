@@ -15,8 +15,8 @@ $menu-height: 60px;
 
 .c-menu {
   position: fixed;
-  z-index: 200;
-  background-color: $dark_background;
+  z-index: 2000;
+  background-color: $menu_background;
   transition: transform 0.3s;
 }
 
