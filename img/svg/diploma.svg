@@ -1,0 +1,39 @@
+<svg width="17" height="14" viewBox="0 0 17 14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>
+        diploma
+    </title>
+    <defs>
+        <path id="a" d="M0 0h16.073v12.51H0z"/>
+        <mask id="e" x="0" y="0" width="16.073" height="12.511" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <path d="M15.455 3.27C16.32 3.195 17 2.493 17 1.638c0-.854-.68-1.556-1.545-1.63V0H1.545v3.277h13.91V3.27z" id="b"/>
+        <mask id="f" x="0" y="0" width="15.455" height="3.277" fill="#fff">
+            <use xlink:href="#b"/>
+        </mask>
+        <ellipse id="c" cx="1.7" cy="1.638" rx="1.7" ry="1.638"/>
+        <mask id="g" x="0" y="0" width="3.4" height="3.277" fill="#fff">
+            <use xlink:href="#c"/>
+        </mask>
+        <ellipse id="d" cx="1.236" cy="1.191" rx="1.236" ry="1.191"/>
+        <mask id="h" x="0" y="0" width="2.473" height="2.383" fill="#fff">
+            <use xlink:href="#d"/>
+        </mask>
+    </defs>
+    <g stroke="#2C3E50" fill="none" fill-rule="evenodd">
+        <g>
+            <use mask="url(#e)" fill="#FFF" xlink:href="#a"/>
+            <g stroke-width=".5" stroke-linecap="square">
+                <path d="M2.627 3.426h7.418M2.627 5.213h7.418M2.627 6.702h12.055M2.627 8.49h12.055"/>
+            </g>
+        </g>
+        <g transform="translate(0 10.723)" fill="#FFF">
+            <use mask="url(#f)" xlink:href="#b"/>
+            <use mask="url(#g)" xlink:href="#c"/>
+        </g>
+        <g transform="translate(12.364 2.085)" fill="#FFF">
+            <path stroke-width=".5" d="M1.236 1.787l-.422.524.025-.662-.674.14.462-.493-.61-.31.683-.09L.443.278l.583.352.21-.632.213.632L2.03.28l-.258.614.682.09-.61.31.463.493-.673-.14.025.664z"/>
+            <use mask="url(#h)" xlink:href="#d"/>
+        </g>
+    </g>
+</svg>

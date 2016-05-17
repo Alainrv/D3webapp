@@ -675,6 +675,26 @@ body.has-active-menu {
     font-size: 1em;
     margin-right: 4px; }
 
+#social a::before {
+  height: 1em;
+  width: 1em;
+  margin-right: 4px; }
+
+.facebook a::before {
+  content: url("../img/svg/facebook.svg"); }
+
+.twitter a::before {
+  content: url("../img/svg/twitter.svg"); }
+
+.instagram a::before {
+  content: url("../img/svg/instagram.svg"); }
+
+.linkedin a::before {
+  content: url("../img/svg/linkedin.svg"); }
+
+.angel a::before {
+  content: url("../img/svg/angellist.svg"); }
+
 .phpdebugbar p {
   font-size: black; }
 

@@ -1,0 +1,189 @@
+.profile_wrapper {
+	width: 100%;
+	max-width: 800px;
+	margin: auto auto;
+	padding-top: $navHeight + 10px;
+}
+
+.compHedaer {
+	width: 100%;
+	height: 260px;
+	@include display(flex);
+	@include justify-content(center);
+	@include align-content(center);
+	border: 0.5px solid $greyBorder;
+
+	img {
+		margin: auto auto;
+		max-width: 90%;
+	}
+}
+
+.indHeader { 
+	width: 100%;
+	height: 120px;
+	background-color: $dark_background;
+	text-align: center;
+	position: relative;
+	padding-top: 85px;
+
+	img {
+		width: $profilePictureSize;
+		height: $profilePictureSize;
+		border-radius: 50%;
+		position: absolute;
+		top: -70px;
+		left: calc(50% - 75px);
+		border: 0.5px solid white; 
+	}
+
+	h2 {
+		color: white;
+		font-weight: 500;
+		font-size: 1.2em;
+	}
+}
+
+
+.profile_tabs {
+
+	.tabs {
+		@include display(flex);
+	}
+
+    .top_tab {
+	    background: $dark_background;
+	    border-top: 0.5px white solid;
+	    border-right: 0.5px white solid;
+	    @include flex-grow(1);
+	    transition: background 0.3s;
+
+	    &:last-child {
+	    	border-right: none;
+	    }
+
+	    a {
+	    	width: 100%;
+	    	color: white;
+	    	text-align: center;
+	    	display: block;
+		    padding: 16px;
+		    text-transform: uppercase;
+		    font-weight: 500;
+		    transition: color 0.3s;
+	    }
+	}
+
+	div.active {
+	    background: white;
+
+	    a {
+	    	color: $dark_background;
+	    }
+
+	    &:first-child {
+	    	border-left: 1px solid $greyBorder;
+	    }
+
+	    &:last-child {
+	    	border-right: 1px solid $greyBorder;
+	    }
+	}
+}
+
+
+.tabInner {
+    clear: both;
+	border-right: 0.5px solid $greyBorder;
+	border-left: 0.5px solid $greyBorder;
+	border-bottom: 0.5px solid $greyBorder;
+	@include display(flex);
+	overflow-x: hidden;
+
+
+    .tab {
+	    padding: 10px;
+	    min-width: 100%;
+	    margin-right: 10px;
+	    background: white;
+	}
+}
+
+.p-info {
+	margin-bottom: 18px;
+
+	h3 {
+		font-size: 1em;
+		font-weight: 700;
+		margin-bottom: 6px;
+	}
+
+	p {
+		margin-bottom: 6px;
+		line-height: 1.2em;
+	}
+}
+
+
+.degree{
+	p:before {
+		content: url("../img/svg/diploma.svg");
+		margin-right: 4px;
+	}
+}
+
+.expertise_container {
+	width: 100%;
+	padding: 10px;
+
+	i {
+		border: solid 1px $dark_background;
+		border-radius: 2px;
+		padding: 2px 6px;
+		background: white;
+		font-size: 1em;
+		margin-right: 4px;
+	}
+}
+
+
+#social {
+	a::before {
+		height: 1em;
+		width: 1em;
+		margin-right: 4px;
+	}
+}
+
+.facebook a::before {
+	content: url("../img/svg/facebook.svg");
+}
+
+.twitter a::before {
+	content: url("../img/svg/twitter.svg");
+}
+
+.instagram a::before {
+	content: url("../img/svg/instagram.svg");
+}
+
+.linkedin a::before {
+	content: url("../img/svg/linkedin.svg");
+}
+
+.angel a::before {
+	content: url("../img/svg/angellist.svg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
