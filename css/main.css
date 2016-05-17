@@ -544,7 +544,7 @@ body.has-active-menu {
   width: 100%;
   max-width: 800px;
   margin: auto auto;
-  padding-top: 60px; }
+  padding-top: 30px; }
 
 .compHedaer {
   width: 100%;
@@ -648,7 +648,24 @@ body.has-active-menu {
     padding: 10px;
     min-width: 100%;
     margin-right: 10px;
-    background: white; }
+    background: white;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column; }
 
 .p-info {
   margin-bottom: 18px; }
@@ -678,7 +695,7 @@ body.has-active-menu {
 #social a::before {
   height: 1em;
   width: 1em;
-  margin-right: 4px; }
+  margin-right: 6px; }
 
 .facebook a::before {
   content: url("../img/svg/facebook.svg"); }
@@ -694,6 +711,14 @@ body.has-active-menu {
 
 .angel a::before {
   content: url("../img/svg/angellist.svg"); }
+
+.editOptions {
+  width: 100%;
+  text-align: right;
+  margin-top: auto; }
+  .editOptions a {
+    text-decoration: underline;
+    font-weight: 600; }
 
 .phpdebugbar p {
   font-size: black; }

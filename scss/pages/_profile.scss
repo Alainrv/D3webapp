@@ -2,7 +2,7 @@
 	width: 100%;
 	max-width: 800px;
 	margin: auto auto;
-	padding-top: $navHeight + 10px;
+	padding-top: 30px;
 }
 
 .compHedaer {
@@ -106,6 +106,8 @@
 	    min-width: 100%;
 	    margin-right: 10px;
 	    background: white;
+	    @include display(flex);
+	    @include flex-direction(column);
 	}
 }
 
@@ -151,7 +153,7 @@
 	a::before {
 		height: 1em;
 		width: 1em;
-		margin-right: 4px;
+		margin-right: 6px;
 	}
 }
 
@@ -176,7 +178,16 @@
 }
 
 
+.editOptions {
+	width: 100%;
+	text-align: right;
+	margin-top: auto;
 
+	a {
+		text-decoration: underline;
+		font-weight: 600;
+	}
+}
 
 
 
