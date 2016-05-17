@@ -132,7 +132,9 @@
       				<img src="../img/temp/D3Logo.png">
       			</div>
       			<div class="indHeader">
+      			<!-- Diego!! Image of the profile picture of the user goes here -->
       				<img src="../img/temp/profile.jpg">
+      				<!-- Diego!!  First and last name of hte user goes here below -->
       				<h2>Firstname Lastname</h2>
       			</div>
   			    <div class="profile_tabs">
@@ -143,36 +145,69 @@
 			        </div>
 			        <div class="tabInner">
 			            <div class="tab" id="info">
+			            <!-- If this is a Mentor users -->
+			            <!-- If the person who is looking at this profile is a staff they see all of the below info if they are not staff then the visibility depends on the settings of the user -->
 			            	<div class="p-info">
 			            		<h3>Biography</h3>
 				                <p>This is my biography and this can be really exciting or it can be really really boring since poeple have different level of experience. Take Elon Musk for exmaple could be exciting. Take a dude who didn't do anything of their life, that coudl be very boring.</p>
+				               	<div class="editMode">
+				               		<input type="text" name="mentor_bio">
+				               	</div>
 			            	</div>
 			            	<div class="p-info">
 				                <h3>Startups Coached</h3>
 				                <p>team 1</p><p>team 2</p>
+				                <div class="editMode">
+				                	<!-- Diego this is a search fields of the companies at D3 -->
+				                	<input type="text" name="mentor_teams">
+				                </div>
 			            	</div>
+			            <!-- End if this is a mentor user -->
+						<!-- Show depending on settings			            			            	 -->
 			            	<div class="p-info">
 			            		<h3>Gender</h3>
 			            		<p>male / female</p>
+			            		<div class="editMode">
+			            			<input type="radio" name="user_gender">
+			            		</div>
 			            	</div>
+		            	<!-- End show depending on settings -->
+		            	<!-- Show depending on settings -->
 			            	<div class="p-info">
 			            		<h3>Birthday</h3>
 			            		<p>1985 / 05 / 08</p>
+			            		<div class="editMode">
+			            			<input type="date" name="user_bday">
+			            		</div>
 			            	</div>
+		            	<!-- End show depending on settings -->
+		            	<!-- Show depending on settings -->
 			            	<div class="p-info">
 			            		<h3>Email</h3>
 			            		<p>alain@d3center.ca</p>
+			            		<div class="editMode">
+			            			<input type="email" name="user_email">
+			            		</div>
 			            	</div>
+		            	<!-- End show depending on settings -->
+		            	<!-- Show depending on settings -->			            	
 			            	<div class="p-info">
 			            		<h3>Phone Number</h3>
 			            		<p>514 690-4850</p>
+			            		<div class="editMode">
+			            			<input type="phone" name="user_phone">
+			            		</div>
 			            	</div>
+		            	<!-- End show depending on settings -->
 			            	<div class="p-info">
 			            		<h3>Slack username</h3>
 			            		<p>alainrv</p>
+			            		<div class="editMode">
+			            			<input type="text" name="user_slack">
+			            		</div>
 			            	</div>
 			            	<div class="editOptions">
-			            		<a href="#">Edit</a>
+			            		<a href="javascript:void(0)_">Edit</a>
 			            	</div>
 			            </div>
 			            <div class="tab" id="experience">
@@ -338,6 +373,11 @@ $(".top_tab").click(function() {
 	$(".top_tab").removeClass("active");
 	//add the active state to the newly selected tab
 	$(this).addClass("active");
+});
+
+$(".editMode a").click( function() {
+
+	
 });
 
 </script>
