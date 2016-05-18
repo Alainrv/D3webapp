@@ -134,7 +134,7 @@
 	}
 }
 
-.expertise_container {
+.list_saved_container {
 	width: 100%;
 	padding: 10px;
 
@@ -148,6 +148,9 @@
 	}
 }
 
+.saveEditing {
+	display: none;
+}
 
 #social {
 	a::before {
@@ -192,8 +195,30 @@
 
 .editMode {
 	display: none;
-	background: $hoverOnWhite;
+	background: $profileEditBackground;
 	padding: 10px;
+
+	input {
+		background: white;
+		border: 1px solid $greyBorder;
+		border-radius: 5px;
+		font-size: 0.8em;
+		letter-spacing: 1.69px;
+		width: 50%;
+		min-width: 200px;
+		padding: 5px;
+	}
+
+	button {
+		font-size: 1em;
+		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+		@include btn($backgroundButton, 30px, 110px);	
+	}
+
+	button[type="submit"] {
+		background: $saveEditing;
+		background:
+	}
 }
 	
 
@@ -213,7 +238,9 @@
 }
 
 
-#current_experiences {
+.added_list {
+	padding: 10px;
+
 	i {
 		border: solid 1px $dark_background;
 		border-radius: 2px;
@@ -221,10 +248,21 @@
 		background: white;
 		font-size: 1em;
 		margin-right: 4px;
+		cursor: pointer;
 
 		&::after {
-			content: url("..img/svg/deleteExpertise.svg");
-			margin-left: 3px;
+			content: url("../img/svg/deleteExpertise.svg");
+			margin-left: -12px;
+			cursor: pointer;
+			opacity: 0;
+			transition: margin 0.15s, opacity 0s;
+		}
+
+		&:hover::after {
+			margin-left: 10px;
+			margin-right: 4px;
+			opacity: 1;
+			transition: margin 0.2s, opacity 0.2s 0.1s;
 		}
 	}
 }

@@ -2,7 +2,7 @@
   @include prefixer(box-shadow, $shadow, webkit moz ms o spec);
 }
 
-@mixin btn($background, $height: auto, $width: auto, $padding_vertical: 0, $padding_horizontal: 0) {
+@mixin btn($background, $height: auto, $width: auto, $padding_vertical: 0, $padding_horizontal: 0, $button_color:#fff ) {
 	background: $background;
     border-radius: 2px;
     border: none;

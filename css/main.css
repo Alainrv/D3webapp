@@ -1,754 +1,89 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+Error: Invalid CSS after "		background:": expected expression (e.g. 1px, bold), was "}"
+        on line 221 of scss/pages/_profile.scss
+        from line 42 of scss/main.scss
+
+216: 	}
+217: 
+218: 	button[type="submit"] {
+219: 		background: $saveEditing;
+220: 		background:
+221: 	}
+222: }
+223: 	
+224: 
+225: .p-info h3 {
+226: 	cursor: pointer;
+
+Backtrace:
+scss/pages/_profile.scss:221
+scss/main.scss:42
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/lexer.rb:227:in `expected!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/parser.rb:673:in `assert_expr'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/parser.rb:63:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1041:in `sass_script'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:894:in `value!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:767:in `block in try_declaration'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1155:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1155:in `rethrow'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:780:in `try_declaration'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:709:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:674:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:666:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:655:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:724:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:674:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:666:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:655:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:647:in `ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:673:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:666:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:123:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:39:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:403:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:309:in `to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:471:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after {
-  content: '';
-  content: none; }
-
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/*  ===========     General Rule & Styling     =============
-===========================================================*/
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-html {
-  box-sizing: border-box; }
-
-*:focus {
-  outline: none; }
-
-body {
-  overflow: scroll; }
-
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-title,
-html,
-div,
-button,
-input,
-select,
-textarea {
-  letter-spacing: 1px;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-title {
-  color: #202334;
-  letter-spacing: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-a,
-p,
-span,
-title,
-html,
-div,
-button,
-input,
-select,
-textarea {
-  color: #4A4A4A;
-  font-family: "MuseoSans", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-a {
-  text-decoration: none; }
-
-caption {
-  display: none; }
-
-.overlayStyle {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-  position: fixed; }
-
-p {
-  font-size: 0.8em;
-  letter-spacing: 0px; }
-
-.o-content {
-  padding-top: 50px; }
-
-/* -----------------------------------------------------------------------------
-
-  WRAPPER OBJECT
-  
------------------------------------------------------------------------------ */
-.o-wrapper {
-  transition: transform 0.3s;
-  overflow-x: hidden; }
-
-/* -----------------------------------------------------------------------------
-
-  CONTAINER OBJECTS
-  
------------------------------------------------------------------------------ */
-.o-container {
-  margin: 0 auto;
-  padding: 0 12px;
-  max-width: 960px; }
-
-@media all and (min-width: 480px) {
-  .o-container {
-    padding: 0 24px; } }
-@media all and (min-width: 720px) {
-  .o-container {
-    padding: 0 48px; } }
-/* -----------------------------------------------------------------------------
-
-  HEADER OBJECT
-  
------------------------------------------------------------------------------ */
-.o-header {
-  margin: 0;
-  padding: 0; }
-
-.o-header-nav {
-  display: flex;
-  justify-content: space-between; }
-
-.o-header-nav__link {
-  padding: 12px;
-  color: #fff; }
-
-.o-header-nav__link:hover {
-  color: #fff; }
-
-.o-header__title {
-  margin: 24px;
-  padding: 0;
-  color: #818181;
-  font-size: 28px;
-  font-weight: 300;
-  text-align: center; }
-
-@media all and (min-width: 480px) {
-  .o-header__title {
-    margin: 36px;
-    font-size: 42px; } }
-/* -----------------------------------------------------------------------------
-
-  MAIN OBJECT
-  
------------------------------------------------------------------------------ */
-.o-main {
-  /**/ }
-
-/* -----------------------------------------------------------------------------
-
-  SUB-NAVIGATION OBJECT
-  
------------------------------------------------------------------------------ */
-.o-sub-nav {
-  margin: 0 0 24px 0;
-  padding: 0; }
-
-.o-sub-nav__items {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-.o-sub-nav__item {
-  margin: 0;
-  padding: 4px; }
-
-.o-sub-nav__link {
-  display: block;
-  margin: 0;
-  padding: 4px 24px; }
-
-.o-sub-nav__link:hover,
-.o-sub-nav__item.active .o-sub-nav__link {
-  color: #fff; }
-
-@media all and (min-width: 720px) {
-  .o-sub-nav {
-    margin: 0 0 48px 0; } }
-/* -----------------------------------------------------------------------------
-
-  FOOTER OBJECT
-  
------------------------------------------------------------------------------ */
-.o-footer {
-  padding: 12px 0;
-  text-align: center; }
-
-@media all and (min-width: 480px) {
-  .o-footer {
-    padding: 24px 0; } }
-@media all and (min-width: 720px) {
-  .o-footer {
-    padding: 48px 0; } }
-/* -----------------------------------------------------------------------------
-
-  SLIDE AND PUSH MENUS COMPONENT
-  
------------------------------------------------------------------------------ */
-/**
- * Menu overview.
- */
-.c-menu {
-  position: fixed;
-  z-index: 2000;
-  background-color: #333645;
-  transition: transform 0.3s; }
-
-.c-menu__items {
-  list-style: none;
-  padding: 0; }
-
-/**
- * Left and right menus
- *
- * Slide and push menus coming in from the left and right inherit a lot of
- * common styles. We'll start each of them off by doing up the common styles
- * for each version, followed by individual styles.
- *
- * The various versions are governed by modifier classes.
- */
-/**
- * Common modifiers for left/right menus.
- */
-.c-menu--slide-left,
-.c-menu--push-left {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll; }
-  @media all and (min-width: 320px) {
-    .c-menu--slide-left,
-    .c-menu--push-left {
-      width: 300px; } }
-
-.c-menu--slide-left .c-menu__item,
-.c-menu--push-left .c-menu__item {
-  display: block; }
-
-.c-menu--slide-left .c-menu__link, .c-menu--slide-left .profile_info h3, .profile_info .c-menu--slide-left h3,
-.c-menu--push-left .c-menu__link,
-.c-menu--push-left .profile_info h3,
-.profile_info .c-menu--push-left h3 {
-  display: block;
-  padding: 12px 24px 12px 0;
-  color: #fff; }
-
-.c-menu--slide-left .c-menu__close,
-.c-menu--push-left .c-menu__close {
-  display: block;
-  float: right;
-  padding: 10px; }
-
-/**
- * Slide/Push Menu Left.
- */
-.c-menu--slide-left,
-.c-menu--push-left {
-  top: 0;
-  left: 0;
-  transform: translateX(-100%); }
-  @media all and (min-width: 320px) {
-    .c-menu--slide-left,
-    .c-menu--push-left {
-      transform: translateX(-300px); } }
-
-.c-menu--slide-left.is-active,
-.c-menu--push-left.is-active {
-  transform: translateX(0); }
-
-/**
- * Wrapper states.
- *
- * Various wrapper states occur depending on if a menu is pushing into view, in
- * which case, the wrapper has to be pushed by the respective distance.
- */
-.o-wrapper.has-push-left {
-  transform: translateX(100%); }
-  @media all and (min-width: 320px) {
-    .o-wrapper.has-push-left {
-      transform: translateX(300px); } }
-
-/**
- * Body states.
- *
- * When a menu is active, we want to hide the overflows on the body to prevent
- * awkward document scrolling.
- */
-body.has-active-menu {
-  overflow: hidden; }
-
-/**
- * Close button resets.
- */
-.c-menu__close {
-  color: #fff;
-  border: none;
-  box-shadow: none;
-  border-radius: none;
-  background-color: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer; }
-
-.c-menu__close:focus {
-  outline: none; }
-
-.profile_info img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-top: 45px;
-  margin-bottom: 20px;
-  margin-left: 45px; }
-.profile_info h3 {
-  color: white;
-  font-size: 1em;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s; }
-
-.c-menu__item {
-  position: relative; }
-  .c-menu__item h3::before,
-  .c-menu__item a::before {
-    position: absolute;
-    top: 1px;
-    cursor: pointer;
-    padding: 12px 0;
-    left: 18px; }
-
-.user h3::before {
-  content: url("../img/svg/gearSetting.svg"); }
-
-.meeting a::before {
-  content: url("../img/svg/pplMeeting.svg"); }
-
-.rooms a::before {
-  content: url("../img/svg/notepadRoombooking.svg"); }
-
-.availabilities a::before {
-  content: url("../img/svg/clockRoomavailability.svg"); }
-
-.search a::before {
-  content: url("../img/svg/loopSearchDark.svg"); }
-
-.available a::before {
-  content: url("../img/svg/availableRoom.svg"); }
-
-.occupied a::before {
-  content: url("../img/svg/occupiedRoom.svg"); }
-
-.menu_nav {
-  padding-bottom: 12px; }
-
-.menu_room {
-  padding-top: 12px;
-  border-top: solid 0.5px #979797; }
-
-.c-menu__item {
-  padding-left: 45px;
-  transition: all 0.3s; }
-  .c-menu__item:hover {
-    background-color: #202334; }
-
-.room .c-menu__link, .room .profile_info h3, .profile_info .room h3 {
-  color: #9B9B9B;
-  padding: 8px 10px; }
-
-/* -----------------------------------------------------------------------------
-
-  MASK COMPONENT
-  
------------------------------------------------------------------------------ */
-.c-mask {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  width: 0;
-  height: 0;
-  background-color: #000;
-  opacity: 0;
-  transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s; }
-
-.c-mask.is-active {
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
-  transition: opacity 0.3s; }
-
-.o-header-nav {
-  height: 50px;
-  background-color: white;
-  position: fixed;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  padding: 0 20px;
-  z-index: 1000; }
-  .o-header-nav svg {
-    cursor: pointer; }
-
-.nav_options {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify;
-  width: 70px; }
-
-#notification {
-  position: relative; }
-
-#notificationAlert {
-  background-color: #FF0000;
-  position: absolute;
-  top: -7px;
-  right: -4px; }
-  #notificationAlert p {
-    color: white;
-    padding: 2px;
-    font-size: 0.6em;
-    font-weight: 700; }
-
-.notification_holder {
-  overflow: hidden; }
-
-.notification_menu {
-  position: absolute;
-  top: -500%;
-  right: 0;
-  width: 275px;
-  border: 0.5px solid #979797;
-  background-color: white;
-  transition: all 0.4s; }
-  .notification_menu--active {
-    top: 50px; }
-  .notification_menu .notification_header {
-    padding: 7px 7px; }
-    .notification_menu .notification_header p {
-      font-weight: 700; }
-  .notification_menu .notification_item {
-    padding: 8px;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    border-top: solid 0.5px #C7C7C7;
-    transition: all 0.3s; }
-    .notification_menu .notification_item:hover {
-      background-color: #FFF2DD; }
-    .notification_menu .notification_item p {
-      display: inline;
-      line-height: 1.1em; }
-      .notification_menu .notification_item p:first-child {
-        margin-right: 8px; }
-    .notification_menu .notification_item img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%; }
-    .notification_menu .notification_item .notification_info {
-      margin-left: 15px;
-      margin-bottom: auto;
-      margin-top: auto; }
-  .notification_menu .see_all {
-    border-top: solid 0.5px #C7C7C7;
-    text-align: center;
-    padding: 7px;
-    cursor: pointer; }
-    .notification_menu .see_all:hover {
-      background-color: #FFF2DD; }
-    .notification_menu .see_all p {
-      font-weight: 500; }
-
-.time_since::before {
-  content: url("../img/svg/clockNotificationDelay.svg");
-  margin-right: 4px; }
-
-.profile_wrapper {
-  width: 100%;
-  max-width: 800px;
-  margin: auto auto;
-  padding-top: 30px; }
-
-.compHedaer {
-  width: 100%;
-  height: 260px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-align-content: center;
-  -moz-align-content: center;
-  align-content: center;
-  -ms-flex-line-pack: center;
-  border: 0.5px solid #979797; }
-  .compHedaer img {
-    margin: auto auto;
-    max-width: 90%; }
-
-.indHeader {
-  width: 100%;
-  height: 120px;
-  background-color: #202334;
-  text-align: center;
-  position: relative;
-  padding-top: 85px; }
-  .indHeader img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: absolute;
-    top: -70px;
-    left: calc(50% - 75px);
-    border: 0.5px solid white; }
-  .indHeader h2 {
-    color: white;
-    font-weight: 500;
-    font-size: 1.2em; }
-
-.profile_tabs .tabs {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex; }
-.profile_tabs .top_tab {
-  background: #202334;
-  border-top: 0.5px white solid;
-  border-right: 0.5px white solid;
-  -webkit-flex-grow: 1;
-  -moz-flex-grow: 1;
-  flex-grow: 1;
-  -ms-flex-positive: 1;
-  transition: background 0.3s; }
-  .profile_tabs .top_tab:last-child {
-    border-right: none; }
-  .profile_tabs .top_tab a {
-    width: 100%;
-    color: white;
-    text-align: center;
-    display: block;
-    padding: 16px;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: color 0.3s; }
-.profile_tabs div.active {
-  background: white; }
-  .profile_tabs div.active a {
-    color: #202334; }
-  .profile_tabs div.active:first-child {
-    border-left: 1px solid #979797; }
-  .profile_tabs div.active:last-child {
-    border-right: 1px solid #979797; }
-
-.tabInner {
-  clear: both;
-  border-right: 0.5px solid #979797;
-  border-left: 0.5px solid #979797;
-  border-bottom: 0.5px solid #979797;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: hidden; }
-  .tabInner .tab {
-    padding: 10px;
-    min-width: 100%;
-    margin-right: 10px;
-    background: white;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-direction: column; }
-
-.p-info {
-  margin-bottom: 18px; }
-  .p-info h3 {
-    font-size: 1em;
-    font-weight: 700;
-    margin-bottom: 6px; }
-  .p-info p {
-    margin-bottom: 6px;
-    line-height: 1.2em; }
-
-.degree p:before {
-  content: url("../img/svg/diploma.svg");
-  margin-right: 4px; }
-
-.expertise_container {
-  width: 100%;
-  padding: 10px; }
-  .expertise_container i {
-    border: solid 1px #202334;
-    border-radius: 2px;
-    padding: 2px 6px;
-    background: white;
-    font-size: 1em;
-    margin-right: 4px; }
-
-#social a::before {
-  height: 1em;
-  width: 1em;
-  margin-right: 6px; }
-
-.facebook a::before {
-  content: url("../img/svg/facebook.svg"); }
-
-.twitter a::before {
-  content: url("../img/svg/twitter.svg"); }
-
-.instagram a::before {
-  content: url("../img/svg/instagram.svg"); }
-
-.linkedin a::before {
-  content: url("../img/svg/linkedin.svg"); }
-
-.angel a::before {
-  content: url("../img/svg/angellist.svg"); }
-
-.saveEditing,
-.editOptions {
-  width: 100%;
-  text-align: right;
-  margin-top: auto; }
-  .saveEditing a,
-  .editOptions a {
-    text-decoration: underline;
-    font-weight: 600; }
-
-.editMode {
-  display: none;
-  background: #FFF2DD;
-  padding: 10px; }
-
-.p-info h3 {
-  cursor: pointer; }
-  .p-info h3::after {
-    content: url("../img/svg/edit.svg");
-    margin-left: 8px;
-    opacity: 0;
-    transition: opacity 0.2s; }
-  .p-info h3:hover::after {
-    opacity: 1; }
-
-#current_experiences i {
-  border: solid 1px #202334;
-  border-radius: 2px;
-  padding: 2px 6px;
-  background: white;
-  font-size: 1em;
-  margin-right: 4px; }
-  #current_experiences i::after {
-    content: url("..img/svg/deleteExpertise.svg");
-    margin-left: 3px; }
-
-.phpdebugbar p {
-  font-size: black; }
-
-/*# sourceMappingURL=main.css.map */
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"		background:\": expected expression (e.g. 1px, bold), was \"}\"\A         on line 221 of scss/pages/_profile.scss\A         from line 42 of scss/main.scss\A \A 216: 	}\A 217: \A 218: 	button[type=\"submit\"] {\A 219: 		background: $saveEditing;\A 220: 		background:\A 221: 	}\A 222: }\A 223: 	\A 224: \A 225: .p-info h3 {\A 226: 	cursor: pointer;"; }

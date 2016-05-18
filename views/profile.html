@@ -232,6 +232,12 @@
 			            			</form>
 			            		</div>
 			            	</div>
+			            	<div class="editOptions">
+			            		<a href="javascript:void(0);">Edit</a>
+			            	</div>
+			            	<div class="saveEditing">
+			            		<a href="javascript:void(0);">Save</a>
+			            	</div>
 			            </div>
 			            <div class="tab" id="experience">
 			                <div class="p-info degree">
@@ -257,16 +263,18 @@
 			            		</div>
 			            	</div>
 			            	<div class="p-info">
-			            		<h3>Fields of expertise</h3>
-			            		<div class="expertise_container">
+			            		<h3 onclick="moveDataToEdit()">Fields of expertise</h3>
+			            		<div class="list_saved_container">
 			            			<i>HTML</i><i>Css</i><i>JavaScript</i><i>Jquery</i><i>Sass</i><i>Financing</i>
 			            		</div>
-			            		<div id="experiences" class="editMode">
+			            		<div class="editMode">
 			            			<form action="" method="post">
-			            				<div id="current_experiences">
-			            					<i>HTML</i>
+			            				<div class="added_list">
 			            				</div>
-			            				<input type="text" name="experiences">
+			            				<div class="adding_list">
+				            				<input class="val_to_list" type="text" name="experiences">
+				            				<button class="add_to_list" type="button">Add</button>
+			            				</div>
 			            				<button type="submit">Save</button>
 			            				<button type="reset">Cancel</button>
 			            			</form>
@@ -275,33 +283,71 @@
 			            	<div class="editOptions">
 			            		<a href="javascript:void(0);">Edit</a>
 			            	</div>
+			            	<div class="saveEditing">
+			            		<a href="javascript:void(0);">Save</a>
+			            	</div>
 			            </div>
 			            <div class="tab" id="social">
 			                <div class="p-info facebook">
 			                	<h3>Facebook</h3>
 			                	<a href="#" target="_blank">www.facebook.com/alainrvaliquette</a>
+			                	<div class="editMode">
+			            			<form action="" method="post">
+				            			<input type="text" name="user_facebook">
+				            			<button type="submit">Save</button>
+				               			<button type="reset">Cancel</button>
+			            			</form>
+			            		</div>
 		                	</div>
 		                	<div class="p-info twitter">
 			                	<h3>Twitter</h3>
 			                	<a href="#" target="_blank">@alainrv</a>
+			                	<div class="editMode">
+			            			<form action="" method="post">
+				            			<input type="text" name="user_twitter">
+				            			<button type="submit">Save</button>
+				               			<button type="reset">Cancel</button>
+			            			</form>
+			            		</div>
 		                	</div>
 		                	<div class="p-info instagram">
 			                	<h3>Instagram</h3>
 			                	<a href="#" target="_blank">@nolykids</a>
+			                	<div class="editMode">
+			            			<form action="" method="post">
+				            			<input type="text" name=user_instagram>
+				            			<button type="submit">Save</button>
+				               			<button type="reset">Cancel</button>
+			            			</form>
+			            		</div>
 		                	</div>
 		                	<div class="p-info angel">
 			                	<h3>Angel List</h3>
 			                	<a href="#" target="_blank">@alainrv</a>
+			                	<div class="editMode">
+			            			<form action="" method="post">
+				            			<input type="text" name="user_angel">
+				            			<button type="submit">Save</button>
+				               			<button type="reset">Cancel</button>
+			            			</form>
+			            		</div>
 		                	</div>
 		                	<div class="p-info linkedin">
 			                	<h3>Linked In</h3>
 			                	<a href="#" target="_blank">www.linkedin.com/in/alainrv</a>
+			                	<div class="editMode">
+			            			<form action="" method="post">
+				            			<input type="text" name="user_linkedin">
+				            			<button type="submit">Save</button>
+				               			<button type="reset">Cancel</button>
+			            			</form>
+			            		</div>
 			                </div>
 			                <div class="editOptions">
 			            		<a href="javascript:void(0);">Edit</a>
 			            	</div>
-			            	<div>
-			            		
+			            	<div class="saveEditing">
+			            		<a href="javascript:void(0);">Save</a>
 			            	</div>
 			            </div>
 			        </div>
@@ -423,19 +469,68 @@ $(".top_tab").click(function() {
 });
 
 
-
+//Open the editing block if clicked on individually. 
 $(".tab h3").click(function() {
 	$(event.target).parent(".p-info").find(".editMode").show();
 });
 
 
+//Close the editing block when cancelled
+$("button[type='reset']").click(function() {
+	//hide the div containing the ediit fucntionalities
+	$(event.target).closest(".editMode").hide();
+});
+
+
+//Open all the editing blocks when pressed on edit
 $(".editOptions").children("a").click(function() {
+	//the tab parent of the item that was clicked
 	var $thisTab = $(event.target).closest(".tab");
+	// hide the text already there
 	$thisTab.find(".p-info p").hide();
+	//show all the editing block that are hiding
 	$thisTab.find(".editMode").show();
+	// hide the edit button
 	$thisTab.find(".editOptions").hide();
+	// show the save button 
 	$thisTab.find(".saveEditing").show();
 });
+
+
+var moveDataToEdit = function() {
+	var $containerData = $(event.target).parent(".p-info").find(".list_saved_container");
+	var $data = $containerData.children("i").clone();
+	var $editingConatiner = $(event.target).parent(".p-info").find(".added_list");
+	$editingConatiner.append($data);
+
+	$(".added_list i").click(function() {
+		removeTag();
+	});
+};
+
+
+
+// Remove the selected item from the list it was added to
+var removeTag = function() {
+	$(event.target).remove();
+};
+
+
+//Add the item of the list in the 
+$(".add_to_list").click(function(event) {
+	// stop form from submitting
+	event.preventDefault();
+	// Get the value in the input box 
+	var $element = $(event.target).parent(".adding_list").find(".val_to_list").val();
+	// Create the new tag
+	var newTag = '<i onclick="removeTag()">' + $element + '</i>';
+	// Adding the tag to the right div
+	$(event.target).closest(".editMode").find(".added_list").append(newTag);
+	//clean the input from it's previous value
+	$(event.target).parent(".adding_list").find(".val_to_list").val("");
+});
+
+
 
 </script>
 
@@ -443,6 +538,25 @@ $(".editOptions").children("a").click(function() {
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
