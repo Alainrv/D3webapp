@@ -1,39 +1,55 @@
-<svg width="17" height="14" viewBox="0 0 17 14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>
-        diploma
-    </title>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>diploma</title>
+    <desc>Created with Sketch.</desc>
     <defs>
-        <path id="a" d="M0 0h16.073v12.51H0z"/>
-        <mask id="e" x="0" y="0" width="16.073" height="12.511" fill="#fff">
-            <use xlink:href="#a"/>
+        <rect id="path-1" x="0" y="2" width="16.0727273" height="12.5106383"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16.0727273" height="12.5106383" fill="white">
+            <use xlink:href="#path-1"></use>
         </mask>
-        <path d="M15.455 3.27C16.32 3.195 17 2.493 17 1.638c0-.854-.68-1.556-1.545-1.63V0H1.545v3.277h13.91V3.27z" id="b"/>
-        <mask id="f" x="0" y="0" width="15.455" height="3.277" fill="#fff">
-            <use xlink:href="#b"/>
+        <path d="M15.1590909,0.00243746434 L15.1590909,0 L1.25,0 L1.25,4.09574468 L15.1590909,4.09574468 L15.1590909,4.09330722 C15.7943959,4.04075667 16.3000245,3.14508338 16.3000245,2.04787234 C16.3000245,0.950661304 15.7943959,0.0549880069 15.1590909,0.00243746434 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15.0500245" height="4.09574468" fill="white">
+            <use xlink:href="#path-3"></use>
         </mask>
-        <ellipse id="c" cx="1.7" cy="1.638" rx="1.7" ry="1.638"/>
-        <mask id="g" x="0" y="0" width="3.4" height="3.277" fill="#fff">
-            <use xlink:href="#c"/>
+        <ellipse id="path-5" cx="1.20000005" cy="2.04787234" rx="1.20000005" ry="2.04787234"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="2.4000001" height="4.09574468" fill="white">
+            <use xlink:href="#path-5"></use>
         </mask>
-        <ellipse id="d" cx="1.236" cy="1.191" rx="1.236" ry="1.191"/>
-        <mask id="h" x="0" y="0" width="2.473" height="2.383" fill="#fff">
-            <use xlink:href="#d"/>
+        <path d="M2.1563,0.585062892 L1.72359069,0.777601776 L1.38712007,0.195117857 L0.8308895,1.90701954 L1.78194602,2.21603654 L2.23409074,0.824478172 L2.68623546,2.21603654 L3.63729197,1.90701954 L3.0810614,0.195117857 L2.74459078,0.777601776 L2.31188148,0.585062892 L2.33817659,0.504134852 L2.23409074,0.550449026 L2.13000488,0.504134852 L2.1563,0.585062892 Z" id="path-7"></path>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-0.1" y="-0.1" width="3.00640247" height="2.22091868">
+            <rect x="0.7308895" y="0.0951178575" width="3.00640247" height="2.22091868" fill="white"></rect>
+            <use xlink:href="#path-7" fill="black"></use>
+        </mask>
+        <ellipse id="path-9" cx="2.23636364" cy="1.19148936" rx="1.23636364" ry="1.19148936"></ellipse>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="2.47272727" height="2.38297872" fill="white">
+            <use xlink:href="#path-9"></use>
         </mask>
     </defs>
-    <g stroke="#2C3E50" fill="none" fill-rule="evenodd">
-        <g>
-            <use mask="url(#e)" fill="#FFF" xlink:href="#a"/>
-            <g stroke-width=".5" stroke-linecap="square">
-                <path d="M2.627 3.426h7.418M2.627 5.213h7.418M2.627 6.702h12.055M2.627 8.49h12.055"/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="13--Profile-mentor/staff-(tablet)" transform="translate(-646.000000, -496.000000)">
+            <g id="diploma" transform="translate(646.000000, 496.000000)">
+                <use id="Rectangle-1001" stroke="#202334" mask="url(#mask-2)" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <path d="M2,9.44680851 L9.57272727,9.44680851" id="Line" stroke="#202334" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M2,11 L9.41818182,11" id="Line" stroke="#202334" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M2,5.44680851 L14.2090909,5.44680851" id="Line" stroke="#202334" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M2,7.29787234 L14.0545455,7.29787234" id="Line" stroke="#202334" stroke-width="0.5" stroke-linecap="square"></path>
+                <g id="Group-4">
+                    <use id="Combined-Shape" stroke="#202334" mask="url(#mask-4)" fill="#FFFFFF" xlink:href="#path-3"></use>
+                    <use id="Oval-313" stroke="#202334" mask="url(#mask-6)" fill="#FFFFFF" xlink:href="#path-5"></use>
+                    <path id="Line" stroke="#2C3E50" stroke-width="0.5" stroke-linecap="square"></path>
+                </g>
+                <g id="Group-3" transform="translate(11.000000, 11.000000)">
+                    <g id="Group-11" transform="translate(0.000000, 2.000000)">
+                        <g id="Combined-Shape">
+                            <use fill="#202334" fill-rule="evenodd" xlink:href="#path-7"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-8)" stroke-width="0.2" xlink:href="#path-7"></use>
+                        </g>
+                    </g>
+                    <polygon id="Star-1" stroke="#202334" stroke-width="0.5" fill="#FFFFFF" points="2.23636364 2.16283626 1.88803975 2.33471503 1.69143548 2.00863837 1.30198234 1.97174896 1.31951817 1.59500145 1.0125844 1.36105598 1.23869281 1.05325228 1.11172771 0.696526793 1.47462089 0.555392417 1.56793499 0.189144727 1.95239691 0.259488834 2.23636364 0 2.52033036 0.259488834 2.90479228 0.189144727 2.99810638 0.555392417 3.36099956 0.696526793 3.23403446 1.05325228 3.46014287 1.36105598 3.1532091 1.59500145 3.17074493 1.97174896 2.78129179 2.00863837 2.58468752 2.33471503"></polygon>
+                    <use id="Oval-315" stroke="#202334" mask="url(#mask-10)" fill="#FFFFFF" xlink:href="#path-9"></use>
+                </g>
             </g>
-        </g>
-        <g transform="translate(0 10.723)" fill="#FFF">
-            <use mask="url(#f)" xlink:href="#b"/>
-            <use mask="url(#g)" xlink:href="#c"/>
-        </g>
-        <g transform="translate(12.364 2.085)" fill="#FFF">
-            <path stroke-width=".5" d="M1.236 1.787l-.422.524.025-.662-.674.14.462-.493-.61-.31.683-.09L.443.278l.583.352.21-.632.213.632L2.03.28l-.258.614.682.09-.61.31.463.493-.673-.14.025.664z"/>
-            <use mask="url(#h)" xlink:href="#d"/>
         </g>
     </g>
 </svg>

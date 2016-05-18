@@ -177,7 +177,7 @@
 	content: url("../img/svg/angellist.svg");
 }
 
-
+.saveEditing,
 .editOptions {
 	width: 100%;
 	text-align: right;
@@ -190,9 +190,44 @@
 }
 
 
+.editMode {
+	display: none;
+	background: $hoverOnWhite;
+	padding: 10px;
+}
+	
+
+.p-info h3 {
+	cursor: pointer;
+
+	&::after {
+		content: url("../img/svg/edit.svg");
+		margin-left: 8px;
+		opacity: 0;		
+		transition: opacity 0.2s;
+	}
+
+	&:hover::after {
+		opacity: 1;
+	}
+}
 
 
+#current_experiences {
+	i {
+		border: solid 1px $dark_background;
+		border-radius: 2px;
+		padding: 2px 6px;
+		background: white;
+		font-size: 1em;
+		margin-right: 4px;
 
+		&::after {
+			content: url("..img/svg/deleteExpertise.svg");
+			margin-left: 3px;
+		}
+	}
+}
 
 
 
