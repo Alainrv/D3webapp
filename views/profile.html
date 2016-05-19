@@ -139,126 +139,217 @@
       			</div>
   			    <div class="profile_tabs">
 			        <div class="tabs">
-			            <div class="top_tab active"><a href="#info">Info</a></div>
-			            <div class="top_tab"><a href="#experience">Experience</a></div>
-			            <div class="top_tab"><a href="#social">Social</a></div>
+			        <!-- Diego!! If this is a person -->
+			            <!-- <div class="top_tab active"><a href="#info">Info</a></div> -->
+			            <!-- <div class="top_tab"><a href="#experience">Experience</a></div> -->
+			            <!-- <div class="top_tab"><a href="#social">Media</a></div> -->
+			        <!-- Diego!! End if this is a person -->
+			        <!-- Diego!! If this is a startup -->
+			            <div class="top_tab active"><a href="#startup_info">Info</a></div>
+			            <div class="top_tab"><a href="#startup_data">Data</a></div>
+			            <div class="top_tab"><a href="#startup_media">Media</a></div>
+			            <div class="top_tab"><a href="#startup_staff">Staff</a></div>
+			        <!-- Diego !! End if this is a startup -->
 			        </div>
 			        <div class="tabInner">
+
+
+
+			        
 			            <div class="tab" id="info">
-			            <!-- If this is a Mentor users -->
-			            <!-- If the person who is looking at this profile is a staff they see all of the below info if they are not staff then the visibility depends on the settings of the user -->
+			        <!-- DIEGO If this is a Mentor users -->
 			            	<div class="p-info">
 			            		<h3>Biography</h3>
 				                <p>This is my biography and this can be really exciting or it can be really really boring since poeple have different level of experience. Take Elon Musk for exmaple could be exciting. Take a dude who didn't do anything of their life, that coudl be very boring.</p>
 				               	<div class="editMode">
 				               		<form action="" method="post">
-				               			<input type="textarea" name="mentor_bio">
-				               			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
-				               		</form>
-				               		
+				               			<textarea name="mentor_bio"></textarea>
+				               			<div class="btnOptions">
+				               				<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+				               		</form>	               		
+				               	</div>
+			            	</div>
+			        <!-- Diego!! End if this is a mentor fo D3 -->
+			        <!-- Diego!! if this is a Staff of District 3 type of user -->
+			            	<div class="p-info">
+			            		<h3>What I do</h3>
+				                <p>I can help you at D3 by being there to support you and your team through rought time. I have a degree in being boring and can definetly help you become more boring like me</p>
+				               	<div class="editMode">
+				               		<form action="" method="post">
+				               			<textarea name="staff_do"></textarea>
+				               			<div class="btnOptions">
+				               				<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+				               		</form>	               		
 				               	</div>
 			            	</div>
 			            	<div class="p-info">
-				                <h3>Startups Coached</h3>
-				                <p>team 1</p><p>team 2</p>
+			            		<h3>A word from me</h3>
+				                <p>I am passionate about startup just like everybody else at D3, there is nothing spceial about me so don't you fucking come and bug me you sons of bitches.</p>
+				               	<div class="editMode">
+				               		<form action="" method="post">
+				               			<textarea name="staff_do"></textarea>
+				               			<div class="btnOptions">
+				               				<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+				               		</form>	               		
+				               	</div>
+			            	</div>
+			            	<!-- Diego!! End if this is a stadd of District 3 -->
+			            	<!-- Diego!! If this is a mentor of D3 -->
+			            	<div class="p-info">
+				                <h3 onclick="moveDataToEdit()">Startups Coached</h3>
+				                <div class="list_saved_container">
+			            			<i>Team 1</i><i>Team 2</i><i>Team 3</i>
+			            		</div>
 				                <div class="editMode">
-				                	<!-- Diego this is a search fields of the companies at D3 -->
-				                	<input type="text" name="mentor_teams">
+				                	<form action="" method="post">
+			            				<div class="added_list">
+			            				</div>
+			            				<div class="adding_list">
+				            				<!-- Diego this is a search fields of the companies at D3 -->
+				            				<input class="val_to_list" type="text" name="mentor_teams">
+				            				<button class="add_to_list" type="button">+ Add</button>
+			            				</div>
+			            				<div class="btnOptions">
+				            				<button type="submit">Save</button>
+				            				<button type="reset">Cancel</button>
+				            			</div>
+			            			</form>
 				                </div>
 			            	</div>
-			            <!-- End if this is a mentor user -->
-						<!-- Show depending on settings			            			            	 -->
+			            <!-- Diego!! End if this is a mentor user -->
+
+			            <!-- DIEGO If the person who is looking at this profile is a staff they see all of the below info if they are not staff then the visibility depends on the settings of the user -->
+
+						<!-- Diego!! Show depending on settings			            			            	 -->
 			            	<div class="p-info">
 			            		<h3>Gender</h3>
 			            		<p>male / female</p>
 			            		<div class="editMode">
 			            			<form action="" method="post">
-				            			<input id="male" type="radio" name="user_gender"><label for="male">male</label>
-				            			<input id="female" type="radio" name="user_gender"><label for="female">female</label>
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+			            				<div class="editInput">
+			            					<input id="male" type="radio" name="user_gender"><label for="male">male</label>
+					            			<input id="female" type="radio" name="user_gender"><label for="female">female</label>
+			            				</div>
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
 				            		</form>
 			            		</div>
 			            	</div>
-		            	<!-- End show depending on settings -->
-		            	<!-- Show depending on settings -->
+		            	<!-- Diego!! End show depending on settings -->
+
+		            	<!-- Diego!! Show depending on settings -->
 			            	<div class="p-info">
 			            		<h3>Birthday</h3>
 			            		<p>1985 / 05 / 08</p>
 			            		<div class="editMode">
 			            			<form action="" method="post">
-			            				<input type="date" name="user_bday">
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+			            				<div class="editInput">
+				            				<input type="date" name="user_bday">
+			            				</div>
+			            				<div class="btnOptions">
+			            					<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+			            				</div>
 			            			</form>
 			            		</div>
 			            	</div>
-		            	<!-- End show depending on settings -->
-		            	<!-- Show depending on settings -->
+		            	<!-- Diego!! End show depending on settings -->
+
+		            	<!-- Diego!! Show depending on settings -->
 			            	<div class="p-info">
 			            		<h3>Email</h3>
 			            		<p>alain@d3center.ca</p>
 			            		<div class="editMode">
 			            			<form action="" method="post">
 				            			<input type="email" name="user_email">
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
 				            		</form>	
 			            		</div>
 			            	</div>
-		            	<!-- End show depending on settings -->
-		            	<!-- Show depending on settings -->			            	
+		            	<!-- Diego!! End show depending on settings -->
+
+		            	<!-- Diego!! Show depending on settings -->			            	
 			            	<div class="p-info">
 			            		<h3>Phone Number</h3>
 			            		<p>514 690-4850</p>
 			            		<div class="editMode">
 			            			<form action="" method="post">
 				            			<input type="phone" name="user_phone">
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
 			               			</form>
 			            		</div>
 			            	</div>
-		            	<!-- End show depending on settings -->
+		            	<!-- Diego!! End show depending on settings -->
+
+		            	<!-- Show to everyone -->
 			            	<div class="p-info">
 			            		<h3>Slack username</h3>
 			            		<p>alainrv</p>
 			            		<div class="editMode">
 			            			<form action="" method="post">
 				            			<input type="text" name="user_slack">
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+				            			<div class="btnOptions">
+				            				<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				            			</div>
 			            			</form>
 			            		</div>
 			            	</div>
-			            	<div class="editOptions">
-			            		<a href="javascript:void(0);">Edit</a>
-			            	</div>
-			            	<div class="saveEditing">
-			            		<a href="javascript:void(0);">Save</a>
-			            	</div>
 			            </div>
-			            <div class="tab" id="experience">
-			                <div class="p-info degree">
-			            		<h3>Degrees</h3>
-			            		<p>Engineering in Computer Science, McGill University</p><p>MBA, Concordia Univeristy</p>
+
+					<!-- Diego!! Show if Startup -->
+			            <div class="tab" id="experience">	
+			            	<div class="p-info degree">
+			            		<h3 onclick="moveDataToEdit()">Degrees</h3>
+			            		<div class="list_saved_container">
+			            			<i>Engineering in Computer Science, McGill University</i><i>MBA, Concordia Univeristy</i>
+			            		</div>
 			            		<div class="editMode">
 			            			<form action="" method="post">
-				            			<input type="text" name="degree">
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+			            				<div class="added_list">
+			            				</div>
+			            				<div class="adding_list">
+				            				<input class="val_to_list" type="text" name="degree">
+				            				<button class="add_to_list" type="button">+ Add</button>
+			            				</div>
+			            				<div class="btnOptions">
+			            					<button type="submit">Save</button>
+				            				<button type="reset">Cancel</button>
+			            				</div>
 			            			</form>
 			            		</div>
 			            	</div>
 			            	<div class="p-info">
-			            		<h3>Currently learning</h3>
-			            		<p>Rubby on rails</p>
+			            		<h3 onclick="moveDataToEdit()">Currently learning</h3>
+			            		<div class="list_saved_container">
+			            			<i>Rubby on rails</i><i>Python</i>
+			            		</div>
 			            		<div class="editMode">
 			            			<form action="" method="post">
-				            			<input type="text" name="learning">
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+			            				<div class="added_list">
+			            				</div>
+			            				<div class="adding_list">
+				            				<input class="val_to_list" type="text" name="learning">
+				            				<button class="add_to_list" type="button">+ Add</button>
+			            				</div>
+			            				<div class="btnOptions">
+			            					<button type="submit">Save</button>
+				            				<button type="reset">Cancel</button>
+			            				</div>
 			            			</form>
 			            		</div>
 			            	</div>
@@ -273,20 +364,17 @@
 			            				</div>
 			            				<div class="adding_list">
 				            				<input class="val_to_list" type="text" name="experiences">
-				            				<button class="add_to_list" type="button">Add</button>
+				            				<button class="add_to_list" type="button">+ Add</button>
 			            				</div>
-			            				<button type="submit">Save</button>
-			            				<button type="reset">Cancel</button>
+			            				<div class="btnOptions">
+			            					<button type="submit">Save</button>
+				            				<button type="reset">Cancel</button>
+			            				</div>
 			            			</form>
 			            		</div>
 			            	</div>
-			            	<div class="editOptions">
-			            		<a href="javascript:void(0);">Edit</a>
-			            	</div>
-			            	<div class="saveEditing">
-			            		<a href="javascript:void(0);">Save</a>
-			            	</div>
 			            </div>
+
 			            <div class="tab" id="social">
 			                <div class="p-info facebook">
 			                	<h3>Facebook</h3>
@@ -294,8 +382,10 @@
 			                	<div class="editMode">
 			            			<form action="" method="post">
 				            			<input type="text" name="user_facebook">
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+					               		</div>
 			            			</form>
 			            		</div>
 		                	</div>
@@ -305,8 +395,10 @@
 			                	<div class="editMode">
 			            			<form action="" method="post">
 				            			<input type="text" name="user_twitter">
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+					               		</div>
 			            			</form>
 			            		</div>
 		                	</div>
@@ -316,8 +408,10 @@
 			                	<div class="editMode">
 			            			<form action="" method="post">
 				            			<input type="text" name=user_instagram>
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
 			            			</form>
 			            		</div>
 		                	</div>
@@ -327,8 +421,10 @@
 			                	<div class="editMode">
 			            			<form action="" method="post">
 				            			<input type="text" name="user_angel">
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
 			            			</form>
 			            		</div>
 		                	</div>
@@ -338,18 +434,172 @@
 			                	<div class="editMode">
 			            			<form action="" method="post">
 				            			<input type="text" name="user_linkedin">
-				            			<button type="submit">Save</button>
-				               			<button type="reset">Cancel</button>
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
 			            			</form>
 			            		</div>
 			                </div>
-			                <div class="editOptions">
-			            		<a href="javascript:void(0);">Edit</a>
+			            </div>
+			            <div class="tab" id="startup_info">
+				            <div class="p-info">
+			            		<h3>Registered City</h3>
+				                <p>Montreal</p>
+				               	<div class="editMode">
+				               		<form action="" method="post">
+				               			<textarea name="startup_city"></textarea>
+				               			<div class="btnOptions">
+				               				<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+				               		</form>	               		
+				               	</div>
 			            	</div>
-			            	<div class="saveEditing">
-			            		<a href="javascript:void(0);">Save</a>
+			            	<div class="p-info">
+			            		<h3>Our Mission</h3>
+				                <textarea>No longer produce any polution aside from smokers.</textarea>
+				               	<div class="editMode">
+				               		<form action="" method="post">
+				               			<textarea name="startup_Mission"></textarea>
+				               			<div class="btnOptions">
+				               				<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+				               		</form>	               		
+				               	</div>
+			            	</div>
+
+			            	<div class="p-info">
+			            		<h3 onclick="moveDataToEdit()">Value Propositions</h3>
+			            		<div class="list_saved_container">
+			            			<i>Save time</i><i>Cure Boredom</i>
+			            		</div>
+			            		<div class="editMode">
+			            			<form action="" method="post">
+			            				<div class="added_list">
+			            				</div>
+			            				<div class="adding_list">
+				            				<input class="val_to_list" type="text" name="startup_valueProposition">
+				            				<button class="add_to_list" type="button">+ Add</button>
+			            				</div>
+			            				<div class="btnOptions">
+			            					<button type="submit">Save</button>
+				            				<button type="reset">Cancel</button>
+			            				</div>
+			            			</form>
+			            		</div>
+			            	</div>
+
+			            	<div class="p-info">
+			            		<h3 onclick="moveDataToEdit()">Customer Segments</h3>
+			            		<div class="list_saved_container">
+			            			<i>Teacher with less then 3 years experience</i><i>Students</i>
+			            		</div>
+			            		<div class="editMode">
+			            			<form action="" method="post">
+			            				<div class="added_list">
+			            				</div>
+			            				<div class="adding_list">
+				            				<input class="val_to_list" type="text" name="startup_customerSegments">
+				            				<button class="add_to_list" type="button">+ Add</button>
+			            				</div>
+			            				<div class="btnOptions">
+			            					<button type="submit">Save</button>
+				            				<button type="reset">Cancel</button>
+			            				</div>
+			            			</form>
+			            		</div>
+			            	</div>
+
+			            </div>
+
+			            <div class="tab" id="startup_data">
+			            	<div class="p-info">
+			            		
+			            	</div>
+			            	<div class="p-info">
+			            		
 			            	</div>
 			            </div>
+			            <div class="tab" id="startup_media">
+			                <div class="p-info facebook">
+			                	<h3>Facebook</h3>
+			                	<a href="#" target="_blank">www.facebook.com/alainrvaliquette</a>
+			                	<div class="editMode">
+			            			<form action="" method="post">
+				            			<input type="text" name="user_facebook">
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+					               		</div>
+			            			</form>
+			            		</div>
+		                	</div>
+		                	<div class="p-info twitter">
+			                	<h3>Twitter</h3>
+			                	<a href="#" target="_blank">@alainrv</a>
+			                	<div class="editMode">
+			            			<form action="" method="post">
+				            			<input type="text" name="user_twitter">
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+					               		</div>
+			            			</form>
+			            		</div>
+		                	</div>
+		                	<div class="p-info instagram">
+			                	<h3>Instagram</h3>
+			                	<a href="#" target="_blank">@nolykids</a>
+			                	<div class="editMode">
+			            			<form action="" method="post">
+				            			<input type="text" name=user_instagram>
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+			            			</form>
+			            		</div>
+		                	</div>
+		                	<div class="p-info angel">
+			                	<h3>Angel List</h3>
+			                	<a href="#" target="_blank">@alainrv</a>
+			                	<div class="editMode">
+			            			<form action="" method="post">
+				            			<input type="text" name="user_angel">
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+			            			</form>
+			            		</div>
+		                	</div>
+		                	<div class="p-info linkedin">
+			                	<h3>Linked In</h3>
+			                	<a href="#" target="_blank">www.linkedin.com/in/alainrv</a>
+			                	<div class="editMode">
+			            			<form action="" method="post">
+				            			<input type="text" name="user_linkedin">
+				            			<div class="btnOptions">
+					            			<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+			            			</form>
+			            		</div>
+			                </div>
+			            </div>
+			            <div class="tab" id="startup_staff">
+			            	<div class="employee_Container">
+			            		<img src="../img/temp/profile.jpg">
+			            		<div class="employee_info">
+			            			<h3>FirstName LastName</h3>
+			            			<p>Job Title</p>
+			            		</div>
+			            	</div>
+			            </div>
+
+			            <!-- Diego end if startup profile -->
 			        </div>
 			    </div>
       		</div>
@@ -460,6 +710,9 @@ $("#notification").click(function() {
 
 <!-- Profile Script -->
 <script type="text/javascript">
+
+
+
 //Allows for the tabs to switch on the user profile
 $(".top_tab").click(function() {
 	//remove the active state of the preselected tab
@@ -469,8 +722,33 @@ $(".top_tab").click(function() {
 });
 
 
-//Open the editing block if clicked on individually. 
+//Open the editing block 
 $(".tab h3").click(function() {
+	// Variable of the text just below
+	var $text = $(event.target).parent(".p-info").find("p");
+	var $texta = $(event.target).parent(".p-info").find("a");
+	// pick value already save
+	var $textVal = $text.text();
+	var $textaVal = $texta.text();
+
+	// set value as value in the input
+	// check if it is a p or an a
+	if ($text.length > 0) {
+
+		// Set the text in the input
+		$(event.target).parent(".p-info").find("input").val($textVal);
+		$(event.target).parent(".p-info").find("textarea").val($textVal);
+		// Hide the paragraphs while editing
+		$text.hide();
+
+	} else if ($texta.length > 0) {
+		// Set the text of the a in the input
+		$(event.target).parent(".p-info").find("input").val($textaVal);
+		// Hide the achor until edited.
+		$texta.hide();
+	} 
+
+	// shows the editing form
 	$(event.target).parent(".p-info").find(".editMode").show();
 });
 
@@ -479,6 +757,12 @@ $(".tab h3").click(function() {
 $("button[type='reset']").click(function() {
 	//hide the div containing the ediit fucntionalities
 	$(event.target).closest(".editMode").hide();
+	// Show the paragraph that was there before
+	$(event.target).closest(".p-info").find("p").show();
+	// Show the anchor that was there before
+	$(event.target).closest(".p-info").find("a").show();
+	//Show the saved_container again. 
+	$(event.target).closest(".p-info").find(".list_saved_container").show();
 });
 
 
@@ -501,7 +785,10 @@ var moveDataToEdit = function() {
 	var $containerData = $(event.target).parent(".p-info").find(".list_saved_container");
 	var $data = $containerData.children("i").clone();
 	var $editingConatiner = $(event.target).parent(".p-info").find(".added_list");
+	$editingConatiner.children().remove();
+
 	$editingConatiner.append($data);
+	$containerData.hide();
 
 	$(".added_list i").click(function() {
 		removeTag();

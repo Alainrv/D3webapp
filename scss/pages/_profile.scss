@@ -67,7 +67,7 @@
 	    	color: white;
 	    	text-align: center;
 	    	display: block;
-		    padding: 16px;
+		    padding: 16px 0px;
 		    text-transform: uppercase;
 		    font-weight: 500;
 		    transition: color 0.3s;
@@ -126,13 +126,42 @@
 	}
 }
 
+.employee_Container {
+	width: 100%;
+	padding: 5px;
+	@include display(flex);
+	background: $backgroundEmployees;
+	border-radius: 2px;
+	margin-bottom: 10px;
 
-.degree{
-	p:before {
-		content: url("../img/svg/diploma.svg");
-		margin-right: 4px;
+	img {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+
+	.employee_info {
+		margin-left: 15px;
+		@include display(flex);
+		@include flex-direction(column);
+
+		h3, 
+		p {
+			cursor: initial;
+		}
+
+		h3 {
+			margin-top: auto;
+		}
+		p{
+			margin-bottom: auto;
+			margin-top: 5px;
+		}
 	}
 }
+
+
+
 
 .list_saved_container {
 	width: 100%;
@@ -192,36 +221,6 @@
 	}
 }
 
-
-.editMode {
-	display: none;
-	background: $profileEditBackground;
-	padding: 10px;
-
-	input {
-		background: white;
-		border: 1px solid $greyBorder;
-		border-radius: 5px;
-		font-size: 0.8em;
-		letter-spacing: 1.69px;
-		width: 50%;
-		min-width: 200px;
-		padding: 5px;
-	}
-
-	button {
-		font-size: 1em;
-		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-		@include btn($backgroundButton, 30px, 110px);	
-	}
-
-	button[type="submit"] {
-		background: $saveEditing;
-		background:
-	}
-}
-	
-
 .p-info h3 {
 	cursor: pointer;
 
@@ -237,9 +236,72 @@
 	}
 }
 
+.editMode {
+	display: none;
+	background: $profileEditBackground;
+	padding: 10px;
+
+	textarea,
+	input[type="text"],
+	input[type="date"],
+	input[type="email"],
+	input[type="phone"] {
+		background: white;
+		border: 1px solid $greyBorder;
+		border-radius: 2px;
+		font-size: 0.8em;
+		letter-spacing: 1.69px;
+		min-width: 200px;
+		padding: 5px;
+	}
+
+	textarea,
+	input[type="text"] {
+		width: 100%;
+	}
+
+	textarea {
+		height: 80px;
+	}
+
+	input[type="phone"],
+	input[type="email"] {
+		width: 50%;
+		min-width: 251px;
+		max-width: 500px;
+	}
+
+	button {
+		font-size: 1em;
+		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+		@include btn($backgroundButton, 30px, 110px);	
+	}
+
+	button[type="submit"] {
+		background: $saveEditing;
+		@include box-shadow(0 3px 0 darken($saveEditing, 15%));
+	}
+
+	.btnOptions {
+		margin-top: 10px;
+	}
+
+	.adding_list {
+		input[type="text"],
+		input[type="textarea"] {
+			width: calc(99% - 75px);
+			min-width: 175px;
+		}
+	}
+
+	button.add_to_list {
+		width: 70px;
+	}
+}
+
 
 .added_list {
-	padding: 10px;
+	padding: 10px 0px;
 
 	i {
 		border: solid 1px $dark_background;
@@ -268,6 +330,25 @@
 }
 
 
+.degree{
+	i:before {
+		content: url("../img/svg/diploma.svg");
+		margin-right: 4px;
+	}
+
+	i {
+		display: inline-block;
+		margin: 5px;
+	}
+
+	.list_saved_container i {
+		border: none;
+	}
+
+	.added_list i {
+		padding: 5px 10px;
+	}
+}
 
 
 
