@@ -5,7 +5,7 @@
 	padding-top: 30px;
 }
 
-.compHedaer {
+.compHeader {
 	width: 100%;
 	height: 260px;
 	@include display(flex);
@@ -15,9 +15,10 @@
 
 	img {
 		margin: auto auto;
-		max-width: 90%;
+		max-width: 95%;
 	}
 }
+
 
 .indHeader { 
 	width: 100%;
@@ -41,6 +42,26 @@
 		color: white;
 		font-weight: 500;
 		font-size: 1.2em;
+	}
+}
+
+.startupHeader {
+	width: 100%;
+	height: 60px;
+	background-color: $dark_background;
+	text-align: center;
+	padding-top: 10px;
+
+	h2 {
+		color: white;
+		font-weight: 500;
+		font-size: 1.2em;
+		margin-bottom: 6px;
+	}
+
+	a {
+		color: white;
+		font-size: 1em;
 	}
 }
 
@@ -170,10 +191,12 @@
 	i {
 		border: solid 1px $dark_background;
 		border-radius: 2px;
-		padding: 2px 6px;
+		padding: 4px 6px;
 		background: white;
 		font-size: 1em;
 		margin-right: 4px;
+		margin-bottom: 6px;
+		display: inline-block;
 	}
 }
 
@@ -181,7 +204,8 @@
 	display: none;
 }
 
-#social {
+#startup_media,
+#media {
 	a::before {
 		height: 1em;
 		width: 1em;
