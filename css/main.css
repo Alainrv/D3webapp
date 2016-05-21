@@ -874,11 +874,13 @@ body.has-active-menu {
   .added_list i {
     border: solid 1px #202334;
     border-radius: 2px;
-    padding: 2px 6px;
+    padding: 4px 6px;
     background: white;
     font-size: 1em;
     margin-right: 4px;
-    cursor: pointer; }
+    margin-bottom: 6px;
+    cursor: pointer;
+    display: inline-block; }
     .added_list i::after {
       content: url("../img/svg/deleteExpertise.svg");
       margin-left: -12px;

@@ -330,11 +330,13 @@
 	i {
 		border: solid 1px $dark_background;
 		border-radius: 2px;
-		padding: 2px 6px;
+		padding: 4px 6px;
 		background: white;
 		font-size: 1em;
 		margin-right: 4px;
+		margin-bottom: 6px;
 		cursor: pointer;
+		display: inline-block;
 
 		&::after {
 			content: url("../img/svg/deleteExpertise.svg");
