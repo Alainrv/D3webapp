@@ -692,6 +692,11 @@ body.has-active-menu {
     margin-bottom: 6px;
     line-height: 1.2em; }
 
+div[class^="team__"] h2 {
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 10px; }
+
 .employee_Container {
   width: 100%;
   padding: 5px;
@@ -702,7 +707,7 @@ body.has-active-menu {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  background: #FFF2DD;
+  background: #fff;
   border-radius: 2px;
   margin-bottom: 10px; }
   .employee_Container img {
@@ -743,7 +748,7 @@ body.has-active-menu {
   .list_saved_container i {
     border: solid 1px #202334;
     border-radius: 2px;
-    padding: 4px 6px;
+    padding: 6px 10px;
     background: white;
     font-size: 1em;
     margin-right: 4px;
@@ -870,11 +875,11 @@ body.has-active-menu {
     width: 70px; }
 
 .added_list {
-  padding: 10px 0px; }
+  padding: 10px 0px 6px; }
   .added_list i {
     border: solid 1px #202334;
     border-radius: 2px;
-    padding: 4px 6px;
+    padding: 6px 10px;
     background: white;
     font-size: 1em;
     margin-right: 4px;
@@ -903,6 +908,22 @@ body.has-active-menu {
   border: none; }
 .degree .added_list i {
   padding: 5px 10px; }
+
+.startup_stage {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .startup_stage div {
+    height: 50px;
+    width: 70px;
+    background-color: #c1c1c1;
+    color: #202334;
+    text-align: center;
+    line-height: 50px; }
 
 .phpdebugbar p {
   font-size: black; }

@@ -145,7 +145,7 @@
   				</div>
   				<div class="startupHeader">
   					<h2>startupName</h2>
-  					<a href="#">www.website.com</a>
+  					<a href="#" target="_blank">www.website.com</a>
   				</div>
   			<!-- Diego!! end if this is a startup -->
 
@@ -160,7 +160,7 @@
 			            <div class="top_tab active"><a href="#startup_info">Info</a></div>
 			            <div class="top_tab"><a href="#startup_data">Data</a></div>
 			            <div class="top_tab"><a href="#startup_media">Media</a></div>
-			            <div class="top_tab"><a href="#startup_staff">Staff</a></div>
+			            <div class="top_tab"><a href="#startup_staff">Team</a></div>
 			        <!-- Diego !! End if this is a startup -->
 			        </div>
 			        <div class="tabInner">
@@ -455,20 +455,8 @@
 			                </div>
 			            </div>
 			            <div class="tab" id="startup_info">
+
 				            <div class="p-info">
-			            		<h3>Registered City</h3>
-				                <p>Montreal</p>
-				               	<div class="editMode">
-				               		<form action="" method="post">
-				               			<textarea name="startup_city"></textarea>
-				               			<div class="btnOptions">
-				               				<button type="submit">Save</button>
-					               			<button type="reset">Cancel</button>
-				               			</div>
-				               		</form>	               		
-				               	</div>
-			            	</div>
-			            	<div class="p-info">
 			            		<h3>Our Mission</h3>
 				                <p>No longer produce any polution aside from smokers.</p>
 				               	<div class="editMode">
@@ -481,6 +469,98 @@
 				               		</form>	               		
 				               	</div>
 			            	</div>
+
+			            	<div class="p-info">
+			            		<h3>Product Description</h3>
+				                <p>Web-based software and IOS app that allows students to better succeed in life with their idiotique ideas that they are more then they really are. </p>
+				               	<div class="editMode">
+				               		<form action="" method="post">
+				               			<textarea name="startup_productDescription"></textarea>
+				               			<div class="btnOptions">
+				               				<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+				               		</form>	               		
+				               	</div>
+			            	</div>
+
+			            	<div class="p-info">
+			            		<h3>Stage</h3>
+				                
+			            		<div class="startup_stage">
+			            			<div class="bmv">BMV</div>
+			            			<div class="mvp">MVP</div>
+			            			<div class="pmf">PMF</div>
+			            			<div class="growth">Growth</div>
+			            		</div>
+
+				               	<div class="editMode">
+				               		<form action="" method="post">
+				               			<label for="BMV">Business Model Validation</label>
+				               			<input type="radio" name="startup_stageBMV" id="BMV">
+				               			<label for="MVP">Minimum Viable Product</label>
+				               			<input type="radio" name="startup_stageMVP" id="MVP">
+				               			<label for="PMF">Product Market Fit</label>
+				               			<input type="radio" name="startup_stagePMF" id="PMF">
+				               			<label for="growth">Growth phase</label>
+				               			<input type="radio" name="startup_stageGrowth" id="growth">
+
+				               			<div class="btnOptions">
+				               				<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+				               		</form>	               		
+				               	</div>
+			            	</div>
+
+			            	<div class="p-info">
+			            		<h3 onclick="moveDataToEdit()">Revenue Model</h3>
+			            		<div class="list_saved_container">
+			            			<i>20% comission</i><i>Advertising</i>
+			            		</div>
+			            		<div class="editMode">
+			            			<form action="" method="post">
+			            				<div class="added_list">
+			            				</div>
+			            				<div class="adding_list">
+				            				<input class="val_to_list" type="text" name="startup_revenueModel">
+				            				<button class="add_to_list" type="button">+ Add</button>
+			            				</div>
+			            				<div class="btnOptions">
+			            					<button type="submit">Save</button>
+				            				<button type="reset">Cancel</button>
+			            				</div>
+			            			</form>
+			            		</div>
+			            	</div>
+
+				            <div class="p-info">
+			            		<h3>Address</h3>
+				                <p>453 Bob Stree, Montreal, Qc, H3w 1e3</p>
+				               	<div class="editMode">
+				               		<form action="" method="post">
+				               			<input type="text" name="startup_city">
+				               			<div class="btnOptions">
+				               				<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+				               		</form>	               		
+				               	</div>
+			            	</div>
+				            <div class="p-info">
+			            		<h3>Phone Number</h3>
+				                <p>+1 (514) 690-4850</p>
+				               	<div class="editMode">
+				               		<form action="" method="post">
+				               			<input type="phone" name="startup_phone">
+				               			<div class="btnOptions">
+				               				<button type="submit">Save</button>
+					               			<button type="reset">Cancel</button>
+				               			</div>
+				               		</form>	               		
+				               	</div>
+			            	</div>
+			            	
 
 			            	<div class="p-info">
 			            		<h3 onclick="moveDataToEdit()">Value Propositions</h3>
@@ -523,6 +603,9 @@
 			            			</form>
 			            		</div>
 			            	</div>
+
+			       
+
 
 			            </div>
 
@@ -602,15 +685,41 @@
 			                </div>
 			            </div>
 			            <div class="tab" id="startup_staff">
-			            	<div class="employee_Container">
-			            		<img src="../img/temp/profile.jpg">
-			            		<div class="employee_info">
-			            			<h3>FirstName LastName</h3>
-			            			<p>Job Title</p>
-			            		</div>
-			            	</div>
-			            </div>
-
+			            	<div class="team__founding">
+				            	<h2>Founding Team</h2>
+				            	<div class="employee_Container">
+				            		<img src="../img/temp/profile.jpg">
+				            		<div class="employee_info">
+				            			<h3>FirstName LastName</h3>
+				            			<p>Job Title</p>
+				            		</div>
+				            	</div>
+				            	<div class="employee_Container">
+				            		<img src="../img/temp/profile.jpg">
+				            		<div class="employee_info">
+				            			<h3>FirstName LastName</h3>
+				            			<p>Job Title</p>
+				            		</div>
+				            	</div>
+				            	<div class="employee_Container">
+				            		<img src="../img/temp/profile.jpg">
+				            		<div class="employee_info">
+				            			<h3>FirstName LastName</h3>
+				            			<p>Job Title</p>
+				            		</div>
+				            	</div>
+				            </div>
+				            <div class="team__employees">
+				            	<h2>Joined as employees</h2>
+				            	<div class="employee_Container">
+				            		<img src="../img/temp/profile.jpg">
+				            		<div class="employee_info">
+				            			<h3>FirstName LastName</h3>
+				            			<p>Job Title</p>
+				            		</div>
+				            	</div>
+				            </div>
+				         </div>
 			            <!-- Diego end if startup profile -->
 			        </div>
 			    </div>
