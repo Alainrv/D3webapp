@@ -136,7 +136,7 @@
 	margin-bottom: 18px;
 
 	h3 {
-		font-size: 1em;
+		font-size: 1.2em;
 		font-weight: 700;
 		margin-bottom: 6px;
 	}
@@ -144,6 +144,7 @@
 	p {
 		margin-bottom: 6px;
 		line-height: 1.2em;
+		padding-left: 10px;
 	}
 }
 
@@ -387,6 +388,7 @@ div[class^="team__"] {
 
 .startup_stage {
 	@include display(flex);
+	padding-left: 10px;
 
 	div {
 		height: 50px;
@@ -398,3 +400,38 @@ div[class^="team__"] {
 	}
 }
 
+
+// ************************
+//
+// 			DATA
+//
+//*************************
+
+.inves__round {
+
+	margin-top: 10px;
+
+	p,
+	h4 {
+		display: inline-block;
+		padding-left: 0;
+	}
+}
+
+.use_of_funds {
+	margin-bottom: 15px;
+
+	h4 {
+		font-weight: 500;
+		margin-bottom: 5px;
+	}
+
+	ul {
+		padding-left: 20px;
+
+		li {
+			list-style: initial;
+		}
+	}
+
+}

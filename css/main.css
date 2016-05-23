@@ -685,12 +685,13 @@ body.has-active-menu {
 .p-info {
   margin-bottom: 18px; }
   .p-info h3 {
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 700;
     margin-bottom: 6px; }
   .p-info p {
     margin-bottom: 6px;
-    line-height: 1.2em; }
+    line-height: 1.2em;
+    padding-left: 10px; }
 
 div[class^="team__"] h2 {
   font-weight: 500;
@@ -916,7 +917,8 @@ div[class^="team__"] h2 {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding-left: 10px; }
   .startup_stage div {
     height: 50px;
     width: 70px;
@@ -924,6 +926,23 @@ div[class^="team__"] h2 {
     color: #202334;
     text-align: center;
     line-height: 50px; }
+
+.inves__round {
+  margin-top: 10px; }
+  .inves__round p,
+  .inves__round h4 {
+    display: inline-block;
+    padding-left: 0; }
+
+.use_of_funds {
+  margin-bottom: 15px; }
+  .use_of_funds h4 {
+    font-weight: 500;
+    margin-bottom: 5px; }
+  .use_of_funds ul {
+    padding-left: 20px; }
+    .use_of_funds ul li {
+      list-style: initial; }
 
 .phpdebugbar p {
   font-size: black; }
