@@ -75,13 +75,17 @@ textarea {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 title {
   color: #202334;
   letter-spacing: 1px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h4,
+h5,
+h6 {
+  color: #4A4A4A;
+  letter-spacing: 1px;
+  font-family: "MuseoSans", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 a,
 p,
@@ -690,8 +694,7 @@ body.has-active-menu {
     margin-bottom: 6px; }
   .p-info p {
     margin-bottom: 6px;
-    line-height: 1.2em;
-    padding-left: 10px; }
+    line-height: 1.2em; }
 
 div[class^="team__"] h2 {
   font-weight: 500;
@@ -917,28 +920,41 @@ div[class^="team__"] h2 {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex;
-  padding-left: 10px; }
-  .startup_stage div {
-    height: 50px;
-    width: 70px;
-    background-color: #c1c1c1;
-    color: #202334;
+  display: flex; }
+  .startup_stage .stage {
+    padding: 8px 0px;
+    background-color: white;
+    border: 1px solid #FBB147;
     text-align: center;
-    line-height: 50px; }
+    border-right: none;
+    width: 25%; }
+    .startup_stage .stage:last-child {
+      border-right: 1px solid #FBB147; }
+    .startup_stage .stage p {
+      color: #202334;
+      padding: 0;
+      margin: 0;
+      font-weight: 500; }
+  .startup_stage .completed {
+    background-color: #FBB147; }
+    .startup_stage .completed p::after {
+      content: url("../img/svg/completedStage.svg");
+      margin-left: 4px; }
 
 .inves__round {
-  margin-top: 10px; }
-  .inves__round p,
-  .inves__round h4 {
-    display: inline-block;
+  margin-top: 14px;
+  padding-left: 5px; }
+  .inves__round .round__amount {
+    font-weight: 700;
     padding-left: 0; }
+    .inves__round .round__amount span {
+      font-weight: inherit; }
 
 .use_of_funds {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-top: 7px; }
   .use_of_funds h4 {
-    font-weight: 500;
-    margin-bottom: 5px; }
+    margin-bottom: 3px; }
   .use_of_funds ul {
     padding-left: 20px; }
     .use_of_funds ul li {

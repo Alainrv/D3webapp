@@ -144,7 +144,6 @@
 	p {
 		margin-bottom: 6px;
 		line-height: 1.2em;
-		padding-left: 10px;
 	}
 }
 
@@ -386,45 +385,76 @@ div[class^="team__"] {
 	}
 }
 
+// ************************
+//
+// 		Startup_Stage
+//
+//*************************
+
 .startup_stage {
 	@include display(flex);
-	padding-left: 10px;
 
-	div {
-		height: 50px;
-		width: 70px;
-		background-color: $backgroundButton;
-		color: $dark_background;
+	.stage {
+		padding: 8px 0px;
+		background-color: white;
+		border: 1px solid $d3Orange;
 		text-align: center;
-		line-height: 50px;
+		border-right: none;
+		width: 25%;
+
+		&:last-child {
+			border-right: 1px solid $d3Orange;
+		}
+
+
+		p {
+			color: $dark_background;
+			padding: 0;
+			margin: 0;
+			font-weight: 500;
+		}
+	}
+
+	.completed {
+		background-color: $d3Orange;
+
+		p::after{
+			content: url("../img/svg/completedStage.svg");
+			margin-left: 4px;
+		}
+
 	}
 }
 
 
 // ************************
 //
-// 			DATA
+// 		Startup_DATA
 //
 //*************************
 
 .inves__round {
 
-	margin-top: 10px;
+	margin-top: 14px;
+	padding-left: 5px;
 
-	p,
-	h4 {
-		display: inline-block;
+	.round__amount {
+		font-weight: 700;
 		padding-left: 0;
+
+		span {
+			font-weight: inherit;
+		}
 	}
 }
 
 .use_of_funds {
 	margin-bottom: 15px;
+    margin-top: 7px;
 
-	h4 {
-		font-weight: 500;
-		margin-bottom: 5px;
-	}
+    h4 {
+    	margin-bottom: 3px;
+    }
 
 	ul {
 		padding-left: 20px;
@@ -433,5 +463,4 @@ div[class^="team__"] {
 			list-style: initial;
 		}
 	}
-
 }

@@ -1,0 +1,20 @@
+<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>
+        Group 2
+    </title>
+    <defs>
+        <linearGradient x1="14.169%" y1="13.954%" x2="69.499%" y2="67.405%" id="b">
+            <stop stop-color="#FFF" stop-opacity="0" offset="0%"/>
+            <stop stop-opacity=".5" offset="100%"/>
+        </linearGradient>
+        <rect id="a" x="1.48" y="3.109" width="1.983" height="5.53" rx=".68"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <circle fill="#FFF" cx="7.5" cy="7.5" r="7.5"/>
+        <g transform="translate(2 3.5)">
+            <use fill="#FCA20E" xlink:href="#a"/>
+            <use fill="url(#b)" xlink:href="#a"/>
+        </g>
+        <path d="M12.54 5.328a.678.678 0 0 0 0-.95l-.453-.453a.668.668 0 0 0-.95 0l-6.765 6.766.927.928a.668.668 0 0 0 .95 0l6.29-6.29z" fill="#FCA20E"/>
+    </g>
+</svg>
