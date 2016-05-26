@@ -78,6 +78,7 @@
 	    border-right: 0.5px white solid;
 	    @include flex-grow(1);
 	    transition: background 0.3s;
+	    cursor: pointer;
 
 	    &:last-child {
 	    	border-right: none;
@@ -411,6 +412,50 @@ div[class^="team__"] {
 		height: 15px;
 	}
 }
+
+
+// ************************
+//
+// 		Coaching
+//
+//*************************
+
+.startup_coached {
+	form {
+		width: 100%;
+		padding: 10px;
+	}
+
+	input[type="search"] {
+		background-color: white;
+		border: 1px solid $greyBorder;
+		color: $writting;
+		font-size: 1em;
+		width: 100%;
+		height: 36px;
+		border-radius: 2px;
+		padding-left: 6px;
+		max-width: 440px;
+		padding-right: 10px;
+	}
+
+	.editInput {
+		position: relative;
+
+		&::after {
+			content: url("../img/svg/loup.svg");
+			position: absolute;
+			right: 15px;
+			top: 10px;
+		}
+
+		input:focus + &::after,
+		input:active + &::after {
+			content: " ";
+		}
+	}
+}
+
 
 // ************************
 //

@@ -629,7 +629,8 @@ body.has-active-menu {
   -moz-flex-grow: 1;
   flex-grow: 1;
   -ms-flex-positive: 1;
-  transition: background 0.3s; }
+  transition: background 0.3s;
+  cursor: pointer; }
   .profile_tabs .top_tab:last-child {
     border-right: none; }
   .profile_tabs .top_tab a {
@@ -947,6 +948,30 @@ div[class^="team__"] h2 {
     display: block;
     margin: auto;
     height: 15px; }
+
+.startup_coached form {
+  width: 100%;
+  padding: 10px; }
+.startup_coached input[type="search"] {
+  background-color: white;
+  border: 1px solid #979797;
+  color: #4A4A4A;
+  font-size: 1em;
+  width: 100%;
+  height: 36px;
+  border-radius: 2px;
+  padding-left: 6px;
+  max-width: 440px;
+  padding-right: 10px; }
+.startup_coached .editInput {
+  position: relative; }
+  .startup_coached .editInput::after {
+    content: url("../img/svg/loup.svg");
+    position: absolute;
+    right: 15px;
+    top: 10px; }
+  input:focus + .startup_coached .editInput::after, input:active + .startup_coached .editInput::after {
+    content: " "; }
 
 .startup_stage {
   display: -webkit-box;
