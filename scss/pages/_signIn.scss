@@ -1,0 +1,45 @@
+.logIn_wrapper {
+	max-width: 800px;
+	margin: auto auto;
+}
+.pic_container,
+.form_container,
+.footer {
+	width:100%;
+	margin: auto auto;
+}
+
+.logIn_image {
+	width: 100%;
+	margin: auto auto
+}
+.logIn_pic {
+	margin: 40px auto;
+	width: 130px;
+	height: 130px;
+}
+
+.logIn_tabs {
+	margin-top: 40px;
+	margin-left: 50px;
+	margin-right: 50px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+    box-sizing: border-box;
+    p {
+    	margin: auto auto;
+    }
+    input[type=text]{
+		display: inline;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+    }
+    input[type=submit]{
+    	width: 100%;
+    	background: #808080;
+    	color: white;
+    	&:hover {
+    	}
+    }
+}

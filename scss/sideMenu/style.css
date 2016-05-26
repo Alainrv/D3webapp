@@ -1,7 +1,7 @@
 /*
 Error: Undefined variable: "$navHeight".
         on line 2 of scss/sideMenu/_objects.layout.scss
-        from line 17 of scss/sideMenu/style.scss
+        from line 17 of ./scss/sideMenu/style.scss
 
 1: // -----------------------------------------------------------------------------
 2: //
@@ -13,7 +13,7 @@ Error: Undefined variable: "$navHeight".
 
 Backtrace:
 scss/sideMenu/_objects.layout.scss:2
-scss/sideMenu/style.scss:17
+./scss/sideMenu/style.scss:17
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -66,17 +66,16 @@ scss/sideMenu/style.scss:17
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$navHeight\".\A         on line 2 of scss/sideMenu/_objects.layout.scss\A         from line 17 of scss/sideMenu/style.scss\A \A 1: // -----------------------------------------------------------------------------\A 2: //\A 3: // CONFIG\A 4: //\A 5: // -----------------------------------------------------------------------------\A 6: \A 7: @import \"config.variables\";"; }
+  content: "Error: Undefined variable: \"$navHeight\".\A         on line 2 of scss/sideMenu/_objects.layout.scss\A         from line 17 of ./scss/sideMenu/style.scss\A \A 1: // -----------------------------------------------------------------------------\A 2: //\A 3: // CONFIG\A 4: //\A 5: // -----------------------------------------------------------------------------\A 6: \A 7: @import \"config.variables\";"; }
