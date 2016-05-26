@@ -387,6 +387,32 @@ div[class^="team__"] {
 
 // ************************
 //
+// 	   Coach Specific
+//
+//*************************
+
+.logo_container {
+	@include display(inline-flex);
+	height: auto;
+	width: auto;
+	min-width: 40px;
+	min-height: 40px;
+	max-width: 80px;
+	max-height: 80px;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+	text-align: center;	
+
+	img {
+		display: block;
+		margin: auto;
+		height: 15px;
+	}
+}
+
+// ************************
+//
 // 		Startup_Stage
 //
 //*************************
@@ -417,12 +443,23 @@ div[class^="team__"] {
 
 	.completed {
 		background-color: $d3Orange;
+		position: relative;
 
 		p::after{
 			content: url("../img/svg/completedStage.svg");
 			margin-left: 4px;
 		}
 
+		&::after {
+			content: url("../img/svg/separators.svg");
+			position: absolute;
+			left: 0px;
+			top: 3px;
+		}
+
+		&:first-child::after {
+			content: "";
+		}
 	}
 }
 
