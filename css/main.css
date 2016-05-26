@@ -921,6 +921,7 @@ div[class^="team__"] h2 {
   display: -moz-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  position: relative;
   height: auto;
   width: auto;
   min-width: 40px;
@@ -931,6 +932,17 @@ div[class^="team__"] h2 {
   background-color: white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
   text-align: center; }
+  .logo_container:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%; }
+  .logo_container > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
   .logo_container img {
     display: block;
     margin: auto;
