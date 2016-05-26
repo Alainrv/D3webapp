@@ -413,17 +413,14 @@ div[class^="team__"] {
 	}
 }
 
-
-// ************************
-//
-// 		Coaching
-//
-//*************************
-
 .startup_coached {
+
+	.editMode {
+		display: block;
+	}
+
 	form {
 		width: 100%;
-		padding: 10px;
 	}
 
 	input[type="search"] {
@@ -435,24 +432,48 @@ div[class^="team__"] {
 		height: 36px;
 		border-radius: 2px;
 		padding-left: 6px;
-		max-width: 440px;
+		// max-width: 440px;
 		padding-right: 10px;
 	}
+}
 
-	.editInput {
-		position: relative;
+.search {
+	position: relative;
+	// max-width: 440px;
+	img {
+		position: absolute;
+		top: 11px;
+		right: 15px;
+		transition: opacity 0.2s;
+	}
 
-		&::after {
-			content: url("../img/svg/loup.svg");
-			position: absolute;
-			right: 15px;
-			top: 10px;
-		}
+	input:focus + img,
+	input:active + img{
+		opacity: 0;
+	}
+}
 
-		input:focus + &::after,
-		input:active + &::after {
-			content: " ";
-		}
+.search_results {
+	background-color: $profileEditBackground;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.search_result_startup {
+	background-color: white;
+	padding: 5px;
+	margin-bottom: 1px;
+	border-radius: 2px;
+	@include display(flex);
+
+	div, 
+	h4 {
+		margin-bottom: auto;
+		margin-top: auto;
+	}
+
+	h4 {
+		margin-left: 5px;
 	}
 }
 

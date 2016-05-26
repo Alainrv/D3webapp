@@ -949,9 +949,10 @@ div[class^="team__"] h2 {
     margin: auto;
     height: 15px; }
 
+.startup_coached .editMode {
+  display: block; }
 .startup_coached form {
-  width: 100%;
-  padding: 10px; }
+  width: 100%; }
 .startup_coached input[type="search"] {
   background-color: white;
   border: 1px solid #979797;
@@ -961,17 +962,42 @@ div[class^="team__"] h2 {
   height: 36px;
   border-radius: 2px;
   padding-left: 6px;
-  max-width: 440px;
   padding-right: 10px; }
-.startup_coached .editInput {
+
+.search {
   position: relative; }
-  .startup_coached .editInput::after {
-    content: url("../img/svg/loup.svg");
+  .search img {
     position: absolute;
+    top: 11px;
     right: 15px;
-    top: 10px; }
-  input:focus + .startup_coached .editInput::after, input:active + .startup_coached .editInput::after {
-    content: " "; }
+    transition: opacity 0.2s; }
+  .search input:focus + img,
+  .search input:active + img {
+    opacity: 0; }
+
+.search_results {
+  background-color: #D8D8D8;
+  width: 100%;
+  margin-top: 10px; }
+
+.search_result_startup {
+  background-color: white;
+  padding: 5px;
+  margin-bottom: 1px;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .search_result_startup div,
+  .search_result_startup h4 {
+    margin-bottom: auto;
+    margin-top: auto; }
+  .search_result_startup h4 {
+    margin-left: 5px; }
 
 .startup_stage {
   display: -webkit-box;
