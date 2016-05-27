@@ -1003,17 +1003,17 @@ div[class^="team__"] h2 {
     .use_of_funds ul li {
       list-style: initial; }
 
+*,
+*::before {
+  box-sizing: inherit; }
+
 .logIn_wrapper {
   max-width: 800px;
   margin: auto auto; }
 
 .pic_container,
 .form_container,
-.footer {
-  width: 100%;
-  margin: auto auto; }
-
-.logIn_image {
+.footer_container {
   width: 100%;
   margin: auto auto; }
 
@@ -1021,25 +1021,38 @@ div[class^="team__"] h2 {
   margin: 40px auto;
   width: 130px;
   height: 130px; }
+  .logIn_pic .logIn_image {
+    width: 100%;
+    margin: auto auto; }
 
 .logIn_tabs {
-  margin-top: 40px;
+  margin-top: 60px;
   margin-left: 50px;
   margin-right: 50px;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box; }
-  .logIn_tabs p {
+  .logIn_tabs hr {
+    color: #D3D3D3;
+    width: 100%;
     margin: auto auto; }
   .logIn_tabs input[type=text] {
-    display: inline;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    float: right;
+    height: 40px;
+    width: 80%;
     box-sizing: border-box; }
   .logIn_tabs input[type=submit] {
+    height: 40px;
     width: 100%;
     background: #808080;
     color: white; }
+
+.footer {
+  margin-top: 80px; }
+  .footer a {
+    font-size: 10px;
+    display: inline;
+    margin-left: 45px; }
 
 .phpdebugbar p {
   font-size: black; }
