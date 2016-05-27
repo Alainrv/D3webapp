@@ -1,7 +1,4 @@
-*,
-*::before {
-	box-sizing: inherit;
-}
+
 .logIn_wrapper {
 	max-width: 800px;
 	margin: auto auto;
@@ -31,32 +28,40 @@
 	margin-left: 50px;
 	margin-right: 50px;
 	border: 1px solid #ddd;
-	border-radius: 4px;
-    box-sizing: border-box;
+	border-radius: 1px;
 
-    // try to add svg image before the password input tag
- //    .password::before{
-	// 	content:url("../img/svg/pplMeeting.svg");
-	// }
 
-    hr {
-    	color: #D3D3D3;
-    	width: 100%;
-    	margin: auto auto;
-    }
+	img{
+		position: absolute;
+		float: left;
+		padding-top: 15px;
+		padding-left: 15px;
+		&.padlock {
+			padding-top: 55px;
+		}
+	}
 
-    input[type=text]{
+    .username, .password {
+    	border: none;
     	float: right;
     	height: 40px;
-    	width: 80%;
-		box-sizing: border-box;
+    	width: 100%;
+    	text-indent: 40px;
+    	&.username {
+    		border-bottom: 1px solid black;
+    	}
 		
     }
-    input[type=submit]{
+    .submit {
+    	border: none;
     	height: 40px;
     	width: 100%;
     	background: #808080;
     	color: white;
+    	&:active {
+    		background: white;
+    		color: black;
+    	}
     }
 }
 

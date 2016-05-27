@@ -1003,10 +1003,6 @@ div[class^="team__"] h2 {
     .use_of_funds ul li {
       list-style: initial; }
 
-*,
-*::before {
-  box-sizing: inherit; }
-
 .logIn_wrapper {
   max-width: 800px;
   margin: auto auto; }
@@ -1030,22 +1026,31 @@ div[class^="team__"] h2 {
   margin-left: 50px;
   margin-right: 50px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box; }
-  .logIn_tabs hr {
-    color: #D3D3D3;
-    width: 100%;
-    margin: auto auto; }
-  .logIn_tabs input[type=text] {
+  border-radius: 1px; }
+  .logIn_tabs img {
+    position: absolute;
+    float: left;
+    padding-top: 15px;
+    padding-left: 15px; }
+    .logIn_tabs img.padlock {
+      padding-top: 55px; }
+  .logIn_tabs .username, .logIn_tabs .password {
+    border: none;
     float: right;
     height: 40px;
-    width: 80%;
-    box-sizing: border-box; }
-  .logIn_tabs input[type=submit] {
+    width: 100%;
+    text-indent: 40px; }
+    .logIn_tabs .username.username, .logIn_tabs .password.username {
+      border-bottom: 1px solid black; }
+  .logIn_tabs .submit {
+    border: none;
     height: 40px;
     width: 100%;
     background: #808080;
     color: white; }
+    .logIn_tabs .submit:active {
+      background: white;
+      color: black; }
 
 .footer {
   margin-top: 80px; }
