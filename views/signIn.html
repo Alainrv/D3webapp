@@ -48,7 +48,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     
 </head>
-
+<body>
 <div class="logIn_wrapper">
 
 	<div class="pic_container">
@@ -60,17 +60,32 @@
 	<div class="form_container">
 		<div class="logIn_tabs">
 			<form>
-				Username
-				<input type="text" name="username">
-				Password
-				<input type="text" name="password">
-				<input class="submit" type="submit" value="Submit">
+				<div><img class="user" src="../img/svg/user.svg" /></div>
+				<input class="username" type="text" name="username" placeholder="Username">
+				<img class="padlock" src="../img/svg/padlock.svg" />
+				<div><input class="password" type="text" name="password" placeholder="Password"></div>
+				<input class="submit" type="submit" value="SIGN IN">
 			</form>
 		</div>
 	</div>
 
-	<div class="footer"></div>
+	<div class="footer_container">
+		<div class="footer">
+			<a class="a1" href="">New here? Sign up</a>
+			<a class="a2" href="">Forget Password?</a>
+		</div>
+
+		<div class="footer_icons">
+			<a href="https://www.facebook.com/" target="_blank"><img class="facebook" src="../img/svg/facebook.svg" /></a>
+			<a href="https://twitter.com/?lang=en" target="_blank"><img class="twitter" src="../img/svg/twitter.svg" /></a>
+			<a href="https://www.instagram.com/?hl=en" target="_blank"><img class="instagram" src="../img/svg/instagram.svg" /></a>
+			<a href="https://angel.co/" target="_blank"><img class="angellist" src="../img/svg/angellist.svg" /></a>
+			<a href="https://www.linkedin.com/uas/login" target="_blank"><img class="linkedin" src="../img/svg/linkedin.svg" /></a>
+		</div>
+	</div>
 </div>
+</body>
+</html>
 
 
 

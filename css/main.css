@@ -1060,37 +1060,76 @@ div[class^="team__"] h2 {
 
 .pic_container,
 .form_container,
-.footer {
+.footer_container {
   width: 100%;
-  margin: auto auto; }
-
-.logIn_image {
-  width: 100%;
-  margin: auto auto; }
+  margin: auto auto;
+  position: relative; }
 
 .logIn_pic {
-  margin: 40px auto;
-  width: 130px;
-  height: 130px; }
+  width: 100%;
+  margin: auto auto; }
+  .logIn_pic .logIn_image {
+    max-width: 35%;
+    display: block;
+    margin: 10vh auto; }
 
 .logIn_tabs {
-  margin-top: 40px;
-  margin-left: 50px;
-  margin-right: 50px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box; }
-  .logIn_tabs p {
-    margin: auto auto; }
-  .logIn_tabs input[type=text] {
-    display: inline;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; }
-  .logIn_tabs input[type=submit] {
+  max-width: 50%;
+  min-width: 240px;
+  margin: auto auto;
+  margin-top: 10vh;
+  box-shadow: 0px 4px 6px 2px #4a4a4a;
+  position: relative; }
+  .logIn_tabs img {
+    position: absolute;
+    top: 13px;
+    left: 15px; }
+    .logIn_tabs img.padlock {
+      top: 53px; }
+  .logIn_tabs ::-webkit-input-placeholder {
+    color: #1d1d26; }
+  .logIn_tabs .username, .logIn_tabs .password {
+    border: none;
+    height: 40px;
     width: 100%;
-    background: #808080;
-    color: white; }
+    text-indent: 45px;
+    margin: auto auto; }
+    .logIn_tabs .username.username, .logIn_tabs .password.username {
+      border-bottom: solid 0.4px #1d1d26; }
+  .logIn_tabs .submit {
+    border: none;
+    height: 40px;
+    width: 100%;
+    background: #4a4a4a;
+    color: #ffffff; }
+    .logIn_tabs .submit:active {
+      background: white;
+      color: black; }
+
+.footer {
+  max-width: 50%;
+  min-width: 240px;
+  margin: 10vh auto; }
+  .footer a {
+    font-size: 10px;
+    color: #4a4a4a; }
+    .footer a.a1 {
+      float: left; }
+    .footer a.a2 {
+      float: right; }
+  @media (min-width: 720px) {
+    .footer {
+      margin: 20px auto; } }
+
+.footer_icons {
+  display: none;
+  width: 100%;
+  max-width: 50%;
+  margin: 10vh 25%; }
+  @media (min-width: 720px) {
+    .footer_icons {
+      display: inline-flex;
+      justify-content: space-between; } }
 
 .phpdebugbar p {
   font-size: black; }
