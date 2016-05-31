@@ -96,7 +96,7 @@ $desktop-breakpoint: 720px;
 	display: none;
 	width: 100%;
 	max-width: 50%;
-	margin: 20vh 25%;
+	margin: 10vh 25%;
 	@media (min-width: $desktop-breakpoint) {
 		display: inline-flex;
 		justify-content: space-between;

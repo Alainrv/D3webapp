@@ -1077,7 +1077,7 @@ div[class^="team__"] h2 {
   display: none;
   width: 100%;
   max-width: 50%;
-  margin: 20vh 25%; }
+  margin: 10vh 25%; }
   @media (min-width: 720px) {
     .footer_icons {
       display: inline-flex;
