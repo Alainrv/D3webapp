@@ -14,9 +14,9 @@ $desktop-breakpoint: 720px;
 
 .logIn_pic {
 	width: 100%;
-	margin: auto auto;
 	.logIn_image {
 		max-width: 35%;
+		min-width: 160px;
 		display: block;
 		margin: 10vh auto;
 	}
@@ -28,7 +28,7 @@ $desktop-breakpoint: 720px;
 	min-width: 240px;
 	margin: auto auto;
 	margin-top: 10vh;
-	box-shadow: 0px 4px 6px 2px #4a4a4a;
+	box-shadow: 0px 3px 6px 2px #4a4a4a;
 	position: relative;
 
 	img{
@@ -42,6 +42,7 @@ $desktop-breakpoint: 720px;
 
 	::-webkit-input-placeholder {
 	   color: #1d1d26;
+	   font-family: Avenir-Book;
 	}
 
     .username, .password {
@@ -61,6 +62,7 @@ $desktop-breakpoint: 720px;
     	width: 100%;
     	background: #4a4a4a;
     	color: #ffffff;
+    	font-family: Avenir-Roman;
     	&:active {
     		background: white;
     		color: black;
@@ -73,7 +75,9 @@ $desktop-breakpoint: 720px;
 	max-width: 50%;
 	min-width: 240px;
 	margin: 10vh auto;
+
 	a {
+		font-family: Avenir-Book;
 		font-size: 10px;
 		color: #4a4a4a;
 		&.a1 {
@@ -83,7 +87,7 @@ $desktop-breakpoint: 720px;
 			float: right;
 		}
 	}
-	@media (min-width: 720px) {
+	@media (min-width: $desktop-breakpoint) {
 		margin: 20px auto;
 	}
 }
@@ -92,8 +96,8 @@ $desktop-breakpoint: 720px;
 	display: none;
 	width: 100%;
 	max-width: 50%;
-	margin: 10vh 25%;
-	@media (min-width: 720px) {
+	margin: 20vh 25%;
+	@media (min-width: $desktop-breakpoint) {
 		display: inline-flex;
 		justify-content: space-between;
 	}
