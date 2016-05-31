@@ -1020,7 +1020,7 @@ div[class^="team__"] h2 {
     max-width: 35%;
     min-width: 160px;
     display: block;
-    margin: 10vh auto; }
+    margin: 5vh auto; }
 
 .logIn_tabs {
   max-width: 50%;
@@ -1036,6 +1036,7 @@ div[class^="team__"] h2 {
     .logIn_tabs img.padlock {
       top: 53px; }
   .logIn_tabs ::-webkit-input-placeholder {
+    font-size: 12px;
     color: #1d1d26;
     font-family: Avenir-Book; }
   .logIn_tabs .username, .logIn_tabs .password {
@@ -1043,7 +1044,10 @@ div[class^="team__"] h2 {
     height: 40px;
     width: 100%;
     text-indent: 45px;
-    margin: auto auto; }
+    margin: auto auto;
+    font-size: 12px;
+    color: #1d1d26;
+    font-family: Avenir-Book; }
     .logIn_tabs .username.username, .logIn_tabs .password.username {
       border-bottom: solid 0.4px #1d1d26; }
   .logIn_tabs .submit {
@@ -1051,6 +1055,7 @@ div[class^="team__"] h2 {
     height: 40px;
     width: 100%;
     background: #4a4a4a;
+    font-size: 12px;
     color: #ffffff;
     font-family: Avenir-Roman; }
     .logIn_tabs .submit:active {
@@ -1078,6 +1083,9 @@ div[class^="team__"] h2 {
   width: 100%;
   max-width: 50%;
   margin: 10vh 25%; }
+  .footer_icons img {
+    width: 35px;
+    height: 35px; }
   @media (min-width: 720px) {
     .footer_icons {
       display: inline-flex;
@@ -1099,41 +1107,51 @@ div[class^="team__"] h2 {
     display: block;
     margin: 5vh auto; }
 
-.forgetPass_tabs {
+.forgetPass_tabs .text p {
+  max-width: 40%;
+  min-width: 270px;
+  margin: auto;
+  line-height: 120%;
+  font-family: Avenir-Book;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  text-align: center;
+  color: #4a4a4a; }
+.forgetPass_tabs ::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #1d1d26;
+  font-family: Avenir-Book; }
+.forgetPass_tabs form {
   max-width: 50%;
   min-width: 240px;
-  margin: auto auto; }
-  .forgetPass_tabs .text p {
-    font-family: Avenir-Book;
-    font-size: 13px;
+  display: block;
+  margin: auto;
+  margin-top: 5vh;
+  box-shadow: 0px 3px 6px 2px #4a4a4a;
+  position: relative; }
+  .forgetPass_tabs form img {
+    position: absolute;
+    top: 13px;
+    left: 15px; }
+  .forgetPass_tabs form input {
+    height: 40px;
     width: 100%;
-    height: 30px;
-    text-align: center;
-    letter-spacing: 0.6px;
-    color: #4a4a4a; }
-  .forgetPass_tabs ::-webkit-input-placeholder {
     font-size: 14px;
     color: #1d1d26;
     font-family: Avenir-Book; }
-  .forgetPass_tabs form {
-    margin-top: 5vh;
-    box-shadow: 0px 3px 6px 2px #4a4a4a; }
-    .forgetPass_tabs form input {
+    .forgetPass_tabs form input.email {
+      text-indent: 45px; }
+    .forgetPass_tabs form input.submit {
+      border: none;
       height: 40px;
-      width: 100%; }
-      .forgetPass_tabs form input.email {
-        text-indent: 45px; }
-      .forgetPass_tabs form input.submit {
-        border: none;
-        height: 40px;
-        width: 100%;
-        background: #4a4a4a;
-        color: #ffffff;
-        font-size: 14px;
-        font-family: Avenir-Roman; }
-        .forgetPass_tabs form input.submit:active {
-          background: white;
-          color: black; }
+      width: 100%;
+      background: #4a4a4a;
+      color: #ffffff;
+      font-size: 14px;
+      font-family: Avenir-Roman; }
+      .forgetPass_tabs form input.submit:active {
+        background: white;
+        color: black; }
 
 .phpdebugbar p {
   font-size: black; }

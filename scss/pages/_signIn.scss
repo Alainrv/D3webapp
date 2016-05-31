@@ -18,7 +18,7 @@ $desktop-breakpoint: 720px;
 		max-width: 35%;
 		min-width: 160px;
 		display: block;
-		margin: 10vh auto;
+		margin: 5vh auto;
 	}
 }
 
@@ -41,8 +41,9 @@ $desktop-breakpoint: 720px;
 	}
 
 	::-webkit-input-placeholder {
-	   color: #1d1d26;
-	   font-family: Avenir-Book;
+		font-size: 12px;
+	   	color: #1d1d26;
+   		font-family: Avenir-Book;
 	}
 
     .username, .password {
@@ -51,6 +52,9 @@ $desktop-breakpoint: 720px;
     	width: 100%;
     	text-indent: 45px;
     	margin: auto auto;
+    	font-size: 12px;
+    	color: #1d1d26;
+	   	font-family: Avenir-Book;
     	&.username {
     		border-bottom: solid 0.4px #1d1d26;
     	}
@@ -61,6 +65,7 @@ $desktop-breakpoint: 720px;
     	height: 40px;
     	width: 100%;
     	background: #4a4a4a;
+    	font-size: 12px;
     	color: #ffffff;
     	font-family: Avenir-Roman;
     	&:active {
@@ -97,6 +102,10 @@ $desktop-breakpoint: 720px;
 	width: 100%;
 	max-width: 50%;
 	margin: 10vh 25%;
+	& img {
+		width: 35px;
+		height: 35px;
+	}
 	@media (min-width: $desktop-breakpoint) {
 		display: inline-flex;
 		justify-content: space-between;
