@@ -1573,7 +1573,7 @@ div[class^="team__"] h2 {
 
 /* line 12, ../scss/pages/_signUp.scss */
 .SearchAzax {
-  padding-right: 30px;
+  padding-right: 20px;
   height: 10px;
   outline: none;
   border: 2px solid #999999;
