@@ -1011,7 +1011,8 @@ div[class^="team__"] h2 {
 .form_container,
 .footer_container {
   width: 100%;
-  margin: auto auto; }
+  margin: auto auto;
+  position: relative; }
 
 .logIn_pic {
   width: 100%;
@@ -1024,8 +1025,8 @@ div[class^="team__"] h2 {
 .logIn_tabs {
   max-width: 50%;
   min-width: 240px;
-  margin: 10vh auto;
-  border-radius: 1px;
+  margin: auto auto;
+  margin-top: 10vh;
   box-shadow: 0px 4px 6px 2px #4a4a4a;
   position: relative; }
   .logIn_tabs img {
@@ -1055,17 +1056,29 @@ div[class^="team__"] h2 {
       color: black; }
 
 .footer {
-  width: 100%;
-  margin: 15vh auto; }
+  max-width: 50%;
+  min-width: 240px;
+  margin: 10vh auto; }
   .footer a {
     font-size: 10px;
     color: #4a4a4a; }
     .footer a.a1 {
-      float: left;
-      margin-left: 12%; }
+      float: left; }
     .footer a.a2 {
-      float: right;
-      margin-right: 12%; }
+      float: right; }
+  @media (min-width: 720px) {
+    .footer {
+      margin: 20px auto; } }
+
+.footer_icons {
+  display: none;
+  width: 100%;
+  max-width: 50%;
+  margin: 10vh 25%; }
+  @media (min-width: 720px) {
+    .footer_icons {
+      display: inline-flex;
+      justify-content: space-between; } }
 
 .phpdebugbar p {
   font-size: black; }
