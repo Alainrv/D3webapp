@@ -1547,8 +1547,7 @@ div[class^="team__"] h2 {
   display: none;
   width: 100%;
   max-width: 50%;
-  margin: 20vh 25%;
-}
+
 @media (min-width: 720px) {
   /* line 95, ../scss/pages/_signIn.scss */
   .footer_icons {
@@ -1590,7 +1589,14 @@ div[class^="team__"] h2 {
 .logIn_image {
   width: 50%;
   margin: auto auto;
-}
+
+
+  margin: 10vh 25%; }
+  @media (min-width: 720px) {
+    .footer_icons {
+      display: inline-flex;
+      justify-content: space-between; } }
+
 
 /* line 29, ../scss/pages/_signUp.scss */
 .logIn_pic {
