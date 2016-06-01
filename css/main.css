@@ -1684,6 +1684,195 @@ div[class^="team__"] h2 {
   }
 }
 
+/* line 2, ../scss/pages/_signUp.scss */
+.signUpWrapper {
+  max-width: 800px;
+  margin: auto auto;
+  border: 1px solid grey;
+}
+
+/* line 7, ../scss/pages/_signUp.scss */
+.picContainer,
+.footerContainer {
+  width: 100%;
+  margin: auto auto;
+  position: relative;
+}
+
+/* line 15, ../scss/pages/_signUp.scss */
+.d3Image {
+  max-width: 35%;
+  min-width: 160px;
+  display: block;
+  margin: 10vh auto;
+}
+
+/* line 22, ../scss/pages/_signUp.scss */
+.SearchAzax {
+  width: 85%;
+  margin-left: 3vh;
+  height: 30px;
+  outline: none;
+  border: 2px solid #999999;
+  background-color: #FBFBFB;
+  font-family: Avenir-Roman;
+  font-size: 12px;
+  background-position: right;
+  background-image: url("../img/svg/search.svg");
+  background-repeat: no-repeat;
+}
+/* line 35, ../scss/pages/_signUp.scss */
+.SearchAzax:hover {
+  border: 1px solid blue;
+}
+@media (min-width: 720px) {
+  /* line 22, ../scss/pages/_signUp.scss */
+  .SearchAzax {
+    margin-left: 10vh;
+    width: 60%;
+  }
+}
+
+/* line 44, ../scss/pages/_signUp.scss */
+.signUpElements {
+  max-width: 50%;
+  min-width: 240px;
+  display: block;
+  margin: auto auto;
+  margin-top: 10vh;
+  position: relative;
+}
+/* line 52, ../scss/pages/_signUp.scss */
+.signUpElements p {
+  margin-left: 3vh;
+}
+/* line 56, ../scss/pages/_signUp.scss */
+.signUpElements img {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+}
+/* line 61, ../scss/pages/_signUp.scss */
+.signUpElements img.email {
+  top: 50px;
+  right: 30px;
+}
+/* line 66, ../scss/pages/_signUp.scss */
+.signUpElements img.padlock {
+  top: 90px;
+}
+/* line 70, ../scss/pages/_signUp.scss */
+.signUpElements img.repeatPadlock {
+  top: 130px;
+}
+/* line 74, ../scss/pages/_signUp.scss */
+.signUpElements img.url {
+  top: 170px;
+}
+/* line 79, ../scss/pages/_signUp.scss */
+.signUpElements ::-webkit-input-placeholder {
+  color: #1d1d26;
+  font-family: Avenir-Book;
+}
+/* line 84, ../scss/pages/_signUp.scss */
+.signUpElements .signUpInput {
+  border: none;
+  height: 40px;
+  width: 100%;
+  text-indent: 45px;
+  margin: auto auto;
+}
+/* line 90, ../scss/pages/_signUp.scss */
+.signUpElements .signUpInput:hover {
+  border-bottom: solid 0.4px blue;
+}
+/* line 95, ../scss/pages/_signUp.scss */
+.signUpElements .submit {
+  border: none;
+  height: 40px;
+  margin-left: 3vh;
+  width: 85%;
+  background: #4a4a4a;
+  color: #ffffff;
+  font-family: Avenir-Roman;
+}
+/* line 103, ../scss/pages/_signUp.scss */
+.signUpElements .submit:active {
+  background: white;
+  color: black;
+}
+/* line 107, ../scss/pages/_signUp.scss */
+.signUpElements .submit:hover {
+  border: 1px solid blue;
+}
+@media (min-width: 720px) {
+  /* line 95, ../scss/pages/_signUp.scss */
+  .signUpElements .submit {
+    margin-left: 10vh;
+    width: 60%;
+  }
+}
+@media (min-width: 720px) {
+  /* line 117, ../scss/pages/_signUp.scss */
+  .signUpElements p {
+    margin-left: 10vh;
+  }
+}
+
+/* line 124, ../scss/pages/_signUp.scss */
+.footer {
+  max-width: 50%;
+  min-width: 240px;
+  margin: 5vh auto;
+}
+/* line 129, ../scss/pages/_signUp.scss */
+.footer a {
+  font-family: Avenir-Book;
+  font-size: 9px;
+  color: #4a4a4a;
+}
+/* line 133, ../scss/pages/_signUp.scss */
+.footer a.Already-have-an-acco {
+  margin-left: 6vh;
+}
+/* line 135, ../scss/pages/_signUp.scss */
+.footer a.Already-have-an-acco:hover {
+  border: 1px solid blue;
+}
+@media (min-width: 720px) {
+  /* line 124, ../scss/pages/_signUp.scss */
+  .footer {
+    margin: 20px auto;
+  }
+  /* line 143, ../scss/pages/_signUp.scss */
+  .footer a {
+    font-size: 13px;
+  }
+  /* line 145, ../scss/pages/_signUp.scss */
+  .footer a.Already-have-an-acco {
+    margin-left: 11vh;
+  }
+  /* line 147, ../scss/pages/_signUp.scss */
+  .footer a.Already-have-an-acco:hover {
+    border: 1px solid blue;
+  }
+}
+
+/* line 155, ../scss/pages/_signUp.scss */
+.footer_icons {
+  display: none;
+  width: 100%;
+  max-width: 50%;
+  margin: 20vh 25%;
+}
+@media (min-width: 720px) {
+  /* line 155, ../scss/pages/_signUp.scss */
+  .footer_icons {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+}
+
 /* line 51, ../scss/main.scss */
 .phpdebugbar p {
   font-size: black;
