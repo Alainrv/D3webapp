@@ -1014,13 +1014,11 @@ div[class^="team__"] h2 {
   margin: auto auto;
   position: relative; }
 
-.logIn_pic {
-  width: 100%; }
-  .logIn_pic .logIn_image {
-    max-width: 35%;
-    min-width: 160px;
-    display: block;
-    margin: 5vh auto; }
+.logIn_image {
+  max-width: 35%;
+  min-width: 160px;
+  display: block;
+  margin: 5vh auto; }
 
 .logIn_tabs {
   max-width: 50%;
@@ -1099,15 +1097,13 @@ div[class^="team__"] h2 {
     width: 100%;
     margin: auto auto; }
 
-.forgetPass_pic {
-  width: 100%; }
-  .forgetPass_pic .forgetPass_image {
-    max-width: 35%;
-    min-width: 160px;
-    display: block;
-    margin: 5vh auto; }
+.forgetPass_image {
+  max-width: 35%;
+  min-width: 160px;
+  display: block;
+  margin: 5vh auto; }
 
-.forgetPass_tabs .text p {
+.text p {
   max-width: 40%;
   min-width: 270px;
   margin: auto;
@@ -1117,6 +1113,7 @@ div[class^="team__"] h2 {
   letter-spacing: 0.7px;
   text-align: center;
   color: #4a4a4a; }
+
 .forgetPass_tabs ::-webkit-input-placeholder {
   font-size: 14px;
   color: #1d1d26;
@@ -1150,6 +1147,70 @@ div[class^="team__"] h2 {
       font-size: 14px;
       font-family: Avenir-Roman; }
       .forgetPass_tabs form input.submit:active {
+        background: white;
+        color: black; }
+
+.resetError_wrapper {
+  max-width: 800px;
+  margin: auto; }
+  .resetError_wrapper .pic_container,
+  .resetError_wrapper .form_container {
+    width: 100%;
+    display: block;
+    margin: auto auto; }
+
+.resetError_image {
+  max-width: 25%;
+  min-width: 120px;
+  display: block;
+  margin: 10vh auto;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px 2px #A9A9A9; }
+
+.text p {
+  max-width: 40%;
+  min-width: 270px;
+  margin: auto;
+  line-height: 120%;
+  font-family: Avenir-Book;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  text-align: center;
+  color: #4a4a4a; }
+
+.resetError_tabs ::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #1d1d26;
+  font-family: Avenir-Book; }
+.resetError_tabs form {
+  max-width: 50%;
+  min-width: 240px;
+  display: block;
+  margin: auto;
+  margin-top: 5vh;
+  box-shadow: 0px 3px 6px 2px #4a4a4a;
+  position: relative; }
+  .resetError_tabs form img {
+    position: absolute;
+    top: 13px;
+    left: 15px; }
+  .resetError_tabs form input {
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    color: #1d1d26;
+    font-family: Avenir-Book; }
+    .resetError_tabs form input.email {
+      text-indent: 45px; }
+    .resetError_tabs form input.submit {
+      border: none;
+      height: 40px;
+      width: 100%;
+      background: #4a4a4a;
+      color: #ffffff;
+      font-size: 14px;
+      font-family: Avenir-Roman; }
+      .resetError_tabs form input.submit:active {
         background: white;
         color: black; }
 

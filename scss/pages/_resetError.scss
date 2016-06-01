@@ -1,22 +1,25 @@
 
-.forgetPass_wrapper {
+.resetError_wrapper {
 	max-width: 800px;
-	margin: auto auto;
+	margin: auto;
+
 	.pic_container,
 	.form_container {
 		width: 100%;
+		display: block;
 		margin: auto auto;
 	}
 }
 
 
-.forgetPass_image {
-	max-width: 35%;
-	min-width: 160px;
+.resetError_image {
+	max-width: 25%;
+	min-width: 120px;
 	display: block;
-	margin: 5vh auto;
+	margin: 10vh auto;
+	border-radius: 50%;
+	box-shadow: 0px 2px 2px 2px #A9A9A9;
 }
-
 
 .text p {
 	max-width: 40%;
@@ -30,7 +33,8 @@
 	color: #4a4a4a;
 }
 
-.forgetPass_tabs {
+.resetError_tabs {
+
 	::-webkit-input-placeholder {
 		font-size: 14px;
 	   	color: #1d1d26;
@@ -77,3 +81,5 @@
 		}		
 	}
 }
+
+
