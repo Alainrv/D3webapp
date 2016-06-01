@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="56px" viewBox="0 0 55 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>8F841DE1-AC22-4665-A06B-F78D799E1052</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <ellipse id="path-1" cx="27.5" cy="28" rx="27.5" ry="28"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="55" height="56" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="social-median-icons" transform="translate(-162.000000, 0.000000)">
+            <g id="social-media">
+                <g id="linkedin" transform="translate(162.000000, 0.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="55" height="56"></rect>
+                    <use id="Oval" stroke="#4A4A4A" mask="url(#mask-2)" stroke-width="3" xlink:href="#path-1"></use>
+                    <path d="M15.6305856,23.4348712 L20.5032926,23.4348712 L20.5032926,40.7256429 L15.6305856,40.7256429 L15.6305856,23.4348712 Z M17.9427328,21.2720986 L17.9074553,21.2720986 C16.1435795,21.2720986 15,19.9503137 15,18.2764875 C15,16.568435 16.1773871,15.2727273 17.9765405,15.2727273 C19.7742239,15.2727273 20.8795861,16.5651754 20.9148636,18.271598 C20.9148636,19.9454243 19.7742239,21.2720986 17.9427328,21.2720986 L17.9427328,21.2720986 Z M40,40.7272727 L34.474659,40.7272727 L34.474659,31.7779252 C34.474659,29.4358724 33.6103598,27.8386477 31.7097836,27.8386477 C30.256056,27.8386477 29.4476129,28.9159594 29.0713194,29.9574151 C28.9302093,30.3290143 28.9522578,30.8489272 28.9522578,31.37047 L28.9522578,40.7272727 L23.4783631,40.7272727 C23.4783631,40.7272727 23.5489182,24.875633 23.4783631,23.4348712 L28.9522578,23.4348712 L28.9522578,26.1485233 C29.275635,24.9620135 31.0248119,23.2686294 33.8161453,23.2686294 C37.2792215,23.2686294 40,25.7573662 40,31.1113284 L40,40.7272727 L40,40.7272727 Z" id="Shape" fill="#4A4A4A"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
