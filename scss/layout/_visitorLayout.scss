@@ -1,0 +1,18 @@
+.visitor {
+
+	.menu_nav {
+		padding-top: 50px;
+	}
+
+	.c-menu__item {
+		padding-left: 20px;
+
+		svg {
+			margin-right: 10px;
+		}
+
+		&:hover svg path {
+			fill: $iconHoverColor;
+		}
+	}
+}

@@ -75,3 +75,31 @@ p {
 	font-size: 1em;
 	letter-spacing: 0.5px;
 }
+
+.button_container {
+	text-align: center;
+}
+
+.acc-btn {
+	@include btn($accountButtonColor, 40px, 240px);
+	color: white;
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+
+.createSocial {
+	display: none;
+
+	@media (min-width: 400px) {
+		@include display(flex);
+		@include justify-content(space-between);
+		width: 380px;
+		margin: auto auto;
+		margin-top: 7vh;
+	}
+}
+
+
+
+

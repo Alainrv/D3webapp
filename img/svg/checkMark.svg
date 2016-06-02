@@ -1,0 +1,28 @@
+<svg width="133" height="105" viewBox="0 0 133 105" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>
+        group
+    </title>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="a">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowBlurOuter1" result="shadowMatrixOuter1"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient x1="14.169%" y1="13.954%" x2="69.499%" y2="67.405%" id="c">
+            <stop stop-color="#FFF" stop-opacity="0" offset="0%"/>
+            <stop stop-opacity=".5" offset="100%"/>
+        </linearGradient>
+        <rect id="b" x="17.766" y="35.842" width="23.797" height="63.754" rx="4"/>
+    </defs>
+    <g filter="url(#a)" transform="translate(-49 -69)" fill="none" fill-rule="evenodd">
+        <g transform="translate(52.75 70.15)">
+            <use fill="#FCA20E" xlink:href="#b"/>
+            <use fill="url(#c)" xlink:href="#b"/>
+        </g>
+        <path d="M176.785 88.895a3.998 3.998 0 0 0-.01-5.66L165.618 72.08a4 4 0 0 0-5.66-.012L79.31 152.716l13.992 13.992a4 4 0 0 0 5.66.01l77.823-77.823z" fill="#FCA20E"/>
+    </g>
+</svg>

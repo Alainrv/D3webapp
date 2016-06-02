@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="27.5" cy="27.5" r="27.5"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="55" height="55" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="social-median-icons">
+            <g id="social-media">
+                <g id="facebook">
+                    <rect id="Rectangle" x="0" y="0" width="55" height="55"></rect>
+                    <use id="Oval" stroke="#4A4A4A" mask="url(#mask-2)" stroke-width="3" xlink:href="#path-1"></use>
+                    <path d="M29.1433821,43.75 L23.0465522,43.75 L23.0465522,29.3731854 L20,29.3731854 L20,24.4194174 L23.0465522,24.4194174 L23.0465522,21.4453421 C23.0465522,17.4043013 24.7658843,15 29.6537797,15 L33.7220585,15 L33.7220585,19.9555826 L31.1793843,19.9555826 C29.2765698,19.9555826 29.1508332,20.6478399 29.1508332,21.9398116 L29.1424507,24.4194174 L33.75,24.4194174 L33.2107295,29.3731854 L29.1424507,29.3731854 L29.1424507,43.75 L29.1433821,43.75 Z" id="Shape" fill="#4A4A4A"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

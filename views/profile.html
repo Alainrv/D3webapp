@@ -133,38 +133,38 @@
 	    <div class="o-container">
       		<div class="profile_wrapper">
       		<!-- Diego!! if this is a user -->
-      			<!-- <div class="compHeader">
+      			<div class="compHeader">
       				<img src="../img/temp/D3Logo.png">
       			</div>
-      			<div class="indHeader"> -->
+      			<div class="indHeader">
   			<!-- Diego!! Image of the profile picture of the user goes here -->
-      				<!-- <img src="../img/temp/profile.jpg"> -->
+      				<img src="../img/temp/profile.jpg">
 			<!-- Diego!!  First and last name of hte user goes here below -->
-      				<!-- <h2>Firstname Lastname</h2> -->
+      				<h2>Firstname Lastname</h2>
       			</div>
   			<!-- Diego!! end if this is a user -->
   			<!-- Diego!! if this is a start up -->
-  				<div class="compHeader">
+  				<!-- <div class="compHeader">
   					<img src="../img/temp/D3Logo.png">
   				</div>
   				<div class="startupHeader">
   					<h2>startupName</h2>
   					<a href="#" target="_blank">www.website.com</a>
-  				</div>
+  				</div> -->
   			<!-- Diego!! end if this is a startup -->
 
   			    <div class="profile_tabs">
 			        <div class="tabs">
 			        <!-- Diego!! If this is a person -->
-			            <!-- <div class="top_tab active"><a href="#info">Info</a></div> -->
-			            <!-- <div class="top_tab"><a href="#experience">Experience</a></div> -->
-			            <!-- <div class="top_tab"><a href="#social">Media</a></div> -->
+			            <div class="top_tab active"><a href="#info">Info</a></div>
+			            <div class="top_tab"><a href="#experience">Experience</a></div>
+			            <div class="top_tab"><a href="#social">Media</a></div>
 			        <!-- Diego!! End if this is a person -->
 			        <!-- Diego!! If this is a startup -->
-			            <div class="top_tab active"><a href="#startup_info">Info</a></div>
-			            <div class="top_tab"><a href="#startup_data">Data</a></div>
-			            <div class="top_tab"><a href="#startup_media">Media</a></div>
-			            <div class="top_tab"><a href="#startup_staff">Team</a></div>
+			            <!-- <div class="top_tab active"><a href="#startup_info">Info</a></div> -->
+			            <!-- <div class="top_tab"><a href="#startup_data">Data</a></div> -->
+			            <!-- <div class="top_tab"><a href="#startup_media">Media</a></div> -->
+			            <!-- <div class="top_tab"><a href="#startup_staff">Team</a></div> -->
 			        <!-- Diego !! End if this is a startup -->
 			        </div>
 			        <div class="tabInner">
@@ -215,10 +215,10 @@
 				               		</form>	               		
 				               	</div>
 			            	</div>
-			            	<!-- Diego!! End if this is a stadd of District 3 -->
+			            	<!-- Diego!! End if this is a staff of District 3 -->
 			            	<!-- Diego!! If this is a mentor of D3 -->
 			            	<div class="p-info startup_coached">
-				                <h3>Startups Coached</h3>
+				                <h3 onclick="editStartupCoach()">Startups Coached</h3>
 				                <div class="list_saved_container">
 				                	<a class="logo_container" href="#">
 		            					<img class="content" src="../img/temp/companyLogo.png">
@@ -233,11 +233,13 @@
 				            				<input type="search" placeholder="Type Startup Name" name="startup_search">
 				            				<img src="../img/svg/loup.svg">
 			            				</div>
-			            				<div class="btnOptions">
-			            					<button type="submit">Save</button>
-					               			<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
-			            				</div>
 			            				<div class="search_results">
+			            					<div class="search_result_startup">
+			            						<div class="logo_container">
+			            							<img class="content" src="../img/temp/companyLogo.png">
+			            						</div>
+			            						<h4>TrainerWorkout</h4>
+			            					</div>
 			            					<div class="search_result_startup">
 			            						<div class="logo_container">
 			            							<img class="content" src="../img/temp/companyLogo.png">
@@ -340,29 +342,35 @@
 					<!-- Diego!! Show if Startup -->
 			            <div class="tab" id="experience">	
 			            	<div class="p-info degree">
-			            		<h3 onclick="moveDataToEdit()">Degrees</h3>
+			            		<h3 onclick="editList()">Degrees</h3>
 			            		<div class="list_saved_container">
-			            			<i>Engineering in Computer Science, McGill University</i><i>MBA, Concordia Univeristy</i>
+			            			<ul>
+			            				<li>Engineering in Computer Science, McGill University</li>
+			            				<li>MBA, Concordia Univeristy</li>
+			            			</ul>
 			            		</div>
 			            		<div class="editMode">
 			            			<form action="" method="post">
 			            				<div class="added_list">
 			            				</div>
 			            				<div class="adding_list">
-				            				<input class="val_to_list" type="text" name="degree">
+				            				<input onclick="addToList(event)" class="val_to_list" type="text" name="degree">
 				            				<button class="add_to_list" type="button">+ Add</button>
 			            				</div>
 			            				<div class="btnOptions">
 			            					<button type="submit">Save</button>
-				            				<button type="reset">Cancel</button>
+				            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
 			            				</div>
 			            			</form>
 			            		</div>
 			            	</div>
 			            	<div class="p-info">
-			            		<h3 onclick="moveDataToEdit()">Currently learning</h3>
+			            		<h3 onclick="editList()">Currently learning</h3>
 			            		<div class="list_saved_container">
-			            			<i>Rubby on rails</i><i>Python</i>
+			            			<ul>
+			            				<li>Rubby on rails</li>
+			            				<li>Python</li>
+			            			</ul>
 			            		</div>
 			            		<div class="editMode">
 			            			<form action="" method="post">
@@ -370,19 +378,26 @@
 			            				</div>
 			            				<div class="adding_list">
 				            				<input class="val_to_list" type="text" name="learning">
-				            				<button class="add_to_list" type="button">+ Add</button>
+				            				<button onclick="addToList(event)" class="add_to_list" type="button">+ Add</button>
 			            				</div>
 			            				<div class="btnOptions">
 			            					<button type="submit">Save</button>
-				            				<button type="reset">Cancel</button>
+				            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
 			            				</div>
 			            			</form>
 			            		</div>
 			            	</div>
 			            	<div class="p-info">
-			            		<h3 onclick="moveDataToEdit()">Fields of expertise</h3>
+			            		<h3 onclick="editList()">Fields of expertise</h3>
 			            		<div class="list_saved_container">
-			            			<i>HTML</i><i>Css</i><i>JavaScript</i><i>Jquery</i><i>Sass</i><i>Financing</i>
+			            			<ul>
+			            				<li>HTML</li>
+			            				<li>Css</li>
+			            				<li>JavaScript</li>
+			            				<li>Jquery</li>
+			            				<li>Sass</li>
+			            				<li>Financing</li>
+			            			</ul>
 			            		</div>
 			            		<div class="editMode">
 			            			<form action="" method="post">
@@ -390,11 +405,11 @@
 			            				</div>
 			            				<div class="adding_list">
 				            				<input class="val_to_list" type="text" name="experiences">
-				            				<button class="add_to_list" type="button">+ Add</button>
+				            				<button onclick="addToList(event)" class="add_to_list" type="button">+ Add</button>
 			            				</div>
 			            				<div class="btnOptions">
 			            					<button type="submit">Save</button>
-				            				<button type="reset">Cancel</button>
+				            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
 			            				</div>
 			            			</form>
 			            		</div>
@@ -513,7 +528,7 @@
 			            	</div>
 
 			            	<div class="p-info">
-			            		<h3>Stage</h3>
+			            		<h3 onclick="editStage()">Stage</h3>
 				                
 			            		<div class="startup_stage">
 			            			<div class="stage bmv completed"><p>BMV</p></div>
@@ -523,49 +538,64 @@
 			            		</div>
 
 				               	<div class="editMode">
-				               		<form action="" method="post">
-				               			<label for="BMV">Business Model Validation</label>
-				               			<input type="checkbox" name="startup_stageBMV" id="BMV">
-				               			<label for="MVP">Minimum Viable Product</label>
-				               			<input type="checkbox" name="startup_stageMVP" id="MVP">
-				               			<label for="PMF">Product Market Fit</label>
-				               			<input type="checkbox" name="startup_stagePMF" id="PMF">
-				               			<label for="growth">Growth phase</label>
-				               			<input type="checkbox" name="startup_stageGrowth" id="growth">
-
+				               		<form class="edit_stage" action="" method="post">
+				               			<div>
+				               				<input type="checkbox" name="startup_stageBMV" id="BMV">
+				               				<label for="BMV">Business Model Validation</label>
+				               			</div>
+				               			<div>
+					               			<input type="checkbox" name="startup_stageMVP" id="MVP">
+					               			<label for="MVP">Minimum Viable Product</label>
+				               			</div>
+				               			<div>
+					               			<input type="checkbox" name="startup_stagePMF" id="PMF">
+					               			<label for="PMF">Product Market Fit</label>
+				               			</div>
+				               			<div>
+					               			<input type="checkbox" name="startup_stageGrowth" id="growth">
+					               			<label for="growth">Growth phase</label>
+				               			</div>
 				               			<div class="btnOptions">
 				               				<button type="submit">Save</button>
-					               			<button type="reset">Cancel</button>
+					               			<button onclick="editStage()" type="reset">Cancel</button>
 				               			</div>
 				               		</form>	               		
 				               	</div>
 			            	</div>
 
 			            	<div class="p-info">
-			            		<h3 onclick="moveDataToEdit()">Revenue Model</h3>
+			            		<h3 onclick="editList()">Revenue Model</h3>
 			            		<div class="list_saved_container">
-			            			<i>20% comission</i><i>Advertising</i>
+			            			<ul>
+			            				<li>20% comission on the sales offerd by the clients of dude</li>
+			            				<li>Advertising</li>
+			            			</ul>
 			            		</div>
 			            		<div class="editMode">
 			            			<form action="" method="post">
 			            				<div class="added_list">
+
 			            				</div>
 			            				<div class="adding_list">
 				            				<input class="val_to_list" type="text" name="startup_revenueModel">
-				            				<button class="add_to_list" type="button">+ Add</button>
+				            				<button onclick="addToList(event)" class="add_to_list" type="button">+ Add</button>
 			            				</div>
 			            				<div class="btnOptions">
 			            					<button type="submit">Save</button>
-				            				<button type="reset">Cancel</button>
+				            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
 			            				</div>
 			            			</form>
 			            		</div>
 			            	</div>
 
 			            	<div class="p-info">
-			            		<h3 onclick="moveDataToEdit()">Growth Strategies</h3>
+			            		<h3 onclick="editList()">Growth Strategies</h3>
 			            		<div class="list_saved_container">
-			            			<i>Continuous development of our partnership program with larger and larger organizations</i><i>B2B automated marketing</i><i>Content marketing for the customers</i>
+			            			<ul>
+			            				<li>Continuous development of our partnership program with larger and larger organizations</li>
+			            				<li>B2B automated marketing</li>
+			            				<li>Content marketing for the customers</li>
+			            			</ul>
 			            		</div>
 			            		<div class="editMode">
 			            			<form action="" method="post">
@@ -573,11 +603,11 @@
 			            				</div>
 			            				<div class="adding_list">
 				            				<input class="val_to_list" type="text" name="startup_revenueModel">
-				            				<button class="add_to_list" type="button">+ Add</button>
+				            				<button onclick="addToList(event)" class="add_to_list" type="button">+ Add</button>
 			            				</div>
 			            				<div class="btnOptions">
 			            					<button type="submit">Save</button>
-				            				<button type="reset">Cancel</button>
+				            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
 			            				</div>
 			            			</form>
 			            		</div>
@@ -612,9 +642,12 @@
 			            	
 
 			            	<div class="p-info">
-			            		<h3 onclick="moveDataToEdit()">Value Propositions</h3>
+			            		<h3 onclick="editList()">Value Propositions</h3>
 			            		<div class="list_saved_container">
-			            			<i>Save time</i><i>Cure Boredom</i>
+				            		<ul>
+				            			<li>Save time</li>
+				            			<li>Cure Boredom</li>
+				            		</ul>
 			            		</div>
 			            		<div class="editMode">
 			            			<form action="" method="post">
@@ -622,20 +655,23 @@
 			            				</div>
 			            				<div class="adding_list">
 				            				<input class="val_to_list" type="text" name="startup_valueProposition">
-				            				<button class="add_to_list" type="button">+ Add</button>
+				            				<button onclick="addToList(event)" class="add_to_list" type="button">+ Add</button>
 			            				</div>
 			            				<div class="btnOptions">
 			            					<button type="submit">Save</button>
-				            				<button type="reset">Cancel</button>
+				            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
 			            				</div>
 			            			</form>
 			            		</div>
 			            	</div>
 
 			            	<div class="p-info">
-			            		<h3 onclick="moveDataToEdit()">Customer Segments</h3>
+			            		<h3 onclick="editList()">Customer Segments</h3>
 			            		<div class="list_saved_container">
-			            			<i>Teacher with less then 3 years experience</i><i>Students</i>
+			            			<ul>
+			            				<li>Teacher with less then 3 years experience</li>
+			            				<li>Students</li>
+			            			</ul>
 			            		</div>
 			            		<div class="editMode">
 			            			<form action="" method="post">
@@ -643,11 +679,11 @@
 			            				</div>
 			            				<div class="adding_list">
 				            				<input class="val_to_list" type="text" name="startup_customerSegments">
-				            				<button class="add_to_list" type="button">+ Add</button>
+				            				<button onclick="addToList(event)" class="add_to_list" type="button">+ Add</button>
 			            				</div>
 			            				<div class="btnOptions">
 			            					<button type="submit">Save</button>
-				            				<button type="reset">Cancel</button>
+				            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
 			            				</div>
 			            			</form>
 			            		</div>
@@ -672,43 +708,136 @@
 			            			</form>
 			            		</div>
 			            	</div>
-			            	<div class="p-info">
-			            		<h3>Investment rounds</h3>
-			            		<div class="inves__round seriesA ongoing">
-			            			<h4 class="round__amount">Series A: <span>$1,000,000</span></h4>
-			            			<div class="use_of_funds">
-			            				<h4>Use of Funds</h4>
-			            				<ul>
-				            				<li>Hire 2 more front-end engineer</li>
-				            				<li>Hire Back-end engineer</li>
-				            				<li>Build the AI for the software</li>
-				            			</ul>
-			            			</div>
-			            		</div>
-			            		<div class="inves__round seed closed">
-			            			<h4 class="round__amount">Seed: <span>$150,000</span></h4>
-			            			<div class="use_of_funds">
-			            				<h4>Use of Funds</h4>
-			            				<ul>
-					            			<li>buided our MVP</li>
-					            			<li>closing deals with 50 clients</li>
-				            			</ul>
-			            			</div>
-			            		</div>
-			            		
-
-			                	<div class="editMode">
-			            			<form action="" method="post">
-				            			<input type="text" name="startup_investment">
-				            			<div class="btnOptions">
-					            			<button type="submit">Save</button>
-					               			<button type="reset">Cancel</button>
-					               		</div>
-			            			</form>
+			            	<div class="investment">
+			            		<h3 onclick="editRounds()">Investment rounds</h3>
+			            		<div class="p-info">
+				            		<div class="inves__round seed closed">
+				            			<h4 onclick="editRound()" class="round__name">
+				            				<span onclick="removeRound()" class="removeRound"><img src="../img/svg/remove-lg.svg"></span>
+				            				<span class="r_name">Seed:</span> <span class="r_amount">$150,000</span>
+				            				<span class="underline"></span>
+			            				</h4>
+				            			<span class="exp_fund_details" onclick="expandFundDetails()">more info</span>
+				            			<div class="fund_details">
+					            			<div class="use_of_funds">
+					            				<h5>Use of Funds:</h5>
+					            				<ul>
+							            			<li>buided our MVP</li>
+							            			<li>closing deals with 50 clients</li>
+						            			</ul>
+					            			</div>
+					            			<div class="commited_funds">
+					            				<h5>Commited Funds:</h5>
+					            				<ul>
+					            					<li>$200,000, Real Ventures</li>
+					            				</ul>
+					            			</div>
+					            		</div>
+				            		</div>
+				            		<div class="editMode">
+				            			<form action="" method="post">
+				            				<div class="edit_round">
+				            					<h5>Financing Round</h5>
+				            					<div class="name">
+				            						<label>Round Name</label>
+					            					<input type="text" name="startup_round_text">
+				            					</div>
+				            					<div class="amount">
+				            						<label>Amount</label>
+					            					<input type="text" name="startup_round_amount">
+				            					</div>
+				            				</div>
+				            				<div class="edit_funds use">
+				            					<h5>Use of Funds</h5>
+				            					<div class="added_list">
+					            				</div>
+					            				<div class="adding_list">
+						            				<input class="val_to_list" type="text" name="startup_round">
+						            				<button onclick="addDetailToRound(event)" class="add_to_list" type="button">+ Add</button>
+					            				</div>
+				            				</div>
+				            				<div class="edit_funds commited">
+				            					<h5>Commited Funds</h5>
+				            					<div class="added_list">
+					            				</div>
+					            				<div class="adding_list">
+						            				<input class="val_to_list" type="text" name="startup_customerSegments">
+						            				<button onclick="addDetailToRound(event)" class="add_to_list" type="button">+ Add</button>
+					            				</div>
+				            				</div>
+				            				<div class="btnOptions">
+				            					<button type="submit">Save</button>
+					            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
+				            				</div>
+				            			</form>
+				            		</div>
+								</div>
+								<div class="p-info">
+				            		<div class="inves__round seriesA ongoing">
+				            			<h4 onclick="editRound()" class="round__name">
+				            				<span onclick="removeRound()" class="removeRound"><img src="../img/svg/remove-lg.svg"></span>
+				            				<span class="r_name">Series A:</span> <span class="r_amount">$1,000,000</span>
+				            				<span class="underline"></span>
+			            				</h4>
+				            			<span class="exp_fund_details" onclick="expandFundDetails()">more info</span>
+				            			<div class="fund_details">
+					            			<div class="use_of_funds">
+					            				<h5>Use of Funds:</h5>
+					            				<ul>
+						            				<li>Hire 2 more front-end engineer</li>
+						            				<li>Hire Back-end engineer</li>
+						            				<li>Build the AI for the software</li>
+						            			</ul>
+					            			</div>
+					            			<div class="commited_funds">
+					            				<h5>Commited Funds:</h5>
+					            				<ul>
+					            					<li>$200,000, Real Ventures</li>
+					            				</ul>
+					            			</div>
+					            		</div>	
+				            		</div>
+				            		<div class="editMode">
+				            			<form action="" method="post">
+				            				<div class="edit_round">
+				            					<h5>Financing Round</h5>
+				            					<div class="name">
+				            						<label>Round Name</label>
+					            					<input type="text" name="startup_round_text">
+				            					</div>
+				            					<div class="amount">
+				            						<label>Amount</label>
+					            					<input type="text" name="startup_round_amount">
+				            					</div>
+				            				</div>
+				            				<div class="edit_funds use">
+				            					<h5>Use of Funds</h5>
+				            					<div class="added_list">
+					            				</div>
+					            				<div class="adding_list">
+						            				<input class="val_to_list" type="text" name="startup_round">
+						            				<button onclick="addDetailToRound(event)" class="add_to_list" type="button">+ Add</button>
+					            				</div>
+				            				</div>
+				            				<div class="edit_funds commited">
+				            					<h5>Commited Funds</h5>
+				            					<div class="added_list">
+					            				</div>
+					            				<div class="adding_list">
+						            				<input class="val_to_list" type="text" name="startup_customerSegments">
+						            				<button onclick="addDetailToRound(event)" class="add_to_list" type="button">+ Add</button>
+					            				</div>
+				            				</div>
+				            				<div class="btnOptions">
+				            					<button type="submit">Save</button>
+					            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
+				            				</div>
+				            			</form>
+				            		</div>
 			            		</div>
 			            	</div>	
 			            	<div class="p-info">
-			            		<h3 onclick="moveDataToEdit()">Market</h3>
+			            		<h3 onclick="editList()">Market</h3>
 			            		<div class="list_saved_container">
 			            			<ul>
 			            				<li>540,000 Personal Trainers World Wide</li>
@@ -721,17 +850,17 @@
 			            				</div>
 			            				<div class="adding_list">
 				            				<input class="val_to_list" type="text" name="startup_market">
-				            				<button class="add_to_list" type="button">+ Add</button>
+				            				<button onclick="addToList(event)" class="add_to_list" type="button">+ Add</button>
 			            				</div>
 			            				<div class="btnOptions">
 			            					<button type="submit">Save</button>
-				            				<button type="reset">Cancel</button>
+				            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
 			            				</div>
 			            			</form>
 			            		</div>
 			            	</div>
 			            	<div class="p-info">
-			            		<h3 onclick="moveDataToEdit()">Achievements to date</h3>
+			            		<h3 onclick="editList()">Achievements to date</h3>
 			            		<div class="list_saved_container">
 			            			<ul>
 			            				<li>YMCA largest and most recignized association realted to the fitness in the world has signed a partnerhsip with us where the Quebec province is using TrainerWorkout</li>
@@ -744,11 +873,11 @@
 			            				</div>
 			            				<div class="adding_list">
 				            				<input class="val_to_list" type="text" name="startup_achievements">
-				            				<button class="add_to_list" type="button">+ Add</button>
+				            				<button onclick="addToList(event)" class="add_to_list" type="button">+ Add</button>
 			            				</div>
 			            				<div class="btnOptions">
 			            					<button type="submit">Save</button>
-				            				<button type="reset">Cancel</button>
+				            				<button onclick="cancelEditParagraphAnchor()" type="reset">Cancel</button>
 			            				</div>
 			            			</form>
 			            		</div>
@@ -822,39 +951,81 @@
 			                </div>
 			            </div>
 			            <div class="tab" id="startup_staff">
-			            	<div class="team__founding">
-				            	<h2>Founding Team</h2>
-				            	<div class="employee_Container">
-				            		<img src="../img/temp/profile.jpg">
-				            		<div class="employee_info">
-				            			<h3>FirstName LastName</h3>
-				            			<p>Job Title</p>
-				            		</div>
-				            	</div>
-				            	<div class="employee_Container">
-				            		<img src="../img/temp/profile.jpg">
-				            		<div class="employee_info">
-				            			<h3>FirstName LastName</h3>
-				            			<p>Job Title</p>
-				            		</div>
-				            	</div>
-				            	<div class="employee_Container">
-				            		<img src="../img/temp/profile.jpg">
-				            		<div class="employee_info">
-				            			<h3>FirstName LastName</h3>
-				            			<p>Job Title</p>
-				            		</div>
-				            	</div>
-				            </div>
-				            <div class="team__employees">
-				            	<h2>Joined as employees</h2>
-				            	<div class="employee_Container">
-				            		<img src="../img/temp/profile.jpg">
-				            		<div class="employee_info">
-				            			<h3>FirstName LastName</h3>
-				            			<p>Job Title</p>
-				            		</div>
-				            	</div>
+			            	<div class="team">
+				            	<div class="team__founding list_saved_container p-info">
+					            	<h3 onclick="searchEmployee()">Founding Team</h3>
+					            	<div class="employee_Container">
+					            		<span onclick="removeEmployee()" class="removeEmployee"><img src="../img/svg/remove-lg.svg"></span>
+					            		<img class="employeeProfile" src="../img/temp/profile.jpg">
+					            		<div class="employee_info">
+					            			<h4>FirstName LastName</h4>
+					            			<p>Job Title</p>
+					            		</div>
+					            	</div>
+					            	<div class="employee_Container">
+					            		<span onclick="removeEmployee()" class="removeEmployee"><img src="../img/svg/remove-lg.svg"></span>
+					            		<img class="employeeProfile" src="../img/temp/profile.jpg">
+					            		<div class="employee_info">
+					            			<h4>FirstName LastName</h4>
+					            			<p>Job Title</p>
+					            		</div>
+					            	</div>
+					            	<div class="employee_Container">
+					            		<span onclick="removeEmployee()" class="removeEmployee"><img src="../img/svg/remove-lg.svg"></span>
+					            		<img class="employeeProfile" src="../img/temp/profile.jpg">
+					            		<div class="employee_info">
+					            			<h4>FirstName LastName</h4>
+					            			<p>Job Title</p>
+					            		</div>
+					            	</div>
+					            	<div class="editMode">
+					                	<form action="" method="post">
+				            				<div class="editInput search">
+					            				<input type="search" placeholder="Type Startup Name" name="startup_search">
+					            				<img src="../img/svg/loup.svg">
+				            				</div>
+				            				<div class="search_results">
+				            					<div class="search_result_startup employee_Container">
+				            						<img class="employeeProfile" src="../img/temp/profile.jpg">
+				            						<h4>employee Name</h4>
+				            					</div>
+				            					<div class="search_result_startup employee_Container">
+				            						<img class="employeeProfile" src="../img/temp/profile.jpg">
+				            						<h4>employee Name</h4>
+				            					</div>
+				            				</div>
+				            			</form>
+					               </div>
+					            </div>
+					            <div class="team__employees list_saved_container p-info">
+					            	<h3 onclick="searchEmployee()"">Joined as employees</h3>
+					            	<div class="employee_Container">
+						            	<span onclick="removeEmployee()" class="removeEmployee"><img src="../img/svg/remove-lg.svg"></span>
+					            		<img class="employeeProfile" src="../img/temp/profile.jpg">
+					            		<div class="employee_info">
+					            			<h4>FirstName LastName</h4>
+					            			<p>Job Title</p>
+					            		</div>
+					            	</div>
+					            	<div class="editMode">
+					                	<form action="" method="post">
+				            				<div class="editInput search">
+					            				<input type="search" placeholder="Type Startup Name" name="startup_search">
+					            				<img src="../img/svg/loup.svg">
+				            				</div>
+				            				<div class="search_results">
+				            					<div class="search_result_startup employee_Container">
+				            						<img class="employeeProfile" src="../img/temp/profile.jpg">
+				            						<h4>Employee Name</h4>
+				            					</div>
+				            					<div class="search_result_startup employee_Container">
+				            						<img class="employeeProfile" src="../img/temp/profile.jpg">
+				            						<h4>Employee Name</h4>
+				            					</div>
+				            				</div>
+				            			</form>
+					                </div>
+				                </div>
 				            </div>
 				         </div>
 			            <!-- Diego end if startup profile -->
@@ -973,6 +1144,31 @@ $("#notification").click(function() {
 <script type="text/javascript">
 
 
+// Funciton use to open and close the editing tab of each elements in the profile. 
+function editMode() {
+	$(event.target).closest(".p-info").find(".editMode").toggle();
+}
+
+
+// function used to create elements that will be edited in the editing portion
+function newEditingElement(insert) {
+	return '<div onclick="removeElement()" class="itemsToEdit"><span>' + insert + '</span></div>';
+}
+
+
+// Remove the selected item from the list it was added to
+var removeElement = function() {
+	if ($(event.target).parent(".itemsToEdit").length > 0) {
+		$(event.target).parent(".itemsToEdit").remove();
+	} else {
+		$(event.target).remove();
+	}
+};
+
+function removeRound () {
+	$(event.target).closest(".p-info").remove();
+};
+
 
 //Allows for the tabs to switch on the user profile
 $(".top_tab").click(function() {
@@ -991,26 +1187,22 @@ function editParagrahAnchors() {
 	// pick value already save
 	var $textVal = $text.text();
 	var $textaVal = $texta.text();
-
 	// set value as value in the input
 	// check if it is a p or an a
 	if ($text.length > 0) {
-
 		// Set the text in the input
 		$(event.target).parent(".p-info").find("input").val($textVal);
 		$(event.target).parent(".p-info").find("textarea").val($textVal);
 		// Hide the paragraphs while editing
 		$text.hide();
-
 	} else if ($texta.length > 0) {
 		// Set the text of the a in the input
 		$(event.target).parent(".p-info").find("input").val($textaVal);
 		// Hide the achor until edited.
 		$texta.hide();
 	} 
-
 	// shows the editing form
-	$(event.target).parent(".p-info").find(".editMode").show();
+	editMode();;
 };
 
 
@@ -1027,58 +1219,190 @@ function cancelEditParagraphAnchor() {
 };
 
 
-//Open all the editing blocks when pressed on edit
-$(".editOptions").children("a").click(function() {
-	//the tab parent of the item that was clicked
-	var $thisTab = $(event.target).closest(".tab");
-	// hide the text already there
-	$thisTab.find(".p-info p").hide();
-	//show all the editing block that are hiding
-	$thisTab.find(".editMode").show();
-	// hide the edit button
-	$thisTab.find(".editOptions").hide();
-	// show the save button 
-	$thisTab.find(".saveEditing").show();
+// Open the editing mode of the search
+function editStartupCoach() {
+	// Place the current startup coach in the editing mode .list_saved_container adding .edit
+	$(event.target).closest(".startup_coached").find(".list_saved_container").addClass("edit");
+	// open the search box .editMode
+	editMode();
+};
+
+function searchEmployee() {
+	editMode();
+	$(event.target).closest(".list_saved_container").find(".employee_Container").toggleClass("editEmployee");
+};
+
+function removeEmployee() {
+	$(event.target).closest(".editEmployee").remove();
+};
+
+
+//Opens the search results when the user inputs data in the search box
+$(".search input").keydown(function () {
+	$(event.target).closest("form").find(".search_results").slideDown();
 });
 
 
-var moveDataToEdit = function() {
-	var $containerData = $(event.target).parent(".p-info").find(".list_saved_container");
-	var $data = $containerData.children("i").clone();
-	var $editingConatiner = $(event.target).parent(".p-info").find(".added_list");
-	$editingConatiner.children().remove();
+// Open the edit portion of the stage editor
+function editStage() {
+	editMode();
+	$(event.target).closest(".p-info").find(".startup_stage").toggle();
+};
 
-	$editingConatiner.append($data);
-	$containerData.hide();
 
-	$(".added_list i").click(function() {
-		removeTag();
+function editList() {
+	// Select the container of the data already saved
+	var $listItemsContainer = $(event.target).closest(".p-info").find(".list_saved_container");
+	// Count the number of item in the list
+	var $itemsLi = $listItemsContainer.find("li");
+	// Select the data in the container previoursly selected and create an array.
+	var $ItemsLiContent = $itemsLi.map(function(index) {
+		return $(this).text();
 	});
+	// Select the container in which the new data is going to go.
+	var $editingContainer = $(event.target).parent(".p-info").find(".added_list");
+	//Variable in which the new HTML will be stored
+	var $newItemsToEdit = "";
+	// Remove the content if something was previsously added.
+	$editingContainer.children().remove();
+	// Open the edit box
+	editMode();
+	// Hide the container that was there before we open the edit funcitons.
+	$listItemsContainer.hide();
+	// Create the divs from the data previously capture from the li
+	 $ItemsLiContent.each(function(index) {
+			$newItemsToEdit += newEditingElement($ItemsLiContent[index]);
+	 });
+	// Insert the divs in the container
+	$editingContainer.append($newItemsToEdit);
+};
+
+
+// Opens and closes the details of each funds by a startup
+function expandFundDetails(){
+	var $details = $(event.target).closest(".inves__round").find(".fund_details");
+	//rotate the triangle to show it is now expanded
+	$(event.target).toggleClass("expand");
+	if ($details.is(':visible')) {
+		//change the text from see more to see less
+		$(event.target).text("show more");
+	} else {
+		//change the text from see more to see less
+		$(event.target).text("show less");
+	}
+	//show the details of the fund details
+	$details.slideToggle();
 };
 
 
 
-// Remove the selected item from the list it was added to
-var removeTag = function() {
-	$(event.target).remove();
+function editRound() {
+	var $fundDetails = $(event.target).closest(".inves__round").find(".fund_details");
+	// Round Information
+	var $roundName = $(event.target).closest(".inves__round").find(".r_name").text();
+	var $roundAmount = $(event.target).closest(".inves__round").find(".r_amount").text();
+
+	// Pick the information in the lists
+		// Use of Funds
+		var $fundUsesLi = $fundDetails.find(".use_of_funds").find("li");
+		var $fundUsesLiContent = $fundUsesLi.map(function(index) {
+			return $(this).text();
+		});
+
+		// Commitment of funds
+		var $fundCommitmentLi = $fundDetails.find(".commited_funds").find("li");
+		var $fundCommitmentLiContent = $fundCommitmentLi.map(function(index) {
+			return $(this).text();
+		});
+
+	// Tag inputs that will be used	
+	var $fundNameInput = $(event.target).closest(".p-info").find(".name input");
+	var $fundAmountInput = $(event.target).closest(".p-info").find(".amount input");
+
+	// Container where the editing info will be going
+	var $fundUsesEditContainer = $(event.target).closest(".p-info").find(".use .added_list");
+	var $fundCommitmentEditContainer = $(event.target).closest(".p-info").find(".commited .added_list");
+
+	// Create arrays to store the text of the data to be used
+	var $fundUsesEdit = "";
+	var $fundCommitmentEdit = "";
+
+	// Open the editing box
+	editMode();
+	//add the value of the name in the right input
+	$fundNameInput.val($roundName);
+	//add the value of the amount in the right input
+	$fundAmountInput.val($roundAmount);
+	// Create the items use of funds in the edit format
+	$fundUsesLiContent.each(function(index) {
+		$fundUsesEdit += newEditingElement($fundUsesLiContent[index]);
+	 });
+	// Create the items commitments of funds in the edit format
+	$fundCommitmentLiContent.each(function(index) {
+		$fundCommitmentEdit += newEditingElement($fundCommitmentLiContent[index]);
+	 });
+
+	//remove content from containers
+	$fundUsesEditContainer.children().remove();
+	$fundCommitmentEditContainer.children().remove();
+
+	// Add the items to be edited in the use of funds
+	$fundUsesEditContainer.append($fundUsesEdit);
+	// Add the items to be editied in teh commitment of funds
+	$fundCommitmentEditContainer.append($fundCommitmentEdit);
 };
 
+
+function editRounds() {
+	//show the delete sign and bind the remove funciton to each rounds
+	$(event.target).closest(".investment").find(".inves__round").toggleClass("editingRound");
+	if ($(event.target).closest(".investment").find(".inves__round").hasClass("editingRound")) {
+		var newButton = '<div class="addRound"><button onclick="addRound()">Add Round</button></div>'
+		$(event.target).closest(".investment").append(newButton);
+	} else {
+		$(event.target).closest(".investment").find(".addRound").remove();
+	}
+}
+
+function addDetailToRound(event) {
+	// stop form from submitting
+	event.preventDefault();
+	// Get the value in the input box 
+	var $element = $(event.target).parent(".adding_list").find(".val_to_list").val();
+	// Create new tag with the value provided from the input
+	var $newTag = newEditingElement($element);
+	// Adding the tag to the right div
+	$(event.target).closest(".edit_funds").find(".added_list").append($newTag);
+	//clean the input from it's previous value
+	$(event.target).parent(".adding_list").find(".val_to_list").val("");
+
+};
 
 //Add the item of the list in the 
-$(".add_to_list").click(function(event) {
+function addToList(event) {
 	// stop form from submitting
 	event.preventDefault();
 	// Get the value in the input box 
 	var $element = $(event.target).parent(".adding_list").find(".val_to_list").val();
 	// Create the new tag
-	var newTag = '<i onclick="removeTag()">' + $element + '</i>';
+	var $newTag = newEditingElement($element);
 	// Adding the tag to the right div
-	$(event.target).closest(".editMode").find(".added_list").append(newTag);
+	$(event.target).closest(".editMode").find(".added_list").append($newTag);
 	//clean the input from it's previous value
 	$(event.target).parent(".adding_list").find(".val_to_list").val("");
-});
+};
 
-
+function addRound(){
+	var $newRound = $(event.target).parent().prev().clone();
+	$newRound.find("input").val("");
+	$newRound.find(".round__name .r_amount").text("");
+	$newRound.find(".r_name").text("undefined");
+	$newRound.find(".fund_details li").remove();
+	$newRound.find(".editMode").css("display", "block");
+	$(".addRound").before($newRound);
+	$(event.target).closest(".investment").find(".inves__round").removeClass("editingRound");
+	$(event.target).closest(".investment").find(".addRound").remove();
+}
 
 </script>
 

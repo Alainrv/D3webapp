@@ -1,0 +1,32 @@
+<svg width="93" height="93" viewBox="0 0 93 93" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>
+        Group
+    </title>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="a">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowBlurOuter1" result="shadowMatrixOuter1"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient x1="14.169%" y1="13.954%" x2="69.499%" y2="67.405%" id="c">
+            <stop stop-color="#FFF" stop-opacity="0" offset="0%"/>
+            <stop stop-opacity=".5" offset="100%"/>
+        </linearGradient>
+        <rect id="b" x="30.791" y="-7.618" width="23.797" height="99.897" rx="4"/>
+        <rect id="d" x="30.432" y="-7.259" width="23.797" height="99.897" rx="4"/>
+    </defs>
+    <g filter="url(#a)" transform="translate(-67 -71)" fill="none" fill-rule="evenodd">
+        <g transform="rotate(90 41.805 114.677)">
+            <use fill="#FCA20E" xlink:href="#b"/>
+            <use fill="url(#c)" style="mix-blend-mode:exclusion" xlink:href="#b"/>
+        </g>
+        <g transform="rotate(-180 78.062 79.305)">
+            <use fill="#FCA20E" xlink:href="#d"/>
+            <use fill="url(#c)" style="mix-blend-mode:exclusion" xlink:href="#d"/>
+        </g>
+    </g>
+</svg>

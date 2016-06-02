@@ -35,12 +35,14 @@ body {
 // Basic Styling
 @import "_global.scss";
 @import "sideMenu/style.scss";
-@import "_topNavigation.scss";
+@import "layout/_topNavigation.scss";
+@import "layout/_visitorLayout.scss";
 
 
 // Pages  
 @import "pages/_profile.scss";
-@import "pages/_signIn.scss";
+@import "pages/_signup.scss";
+@import "pages/_baseAccount.scss";
 
 
 

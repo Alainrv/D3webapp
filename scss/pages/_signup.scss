@@ -1,0 +1,99 @@
+.signup_wrapper {
+	max-width: 420px;
+	margin: auto auto;
+	padding: 0 10px;
+
+	.header {
+		margin-top: 10vh;
+		width: 100%;
+		padding: 20px 0;
+		text-align: center;
+		position: relative;
+
+		@media (min-width: 410px) {
+			margin-top: 6vh;
+			margin-bottom: 4vh;
+		}
+
+		@media (min-width: 420px) {
+			margin-top: 6vh;
+			margin-bottom: 2vh;
+
+		}		
+
+		input {
+			width: 100%;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			cursor: pointer;
+		}
+
+		img {
+			width: $porfilePictureSignUpSize;
+			height: $porfilePictureSignUpSize;
+			border-radius: 50%;
+
+			@media (min-width: 420px) {
+				width: $porfilePictureSignUpSize_medium;
+				height: $porfilePictureSignUpSize_medium;
+			}
+		}
+	}
+}
+
+.profileInput {
+	width: 100%;
+
+	.input {
+		width: 100%;
+		position: relative;
+		margin-bottom: 5px;
+
+		@media (min-width: 370px) {
+			margin-bottom: 12px;
+		}
+
+		@media (min-width: 410px) {
+			margin-bottom: 18px;
+		}
+
+		input {
+			width: 100%;
+			height: 40px;
+			border: none;
+			border-bottom: 1px solid $greyBorder;
+			font-size: 1em;
+			color: $writting;
+			border-radius: 2px;
+			padding-left: 30px;
+
+			&:active,
+			&:focus {
+				border-bottom: 2px solid $greyBorder;
+			}
+		}
+
+		img {
+			position: absolute;
+			top: 10px;
+			left: 5px;
+		}
+	}
+
+	.button_container {
+		margin-top: 30px;
+
+		@media(min-width: 370px) {
+			margin-top: 7vh;
+		}
+
+		a {
+			margin-top: 15px;
+			display: block;
+		}
+	}
+}
