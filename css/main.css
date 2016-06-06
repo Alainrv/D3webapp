@@ -181,6 +181,26 @@ p {
       margin: auto auto;
       margin-top: 7vh; } }
 
+[class^="icon-"] {
+  width: 55px;
+  height: 55px;
+  background: url("../img/svg/social/sprite_map.svg"); }
+
+.icon-instagram {
+  background-position: 0 -55px; }
+
+.icon-linkedin {
+  background-position: 0 -110px; }
+
+.icon-twitter {
+  background-position: 0 -165px; }
+
+.icon-youtube {
+  background-position: 0 -220px; }
+
+.icon-profilePicture {
+  background-position: 0 -275px; }
+
 .o-content {
   padding-top: 50px; }
 
@@ -1293,6 +1313,8 @@ div[class^="edit_funds"] {
       right: 0;
       cursor: pointer; }
     .signup_wrapper .header img {
+      display: inline;
+      background: url("../img/svg/social/sprite_map.svg#profilePicture") 0 -275px;
       width: 100px;
       height: 100px;
       border-radius: 50%; }
@@ -1324,7 +1346,7 @@ div[class^="edit_funds"] {
       padding-left: 30px; }
       .profileInput .input input:active, .profileInput .input input:focus {
         border-bottom: 2px solid #979797; }
-    .profileInput .input img {
+    .profileInput .input .profilePicture {
       position: absolute;
       top: 10px;
       left: 5px; }
@@ -1348,9 +1370,6 @@ div[class^="edit_funds"] {
   max-width: 400px;
   margin: auto auto;
   padding: 0 10px; }
-  .accountManagement input {
-    width: 100%;
-    height: 40px; }
 
 .input_form {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); }
@@ -1417,7 +1436,6 @@ div[class^="edit_funds"] {
   width: 30vh;
   height: 30vh;
   margin: auto;
-  margin-bottom: 10vh;
   background: white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
   border-radius: 50%;

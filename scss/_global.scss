@@ -100,6 +100,34 @@ p {
 	}
 }
 
+[class^="icon-"] {
+	// display: block;
+	width: 55px;
+	height: 55px;
+	background: url("../img/svg/social/sprite_map.svg");
+	
 
+}
+
+
+.icon-instagram {
+	background-position: 0 -55px;
+}
+
+.icon-linkedin {
+	background-position: 0 -110px;
+}
+
+.icon-twitter {
+	background-position: 0 -165px;
+}
+
+.icon-youtube {
+	background-position: 0 -220px;
+}
+
+.icon-profilePicture {
+	background-position: 0 -275px;
+}
 
 
