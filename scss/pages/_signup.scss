@@ -31,20 +31,16 @@
 			right: 0;
 			cursor: pointer;
 		}
-
-		img {
-			display: inline;
-			background: url("../img/svg/social/sprite_map.svg#profilePicture") 0 -275px;
-			// background-position:;
-			// background-size: 200px 200px;
-
-			// background-size: auto auto;
+		.profilePicture {
+			display: inline-block;
+			background-position: 0 -275px;
+			
 			width: $porfilePictureSignUpSize;
 			height: $porfilePictureSignUpSize;
 			border-radius: 50%;
 
 			@media (min-width: 420px) {
-				// background-size: $porfilePictureSignUpSize_medium $porfilePictureSignUpSize_medium;
+				background-position: 0 -375px;
 				width: $porfilePictureSignUpSize_medium;
 				height: $porfilePictureSignUpSize_medium;
 			}
@@ -83,11 +79,26 @@
 				border-bottom: 2px solid $greyBorder;
 			}
 		}
-
-		.profilePicture {
+		// change "img" to "div" to avoid the grey border when img has no src in it!
+		div {
 			position: absolute;
 			top: 10px;
 			left: 5px;
+			&.personCreate {
+				width: 18px;
+				height: 19px;
+				background-position: 0 -515px;
+			}
+			&.emailCreate {
+				width: 15px;
+				height: 13px;
+				background-position: 0 -534px;
+			}
+			&.lockCreate {
+				width: 15px;
+				height: 17px;
+				background-position: 0 -547px;
+			}
 		}
 	}
 

@@ -100,34 +100,31 @@ p {
 	}
 }
 
-[class^="icon-"] {
-	// display: block;
-	width: 55px;
-	height: 55px;
+.svg {
 	background: url("../img/svg/social/sprite_map.svg");
-	
+	overflow: hidden;
+	.createSocial & {
+		width: 55px;
+		height: 55px;
+	}
 
 }
 
-
-.icon-instagram {
+.instagram {
 	background-position: 0 -55px;
 }
 
-.icon-linkedin {
+.linkedin {
 	background-position: 0 -110px;
 }
 
-.icon-twitter {
+.twitter {
 	background-position: 0 -165px;
 }
 
-.icon-youtube {
+.youtube {
 	background-position: 0 -220px;
 }
 
-.icon-profilePicture {
-	background-position: 0 -275px;
-}
 
 

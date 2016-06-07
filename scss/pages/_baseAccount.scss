@@ -41,10 +41,25 @@
 		font-size: 0.8em;
 	}
 
-	img {
+	div {
 		position: absolute;
 		top: 12px;
 		left: 12px;
+		&.personCreate {
+			width: 18px;
+			height: 19px;
+			background-position: 0 -515px;
+		}
+		&.emailCreate {
+			width: 15px;
+			height: 13px;
+			background-position: 0 -534px;
+		}
+		&.lockCreate {
+			width: 15px;
+			height: 17px;
+			background-position: 0 -547px;
+		}
 	}
 }
 
@@ -120,6 +135,17 @@
 		width: 20vh;
 		height: 20vh;
 	}
+	// div {
+	// 	margin: auto;
+	// 	width: 20vh;
+	// 	height: 20vh;
+	// 	&.checkMark {
+	// 		// background-position: 0 100%;
+	// 	}
+	// 	&.xMark {
+	// 		// background-position: 0 (100%/11);
+	// 	}
+	// }
 }
 
 
