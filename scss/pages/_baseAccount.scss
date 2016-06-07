@@ -135,17 +135,15 @@
 		width: 20vh;
 		height: 20vh;
 	}
-	// div {
-	// 	margin: auto;
-	// 	width: 20vh;
-	// 	height: 20vh;
-	// 	&.checkMark {
-	// 		// background-position: 0 100%;
-	// 	}
-	// 	&.xMark {
-	// 		// background-position: 0 (100%/11);
-	// 	}
-	// }
+	div {
+		margin: auto;
+		width: 20vh;
+		height: 20vh;
+		&.xMark {
+			background-position: 0 71.25%;
+			background-size: 20vh;
+		}
+	}
 }
 
 

@@ -1474,6 +1474,13 @@ div[class^="edit_funds"] {
     margin: auto;
     width: 20vh;
     height: 20vh; }
+  .responseImg div {
+    margin: auto;
+    width: 20vh;
+    height: 20vh; }
+    .responseImg div.xMark {
+      background-position: 0 71.25%;
+      background-size: 20vh; }
 
 .phpdebugbar p {
   font-size: black; }
