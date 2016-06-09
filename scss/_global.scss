@@ -100,6 +100,36 @@ p {
 	}
 }
 
+.svg {
+	background: url("../img/svg/social/sprite_map.svg");
+	overflow: hidden;
+	.createSocial & {
+		width: 55px;
+		height: 55px;
+	}
 
+}
 
+.instagram {
+	background-position: 0 -55px;
+}
+
+.linkedin {
+	background-position: 0 -110px;
+}
+
+.twitter {
+	background-position: 0 -165px;
+}
+
+.youtube {
+	background-position: 0 -220px;
+}
+
+.booking-btn {
+	@include btn($bookingButtonColor, 30px, 110px);
+	color: lighten(white,10%);
+	// text-transform: uppercase;
+	font-size: 0.85em;
+}
 

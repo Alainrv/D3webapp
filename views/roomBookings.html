@@ -48,39 +48,109 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     
 </head>
+
 <body>
-
-<div class="signup_wrapper login">
-	<div class="headerPicture">
-		<img src="../img/d3logosite-01.png">
-	</div>
-	<div class="accountManagement">
-		<form class="input_form">
-			<div class="input">
-				<input type="text" placeholder="Username" name="">
-				<div class="svg personCreate"></div>
-			</div>
-			<div class="input">
-				<input type="password" placeholder="password" name="">
-				<div class="svg lockCreate"></div>
-			</div>
-
-			<button class="acc-btn" type="submit">Log In</button>
-		</form>
-		<div class="oth_links">
-			<a href="signUp.html">New here? Sign up</a>
-			<a href="forgetPassword.html">Forget Password?</a>
+<div class="booking_wrapper">
+	<div class="header">
+		<div class="headerNav">
+			<!-- can add elements in it -->
+		</div>
+		<div class="headerPicture">
+			<img src="../img/svg/profilePicture.svg">
 		</div>
 	</div>
 
+	<div class="roomBoard">
+		<div class="upcoming">
+				<p>UPCOMING</p>
+				<button id="myButton" class="booking-btn" type="submit" href="createBookingS1.html">+ Create</button>
+		</div>
 
-	<div class="createSocial">
-		<a class="svg facebook" href="" target="_blank"></a>
-		<a class="svg youtube" href="" target="_blank"></a>
-		<a class="svg instagram" href="" target="_blank"></a>
-		<a class="svg twitter" href="" target="_blank"></a>
-		<a class="svg linkedin" href="" target="_blank"></a>
+		<div class="upcomingBox">
+			<div class="room new">
+				<div class="room-detail">
+					<div class="roomName">Maker Space Room</div>
+					<div class="roomSchedule">time schedule set up</div>
+					<div class="roomOwner">owner is whom</div>
+
+					<div class="capacity">8 people</div>
+					<div class="time">
+						<div class="svg meetingClock"></div>
+						<div class="duration">45 min</div>
+					</div>
+				</div>
+
+				<div class="room-edit">
+					<a href="">Edit</a><a class="verticalLine" href="">Cancel</a>
+				</div>
+			</div>
+
+			<div class="room new">
+				<div class="room-detail">
+					<div class="roomName">Maker Space Room</div>
+					<div class="roomSchedule">time schedule set up</div>
+					<div class="roomOwner">owner is whom</div>
+
+					<div class="capacity">8 people</div>
+					<div class="time">
+						<div class="svg meetingClock"></div>
+						<div class="duration">45 min</div>
+					</div>
+				</div>
+
+				<div class="room-edit">
+					<a href="">Edit</a><a class="verticalLine" href="">Cancel</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="history">
+			<p>HISTORY</p>
+		</div>
+
+		<div class="historyBox">
+			<div class="room old">
+				<div class="room-detail">
+					<div class="roomName">Maker Space Room</div>
+					<div class="roomSchedule">time schedule set up</div>
+					<div class="roomOwner">owner is whom</div>
+
+					<div class="capacity">8 people</div>
+					<div class="time">
+						<div class="svg meetingClock"></div>
+						<div class="duration">45 people</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 	</div>
+
 </div>
+
+
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "createBookingS1.html";
+    };
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
-</html>
