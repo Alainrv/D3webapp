@@ -97,3 +97,28 @@
 		}
 	}
 }
+[class^="icon-"] {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url("../img/svg/sprite.svg");
+}
+
+.icon-facebook{
+    background-position: -1799px  0px;
+}
+.icon-instagram{
+    background-position: -48px 0px;
+}
+
+.icon-linkedin{
+    background-position: 0px -110px;;
+}
+
+.icon-twitter{
+    background-position: 0px -165px;
+}
+
+.icon-youtube{
+    background-position: 0px -220px;
+}
