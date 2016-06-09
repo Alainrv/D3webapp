@@ -25,7 +25,7 @@
 }
 
 
-.roomBoard{
+.bookingBoard{
 	width: 100%;
 	margin: auto auto;
 }
@@ -83,7 +83,7 @@
 	
 }
 
-.room {
+.booking {
 	position: relative;
 	margin-top: 15px;
 	padding: 10px 10px;
@@ -99,13 +99,13 @@
 	&.old{
 		height: 35vh;
 	}
-	.room-detail div{
+	.booking-detail div{
 		font-family: 'Avenir-book';
 		font-size: 0.9em;
 		letter-spacing: 1.3px;
 		color: $writting;
 		line-height: 130%;
-		&.roomName{
+		&.name{
 			font-family: 'Avenir-medium';
 			letter-spacing: 1.7px;
 			font-size: 1.2em;
@@ -127,7 +127,7 @@
 
 		}
 	}
-	.room-edit{
+	.booking-edit{
 		position: absolute;
 		bottom:15px;
 		right: 15px;
