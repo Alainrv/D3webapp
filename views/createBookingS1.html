@@ -55,18 +55,71 @@
 		<div class="headerNav">
 			<!-- can add elements here -->
 		</div>
-		<div class="stepHeader">
-			<div class="circle"></div>
-			<div class="circle"></div>
-			<div class="circle"></div>
-		</div>
-		<div>
+		<div class="headerInfor">
+			<div class="signs">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</div>
+			<div class="title">
+				<p>Select a room</p>
+			</div>
 		</div>
 	</div>
+
+	<form method="post">
+		<div name="rooms" class="rooms" >
+			<li>
+				<div class="content">
+					<div class="roomTag">CR</div>
+					<div class="roomDetail">
+			    		<p class="name">Class Room</p>
+			    		<p class="capacity">Capacity: 5people so many words yes yes yes</p>
+		    		</div>
+		    		<div class="svg arrow">
+	    			</div>
+	    		</div>
+			</li>
+
+	    	<li>
+	    		<div class="content">
+	    			<div class="roomTag">WR</div>
+	    			<div class="roomDetail">
+		    			<p class="name">Window Room</p>
+		    			<p class="capacity">Capacity: 20people</p>
+	    			</div>
+	    			<div class="svg arrow">
+	    			</div>
+	    		</div>
+			</li>
+
+	    	<li>
+	    		<div class="content">
+	    			<div class="roomTag">BM</div>
+	    			<div class="roomDetail">
+		    			<p class="name">By the maker space</p>
+		    			<p class="capacity">Capacity: 8people</p>
+	    			</div>
+	    			<div class="svg arrow">
+	    			</div>
+	    		</div>
+			</li>
+		</div>
+
+		<div class="next">
+			<button id="nextButton" class="room-btn">Next</button>
+		</div>
+
+
+	</form>
 </div>
 
 
-
+<script type="text/javascript">
+    document.getElementById("nextButton").onclick = function () {
+        location.href = "createBookingS2.html";
+    };
+</script>
 
 
 

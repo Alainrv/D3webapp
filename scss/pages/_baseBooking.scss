@@ -1,15 +1,108 @@
-.stepHeader {
+$dark : #202334;
+$light : #9b9b9b;
+
+.headerInfor {
 	margin: 5vh auto; 
 	width: 50%;
 	text-align: center;
-	@include display(flex);
-	@include justify-content(space-around);
-	.circle{
-		height: 20px;
-		width: 20px;
-		border-radius: 50%;
-		background-color: #202334;
-		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
+	.signs{
+		@include display(flex);
+		@include justify-content(space-around);
+		.circle {
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			background-color: $light;
+			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
+			&:first-child{
+				background-color: $dark;
+			}
+		}
+	}
+	.title p{
+		margin-top: 3vh;
+		font-family: ".HelveticaNeueDeskInterface-Regular";
+		font-size: 14px;
+		letter-spacing: 1.3px;
+		color: #4a4a4a;
+	}
+}
 
+.rooms{
+	li{
+		list-style-type: none;
+		height: 50px;
+		width: 100%;
+		
+		&:hover{
+			background-color:#fff2dd;
+		}
+		&:first-child .content{
+			border-top: 1px solid #ddd;
+		}
+	}
+
+	.content {
+		margin: auto auto;
+    	width: 90%;
+    	height: 100%;
+    	border-bottom: 1px solid #ddd;
+    	font-family: '.HelveticaNeueDeskInterface-Regular';
+		font-size: 14px;
+		letter-spacing: 1.3px;
+		color: #ffffff;
+		@include display(flex);
+		// @include justify-content(space-between);
+
+		.roomTag {
+			margin: auto 0;
+			width: 30px;
+			height: 30px;
+			line-height: 30px; 
+			background-color: $dark;
+			font-family: ".HelveticaNeueDeskInterface-Regular";
+			color: #ffffff;
+			text-align: center;
+			vertical-align: middle;
+	    }
+	    .roomDetail{
+	    	margin: auto 10px;
+		    p {
+		    	display: block;
+		    	font-family: '.HelveticaNeueDeskInterface-Bold';
+				color: #4a4a4a;
+				&.name{
+					font-size: 0.9em;
+					letter-spacing: 1.1px;
+				}
+				&.capacity{
+					font-size: 10px;
+					color: lighten(#4a4a4a,20%);
+				}
+		    }
+		}
+		.arrow {	
+			margin: auto auto;
+			margin-right: 0;
+			width: 9px;
+			height: 12px;
+			background-position: 0 -788px;
+		}
+	}
+}
+
+
+
+.next {
+	text-align: center;
+	margin: 10vh auto;
+
+	button{
+		font-family: 'Avenir-Roman';
+		font-size: 14px;
+		line-height: 1.4;
+		letter-spacing: 1.7px;
+		color: #ffffff;
+		box-shadow: 0 2px 4px 0 #b4b4b4;
 	}
 }
