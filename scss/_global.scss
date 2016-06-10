@@ -126,6 +126,7 @@ p {
 	background-position: 0 -220px;
 }
 
+
 .booking-btn {
 	@include btn($bookingButtonColor, 30px, 110px);
 	color: lighten(white,10%);

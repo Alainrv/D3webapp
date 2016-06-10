@@ -1,5 +1,5 @@
 
-$font_stack: "MuseoSans", "Open Sans", Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font_stack: "MuseoSans", "Open Sans", Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif,'.HelveticaNeueDeskInterface-Regular';
 $font_stackH: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // ------------------------------------------------
@@ -23,8 +23,7 @@ $backgroundEmployees: #fff;
 $d3Orange: #FBB147;
 $iconHoverColor: #52C484;
 $accountButtonColor: #4A4A4A;
-$bookingButtonColor: #555c82;
-$bookingWritting: #555c82;
+
 // ------------------------------------------------
 // 
 //       		Dimensions of D3 appgreyBorder
@@ -36,3 +35,15 @@ $profilePictureSize: 150px;
 
 $porfilePictureSignUpSize: 100px;
 $porfilePictureSignUpSize_medium: 140px;
+
+// ------------------------------------------------
+// 
+//       		Colors of D3 room booking pages
+// 
+// ------------------------------------------------
+$bookingButtonColor: #555c82;
+$bookingWritting: #555c82;
+$lightBackgroundColor: #f8f8f8;
+$dark : #202334;
+$light : #9b9b9b;
+$white: #ffffff;

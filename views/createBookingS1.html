@@ -67,9 +67,11 @@
 		</div>
 	</div>
 
-	<form method="post">
-		<div name="rooms" class="rooms" >
-			<li>
+	<form method="post" action="createBookingS2.html">
+		<div class="select-rooms">
+
+			<div class="room">
+				<label for="room1">
 				<div class="content">
 					<div class="roomTag">CR</div>
 					<div class="roomDetail">
@@ -79,9 +81,12 @@
 		    		<div class="svg arrow">
 	    			</div>
 	    		</div>
-			</li>
+	    		</label>
+	    		<input type="radio" name="room" id="room1"></input>
+			</div>
 
-	    	<li>
+	    	<div class="room">
+	    		<label for="room2">
 	    		<div class="content">
 	    			<div class="roomTag">WR</div>
 	    			<div class="roomDetail">
@@ -91,9 +96,13 @@
 	    			<div class="svg arrow">
 	    			</div>
 	    		</div>
-			</li>
+	    		</label>
+	    		<input type="radio" name="room" id="room2"></input>
 
-	    	<li>
+			</div>
+
+	    	<div class="room">
+	    		<label for="room3">
 	    		<div class="content">
 	    			<div class="roomTag">BM</div>
 	    			<div class="roomDetail">
@@ -103,34 +112,32 @@
 	    			<div class="svg arrow">
 	    			</div>
 	    		</div>
-			</li>
+	    		</label>
+	    		<input type="radio" name="room" id="room3"></input>
+			</div>
+
+
 		</div>
 
 		<div class="next">
-			<button id="nextButton" class="room-btn">Next</button>
+			<button id="nextButton" type="submit" class="room-btn">Next</button>
 		</div>
-
-
 	</form>
 </div>
 
 
-<script type="text/javascript">
-    document.getElementById("nextButton").onclick = function () {
-        location.href = "createBookingS2.html";
-    };
+<script>
+// add highlight background to selected radio input
+$(document).ready(function(){
+    $('input[type=radio]').change(function(){
+        var $this = $(this);
+        $this.closest('.select-rooms').find('div.highlight').removeClass('highlight');
+        $this.closest('.room').addClass('highlight');
+        // console.log($("input[type=radio]:checked"));
+    });
+});
+
 </script>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

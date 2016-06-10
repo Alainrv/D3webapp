@@ -85,7 +85,7 @@ h5,
 h6 {
   color: #4A4A4A;
   letter-spacing: 1px;
-  font-family: "MuseoSans", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "MuseoSans", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif, ".HelveticaNeueDeskInterface-Regular"; }
 
 a,
 p,
@@ -98,7 +98,7 @@ input,
 select,
 textarea {
   color: #4A4A4A;
-  font-family: "MuseoSans", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "MuseoSans", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif, ".HelveticaNeueDeskInterface-Regular"; }
 
 a {
   text-decoration: none; }
@@ -1571,40 +1571,7 @@ div[class^="edit_funds"] {
   width: 100%;
   margin: auto auto; }
 
-.upcoming {
-  width: 100%;
-  height: 50px;
-  border: #cacaca 1px solid;
-  background-color: #f8f8f8;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify; }
-  .upcoming p {
-    margin: auto;
-    margin-left: 15px;
-    font-size: 16px;
-    font-family: '.HelveticaNeueDeskInterface-Regular';
-    line-height: 1.1;
-    letter-spacing: 1.9px;
-    color: #848484; }
-  .upcoming button {
-    margin: auto;
-    margin-right: 15px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); }
-
+.upcoming,
 .history {
   width: 100%;
   height: 50px;
@@ -1626,6 +1593,7 @@ div[class^="edit_funds"] {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify; }
+  .upcoming p,
   .history p {
     margin: auto;
     margin-left: 15px;
@@ -1634,6 +1602,11 @@ div[class^="edit_funds"] {
     line-height: 1.1;
     letter-spacing: 1.9px;
     color: #848484; }
+  .upcoming button,
+  .history button {
+    margin: auto;
+    margin-right: 15px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); }
 
 .upcomingBox,
 .historyBox {
@@ -1648,10 +1621,8 @@ div[class^="edit_funds"] {
   padding: 10px 10px;
   width: 100%;
   border-radius: 7px;
-  background-color: #ffffff;
   box-shadow: 0 2px 4px 0 #b4b4b4;
-  border: solid 0.5px #c7c7c7;
-  display: block; }
+  border: solid 0.5px #c7c7c7; }
   .booking.new {
     height: 45vh; }
   .booking.old {
@@ -1677,6 +1648,29 @@ div[class^="edit_funds"] {
         width: 18px;
         height: 18px;
         background-position: 0 -770px; }
+    .booking .booking-detail div.equipments {
+      margin-top: 5px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: justify; }
+      .booking .booking-detail div.equipments div {
+        height: 20px;
+        width: 85px;
+        border: solid #7d7d7d 0.5px;
+        text-align: center; }
   .booking .booking-edit {
     position: absolute;
     bottom: 15px;
@@ -1691,10 +1685,12 @@ div[class^="edit_funds"] {
         border-left: solid 2px #979797; }
 
 .headerInfor {
-  margin: 5vh auto;
-  width: 50%;
+  margin: 7vh auto;
+  width: 100%;
   text-align: center; }
   .headerInfor .signs {
+    margin: auto;
+    width: 35%;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -1720,29 +1716,30 @@ div[class^="edit_funds"] {
       .headerInfor .signs .circle:first-child {
         background-color: #202334; }
   .headerInfor .title p {
-    margin-top: 3vh;
+    margin: 3vh auto;
     font-family: ".HelveticaNeueDeskInterface-Regular";
     font-size: 14px;
     letter-spacing: 1.3px;
-    color: #4a4a4a; }
+    color: #4A4A4A; }
 
-.rooms li {
+.select-rooms input[type="radio"] {
+  position: absolute;
+  top: 15px;
+  visibility: hidden; }
+.select-rooms .highlight {
+  background-color: #fff2dd; }
+.select-rooms .room {
+  position: relative;
   list-style-type: none;
   height: 50px;
   width: 100%; }
-  .rooms li:hover {
-    background-color: #fff2dd; }
-  .rooms li:first-child .content {
+  .select-rooms .room:first-child .content {
     border-top: 1px solid #ddd; }
-.rooms .content {
+.select-rooms .content {
   margin: auto auto;
   width: 90%;
   height: 100%;
   border-bottom: 1px solid #ddd;
-  font-family: '.HelveticaNeueDeskInterface-Regular';
-  font-size: 14px;
-  letter-spacing: 1.3px;
-  color: #ffffff;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -1750,29 +1747,28 @@ div[class^="edit_funds"] {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
-  .rooms .content .roomTag {
+  .select-rooms .content .roomTag {
     margin: auto 0;
     width: 30px;
-    height: 30px;
     line-height: 30px;
     background-color: #202334;
     font-family: ".HelveticaNeueDeskInterface-Regular";
+    font-size: 0.9em;
     color: #ffffff;
     text-align: center;
     vertical-align: middle; }
-  .rooms .content .roomDetail {
-    margin: auto 10px; }
-    .rooms .content .roomDetail p {
-      display: block;
+  .select-rooms .content .roomDetail {
+    margin: auto 10px;
+    line-height: 85%; }
+    .select-rooms .content .roomDetail p {
       font-family: '.HelveticaNeueDeskInterface-Bold';
-      color: #4a4a4a; }
-      .rooms .content .roomDetail p.name {
-        font-size: 0.9em;
-        letter-spacing: 1.1px; }
-      .rooms .content .roomDetail p.capacity {
-        font-size: 10px;
+      color: #4A4A4A; }
+      .select-rooms .content .roomDetail p.name {
+        font-size: 0.7em; }
+      .select-rooms .content .roomDetail p.capacity {
+        font-size: 0.6em;
         color: #7d7d7d; }
-  .rooms .content .arrow {
+  .select-rooms .content .arrow {
     margin: auto auto;
     margin-right: 0;
     width: 9px;
@@ -1784,10 +1780,7 @@ div[class^="edit_funds"] {
   margin: 10vh auto; }
   .next button {
     font-family: 'Avenir-Roman';
-    font-size: 14px;
-    line-height: 1.4;
     letter-spacing: 1.7px;
-    color: #ffffff;
     box-shadow: 0 2px 4px 0 #b4b4b4; }
 
 .phpdebugbar p {
