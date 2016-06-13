@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="1000" viewBox="0 0 200 1000">
 
 <!-- <defs> -->
@@ -249,11 +249,19 @@
 
 </svg>
 
-<svg vid="arrow" width="9" height="12" x="0" y="788" viewBox="0 0 22.924 22.924" style="enable-background:new 0 0 22.924 22.924;" xml:space="preserve">
+<svg id="arrow" width="9" height="12" x="0" y="788" viewBox="0 0 22.924 22.924" style="enable-background:new 0 0 22.924 22.924;" xml:space="preserve">
 <path style="fill:#9b9b9b;" d="M2.24,15.206c0,0.619-0.508,1.111-1.127,1.111c-0.619,0-1.111-0.492-1.111-1.111V1.127
     C0.002,0.508,0.494,0,1.113,0h14.079c0.619,0,1.111,0.508,1.111,1.127s-0.492,1.127-1.111,1.127H3.827l18.761,18.761
     c0.444,0.444,0.444,1.143,0,1.587c-0.429,0.429-1.143,0.429-1.571,0L2.24,3.825V15.206z"/>
 
+</svg>
+
+<svg id="Capa_1" width="15" height="15" x="0px" y="800px" viewBox="0 0 86.001 86.001" style="enable-background:new 0 0 86.001 86.001;" xml:space="preserve">
+<g x="0px" y="800px">
+    <path style="fill:#c7c7c7;" d="M64.998,80.095c1.338,1.352,1.338,3.541,0,4.893c-1.336,1.35-3.506,1.352-4.844,0l-39.151-39.54
+        c-1.338-1.352-1.338-3.543,0-4.895l39.15-39.539c1.338-1.352,3.506-1.352,4.844,0C66.335,2.366,66.335,4.556,65,5.907
+        L29.294,43.001L64.998,80.095z"/>
+</g>
 </svg>
 
 </svg>

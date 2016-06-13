@@ -1,6 +1,7 @@
 .booking_wrapper{
 	margin: auto auto;
 	padding: 0 0;
+	min-width: 320px;
 
 	.header {
 		width: 100%;
@@ -11,13 +12,18 @@
 		}
 
 		.headerPicture{
-			margin: 5vh 0;
+			margin: 5vh auto;
 			text-align: center;
 			img{
 				border-radius: 50%;
 				box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-				height: 25vh;
-				width: 25vh;
+				height: 112px;
+				width: 112px;
+			}
+			@media(min-width: 460px){
+				max-width: 600px;
+				margin-bottom: -10px;
+				text-align: left;
 			}
 		}
 	}
@@ -27,8 +33,48 @@
 .bookingBoard{
 	width: 100%;
 	margin: auto auto;
+	position: relative;
+	@media (min-width: 420px) {
+		min-width: 320px;
+		max-width: 550px;
+		margin-bottom: 5vh;
+		border: lighten($greyBorder, 20%) 1px solid;
+	}
 }
 
+.tabs{
+	display: none;
+	height: 56px;
+	border: none;
+	width: 100%;
+	background-color: #ffffff;
+	@media(min-width: 460px){
+		display: block;
+	}
+	.tab {
+		width: 60%;
+		float: left;
+		margin: 13px 10px;
+		@include display(flex);
+		@include justify-content(space-between);
+		line-height: 30px; 
+		text-align: center;
+		vertical-align: middle;
+		a{
+			padding: 0 1px;
+			font-family: '.HelveticaNeueDeskInterface-Regular';
+			font-size: 1em;
+			letter-spacing: 2.2px;
+			color: #4a4a4a;
+		}
+	}
+	button{
+		float: right;
+		margin: 13px 15px;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
 
 .upcoming,
 .history{
@@ -36,6 +82,12 @@
 	height: 50px;
 	border: lighten($greyBorder, 20%) 1px solid;
 	background-color: $lightBackgroundColor;
+	@media (min-width: 460px) {
+		height: 40px;
+		border: none;
+		border-bottom: lighten($greyBorder, 20%) 1px solid;
+		border-top: lighten($greyBorder, 20%) 1px solid;
+	}
 	@include display(flex);
 	@include justify-content(space-between);
 	p {
@@ -50,7 +102,10 @@
 	button{
 		margin: auto;
 		margin-right: 15px;
-		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+		box-shadow: 0 2px 4px 0 #b4b4b4;
+		@media(min-width:460px){
+			display: none;
+		}
 	}
 }
 
@@ -58,11 +113,8 @@
 .historyBox {
 	max-width: 100%;
 	margin: auto auto;
-
 	padding: 0 15px;
 	padding-bottom: 15px;
-
-	
 }
 
 .booking {
@@ -75,17 +127,23 @@
 	border: solid 0.5px #c7c7c7;
 
 	&.new{
-		height: 45vh;
+		height: 230px;
 	}
 	&.old{
-		height: 35vh;
+		height: 180px;
+	}
+	&.new,
+	&.old {
+		@media(min-width: 460px){
+			height: 180px;
+		}
 	}
 	.booking-detail div{
 		font-family: 'Avenir-book';
-		font-size: 0.9em;
+		font-size: 14px;
 		letter-spacing: 1.3px;
 		color: $writting;
-		line-height: 130%;
+		line-height: 150%;
 		&.name{
 			font-family: 'Avenir-medium';
 			letter-spacing: 1.7px;
@@ -101,26 +159,27 @@
 			}
 			.meetingClock {
 				position: absolute;
+				top: 2px;
 				width: 18px;
 				height: 18px;
 				background-position: 0 -770px;
 			}
 		}
 		&.equipments{
-			margin-top: 5px;
+			max-width: 260px;
 			@include display(flex);
 			@include justify-content(space-between);
+			@include flex-wrap(wrap);
 			div {
-				height:20px;
-				width: 85px;
+				margin: 5px 1px;
+				padding: 1px;
 				border: solid lighten($writting,20%) 0.5px;
-				text-align: center;
 			}
 		}
 	}
 	.booking-edit{
 		position: absolute;
-		bottom:15px;
+		bottom:17px;
 		right: 15px;
 		a {	
 			font-family: '.HelveticaNeueDeskInterface-Regular';
@@ -128,9 +187,10 @@
 			letter-spacing: 1.7px;
 			padding: 2px 8px;
 			color: $bookingWritting;
-			&.verticalLine{
-				border-left: solid 2px #979797;
-			}
 		}
 	}
+}
+
+.verticalLine{
+	border-left: solid 2px #979797;
 }

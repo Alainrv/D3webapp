@@ -61,10 +61,21 @@
 	</div>
 
 	<div class="bookingBoard">
+		<div class="tabs">
+			<div class="tab">
+				<a href="">All 10</a>
+				<div class="verticalLine"></div>
+				<a href="">Upcoming 6</a>
+				<div class="verticalLine"></div>
+				<a href="">History 4</a>
+			</div>
+			<button class="booking-btn" onclick="createBooking(this)">+ Create</button>
+		</div>
 		<div class="upcoming">
 				<p>UPCOMING</p>
-				<button id="createButton" class="booking-btn">+ Create</button>
+				<button class="booking-btn" onclick="createBooking(this)">+ Create</button>
 		</div>
+
 
 		<div class="upcomingBox">
 
@@ -169,9 +180,9 @@
 
 
 <script type="text/javascript">
-    document.getElementById("createButton").onclick = function () {
-        location.href = "createBookingS1.html";
-    };
+    function createBooking(){
+    	location.href = "createBookingS1.html";
+    }
 </script>
 
 
