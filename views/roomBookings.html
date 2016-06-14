@@ -71,7 +71,7 @@
 			</div>
 			<button class="booking-btn" onclick="createBooking(this)">+ Create</button>
 		</div>
-		<div class="upcoming">
+		<div class="sectionHead">
 				<p>UPCOMING</p>
 				<button class="booking-btn" onclick="createBooking(this)">+ Create</button>
 		</div>
@@ -98,7 +98,9 @@
 					</div>
 				</div>
 				<div class="booking-edit">
-					<a class="edit" href="">Edit</a><a class="verticalLine cancel" href="">Cancel</a>
+					<a class="edit" href="">Edit</a>
+					<div class="verticalLine"></div>
+					<a class="cancel" href="">Cancel</a>
 				</div>
 			</div>
 
@@ -118,16 +120,22 @@
 						<div>Equipment</div>
 						<div>Equipment</div>
 						<div>Equipment</div>
+						<div>Equipment</div>
+						<div>Equipment</div>
+						<div>Equipment</div>
 					</div>
 				</div>
 				<div class="booking-edit">
-					<a class="edit" href="">Edit</a><a class="verticalLine cancel" href="">Cancel</a>
+					<!-- The line in the middle here should not be part of the second a, we do not want someone to cancel a meeting by pressing the line by mistake. The line is in between creting a space that allow for different intention for fingers on touch base devices -->
+					<a class="edit" href="">Edit</a>
+					<div class="verticalLine"></div>
+					<a class="cancel" href="">Cancel</a>
 				</div>
 			</div>
 
 		</div>
 
-		<div class="history">
+		<div class="sectionHead">
 			<p>HISTORY</p>
 		</div>
 
@@ -183,20 +191,10 @@
     function createBooking(){
     	location.href = "createBookingS1.html";
     }
+
+// Why does this via javascript versus doing versus a simply href function?
+// You can simply wrap the button 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
