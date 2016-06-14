@@ -11,11 +11,15 @@
 ----------------------------------------------------------------------------- */
 
 .o-wrapper {
-  transition: transform 0.3s;
+  transition: transform 0.3s, margin-left 0.3s;
   overflow-x: hidden
 }
 
-
+.has-slide-left {
+  @media all and (min-width: $breakpoint--slide_different) {
+    margin-left: $menu-width;
+  }
+}
 
 
 
@@ -39,7 +43,7 @@
 
 }
 
-@media all and ( min-width: $breakpoint--medium ) {
+@media all and ( min-width: $breakpoint--large ) {
 
   .o-container {
     padding: 0 48px;

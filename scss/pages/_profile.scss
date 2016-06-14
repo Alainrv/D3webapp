@@ -2,7 +2,8 @@
 	width: 100%;
 	max-width: 800px;
 	margin: auto auto;
-	padding-top: 30px;
+	margin-top: 30px;
+	box-shadow: rgba(0,0,0,0.3) 0px 2px 5px 1px;
 }
 
 .compHeader {
@@ -11,11 +12,52 @@
 	@include display(flex);
 	@include justify-content(center);
 	@include align-content(center);
-	border: 0.5px solid $greyBorder;
+	border: none;
+	position: relative;
+	background: white;
+
 
 	img {
 		margin: auto auto;
 		max-width: 95%;
+		max-height: 92%;
+	}
+
+	a {
+		position: absolute;
+		text-decoration: underline;
+		font-size: 0.8em;
+		font-weight: 600;
+		color: $dark_background;
+		bottom: 20px;
+		right: 20px;
+	}
+
+	button {
+		@include btn($d3Orange, 50px, 150px);
+		color: white;
+		font-size: 1em;
+		position: absolute;
+		bottom: 20px; 
+		right: 20px;
+	}
+
+	&--editing {
+
+		.editMode {
+			width: 100%;
+			@include display(flex);
+			@include justify-content(center);
+
+			form {
+				margin-top: auto;
+				margin-bottom: auto;
+			}
+		}
+
+		img {
+			display: none;
+		}
 	}
 }
 
@@ -27,6 +69,31 @@
 	text-align: center;
 	position: relative;
 	padding-top: 85px;
+	@include transition(font-weight 0.3s);
+
+	&--editing {
+		padding-top: 0;
+	}
+
+	&:hover > a {
+		@include animation-name(scale);
+		@include animation-duration(2s);
+		@include animation-timing-function(ease);
+		@include animation-iteration-count(infinite);
+		font-weight: 800;
+	}
+
+	@include keyframes(scale) {
+		0% {
+			@include transform(scale(1));
+		}
+		50% {
+			@include transform(scale(1.5));
+		}
+		100% {
+			@include transform(scale(1));
+		}
+	}
 
 	img {
 		width: $profilePictureSize;
@@ -42,6 +109,42 @@
 		color: white;
 		font-weight: 500;
 		font-size: 1.2em;
+
+		span {
+			color: inherit;
+			font-weight: inherit;
+		}
+	}
+
+	a {
+		position: absolute;
+		bottom: 10px;
+		right: 15px;
+		text-decoration: underline;
+		font-size: 0.8em;
+		font-weight: 600;
+		color: white;
+
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+
+	form {
+		max-width: 300px;
+		margin: auto auto;
+		padding-top: 10px;
+		text-align: left;
+
+		label {
+			font-size: 0.8em;
+			margin-bottom: 5px;
+		}
+
+		input {
+			margin-bottom: 5px;
+			width: 100%;
+		}
 	}
 }
 
@@ -62,6 +165,23 @@
 	a {
 		color: white;
 		font-size: 1em;
+	}
+
+	input:first-child {
+		margin-bottom: 5px;
+	}
+
+	&--editing {
+		height: auto;
+
+		.editMode {
+			display: block;
+		}
+
+		.editContainer {
+			width: 100%;
+			padding: 20px;
+		}
 	}
 }
 
@@ -103,22 +223,20 @@
 	    	color: $dark_background;
 	    }
 
-	    &:first-child {
-	    	border-left: 1px solid $greyBorder;
-	    }
+	    // &:first-child {
+	    // 	border-left: 1px solid $greyBorder;
+	    // }
 
-	    &:last-child {
-	    	border-right: 1px solid $greyBorder;
-	    }
+	    // &:last-child {
+	    // 	border-right: 1px solid $greyBorder;
+	    // }
 	}
 }
 
 
 .tabInner {
     clear: both;
-	border-right: 0.5px solid $greyBorder;
-	border-left: 0.5px solid $greyBorder;
-	border-bottom: 0.5px solid $greyBorder;
+	border: none;
 	@include display(flex);
 	overflow-x: hidden;
 
@@ -130,6 +248,10 @@
 	    background: white;
 	    @include display(flex);
 	    @include flex-direction(column);
+
+	    @media all and (min-width:$medium_size_breakpoint) {
+	    	padding: 10px 20px;
+	    }
 	}
 }
 
@@ -161,6 +283,13 @@ div[class^="team__"] {
 	p {
 		margin-bottom: 6px;
 		line-height: 1.2em;
+		padding-left: 4px;
+	}
+
+	.sub {
+		font-size: 1em;
+		font-weight: 500;
+		padding-left: 5px;
 	}
 }
 
@@ -186,24 +315,41 @@ div[class^="team__"] {
 	}
 }
 
-.team h3,
-.investment h3,
-.investment h4,
-.p-info h3 {
-	cursor: pointer;
+.editingPower {
+	.startupHeader h2,
+	.startupHeader a,
+	.team h3,
+	.investment h3,
+	.investment h4,
+	.p-info h3 {
+		cursor: pointer;
 
-	&::after {
-		content: url("../img/svg/edit.svg");
-		margin-left: -8px;
-		opacity: 0;		
-		transition: margin-left 0.1s 0s opacity 0.2s;
+		&::after {
+			content: url("/img/svg/edit.svg");
+			margin-left: -8px;
+			opacity: 0;		
+			transition: margin-left 0.1s 0s opacity 0.2s;
 
+		}
+
+		&:hover::after {
+			opacity: 1;
+			margin-left: 8px;
+			transition: margin-left 0.2s, opacity 0.2s;
+		}
+
+		&.fake:hover::after {
+			content: "";
+		}
+
+		&.fake {
+			margin-bottom: 15px;
+		}
 	}
 
-	&:hover::after {
-		opacity: 1;
-		margin-left: 8px;
-		transition: margin-left 0.2s, opacity 0.2s;
+	.startupHeader h2::after,
+	.startupHeader a::after {
+		content: url("/img/svg/editWhite.svg");
 	}
 }
 
@@ -306,7 +452,7 @@ div[class^="team__"] {
 		position: relative;
 
 		&::after {
-			content: url("../img/svg/remove-lg.svg");
+			content: url("/img/svg/remove-lg.svg");
 			position: absolute;
 			cursor: pointer;
 			top: -6px;
@@ -327,6 +473,28 @@ div[class^="team__"] {
 	}
 }
 
+.degree ul {
+	padding-left: 30px;
+
+	li {
+		list-style-image: url("/img/svg/diploma.svg");
+	}
+}
+
+.learning ul,
+.expertise ul {
+	padding-left: 0px;
+
+	li {
+		list-style: none;
+		background: white;
+		border: 1px solid $dark_background;
+		border-radius: 2px;
+		display: inline-block;
+		padding: 5px 10px;
+	}
+}
+
 // *****************************************
 // 
 //  		Social Media Startup
@@ -337,30 +505,33 @@ div[class^="team__"] {
 #startup_media,
 #media {
 	a::before {
-		height: 1em;
-		width: 1em;
 		margin-right: 6px;
+		background-size: 20px 20px;
+	    display: inline-block;
+	    width: 20px; 
+	    height: 20px;
+	    content:"";
 	}
 }
 
 .facebook a::before {
-	content: url("../img/svg/facebook.svg");
+	background-image: url("/img/svg/facebook.svg");
 }
 
 .twitter a::before {
-	content: url("../img/svg/twitter.svg");
+	background-image: url("/img/svg/twitter.svg");
 }
 
 .instagram a::before {
-	content: url("../img/svg/instagram.svg");
+	background-image: url("/img/svg/instagram.svg");
 }
 
 .linkedin a::before {
-	content: url("../img/svg/linkedin.svg");
+	background-image: url("/img/svg/linkedin.svg");
 }
 
 .angel a::before {
-	content: url("../img/svg/angellist.svg");
+	background-image: url("/img/svg/angellist.svg");
 }
 
 
@@ -401,6 +572,7 @@ div[class^="team__"] {
 	padding: 10px;
 
 	textarea,
+	input[type="url"],
 	input[type="text"],
 	input[type="date"],
 	input[type="email"],
@@ -415,6 +587,7 @@ div[class^="team__"] {
 	}
 
 	textarea,
+	input[type="url"],
 	input[type="text"] {
 		width: 100%;
 	}
@@ -516,7 +689,7 @@ div[class^="team__"] {
 
 .degree{
 	i:before {
-		content: url("../img/svg/diploma.svg");
+		content: url("/img/svg/diploma.svg");
 		margin-right: 4px;
 	}
 
@@ -581,7 +754,7 @@ div[class^="team__"] {
 	}
 
 	.edit a::after {
-		content: url("../img/svg/remove-sm.svg");
+		content: url("/img/svg/remove-sm.svg");
 		position: absolute;
 		top: 1px;
 		right: -4px;
@@ -629,20 +802,20 @@ div[class^="team__"] {
 		position: relative;
 
 		p::after{
-			content: url("../img/svg/completedStage.svg");
+			content: url("/img/svg/completedStage.svg");
 			margin-left: 4px;
 		}
 
-		&::after {
-			content: url("../img/svg/separators.svg");
-			position: absolute;
-			left: 0px;
-			top: 3px;
-		}
+		// &::after {
+		// 	content: url("/img/svg/separators.svg");
+		// 	position: absolute;
+		// 	left: 0px;
+		// 	top: 3px;
+		// }
 
-		&:first-child::after {
-			content: "";
-		}
+		// &:first-child::after {
+		// 	content: "";
+		// }
 	}
 }
 
@@ -691,7 +864,7 @@ div[class^="team__"] {
 	}
 
 	// &::before {
-	// 	content: url("../img/svg/remove-lg.svg");
+	// 	content: url("/img/svg/remove-lg.svg");
 	// 	margin-right: 5px;
 	// 	cursor: pointer;
 	// 	transition: transform 0.2s;
