@@ -43,7 +43,6 @@
 
 	.room {
 		position: relative;
-		list-style-type: none;
 		height: 50px;
 		width: 100%;
 		
@@ -75,10 +74,10 @@
 		    p {
 		    	font-family: '.HelveticaNeueDeskInterface-Bold';
 				color: $writting;
-				&.name{
+				&.roomName{
 					font-size: 0.7em;
 				}
-				&.capacity{
+				&.roomCapacity{
 					font-size: 0.6em;
 					color: lighten($writting,20%);
 				}

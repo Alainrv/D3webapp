@@ -2111,37 +2111,69 @@ div[class^="edit_funds"] {
 .booking_wrapper {
   margin: auto auto;
   padding: 0 0;
-}
-/* line 5, ../scss/pages/_roomBookings.scss */
-.booking_wrapper .header {
-  width: 100%;
-}
-/* line 7, ../scss/pages/_roomBookings.scss */
-.booking_wrapper .header .headerNav {
-  height: 50px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-}
-/* line 13, ../scss/pages/_roomBookings.scss */
-.booking_wrapper .header .headerPicture {
-  margin: 5vh 0;
-  text-align: center;
-}
-/* line 16, ../scss/pages/_roomBookings.scss */
-.booking_wrapper .header .headerPicture img {
-  border-radius: 50%;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-  height: 25vh;
-  width: 25vh;
-}
+  min-width: 200px; }
 
-/* line 28, ../scss/pages/_roomBookings.scss */
+.headerNav {
+  height: 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+
 .bookingBoard {
   width: 100%;
   margin: auto auto;
-}
+  position: relative; }
+  @media (min-width: 420px) {
+    .bookingBoard {
+      min-width: 320px;
+      max-width: 550px;
+      margin-bottom: 5vh;
+      border: #cacaca 1px solid; } }
 
-/* line 34, ../scss/pages/_roomBookings.scss */
-.upcoming {
+.tabs {
+  display: none;
+  height: 56px;
+  border: none;
+  width: 100%;
+  background-color: #ffffff; }
+  @media (min-width: 460px) {
+    .tabs {
+      display: block; } }
+  .tabs .tab {
+    width: 60%;
+    float: left;
+    margin: 13px 10px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle; }
+    .tabs .tab a {
+      padding: 0 1px;
+      font-family: '.HelveticaNeueDeskInterface-Regular';
+      font-size: 1em;
+      letter-spacing: 2.2px;
+      color: #4a4a4a; }
+  .tabs button {
+    float: right;
+    margin: 13px 15px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 2px 4px 0 #b4b4b4; }
+
+.sectionHead {
   width: 100%;
   height: 50px;
   border: #cacaca 1px solid;
@@ -2161,58 +2193,28 @@ div[class^="edit_funds"] {
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
   justify-content: space-between;
-  -ms-flex-pack: justify;
-}
-/* line 41, ../scss/pages/_roomBookings.scss */
-.upcoming p {
-  margin: auto;
-  margin-left: 15px;
-  font-size: 16px;
-  font-family: '.HelveticaNeueDeskInterface-Regular';
-  line-height: 1.1;
-  letter-spacing: 1.9px;
-  color: #848484;
-}
-/* line 50, ../scss/pages/_roomBookings.scss */
-.upcoming button {
-  margin: auto;
-  margin-right: 15px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-}
-
-/* line 57, ../scss/pages/_roomBookings.scss */
-.history {
-  width: 100%;
-  height: 50px;
-  border: #cacaca 1px solid;
-  background-color: #f8f8f8;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify;
-}
-/* line 64, ../scss/pages/_roomBookings.scss */
-.history p {
-  margin: auto;
-  margin-left: 15px;
-  font-size: 16px;
-  font-family: '.HelveticaNeueDeskInterface-Regular';
-  line-height: 1.1;
-  letter-spacing: 1.9px;
-  color: #848484;
-}
+  -ms-flex-pack: justify; }
+  @media (min-width: 460px) {
+    .sectionHead {
+      height: 40px;
+      border: none;
+      border-bottom: #cacaca 1px solid;
+      border-top: #cacaca 1px solid; } }
+  .sectionHead p {
+    margin: auto;
+    margin-left: 15px;
+    font-size: 16px;
+    font-family: '.HelveticaNeueDeskInterface-Regular';
+    line-height: 1.1;
+    letter-spacing: 1.9px;
+    color: #848484; }
+  .sectionHead button {
+    margin: auto;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px 0 #b4b4b4; }
+    @media (min-width: 460px) {
+      .sectionHead button {
+        display: none; } }
 
 /* line 75, ../scss/pages/_roomBookings.scss */
 .upcomingBox,
@@ -2232,69 +2234,98 @@ div[class^="edit_funds"] {
   border-radius: 7px;
   box-shadow: 0 2px 4px 0 #b4b4b4;
   border: solid 0.5px #c7c7c7;
-  display: block;
-}
-/* line 96, ../scss/pages/_roomBookings.scss */
-.booking.new {
-  height: 45vh;
-}
-/* line 99, ../scss/pages/_roomBookings.scss */
-.booking.old {
-  height: 35vh;
-}
-/* line 102, ../scss/pages/_roomBookings.scss */
-.booking .booking-detail div {
-  font-family: 'Avenir-book';
-  font-size: 0.9em;
+  overflow: auto; }
+
+.booking-detail {
+  font-size: 14px;
   letter-spacing: 1.3px;
   color: #4A4A4A;
-  line-height: 130%;
-}
-/* line 108, ../scss/pages/_roomBookings.scss */
-.booking .booking-detail div.name {
+  line-height: 150%; }
+
+.name {
   font-family: 'Avenir-medium';
   letter-spacing: 1.7px;
-  font-size: 1.2em;
-}
-/* line 113, ../scss/pages/_roomBookings.scss */
-.booking .booking-detail div.capacity {
-  padding-top: 15px;
-}
-/* line 116, ../scss/pages/_roomBookings.scss */
-.booking .booking-detail div.time {
-  position: relative;
-}
-/* line 118, ../scss/pages/_roomBookings.scss */
-.booking .booking-detail div.time .duration {
-  padding-left: 20px;
-}
-/* line 121, ../scss/pages/_roomBookings.scss */
-.booking .booking-detail div.time .meetingClock {
+  font-size: 1.2em; }
+
+.capacity {
+  padding-top: 15px; }
+
+.time {
+  position: relative; }
+
+.duration {
+  padding-left: 20px; }
+
+.meetingClock {
   position: absolute;
+  top: 2px;
   width: 18px;
   height: 18px;
-  background-position: 0 -770px;
-}
-/* line 129, ../scss/pages/_roomBookings.scss */
-.booking .booking-edit {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-}
-/* line 133, ../scss/pages/_roomBookings.scss */
-.booking .booking-edit a {
-  font-family: '.HelveticaNeueDeskInterface-Regular';
-  font-size: 1.1em;
-  letter-spacing: 1.7px;
-  padding: 2px 8px;
-  color: #555c82;
-}
-/* line 139, ../scss/pages/_roomBookings.scss */
-.booking .booking-edit a.verticalLine {
-  border-left: solid 2px #979797;
-}
+  background-position: 0 -770px; }
 
-/* line 4, ../scss/pages/_baseBooking.scss */
+.equipments {
+  max-width: 260px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .equipments div {
+    margin: 5px 1px;
+    padding: 1px;
+    border: solid #7d7d7d 0.5px; }
+
+.booking-edit {
+  float: right;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  @media (min-width: 460px) {
+    .booking-edit {
+      position: absolute;
+      bottom: 17px;
+      right: 15px; } }
+  .booking-edit a {
+    font-family: '.HelveticaNeueDeskInterface-Regular';
+    font-size: 1.1em;
+    letter-spacing: 1.7px;
+    margin: 2px 10px;
+    color: #555c82; }
+
+.verticalLine {
+  border-left: solid 2px #979797; }
+
 .headerInfor {
   margin: 5vh auto;
   width: 50%;
@@ -2348,7 +2379,6 @@ div[class^="edit_funds"] {
   background-color: #fff2dd; }
 .select-rooms .room {
   position: relative;
-  list-style-type: none;
   height: 50px;
   width: 100%; }
   .select-rooms .room:first-child .content {
@@ -2364,48 +2394,34 @@ div[class^="edit_funds"] {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex;
-}
-/* line 57, ../scss/pages/_baseBooking.scss */
-.rooms .content .roomTag {
-  margin: auto 0;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  background-color: #202334;
-  font-family: ".HelveticaNeueDeskInterface-Regular";
-  color: #ffffff;
-  text-align: center;
-  vertical-align: middle;
-}
-/* line 68, ../scss/pages/_baseBooking.scss */
-.rooms .content .roomDetail {
-  margin: auto 10px;
-}
-/* line 70, ../scss/pages/_baseBooking.scss */
-.rooms .content .roomDetail p {
-  display: block;
-  font-family: '.HelveticaNeueDeskInterface-Bold';
-  color: #4a4a4a;
-}
-/* line 74, ../scss/pages/_baseBooking.scss */
-.rooms .content .roomDetail p.name {
-  font-size: 0.9em;
-  letter-spacing: 1.1px;
-}
-/* line 78, ../scss/pages/_baseBooking.scss */
-.rooms .content .roomDetail p.capacity {
-  font-size: 10px;
-  color: #7d7d7d;
-}
-/* line 84, ../scss/pages/_baseBooking.scss */
-.rooms .content .arrow {
-  margin: auto auto;
-  margin-right: 0;
-  width: 9px;
-  height: 12px;
-  background-position: 0 -788px;
-}
+  display: flex; }
+  .select-rooms .content .roomTag {
+    margin: auto 0;
+    width: 30px;
+    line-height: 30px;
+    background-color: #202334;
+    font-family: ".HelveticaNeueDeskInterface-Regular";
+    font-size: 0.9em;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle; }
+  .select-rooms .content .roomDetail {
+    margin: auto 10px;
+    line-height: 85%; }
+    .select-rooms .content .roomDetail p {
+      font-family: '.HelveticaNeueDeskInterface-Bold';
+      color: #4A4A4A; }
+      .select-rooms .content .roomDetail p.roomName {
+        font-size: 0.7em; }
+      .select-rooms .content .roomDetail p.roomCapacity {
+        font-size: 0.6em;
+        color: #7d7d7d; }
+  .select-rooms .content .arrow {
+    margin: auto auto;
+    margin-right: 0;
+    width: 9px;
+    height: 12px;
+    background-position: 0 -788px; }
 
 /* line 96, ../scss/pages/_baseBooking.scss */
 .next {
