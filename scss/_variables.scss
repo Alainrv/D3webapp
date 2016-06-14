@@ -10,6 +10,7 @@ $font_stackH: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $menu_background: #333645;
 $dark_background: #202334;
+$dark_backgroundAlfa: rgba(32,35,52,0.90);
 $dark_backgroundHover: #202334; 
 $greyBorder: #979797;
 $writting: #4A4A4A;
@@ -21,13 +22,14 @@ $saveEditing: #7A7F9C;
 $backgroundButton: #c1c1c1;
 $backgroundEmployees: #fff;
 $d3Orange: #FBB147;
+$d3Red: #D94E4E;
 $iconHoverColor: #52C484;
 $accountButtonColor: #4A4A4A;
 $bookingButtonColor: #555c82;
 $bookingWritting: #555c82;
 // ------------------------------------------------
 // 
-//       		Dimensions of D3 appgreyBorder
+//       		Dimensions of D3 app
 // 
 // ------------------------------------------------
 
@@ -36,3 +38,27 @@ $profilePictureSize: 150px;
 
 $porfilePictureSignUpSize: 100px;
 $porfilePictureSignUpSize_medium: 140px;
+
+$searchBoxWidth: 210px;
+$searchButtonWidth: 100px;
+$spacebetweenSearchButton: 10px;
+
+
+
+// ------------------------------------------------
+// 
+//       		Breakpoints of D3 app
+// 
+// ------------------------------------------------
+$medium_size_breakpoint: 450px;
+
+
+
+
+
+
+
+
+
+
+
