@@ -67,6 +67,7 @@
 		</div>
 	</div>
 
+<!-- Action is about here the form will be posted no need to place any links at this point unless specifically mentionned -->
 	<form method="post" action="createBookingS2.html">
 		<div class="select-rooms">
 
@@ -127,13 +128,18 @@
 
 
 <script>
+//The comments should be placed at the right place, if you are deciding to use binding clicks that way. then you will likely have multiple function in that document ready. Therefore the comment should be placed right above the binding. The each line shoudl have its comments. 
+// the first line shoudl have the comment remove the highlight
+// the second line shoudl have the comment add the highlight
+
+
 // add highlight background to selected radio input
 $(document).ready(function(){
     $('input[type=radio]').change(function(){
+    	// Why did you want to create a variable here? seems like an overkill. 
         var $this = $(this);
         $this.closest('.select-rooms').find('div.highlight').removeClass('highlight');
         $this.closest('.room').addClass('highlight');
-        // console.log($("input[type=radio]:checked"));
     });
 });
 
