@@ -1,22 +1,24 @@
 $dark : #202334;
 $light : #9b9b9b;
 .createMeeting_wrapper {
-	max-width: 420px;
+/* 	max-width: 420px; */
 	margin: auto auto;
 	@media (min-width: 400px) {
-		max-width: 750px;
+		max-width: 765px;
+	}
+	@media (min-width: 770px) {
+		max-width: 1270px;
 	}
 }
 .centerTime{
-	margin-right: 17vh;
-	margin-left: 16vh;	
+	margin:auto auto;	
 	select {
 		letter-spacing: 1.7px;
 		padding: 4px;
 		font-size: 16px;
 		width: 95px;
-		  height: 235px;
-		  font-weight: normal;
+		height: 235px;
+		font-weight: normal;
   		line-height: 1.88;
   		text-align: center;
 	}
@@ -24,19 +26,20 @@ $light : #9b9b9b;
 
 .input_form_create_meeting {	
 	
- 	height: 332px;
+ 	 height: 332px;
 	background-color: #ffffff;
 	border: solid 0.5px #979797;
 	border-radius: 8px;	
 	width: 80%;
-	margin: 5vh auto;
+	margin: 2vh auto;
 	&:hover
  	 {
 		border: 1px solid #555c82;
 	}
 	@media (min-width: 400px) {
-		max-width: 700px;
-		height: 990px;
+		max-width: 765px;
+		height: 770px;
+		margin: 2vh auto;
 	}
 	input {
 	  font-size: 1em;
@@ -47,9 +50,13 @@ $light : #9b9b9b;
 	  margin: 0vh 8vh;
 	  box-sizing: border-box;
 	  width: 70%;
-	  &:hover
- 		 {
-		border: 1px solid #555c82;
+		  &:hover
+	 		 {
+			border: 1px solid #555c82;
+			}
+		@media (min-width: 400px) {
+		  margin: 0vh 4vh;		
+		  width: 87%;
 		}
 	}	
 	div {
@@ -69,7 +76,7 @@ $light : #9b9b9b;
 			&.emailCreate {
 				position: relative;
 				top: -30px;
-				left: 73vw;
+				left: 72vw;
 				width: 19px;
 				height: 20px;
 				background-position: 0 -820px;
@@ -85,19 +92,19 @@ $light : #9b9b9b;
 	text-transform: uppercase;
 	font-size: 0.9em;
 	width: 228px;
- 	 height: 47px;
+ 	height: 47px;
  	 &:hover
  	 {
 		border: 1px solid #555c82;
 	}
 }
 
-	.headerCreateMeeting {
-	margin: 5vh auto; 
+.headerCreateMeeting {
+	margin: 5vh auto 0vh; 
 	width: 58%;
 	text-align: center;
 	.signsCreateMeeting{
-		margin-left: 9vh;
+		margin-left: 11vh;
 		width: 50%;
 		@include display(flex);
 		@include justify-content(space-around);
@@ -111,6 +118,7 @@ $light : #9b9b9b;
 				background-color: $dark;
 			}
 		}
+		
 	}
 	.title p{
 		margin-top: 3vh;
@@ -118,5 +126,10 @@ $light : #9b9b9b;
 		font-size: 14px;
 		letter-spacing: 1.3px;
 		color: #4a4a4a;
+		@media (min-width: 400px) {
+		  margin-top: 2vh;	
+		  font-size: 18px;
+			}
 		}
-	}
+		
+}

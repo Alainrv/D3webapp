@@ -2435,22 +2435,27 @@ div[class^="edit_funds"] {
 
 /* line 3, ../scss/pages/_createMeetingStep3.scss */
 .createMeeting_wrapper {
-  max-width: 420px;
+  /* 	max-width: 420px; */
   margin: auto auto;
 }
 @media (min-width: 400px) {
   /* line 3, ../scss/pages/_createMeetingStep3.scss */
   .createMeeting_wrapper {
-    max-width: 750px;
+    max-width: 765px;
+  }
+}
+@media (min-width: 770px) {
+  /* line 3, ../scss/pages/_createMeetingStep3.scss */
+  .createMeeting_wrapper {
+    max-width: 1270px;
   }
 }
 
-/* line 10, ../scss/pages/_createMeetingStep3.scss */
-.centerTime {
-  margin-right: 17vh;
-  margin-left: 16vh;
-}
 /* line 13, ../scss/pages/_createMeetingStep3.scss */
+.centerTime {
+  margin: auto auto;
+}
+/* line 15, ../scss/pages/_createMeetingStep3.scss */
 .centerTime select {
   letter-spacing: 1.7px;
   padding: 4px;
@@ -2462,27 +2467,28 @@ div[class^="edit_funds"] {
   text-align: center;
 }
 
-/* line 25, ../scss/pages/_createMeetingStep3.scss */
+/* line 27, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting {
   height: 332px;
   background-color: #ffffff;
   border: solid 0.5px #979797;
   border-radius: 8px;
   width: 80%;
-  margin: 5vh auto;
+  margin: 2vh auto;
 }
-/* line 33, ../scss/pages/_createMeetingStep3.scss */
+/* line 35, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting:hover {
   border: 1px solid #555c82;
 }
 @media (min-width: 400px) {
-  /* line 25, ../scss/pages/_createMeetingStep3.scss */
+  /* line 27, ../scss/pages/_createMeetingStep3.scss */
   .input_form_create_meeting {
-    max-width: 700px;
-    height: 990px;
+    max-width: 765px;
+    height: 770px;
+    margin: 2vh auto;
   }
 }
-/* line 41, ../scss/pages/_createMeetingStep3.scss */
+/* line 44, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting input {
   font-size: 1em;
   font-family: sans-serif;
@@ -2493,19 +2499,26 @@ div[class^="edit_funds"] {
   box-sizing: border-box;
   width: 70%;
 }
-/* line 50, ../scss/pages/_createMeetingStep3.scss */
+/* line 53, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting input:hover {
   border: 1px solid #555c82;
 }
-/* line 55, ../scss/pages/_createMeetingStep3.scss */
+@media (min-width: 400px) {
+  /* line 44, ../scss/pages/_createMeetingStep3.scss */
+  .input_form_create_meeting input {
+    margin: 0vh 4vh;
+    width: 87%;
+  }
+}
+/* line 62, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting div {
   display: block;
 }
-/* line 57, ../scss/pages/_createMeetingStep3.scss */
+/* line 64, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting div:hover {
   border: 1px solid #555c82;
 }
-/* line 61, ../scss/pages/_createMeetingStep3.scss */
+/* line 68, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting div.personCreate {
   position: relative;
   top: 30px;
@@ -2514,17 +2527,17 @@ div[class^="edit_funds"] {
   height: 17px;
   background-position: 0 -800px;
 }
-/* line 69, ../scss/pages/_createMeetingStep3.scss */
+/* line 76, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting div.emailCreate {
   position: relative;
   top: -30px;
-  left: 73vw;
+  left: 72vw;
   width: 19px;
   height: 20px;
   background-position: 0 -820px;
 }
 
-/* line 81, ../scss/pages/_createMeetingStep3.scss */
+/* line 88, ../scss/pages/_createMeetingStep3.scss */
 .nxt-btn {
   background: #4A4A4A;
   border-radius: 2px;
@@ -2567,20 +2580,20 @@ div[class^="edit_funds"] {
   -o-transform: translateY(2px);
   transform: translateY(2px);
 }
-/* line 89, ../scss/pages/_createMeetingStep3.scss */
+/* line 96, ../scss/pages/_createMeetingStep3.scss */
 .nxt-btn:hover {
   border: 1px solid #555c82;
 }
 
-/* line 95, ../scss/pages/_createMeetingStep3.scss */
+/* line 102, ../scss/pages/_createMeetingStep3.scss */
 .headerCreateMeeting {
-  margin: 5vh auto;
+  margin: 5vh auto 0vh;
   width: 58%;
   text-align: center;
 }
-/* line 99, ../scss/pages/_createMeetingStep3.scss */
+/* line 106, ../scss/pages/_createMeetingStep3.scss */
 .headerCreateMeeting .signsCreateMeeting {
-  margin-left: 9vh;
+  margin-left: 11vh;
   width: 50%;
   display: -webkit-box;
   display: -moz-box;
@@ -2599,7 +2612,7 @@ div[class^="edit_funds"] {
   justify-content: space-around;
   -ms-flex-pack: distribute;
 }
-/* line 104, ../scss/pages/_createMeetingStep3.scss */
+/* line 111, ../scss/pages/_createMeetingStep3.scss */
 .headerCreateMeeting .signsCreateMeeting .circle {
   height: 20px;
   width: 20px;
@@ -2607,17 +2620,24 @@ div[class^="edit_funds"] {
   background-color: #9b9b9b;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
 }
-/* line 110, ../scss/pages/_createMeetingStep3.scss */
+/* line 117, ../scss/pages/_createMeetingStep3.scss */
 .headerCreateMeeting .signsCreateMeeting .circle:nth-child(2) {
   background-color: #202334;
 }
-/* line 115, ../scss/pages/_createMeetingStep3.scss */
+/* line 123, ../scss/pages/_createMeetingStep3.scss */
 .headerCreateMeeting .title p {
   margin-top: 3vh;
   font-family: ".HelveticaNeueDeskInterface-Regular";
   font-size: 14px;
   letter-spacing: 1.3px;
   color: #4a4a4a;
+}
+@media (min-width: 400px) {
+  /* line 123, ../scss/pages/_createMeetingStep3.scss */
+  .headerCreateMeeting .title p {
+    margin-top: 2vh;
+    font-size: 18px;
+  }
 }
 
 /* line 52, ../scss/main.scss */
