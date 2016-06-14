@@ -127,21 +127,22 @@
 </div>
 
 
-<script>
+<script type="text/javascript">
 //The comments should be placed at the right place, if you are deciding to use binding clicks that way. then you will likely have multiple function in that document ready. Therefore the comment should be placed right above the binding. The each line shoudl have its comments. 
 // the first line shoudl have the comment remove the highlight
 // the second line shoudl have the comment add the highlight
 
 
 // add highlight background to selected radio input
-$(document).ready(function(){
-    $('input[type=radio]').change(function(){
-    	// Why did you want to create a variable here? seems like an overkill. 
-        var $this = $(this);
-        $this.closest('.select-rooms').find('div.highlight').removeClass('highlight');
-        $this.closest('.room').addClass('highlight');
-    });
+$('input[type=radio]').change(function(){
+	// Why did you want to create a variable here? seems like an overkill. 
+    
+    // remove highlight background
+    $(this).closest('.select-rooms').find('div.highlight').removeClass('highlight');
+	//add highlight background to new selected radio 
+    $(this).closest('.room').addClass('highlight');
 });
+
 
 </script>
 

@@ -35,13 +35,14 @@
 	.tab {
 		width: 60%;
 		float: left;
-		margin: 13px 10px;
+		padding: 13px 10px;
+		// height: 56px;
 		@include display(flex);
 		@include justify-content(space-between);
 		line-height: 30px; 
 		text-align: center;
 		vertical-align: middle;
-		a{
+		label{
 			padding: 0 1px;
 			font-family: '.HelveticaNeueDeskInterface-Regular';
 			font-size: 1em;
