@@ -26,14 +26,14 @@ $light : #9b9b9b;
 
 .input_form_create_meeting {	
 	
- 	 height: 332px;
+	height: 332px;
 	background-color: #ffffff;
 	border: solid 0.5px #979797;
 	border-radius: 8px;	
 	width: 80%;
 	margin: auto auto;
-	&:hover
- 	 {
+	text-align: center;
+	&:hover{
 		border: 1px solid #555c82;
 	}
 	@media (min-width: 400px) {
@@ -41,47 +41,43 @@ $light : #9b9b9b;
 		height: 770px;
 		margin: 2vh auto;
 	}
-	input {
-	  font-size: 1em;
-	  font-family: sans-serif;
-	  font-weight: 200;
-	  border: 1px solid #999;
-	  padding: .75em 1em;
-	  margin: 0vh 8vh;
-	  box-sizing: border-box;
-	  width: 70%;
-		  &:hover
-	 		 {
+
+	.calender_create_meeting{
+		position: relative;
+		display: block;	
+		margin: 10px auto;
+		input {
+			font-size: 1em;
+			font-family: sans-serif;
+			font-weight: 200;
+			border: 1px solid #999;
+			padding: .75em 1em;
+			width: 70%;
+			&:hover{
 			border: 1px solid #555c82;
 			}
-		@media (min-width: 400px) {
-		  margin: 0vh 4vh;		
-		  width: 87%;
+		}	
+		:hover
+	 	 {
+			border: 1px solid #555c82;
 		}
-	}	
-	div {
-			display: block;	
-			&:hover
-		 	 {
-				border: 1px solid #555c82;
-			}
-			&.personCreate {
-				position: relative;
-				top: 30px;
-				left: 7px;			
-				width: 15px;
-				height: 17px;
-				background-position: 0 -800px;
-			}
-			&.emailCreate {
-				position: relative;
-				top: -30px;
-				left: 72vw;
-				width: 19px;
-				height: 20px;
-				background-position: 0 -820px;
-				
-			}			
+		.chevronLeft {
+			position: absolute;
+			top: 15px;
+			left: 7px;			
+			width: 15px;
+			height: 17px;
+			background-position: 0 -800px;
 		}
+		.chevronRight {
+			position: absolute;
+			top: 15px;
+			right: 7px;
+			width: 19px;
+			height: 20px;
+			background-position: 0 -820px;
+			
+		}			
+	}
 
 }
