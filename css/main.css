@@ -2434,10 +2434,23 @@ div[class^="edit_funds"] {
 }
 
 /* line 3, ../scss/pages/_createMeetingStep3.scss */
+.createMeeting_wrapper {
+  max-width: 420px;
+  margin: auto auto;
+}
+@media (min-width: 400px) {
+  /* line 3, ../scss/pages/_createMeetingStep3.scss */
+  .createMeeting_wrapper {
+    max-width: 750px;
+  }
+}
+
+/* line 10, ../scss/pages/_createMeetingStep3.scss */
 .centerTime {
+  margin-right: 17vh;
   margin-left: 16vh;
 }
-/* line 5, ../scss/pages/_createMeetingStep3.scss */
+/* line 13, ../scss/pages/_createMeetingStep3.scss */
 .centerTime select {
   letter-spacing: 1.7px;
   padding: 4px;
@@ -2449,9 +2462,8 @@ div[class^="edit_funds"] {
   text-align: center;
 }
 
-/* line 17, ../scss/pages/_createMeetingStep3.scss */
+/* line 25, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting {
-  width: 242px;
   height: 332px;
   background-color: #ffffff;
   border: solid 0.5px #979797;
@@ -2459,7 +2471,18 @@ div[class^="edit_funds"] {
   width: 80%;
   margin: 5vh auto;
 }
-/* line 25, ../scss/pages/_createMeetingStep3.scss */
+/* line 33, ../scss/pages/_createMeetingStep3.scss */
+.input_form_create_meeting:hover {
+  border: 1px solid #555c82;
+}
+@media (min-width: 400px) {
+  /* line 25, ../scss/pages/_createMeetingStep3.scss */
+  .input_form_create_meeting {
+    max-width: 700px;
+    height: 990px;
+  }
+}
+/* line 41, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting input {
   font-size: 1em;
   font-family: sans-serif;
@@ -2470,30 +2493,38 @@ div[class^="edit_funds"] {
   box-sizing: border-box;
   width: 70%;
 }
-/* line 35, ../scss/pages/_createMeetingStep3.scss */
+/* line 50, ../scss/pages/_createMeetingStep3.scss */
+.input_form_create_meeting input:hover {
+  border: 1px solid #555c82;
+}
+/* line 55, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting div {
   display: block;
 }
-/* line 37, ../scss/pages/_createMeetingStep3.scss */
+/* line 57, ../scss/pages/_createMeetingStep3.scss */
+.input_form_create_meeting div:hover {
+  border: 1px solid #555c82;
+}
+/* line 61, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting div.personCreate {
   position: relative;
   top: 30px;
   left: 7px;
-  width: 16px;
+  width: 15px;
   height: 17px;
   background-position: 0 -800px;
 }
-/* line 45, ../scss/pages/_createMeetingStep3.scss */
+/* line 69, ../scss/pages/_createMeetingStep3.scss */
 .input_form_create_meeting div.emailCreate {
   position: relative;
   top: -30px;
-  left: 213px;
+  left: 73vw;
   width: 19px;
   height: 20px;
   background-position: 0 -820px;
 }
 
-/* line 56, ../scss/pages/_createMeetingStep3.scss */
+/* line 81, ../scss/pages/_createMeetingStep3.scss */
 .nxt-btn {
   background: #4A4A4A;
   border-radius: 2px;
@@ -2536,14 +2567,18 @@ div[class^="edit_funds"] {
   -o-transform: translateY(2px);
   transform: translateY(2px);
 }
+/* line 89, ../scss/pages/_createMeetingStep3.scss */
+.nxt-btn:hover {
+  border: 1px solid #555c82;
+}
 
-/* line 66, ../scss/pages/_createMeetingStep3.scss */
+/* line 95, ../scss/pages/_createMeetingStep3.scss */
 .headerCreateMeeting {
   margin: 5vh auto;
   width: 58%;
   text-align: center;
 }
-/* line 70, ../scss/pages/_createMeetingStep3.scss */
+/* line 99, ../scss/pages/_createMeetingStep3.scss */
 .headerCreateMeeting .signsCreateMeeting {
   margin-left: 9vh;
   width: 50%;
@@ -2564,7 +2599,7 @@ div[class^="edit_funds"] {
   justify-content: space-around;
   -ms-flex-pack: distribute;
 }
-/* line 75, ../scss/pages/_createMeetingStep3.scss */
+/* line 104, ../scss/pages/_createMeetingStep3.scss */
 .headerCreateMeeting .signsCreateMeeting .circle {
   height: 20px;
   width: 20px;
@@ -2572,11 +2607,11 @@ div[class^="edit_funds"] {
   background-color: #9b9b9b;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
 }
-/* line 81, ../scss/pages/_createMeetingStep3.scss */
+/* line 110, ../scss/pages/_createMeetingStep3.scss */
 .headerCreateMeeting .signsCreateMeeting .circle:nth-child(2) {
   background-color: #202334;
 }
-/* line 86, ../scss/pages/_createMeetingStep3.scss */
+/* line 115, ../scss/pages/_createMeetingStep3.scss */
 .headerCreateMeeting .title p {
   margin-top: 3vh;
   font-family: ".HelveticaNeueDeskInterface-Regular";
