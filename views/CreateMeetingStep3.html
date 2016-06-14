@@ -53,69 +53,65 @@
 <body>
 	
 <div class="createMeeting_wrapper">
-	
-			<div class="headerCreateMeeting">
-				<div class="signsCreateMeeting">
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-				</div>
-				<div class="title">
-					<p>Select your availabilities</p>
-				</div>
-			</div>
+	<div class="headerNav">
+		<!-- can add elements here -->
+	</div>
+	<div class="headerInfor">
+		<div class="signs">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="title">
+			<p>Select your availabilities</p>
+		</div>
+	</div>
 
-		<form method="post" >	
-			<div class="input_form_create_meeting">
-				
-				<div>	
-					<div class="svg personCreate"></div>	
-					<input type="text" name="date" id="input_date" />	
-					<div class="svg emailCreate"></div>
-				</div>	
-									
+	<form method="post" >	
+		<div class="input_form_create_meeting">
+			<div>	
+				<div class="svg personCreate"></div>	
+				<input type="text" name="date" id="input_date" />	
+				<div class="svg emailCreate"></div>
+			</div>	
+								
 			<div class="centerTime">				
 				<select size="8" >
-					  <option value="7:00 AM">7:00 AM</option>
-					  <option value="7:30 AM">7:30 AM</option>
-					  <option value="8:00 AM">8:00 AM</option>
-					  <option value="8:30 AM">8:30 AM</option>
-					  <option value="9:00 AM">9:00 AM</option>
-					  <option value="9:30 AM">9:30 AM</option>
-					  <option value="10:00 AM">10:00 AM</option>
-					  <option value="10:30 AM">10:30 AM</option>
-					  <option value="11:00 AM">11:00 AM</option>
-					  <option value="11:30 AM">11:30 AM</option>
-					  <option value="12:00 PM">12:00 PM</option>
-					  <option value="12:30 pM">12:30 PM</option>
-					  <option value="1:00 PM">1:00 PM</option>
-					  <option value="1:30 PM">1:30 PM</option>
-					  <option value="2:00 PM">2:00 PM</option>
-					  <option value="2:30 PM">2:30 PM</option>
-					  <option value="3:00 PM">3:00 PM</option>
-					  <option value="3:30 PM">3:30 PM</option>
-					  <option value="4:00 PM">4:00 PM</option>
-					  <option value="4:30 PM">4:30 PM</option>
-					  <option value="5:00 PM">5:00 PM</option>
-					  <option value="5:30 PM">5:30 PM</option>
-					  <option value="6:00 PM">6:00 PM</option>
-					  <option value="6:30 PM">6:30 PM</option>	
-					  <option value="7:00 PM">7:00 PM</option>
-					  <option value="7:30 PM">7:30 PM</option>
-					  <option value="8:00 PM">8:00 PM</option>					  
-				</select>	
-					
+					<option value="7:00 AM">7:00 AM</option>
+					<option value="7:30 AM">7:30 AM</option>
+					<option value="8:00 AM">8:00 AM</option>
+					<option value="8:30 AM">8:30 AM</option>
+					<option value="9:00 AM">9:00 AM</option>
+					<option value="9:30 AM">9:30 AM</option>
+					<option value="10:00 AM">10:00 AM</option>
+					<option value="10:30 AM">10:30 AM</option>
+					<option value="11:00 AM">11:00 AM</option>
+					<option value="11:30 AM">11:30 AM</option>
+					<option value="12:00 PM">12:00 PM</option>
+					<option value="12:30 pM">12:30 PM</option>
+					<option value="1:00 PM">1:00 PM</option>
+					<option value="1:30 PM">1:30 PM</option>
+					<option value="2:00 PM">2:00 PM</option>
+					<option value="2:30 PM">2:30 PM</option>
+					<option value="3:00 PM">3:00 PM</option>
+					<option value="3:30 PM">3:30 PM</option>
+					<option value="4:00 PM">4:00 PM</option>
+					<option value="4:30 PM">4:30 PM</option>
+					<option value="5:00 PM">5:00 PM</option>
+					<option value="5:30 PM">5:30 PM</option>
+					<option value="6:00 PM">6:00 PM</option>
+					<option value="6:30 PM">6:30 PM</option>	
+					<option value="7:00 PM">7:00 PM</option>
+					<option value="7:30 PM">7:30 PM</option>
+					<option value="8:00 PM">8:00 PM</option>					  
+				</select>		
 			</div>	
-			<br>
 		</div>
-		
-			<div class="button_container">
-				<button class="nxt-btn" type="submit">Next</button>				
-			</div>			
-			
-		
-		</form>
-   
+	
+		<div class="next">
+			<button id="nextButton" type="submit" class="room-btn">Next</button>
+		</div>			
+	</form> 
 </div>
 
 

@@ -31,7 +31,7 @@ $light : #9b9b9b;
 	border: solid 0.5px #979797;
 	border-radius: 8px;	
 	width: 80%;
-	margin: 2vh auto;
+	margin: auto auto;
 	&:hover
  	 {
 		border: 1px solid #555c82;
@@ -84,52 +84,4 @@ $light : #9b9b9b;
 			}			
 		}
 
-}
-.nxt-btn {
-	@include btn($accountButtonColor, 40px, 240px);
-	background: #555c82;
-	color: white;
-	text-transform: uppercase;
-	font-size: 0.9em;
-	width: 228px;
- 	height: 47px;
- 	 &:hover
- 	 {
-		border: 1px solid #555c82;
-	}
-}
-
-.headerCreateMeeting {
-	margin: 5vh auto 0vh; 
-	width: 58%;
-	text-align: center;
-	.signsCreateMeeting{
-		margin: 0vh auto;
-		width: 50%;
-		@include display(flex);
-		@include justify-content(space-around);
-		.circle {
-			height: 20px;
-			width: 20px;
-			border-radius: 50%;
-			background-color: $light;
-			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
-			&:nth-child(2){
-				background-color: $dark;
-			}
-		}
-		
-	}
-	.title p{
-		margin-top: 3vh;
-		font-family: ".HelveticaNeueDeskInterface-Regular";
-		font-size: 14px;
-		letter-spacing: 1.3px;
-		color: #4a4a4a;
-		@media (min-width: 400px) {
-		  margin-top: 2vh;	
-		  font-size: 18px;
-			}
-		}
-		
 }
