@@ -2,6 +2,9 @@
 	height: $navHeight;
 	background-color: white;
 	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.30);
 	width: 100%;
 	@include align-items(center);
@@ -16,11 +19,28 @@
 .nav_options {
 	@include display(flex);
 	@include justify-content(space-between);
-	width: 70px;
+	width: 50px;
+
+	a {
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(1.3) rotate(360deg);
+		}
+	}
 }
 
 #notification {
 	position: relative;
+	cursor: pointer;
+
+	img {
+		transition: transform 0.2s;
+	}
+
+	img:hover {
+		transform: scale(1.3) rotate(360deg);
+	}
 }
 
 #notificationAlert {
@@ -43,13 +63,15 @@
 
 
 .notification_menu {
-	position: absolute;
-	top: -500%;
+	position: fixed;
+	top: -100%;
 	right: 0;
 	width: 275px;
 	border: 0.5px solid $greyBorder;
 	background-color: white;
-	transition: all 0.4s;
+	@include transition(all 0.2s $ease-out-quart);
+	box-shadow: rgba(0,0,0,0.35) 0px 2px 4px 1px;
+	z-index: 50;
 
 	&--active {
 		top: $navHeight;
@@ -120,3 +142,210 @@
 		margin-right: 4px;
 	}
 }
+
+
+#search {
+	position: relative;
+    float: left;
+    cursor: pointer;
+}
+
+#label {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    z-index: 20;
+	
+	label {
+	    display: block;
+	    width: 15px;
+	    height: 15px;
+	    background: url("../img/svg/loopSearchDark.svg") 0 0;
+	    font-size: 0;
+	    color: rgba(0, 0, 0, 0);
+	    text-indent: -9999px;
+	    cursor: pointer;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+	    transition: transform 0.2s;
+
+	    &:hover {
+	    	transform: scale(1.3) rotate(360deg);
+	    }
+	}
+}
+
+#input {
+    position: absolute;
+    top: -12px;
+    right: 10px;
+    width: $searchBoxWidth;
+    height: 40px;
+    z-index: 5;
+    overflow: hidden;
+
+	 input {
+	    display: inline-block;
+	    width: $searchBoxWidth;
+	    height: 100%;
+	    margin: 0;
+	    padding: 0 10px;
+	    border: none;
+	    border-bottom: 1px solid $greyBorder;
+	    background-color: white;
+	    color: $writting;
+	    font-size: 1em;
+	    -webkit-backface-visibility: none;
+	    -moz-backface-visibility: none;
+	    -ms-backface-visibility: none;
+	    backface-visibility: none;
+	    -webkit-border-radius: 2px;
+	    -moz-border-radius: 2px;
+	    border-radius: 2px;
+
+	    &:focus {
+		    outline: none
+		}
+	}
+
+	button {
+		@include btn($dark_background, 30px, $searchButtonWidth);
+		display: inline-block;
+		color: white;
+		font-size: 0.8em;
+	}
+
+	#movingPart {
+		position: absolute;
+		top: 0;
+	    right: -$searchBoxWidth;
+	    width: $searchBoxWidth;
+	    height: 100%;
+	    @include transition(right 0.3s);
+
+	}
+}
+
+#input.focus {
+    #movingPart {
+	    right: 0;
+	}
+}
+
+#search_results {
+	position: absolute;
+    top: 50px;
+    right: 55px;
+    width: 250px;
+    height: 50px;
+    z-index: 5;
+
+    .search_results {
+    	position: fixed;
+    	display: block;
+    	top: -300px;
+    	@include transition(top 0.3s);
+		box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.25);
+	    padding: 6px 6px;
+	    margin: 0;
+	    width: 250px;
+    }
+
+    .search_active {
+    	top: $navHeight;
+    }
+}
+
+
+
+.newStartup {
+	background: $dark_backgroundAlfa;
+	padding: 10px;
+	@include display(flex);
+	@include justify-content(center);
+}
+
+.newStartupContainer {
+	background: white;
+	max-width: 500px;
+	margin: auto auto;
+	border-radius: 2px;
+	padding: 10px;
+
+	.title {
+		margin-top: 4vh;
+	}
+
+	h1 {
+		color: $writting;
+		font-weight: 600;
+		font-size: 2.6em;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	p {
+		color: $writting;
+		font-size: 0.9em;
+		line-height: 1.1em;
+		text-align: center;
+		margin-bottom: 5px;
+
+		&.note {
+			text-align: left;
+			padding-left: 5%;
+			margin-bottom: 4vh;
+
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+
+	form {
+		max-width: 350px;
+		margin: 50px auto 75px
+	}
+
+	label{
+		display: block;
+		font-size: 0.9em;
+		margin-bottom: 3px;
+	}
+
+	input{
+		display: block;
+		background: white;
+		border: 1px solid $greyBorder;
+		border-radius: 2px;
+		font-size: 0.8em;
+		letter-spacing: 1.69px;
+		min-width: 200px;
+		padding: 5px;
+		margin-bottom: 20px;
+		width: 100%;
+		height: 40px;
+	    padding-left: 10px;
+	}
+
+	button[type="submit"] {
+		@include btn($saveEditing, 40px, 48%);
+		color: white;
+		font-size: 1em;
+		margin-right: 10px;
+	}
+
+	button[type="reset"] {
+		@include btn($backgroundButton, 40px, 48%);
+		color: white;
+		font-size: 1em;
+	}
+}
+
+
+
+
+
+
+
+
