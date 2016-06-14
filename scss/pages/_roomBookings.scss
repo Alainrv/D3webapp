@@ -1,20 +1,21 @@
 .booking_wrapper{
 	margin: auto auto;
 	padding: 0 0;
-
+	// Overnesting this class
 	.header {
 		width: 100%;
+		// Overnesting this class
 		.headerNav{
 			height: 50px;
 			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) 
 
 		}
 
+		// you are resuing a class name that was already used elsewhere which means that you are unnecessarly rewritting clases in the browser. 
 		.headerPicture{
 			margin: 5vh 0;
 			text-align: center;
 			img{
-
 				border-radius: 50%;
 				box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
 				height: 25vh;
@@ -30,12 +31,13 @@
 	margin: auto auto;
 }
 
-
-.upcoming{
+// Why create two different classes here it is the same thing that is used. These classes are never used differently.
+.upcoming,
+.history{
 	width: 100%;
 	height: 50px;
 	border: lighten($greyBorder, 20%) 1px solid;
-	background-color: #f8f8f8;
+	background-color: $lightBackgroundColor;
 	@include display(flex);
 	@include justify-content(space-between);
 	p {
@@ -54,33 +56,12 @@
 	}
 }
 
-.history{
-	width: 100%;
-	height: 50px;
-	border: lighten($greyBorder, 20%) 1px solid;
-	background-color: #f8f8f8;
-	@include display(flex);
-	@include justify-content(space-between);
-	p {
-		margin: auto;
-		margin-left: 15px;
-		font-size: 16px;
-		font-family: '.HelveticaNeueDeskInterface-Regular';
-		line-height: 1.1;
-		letter-spacing: 1.9px;
-		color: lighten(#6a6a6a,10%);
-	}
-}
-
 .upcomingBox,
 .historyBox {
 	max-width: 100%;
 	margin: auto auto;
-
 	padding: 0 15px;
 	padding-bottom: 15px;
-
-	
 }
 
 .booking {
@@ -89,35 +70,44 @@
 	padding: 10px 10px;
 	width: 100%;
 	border-radius: 7px;
-	background-color: #ffffff;
 	box-shadow: 0 2px 4px 0 #b4b4b4;
 	border: solid 0.5px #c7c7c7;
-	display: block;
+	// Overnesting this class
 	&.new{
 		height: 45vh;
 	}
+	// Overnesting this class
 	&.old{
 		height: 35vh;
 	}
+
+	// Overnesting this class
+	// worng use of div (we shoudl not use div in styling as much as possible)
 	.booking-detail div{
 		font-family: 'Avenir-book';
 		font-size: 0.9em;
 		letter-spacing: 1.3px;
 		color: $writting;
 		line-height: 130%;
+
+		// Overnesting this class
 		&.name{
 			font-family: 'Avenir-medium';
 			letter-spacing: 1.7px;
 			font-size: 1.2em;
 		}
+		// Overnesting this class
 		&.capacity{
 			padding-top: 15px;
 		}
+		// Overnesting this class
 		&.time{
 			position: relative;
+			// Overnesting this class
 			.duration {
 				padding-left: 20px;
 			}
+			// Overnesting this class
 			.meetingClock {
 				position: absolute;
 				width: 18px;
@@ -125,7 +115,21 @@
 				background-position: 0 -770px;
 			}
 		}
+		// Overnesting this class
+		// The width is fixed here but it is a list that is not fixed, which means that differente rooms will have a different list of equipments, and each equipment will have different names, therefore you cannot fix the width and have to account for wrapping. 
+		&.equipments{
+			margin-top: 5px;
+			@include display(flex);
+			@include justify-content(space-between);
+			div {
+				height:20px;
+				width: 85px;
+				border: solid lighten($writting,20%) 0.5px;
+				text-align: center;
+			}
+		}
 	}
+	// Overnesting this class
 	.booking-edit{
 		position: absolute;
 		bottom:15px;
