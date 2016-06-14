@@ -104,7 +104,7 @@ $light : #9b9b9b;
 	width: 58%;
 	text-align: center;
 	.signsCreateMeeting{
-		margin-left: 11vh;
+		margin: 0vh auto;
 		width: 50%;
 		@include display(flex);
 		@include justify-content(space-around);
