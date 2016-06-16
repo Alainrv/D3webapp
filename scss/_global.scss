@@ -132,12 +132,6 @@ p {
 }
 
 
-.booking-btn {
-	@include btn($bookingButtonColor, 30px, 110px);
-	color: lighten(white,10%);
-	font-size: 0.85em;
-}
-
 .room-btn {
 	@include btn($bookingButtonColor, 47px, 228px);
 	color: lighten(white,10%);

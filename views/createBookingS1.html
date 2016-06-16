@@ -51,38 +51,41 @@
 
 
 <div class="booking_wrapper">
-	<div class="header">
-		<div class="headerNav">
-			<!-- can add elements here -->
-		</div>
-		<div class="headerInfor">
+	<div class="roomHeader">
+			<div class="title">
+				Select a room
+			</div>
 			<div class="signs">
 				<div class="circle"></div>
 				<div class="circle"></div>
-				<div class="circle"></div>
 			</div>
-			<div class="title">
-				<p>Select a room</p>
-			</div>
-		</div>
 	</div>
 
+<!-- <div class="content">
+	<div class="roomTag">CR</div>
+	<div class="roomDetail">
+		<p class="roomName">Class Room</p>
+		<p class="roomCapacity">Capacity: 5people so many words yes yes yes</p>
+	</div>
+	<div class="svg arrow">
+	</div>
+</div> -->
 <!-- Action is about here the form will be posted no need to place any links at this point unless specifically mentionned -->
-	<form method="post" action="createBookingS2.html">
-		<div class="select-rooms">
+	<form method="post" >
+		<!-- <div class="select-rooms"> -->
+		<div class="box_wrapper">
 
 			<div class="room">
-				<label for="room1">
-				<div class="content">
-					<div class="roomTag">CR</div>
-					<div class="roomDetail">
-			    		<p class="roomName">Class Room</p>
-			    		<p class="roomCapacity">Capacity: 5people so many words yes yes yes</p>
-		    		</div>
-		    		<div class="svg arrow">
-	    			</div>
-	    		</div>
-	    		</label>
+				<div class="roomSelection">
+					<div class="selectTabs">
+						<label for="room1">
+							<p>Select Me</p>
+			    		</label>
+			    	</div>
+			    	<div class="roomInfor">
+
+			    	</div>
+		    	</div>
 	    		<input type="radio" name="room" id="room1"></input>
 			</div>
 
@@ -117,12 +120,12 @@
 	    		<input type="radio" name="room" id="room3"></input>
 			</div>
 
+			<div class="next">
+				<button id="nextButton" type="submit" class="room-btn">Next</button>
+			</div>
 
 		</div>
 
-		<div class="next">
-			<button id="nextButton" type="submit" class="room-btn">Next</button>
-		</div>
 	</form>
 </div>
 
@@ -138,7 +141,7 @@ $(document).ready(function(){
     $('input[type=radio]').change(function(){
     	// Why did you want to create a variable here? seems like an overkill. 
         var $this = $(this);
-        $this.closest('.select-rooms').find('div.highlight').removeClass('highlight');
+        $this.closest('.box_wrapper').find('div.highlight').removeClass('highlight');
         $this.closest('.room').addClass('highlight');
     });
 });

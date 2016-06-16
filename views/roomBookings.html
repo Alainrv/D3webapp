@@ -50,148 +50,191 @@
 </head>
 
 <body>
+
 <div class="booking_wrapper">
-	<div class="header">
-		<div class="headerNav">
-			<!-- can add elements in it -->
-		</div>
-		<div class="headerPicture">
-			<img src="../img/svg/profilePicture.svg">
-		</div>
+	<div class="bookingTabs">
+		<div class="tab upcoming onSelect">UPCOMING</div><div class="tab history">HISTORY</div>
+		<div class="selectBorder"></div>
 	</div>
 
-	<div class="bookingBoard">
-		<div class="tabs">
-			<div class="tab">
-				<a href="">All 10</a>
-				<div class="verticalLine"></div>
-				<a href="">Upcoming 6</a>
-				<div class="verticalLine"></div>
-				<a href="">History 4</a>
+
+	<div class="box_wrapper upcomingBox">
+		<!-- new room booking 1 -->
+		<div class="booking new">
+			<div class="bookingTitle">
+				<p>Maker Space Room</p>
 			</div>
-			<button class="booking-btn" onclick="createBooking(this)">+ Create</button>
-		</div>
-		<div class="sectionHead">
-				<p>UPCOMING</p>
-				<button class="booking-btn" onclick="createBooking(this)">+ Create</button>
-		</div>
-
-
-		<div class="upcomingBox">
-
-			<!-- new room booking 1 -->
-			<div class="booking new">
-				<div class="booking-detail">
-					<div class="name">Maker Space Room</div>
-					<div class="schedule">time schedule set up</div>
-					<div class="owner">owner is whom</div>
-
-					<div class="capacity">8 people</div>
-					<div class="time">
-						<div class="svg meetingClock"></div>
-						<div class="duration">45 min</div>
-					</div>
-					<div class="equipments">
-						<div>Equipment</div>
-						<div>Equipment</div>
-						<div>Equipment</div>
-					</div>
-				</div>
-				<div class="booking-edit">
+			<div class="bookingInfor">
+				<div class="bookingDate">Monday April 18 2016</div>
+	
+				<div class="bookingTime">7pm</div>
+				<div class="svg bookingClock"></div>
+				<div class="bookingDuration">45 min</div>
+				
+		
+				<div class="bookingEdit">
 					<a class="edit" href="">Edit</a>
-					<div class="verticalLine"></div>
 					<a class="cancel" href="">Cancel</a>
+					<div class="svg toggleSign"></div>
+				</div>
+				<div class="bookingDetail">
+					<p>Room can fit up to 8 people sitting and can accomodate around 15 people standing.</p>
+					<p class="equipment">This room is accomdated with</p>
+					<ul>
+						<li>projector with HDMI cable</li>
+						<li>1 white board</li>
+						<li>1 podium</li>
+						<li>a sound system</li>
+					</ul>
 				</div>
 			</div>
+		</div>
 
-			<!-- new room booking 2 -->
-			<div class="booking new">
-				<div class="booking-detail">
-					<div class="name">Maker Space Room</div>
-					<div class="schedule">time schedule set up</div>
-					<div class="owner">owner is whom</div>
-
-					<div class="capacity">8 people</div>
-					<div class="time">
-						<div class="svg meetingClock"></div>
-						<div class="duration">45 min</div>
-					</div>
-					<div class="equipments">
-						<div>Equipment</div>
-						<div>Equipment</div>
-						<div>Equipment</div>
-						<div>Equipment</div>
-						<div>Equipment</div>
-						<div>Equipment</div>
-					</div>
-				</div>
-				<div class="booking-edit">
-					<!-- The line in the middle here should not be part of the second a, we do not want someone to cancel a meeting by pressing the line by mistake. The line is in between creting a space that allow for different intention for fingers on touch base devices -->
+		<!-- new room booking 2 -->
+		<div class="booking new">
+			<div class="bookingTitle">
+				<p>Maker Space Room</p>
+			</div>
+			<div class="bookingInfor">
+				<div class="bookingDate">Monday April 18 2016</div>
+	
+				<div class="bookingTime">7pm</div>
+				<div class="svg bookingClock"></div>
+				<div class="bookingDuration">45 min</div>
+				
+		
+				<div class="bookingEdit">
 					<a class="edit" href="">Edit</a>
-					<div class="verticalLine"></div>
 					<a class="cancel" href="">Cancel</a>
+					<div class="svg toggleSign"></div>
+				</div>
+				<div class="bookingDetail">
+					<p>Room can fit up to 8 people sitting and can accomodate around 15 people standing.</p>
+					<p class="equipment">This room is accomdated with</p>
+					<ul>
+						<li>projector with HDMI cable</li>
+						<li>1 white board</li>
+						<li>1 podium</li>
+						<li>a sound system</li>
+					</ul>
 				</div>
 			</div>
-
 		</div>
 
-		<div class="sectionHead">
-			<p>HISTORY</p>
+	</div>
+
+
+	<div class="box_wrapper historyBox">
+
+		<!-- old room booking 1 -->
+		<div class="booking old">
+			<div class="bookingTitle">
+				<p>Class room</p>
+			</div>
+			<div class="bookingInfor">
+				<div class="bookingDate">Monday April 18 2016</div>
+	
+				<div class="bookingTime">7pm</div>
+				<div class="svg bookingClock"></div>
+				<div class="bookingDuration">45 min</div>
+				
+		
+				<div class="bookingEdit">
+					<a class="edit" href="">Edit</a>
+					<a class="cancel" href="">Cancel</a>
+					<div class="svg toggleSign"></div>
+				</div>
+				<div class="bookingDetail">
+					<p>Room can fit up to 8 people sitting and can accomodate around 15 people standing.</p>
+					<p class="equipment">This room is accomdated with</p>
+					<ul>
+						<li>projector with HDMI cable</li>
+						<li>1 white board</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 
-		<div class="historyBox">
-
-			<!-- old room booking 1 -->
-			<div class="booking old">
-				<div class="booking-detail">
-					<div class="name">Maker Space Room</div>
-					<div class="schedule">time schedule set up</div>
-					<div class="owner">owner is whom</div>
-
-					<div class="capacity">8 people</div>
-					<div class="time">
-						<div class="svg meetingClock"></div>
-						<div class="duration">45 people</div>
-					</div>
-					<div class="equipments">
-						<div>Equipment</div>
-						<div>Equipment</div>
-						<div>Equipment</div>
-					</div>
+		<!-- old room booking 2 -->
+		<div class="booking new">
+			<div class="bookingTitle">
+				<p>Class room</p>
+			</div>
+			<div class="bookingInfor">
+				<div class="bookingDate">Monday April 18 2016</div>
+	
+				<div class="bookingTime">7pm</div>
+				<div class="svg bookingClock"></div>
+				<div class="bookingDuration">45 min</div>
+				
+		
+				<div class="bookingEdit">
+					<a class="edit" href="">Edit</a>
+					<a class="cancel" href="">Cancel</a>
+					<div class="svg toggleSign"></div>
+				</div>
+				<div class="bookingDetail">
+					<p>Room can fit up to 8 people sitting and can accomodate around 15 people standing.</p>
+					<p class="equipment">This room is accomdated with</p>
+					<ul>
+						<li>projector with HDMI cable</li>
+						<li>1 white board</li>
+					</ul>
 				</div>
 			</div>
-
-			<!-- old room booking 1 -->
-			<div class="booking old">
-				<div class="booking-detail">
-					<div class="name">Maker Space Room</div>
-					<div class="schedule">time schedule set up</div>
-					<div class="owner">owner is whom</div>
-
-					<div class="capacity">8 people</div>
-					<div class="time">
-						<div class="svg meetingClock"></div>
-						<div class="duration">45 people</div>
-					</div>
-					<div class="equipments">
-						<div>Equipment</div>
-						<div>Equipment</div>
-						<div>Equipment</div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 	</div>
+	<a href="createBookingS1.html">
+	<button class="booking-btn">
+		<div class="horizontalLine"></div>
+		<div class="verticalLine"></div>
+	</button>
+	</a>
 </div>
 
 
 
 <script type="text/javascript">
-    function createBooking(){
-    	location.href = "createBookingS1.html";
-    }
+	// function to change the booking tabs and booking displays 
+	// when click on it
+	$(".tab").click(function(){
+		// remove onSelect class from another tab
+		$(this).closest('.bookingTabs').find(".onSelect").removeClass("onSelect");
+		// add onSelect class to the clicked tab
+    	$(this).addClass('onSelect');
+    	// change the bottom border position
+    	// assign bot border to a variable botBor
+    	var $botBor = $(this).closest('.bookingTabs').find('.selectBorder');
+    	var $upcoming = $(this).closest('.booking_wrapper').find('.upcomingBox');
+    	var $history = $(this).closest('.booking_wrapper').find('.historyBox');
+    	// if the clicked tab is at left, move the botBor to left, 
+    	// if not move to right
+    	if($(this).hasClass("upcoming")){
+    		$botBor.css("left",'0%');
+    		$history.css("display","none");
+    		$upcoming.css('display','block');
 
+    	} else {
+    		$botBor.css("left", "50%");
+    		$upcoming.css("display","none");
+    		$history.css('display','block');
+    	};
+	});
+
+	$(".toggleSign").click(function (){
+		// if the content is shown, change to 
+		$content = $(this).closest(".bookingInfor").find('.bookingDetail');
+	    if($content.css("display")=="none"){
+	    	$(this).css("background-position","0 -860px");
+	    } 
+	    // 
+	    else{
+    		$(this).css("background-position","0 -840px");
+	    }
+	    // toggle the content on click
+	    $content.slideToggle(500)
+	});
+	// console.log($(".bookingDetail").css("display"))
 // Why does this via javascript versus doing versus a simply href function?
 // You can simply wrap the button 
 </script>

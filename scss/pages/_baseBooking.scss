@@ -1,9 +1,9 @@
-
-.headerInfor {
-	margin: 7vh auto; 
-	// width: 50%;
+.roomHeader {
+	margin: auto auto; 
+	height: 85px;
 	width: 100%;
 	text-align: center;
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
 	.signs{
 		margin: auto;
 		width: 35%;
@@ -20,78 +20,96 @@
 			}
 		}
 	}
-	.title p{
-		margin: 3vh auto;
+	.title {
+		padding: 15px 0;
 		font-family: ".HelveticaNeueDeskInterface-Regular";
-		font-size: 14px;
+		font-size: 16px;
 		letter-spacing: 1.3px;
 		color: $writting;
 	}
 }
 
-.select-rooms{
+.box_wrapper input[type="radio"]{
+	position: absolute;
+	top: 15px;
+    visibility:hidden;
+}
 
-	input[type="radio"]{
-		position: absolute;
-		top: 15px;
-	    visibility:hidden;
-	}
+.highlight{
+	background-color:#fff2dd;
+}
 
-	.highlight{
-		background-color:#fff2dd;
-	}
-
-	.room {
-		position: relative;
-		height: 50px;
-		width: 100%;
-		
-		&:first-child .content{
-			border-top: 1px solid #ddd;
-		}
-	}
-
-	.content {
-		margin: auto auto;
-    	width: 90%;
-    	height: 100%;
-    	border-bottom: 1px solid #ddd;
-		@include display(flex);
-		.roomTag {
-			margin: auto 0;
-			width: 30px;
-			line-height: 30px; 
-			background-color: $dark;
-			font-family: ".HelveticaNeueDeskInterface-Regular";
-			font-size: 0.9em;
-			color: $white;
-			text-align: center;
-			vertical-align: middle;
-	    }
-	    .roomDetail{
-	    	margin: auto 10px;
-	    	line-height: 85%;
-		    p {
-		    	font-family: '.HelveticaNeueDeskInterface-Bold';
-				color: $writting;
-				&.roomName{
-					font-size: 0.7em;
-				}
-				&.roomCapacity{
-					font-size: 0.6em;
-					color: lighten($writting,20%);
-				}
-		    }
-		}
-		.arrow {	
-			margin: auto auto;
-			margin-right: 0;
-			width: 9px;
-			height: 12px;
-			background-position: 0 -788px;
-		}
+.room {
+	margin-top: 15px;
+	position: relative;
+	// height: 50px;
+	width: 100%;
+	height: 100px;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px 0 #b4b4b4;
+	&:first-child .content{
+		border-top: 1px solid #ddd;
 	}
 }
+.roomSelection{
+	@include display(flex);
+	height: 100%;
+}
+.selectTabs{
+	@include flex(1);
+	background-color: #ffc878;
+	border-radius: 2px;
+	line-height: 100px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.roomInfor{
+	@include flex(2.5);
+	background-color: white;
+}
+
+.content {
+	margin: auto auto;
+	width: 90%;
+	height: 100%;
+	border-bottom: 1px solid #ddd;
+	@include display(flex);
+	.roomTag {
+		margin: auto 0;
+		width: 30px;
+		line-height: 30px; 
+		background-color: $dark;
+		font-family: ".HelveticaNeueDeskInterface-Regular";
+		font-size: 0.9em;
+		color: $white;
+		text-align: center;
+		vertical-align: middle;
+    }
+    .roomDetail{
+    	margin: auto 10px;
+    	line-height: 85%;
+	    p {
+	    	font-family: '.HelveticaNeueDeskInterface-Bold';
+			color: $writting;
+			&.roomName{
+				font-size: 0.7em;
+			}
+			&.roomCapacity{
+				font-size: 0.6em;
+				color: lighten($writting,20%);
+			}
+	    }
+	}
+	.arrow {	
+		margin: auto auto;
+		margin-right: 0;
+		width: 9px;
+		height: 12px;
+		background-position: 0 -788px;
+	}
+}
+// }
 
 
 
