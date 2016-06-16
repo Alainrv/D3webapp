@@ -46,7 +46,19 @@
 
 <!-- Jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<style>
+/* ul li { */
+/*     list-style:none; */
+/*     display:block; */
+/*     border:0.5px solid #2e2e2e; */
+/*     background-color:white; */
+/* } */
+/* ul li.selected { */
+/*  background-color:red; */
+/* } */
 
+
+</style>
 
 
 </head>
@@ -66,45 +78,42 @@
 			<p>Select your availabilities</p>
 		</div>
 	</div>
-
 	<form method="post" >	
 		<div class="input_form_create_meeting">
 			<div class="calender_create_meeting">	
 				<div class="svg chevronLeft"></div>	
 				<input type="text" name="date" id="input_date" />	
 				<div class="svg chevronRight"></div>
-			</div>	
-								
+			</div>									
 			<div class="centerTime">				
-				<select size="8" >
-					<option value="7:00 AM">7:00 AM</option>
-					<option value="7:30 AM">7:30 AM</option>
-					<option value="8:00 AM">8:00 AM</option>
-					<option value="8:30 AM">8:30 AM</option>
-					<option value="9:00 AM">9:00 AM</option>
-					<option value="9:30 AM">9:30 AM</option>
-					<option value="10:00 AM">10:00 AM</option>
-					<option value="10:30 AM">10:30 AM</option>
-					<option value="11:00 AM">11:00 AM</option>
-					<option value="11:30 AM">11:30 AM</option>
-					<option value="12:00 PM">12:00 PM</option>
-					<option value="12:30 pM">12:30 PM</option>
-					<option value="1:00 PM">1:00 PM</option>
-					<option value="1:30 PM">1:30 PM</option>
-					<option value="2:00 PM">2:00 PM</option>
-					<option value="2:30 PM">2:30 PM</option>
-					<option value="3:00 PM">3:00 PM</option>
-					<option value="3:30 PM">3:30 PM</option>
-					<option value="4:00 PM">4:00 PM</option>
-					<option value="4:30 PM">4:30 PM</option>
-					<option value="5:00 PM">5:00 PM</option>
-					<option value="5:30 PM">5:30 PM</option>
-					<option value="6:00 PM">6:00 PM</option>
-					<option value="6:30 PM">6:30 PM</option>	
-					<option value="7:00 PM">7:00 PM</option>
-					<option value="7:30 PM">7:30 PM</option>
-					<option value="8:00 PM">8:00 PM</option>					  
-				</select>		
+				<ul>
+					<li><label for="time1">7:00 AM</label> <input type="radio" name="bookingTime" id="time1" value="7:00 AM"></li>
+					<li><label for="time2">7:30 AM</label> <input type="radio" name="bookingTime" id="time2" value="7:30 AM"></li>
+					<li><label for="time3">8:00 AM</label> <input type="radio" name="bookingTime" id="time3" value="8:00 AM"></li>
+					<li><label for="time4">8:30 AM</label> <input type="radio" name="bookingTime" id="time4" value="8:30 AM"></li>
+					<li><label for="time5">9:00 AM</label> <input type="radio" name="bookingTime" id="time5" value="9:00 AM"></li>
+					<li><label for="time6">9:30 AM</label> <input type="radio" name="bookingTime" id="time6" value="9:30 AM"></li>
+					<li><label for="time7">10:00 AM</label> <input type="radio" name="bookingTime" id="time7" value="10:00 AM"></li>
+					<li><label for="time8">10:30 AM</label> <input type="radio" name="bookingTime" id="time8" value="10:30 AM"></li>
+					<li><label for="time9">11:00 AM</label> <input type="radio" name="bookingTime" id="time9" value="11:00 AM"></li>
+					<li><label for="time10">11:30 AM</label> <input type="radio" name="bookingTime" id="time10" value="11:30 AM"></li>
+					<li><label for="time11">12:00 PM</label> <input type="radio" name="bookingTime" id="time11" value="12:00 PM"></li>
+					<li><label for="time12">12:30 PM</label> <input type="radio" name="bookingTime" id="time12" value="12:30 PM"></li>
+					<li><label for="time13">1:00 PM</label> <input type="radio" name="bookingTime" id="time13" value="1:00 PM"></li>
+					<li><label for="time14">1:30 PM</label> <input type="radio" name="bookingTime" id="time14" value="1:30 PM"></li>
+					<li><label for="time15">2:00 PM</label> <input type="radio" name="bookingTime" id="time15" value="2:00 PM"></li>
+					<li><label for="time16">2:30 PM</label> <input type="radio" name="bookingTime" id="time16" value="2:30 PM"></li>
+					<li><label for="time17">3:00 PM</label> <input type="radio" name="bookingTime" id="time17" value="3:00 PM"></li>
+					<li><label for="time18">3:30 PM</label> <input type="radio" name="bookingTime" id="time18" value="3:30 PM"></li>
+					<li><label for="time19">4:00 PM</label> <input type="radio" name="bookingTime" id="time19" value="4:00 PM"></li>
+					<li><label for="time20">4:30 PM</label> <input type="radio" name="bookingTime" id="time20" value="4:30 PM"></li>
+					<li><label for="time21">5:00 PM</label> <input type="radio" name="bookingTime" id="time21" value="5:00 PM"></li>
+					<li><label for="time22">5:30 PM</label> <input type="radio" name="bookingTime" id="time22" value="5:30 PM"></li>
+					<li><label for="time23">6:00 PM</label> <input type="radio" name="bookingTime" id="time23" value="6:00 PM"></li>
+					<li><label for="time24">6:30 PM</label> <input type="radio" name="bookingTime" id="time24" value="6:30 PM"></li>
+					<li><label for="time25">7:00 PM</label> <input type="radio" name="bookingTime" id="time25" value="7:00 PM"></li>
+					<li><label for="time26">7:30 PM</label> <input type="radio" name="bookingTime" id="time26" value="7:30 PM"></li>	  
+				</ul>		
 			</div>	
 		</div>
 	
@@ -116,7 +125,10 @@
 
 
 <script>
-
+$("li").click(function () {
+    $(this).addClass("activeForCalender");
+    $(this).siblings().removeClass("activeForCalender");
+});
 </script>
 </body>
 </html>

@@ -12,15 +12,14 @@ $light : #9b9b9b;
 }
 .centerTime{
 	margin:auto auto;	
-	select {
-		letter-spacing: 1.7px;
-		padding: 4px;
-		font-size: 16px;
-		width: 95px;
-		height: 235px;
-		font-weight: normal;
-  		line-height: 1.88;
-  		text-align: center;
+	border: none;
+	height: 70%;
+	overflow: scroll;
+	input{
+		visibility:hidden;
+	}
+	label{
+	padding-left: 20px;
 	}
 }
 
@@ -29,10 +28,12 @@ $light : #9b9b9b;
 	height: 332px;
 	background-color: #ffffff;
 	border: solid 0.5px #979797;
-	border-radius: 8px;	
+	 border-radius: 2px;
 	width: 80%;
 	margin: auto auto;
 	text-align: center;
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+	
 	&:hover{
 		border: 1px solid #555c82;
 	}
@@ -80,4 +81,7 @@ $light : #9b9b9b;
 		}			
 	}
 
+}
+.activeForCalender{
+    background-color: #ffa726;
 }
