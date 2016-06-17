@@ -205,7 +205,7 @@ p {
   background-position: 0 -220px; }
 
 .room-btn {
-  background: #555c82;
+  background: #2366a6;
   border-radius: 2px;
   border: none;
   text-align: center;
@@ -218,19 +218,22 @@ p {
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-  -webkit-box-shadow: 0 3px 0 #373b54;
-  -moz-box-shadow: 0 3px 0 #373b54;
-  -ms-box-shadow: 0 3px 0 #373b54;
-  -o-box-shadow: 0 3px 0 #373b54;
-  box-shadow: 0 3px 0 #373b54;
+  -webkit-box-shadow: 0 3px 0 #163f67;
+  -moz-box-shadow: 0 3px 0 #163f67;
+  -ms-box-shadow: 0 3px 0 #163f67;
+  -o-box-shadow: 0 3px 0 #163f67;
+  box-shadow: 0 3px 0 #163f67;
+  font-family: 'Avenir-Roman';
+  letter-spacing: 1.7px;
+  box-shadow: 0 2px 4px 0 #b4b4b4;
   color: white;
   font-size: 0.85em; }
   .room-btn:active {
-    -webkit-box-shadow: 0 1px 0 #373b54;
-    -moz-box-shadow: 0 1px 0 #373b54;
-    -ms-box-shadow: 0 1px 0 #373b54;
-    -o-box-shadow: 0 1px 0 #373b54;
-    box-shadow: 0 1px 0 #373b54; }
+    -webkit-box-shadow: 0 1px 0 #163f67;
+    -moz-box-shadow: 0 1px 0 #163f67;
+    -ms-box-shadow: 0 1px 0 #163f67;
+    -o-box-shadow: 0 1px 0 #163f67;
+    box-shadow: 0 1px 0 #163f67; }
   .room-btn:active {
     -webkit-transform: translateY(2px);
     -moz-transform: translateY(2px);
@@ -2078,10 +2081,11 @@ div[class^="edit_funds"] {
   -moz-transition: 0.5s;
   transition: 0.5s; }
 
-.box_wrapper {
+.historyBox,
+.upcomingBox {
   max-width: 100%;
   margin: auto 10px;
-  margin-bottom: 20vh; }
+  padding-bottom: 20vh; }
 
 .historyBox {
   display: none; }
@@ -2151,18 +2155,20 @@ div[class^="edit_funds"] {
     color: #4a4a4a; }
     .bookingEdit a.cancel {
       margin-left: 40px; }
-  .bookingEdit .toggleSign {
-    position: absolute;
-    right: 10px;
-    height: 20px;
-    width: 20px;
-    background-position: 0 -840px; }
 
-.bookingDetail {
+.toggleSign {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  background-position: 0 -840px; }
+
+.toggleContent {
   display: none;
   margin-top: 20px; }
-  .bookingDetail p,
-  .bookingDetail li {
+  .toggleContent p,
+  .toggleContent li {
     list-style-type: disc;
     list-style-position: inside;
     font-family: 'Avenir-Book';
@@ -2170,7 +2176,7 @@ div[class^="edit_funds"] {
     font-size: 14px;
     letter-spacing: 1.3px;
     color: #4a4a4a; }
-  .bookingDetail .equipment {
+  .toggleContent .equipment {
     margin-top: 20px; }
 
 .booking-btn {
@@ -2266,23 +2272,25 @@ div[class^="edit_funds"] {
     letter-spacing: 1.3px;
     color: #4A4A4A; }
 
-.box_wrapper input[type="radio"] {
-  position: absolute;
-  top: 15px;
-  visibility: hidden; }
-
-.highlight {
-  background-color: #fff2dd; }
+.box_wrapper {
+  max-width: 100%;
+  margin: auto 10px; }
+  .box_wrapper input[type="radio"] {
+    position: absolute;
+    top: 40px;
+    visibility: hidden; }
 
 .room {
+  background-color: #fafafa;
   margin-top: 15px;
   position: relative;
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 #b4b4b4; }
-  .room:first-child .content {
-    border-top: 1px solid #ddd; }
+  .room .toggleContent {
+    margin: auto;
+    padding: 16px 16px; }
 
 .roomSelection {
   display: -webkit-box;
@@ -2293,20 +2301,35 @@ div[class^="edit_funds"] {
   display: -ms-flexbox;
   display: flex;
   height: 100%; }
+  .roomSelection label {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
 
 .selectTabs {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   background-color: #ffc878;
-  border-radius: 2px;
-  line-height: 100px;
-  vertical-align: middle;
-  text-align: center; }
+  border-radius: 2px 0px 0px 2px;
+  height: 100px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s; }
+  .selectTabs p {
+    position: relative;
+    max-width: 70px;
+    text-align: center;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Roboto-Regular';
+    font-size: 20px;
+    color: #ffffff; }
+
+.roomSelection_active {
+  background-color: #ffa726; }
 
 .roomInfor {
   -webkit-box-flex: 2.5;
@@ -2316,55 +2339,36 @@ div[class^="edit_funds"] {
   -moz-flex: 2.5;
   -ms-flex: 2.5;
   flex: 2.5;
-  background-color: white; }
+  border-radius: 0px 2px 2px 0px; }
 
-.content {
-  margin: auto auto;
-  width: 90%;
-  height: 100%;
-  border-bottom: 1px solid #ddd;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .content .roomTag {
-    margin: auto 0;
-    width: 30px;
-    line-height: 30px;
-    background-color: #202334;
-    font-family: ".HelveticaNeueDeskInterface-Regular";
-    font-size: 0.9em;
-    color: #ffffff;
-    text-align: center;
-    vertical-align: middle; }
-  .content .roomDetail {
-    margin: auto 10px;
-    line-height: 85%; }
-    .content .roomDetail p {
-      font-family: '.HelveticaNeueDeskInterface-Bold';
-      color: #4A4A4A; }
-      .content .roomDetail p.roomName {
-        font-size: 0.7em; }
-      .content .roomDetail p.roomCapacity {
-        font-size: 0.6em;
-        color: #7d7d7d; }
-  .content .arrow {
-    margin: auto auto;
-    margin-right: 0;
-    width: 9px;
-    height: 12px;
-    background-position: 0 -788px; }
+.roomName {
+  position: relative;
+  width: 100%;
+  height: 50px; }
+  .roomName p {
+    position: absolute;
+    left: 12px;
+    bottom: 9px;
+    font-family: 'Avenir-Medium';
+    font-size: 24px;
+    color: #4a4a4a; }
+
+.roomDetails {
+  border-top: solid 1px rgba(0, 0, 0, 0.12);
+  height: 50px;
+  position: relative;
+  padding: 15px 0px; }
+  .roomDetails .show {
+    margin-left: 12px;
+    display: inline-block;
+    font-family: '.HelveticaNeueDeskInterface-Regular';
+    font-size: 14px;
+    letter-spacing: 1.3px;
+    color: #4a4a4a; }
 
 .next {
   text-align: center;
-  margin: 10vh auto; }
-  .next button {
-    font-family: 'Avenir-Roman';
-    letter-spacing: 1.7px;
-    box-shadow: 0 2px 4px 0 #b4b4b4; }
+  margin: 5vh auto; }
 
 .createMeeting_wrapper {
   /* 	max-width: 420px; */

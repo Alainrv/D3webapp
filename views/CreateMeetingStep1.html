@@ -77,46 +77,91 @@
 
 			<div class="room">
 				<div class="roomSelection">
-					<div class="selectTabs">
-						<label for="room1">
-							<p>Select Me</p>
-			    		</label>
-			    	</div>
+					<label for="room1">
+						<div class="selectTabs">
+							<p>select me</p>	
+				    	</div>
+			    	</label>
 			    	<div class="roomInfor">
-
+			    		<div class="roomName">
+			    			<p>By Maker Space</p>
+			    		</div>
+			    		<div class="roomDetails">
+			    			<div class="show">Show Details</div>
+			    			<div class="svg toggleSign"></div>
+		    			</div>
 			    	</div>
+		    	</div>
+		    	<div class="toggleContent">
+		    		<p>Room can fit up to 8 people sitting and can accomodate around 15 people standing.</p>
+					<p class="equipment">This room is accomdated with</p>
+					<ul>
+						<li>projector with HDMI cable</li>
+						<li>1 white board</li>
+						<li>1 podium</li>
+						<li>a sound system</li>
+					</ul>
 		    	</div>
 	    		<input type="radio" name="room" id="room1"></input>
 			</div>
 
 	    	<div class="room">
-	    		<label for="room2">
-	    		<div class="content">
-	    			<div class="roomTag">WR</div>
-	    			<div class="roomDetail">
-		    			<p class="roomName">Window Room</p>
-		    			<p class="roomCapacity">Capacity: 20people</p>
-	    			</div>
-	    			<div class="svg arrow">
-	    			</div>
-	    		</div>
-	    		</label>
+				<div class="roomSelection">
+					<label for="room2">
+						<div class="selectTabs">
+							<p>select me</p>	
+				    	</div>
+			    	</label>
+			    	<div class="roomInfor">
+			    		<div class="roomName">
+			    			<p>By Maker Space</p>
+			    		</div>
+			    		<div class="roomDetails">
+			    			<div class="show">Show Details</div>
+			    			<div class="svg toggleSign"></div>
+		    			</div>
+			    	</div>
+		    	</div>
+		    	<div class="toggleContent">
+		    		<p>Room can fit up to 8 people sitting and can accomodate around 15 people standing.</p>
+					<p class="equipment">This room is accomdated with</p>
+					<ul>
+						<li>projector with HDMI cable</li>
+						<li>1 white board</li>
+						<li>1 podium</li>
+						<li>a sound system</li>
+					</ul>
+		    	</div>
 	    		<input type="radio" name="room" id="room2"></input>
-
 			</div>
 
 	    	<div class="room">
-	    		<label for="room3">
-	    		<div class="content">
-	    			<div class="roomTag">BM</div>
-	    			<div class="roomDetail">
-		    			<p class="roomName">By the maker space</p>
-		    			<p class="roomCapacity">Capacity: 8people</p>
-	    			</div>
-	    			<div class="svg arrow">
-	    			</div>
-	    		</div>
-	    		</label>
+				<div class="roomSelection">
+					<label for="room3">
+						<div class="selectTabs">
+							<p>select me</p>	
+				    	</div>
+			    	</label>
+			    	<div class="roomInfor">
+			    		<div class="roomName">
+			    			<p>By Maker Space</p>
+			    		</div>
+			    		<div class="roomDetails">
+			    			<div class="show">Show Details</div>
+			    			<div class="svg toggleSign"></div>
+		    			</div>
+			    	</div>
+		    	</div>
+		    	<div class="toggleContent">
+		    		<p>Room can fit up to 8 people sitting and can accomodate around 15 people standing.</p>
+					<p class="equipment">This room is accomdated with</p>
+					<ul>
+						<li>projector with HDMI cable</li>
+						<li>1 white board</li>
+						<li>1 podium</li>
+						<li>a sound system</li>
+					</ul>
+		    	</div>
 	    		<input type="radio" name="room" id="room3"></input>
 			</div>
 
@@ -136,14 +181,36 @@
 // the second line shoudl have the comment add the highlight
 
 
-// add highlight background to selected radio input
+// add highlight background to selected radio input, and change the label content
 $(document).ready(function(){
+	// change clicked radio input background and text content
     $('input[type=radio]').change(function(){
-    	// Why did you want to create a variable here? seems like an overkill. 
-        var $this = $(this);
-        $this.closest('.box_wrapper').find('div.highlight').removeClass('highlight');
-        $this.closest('.room').addClass('highlight');
+    	// change old selected radio content to select me
+    	$('.roomSelection_active').find('p').html('select me');
+    	// remove old selected radio active class
+        $('.roomSelection_active').removeClass('roomSelection_active');
+        // add active class to this selected radio
+        $(this).closest('.room').find('.selectTabs').addClass('roomSelection_active');
+        // change this radio content to selected
+        $('.roomSelection_active').find('p').html('selected');
     });
+
+    // add toggle to room contents
+    $(".roomDetails").click(function (){
+		// assign room details to variable
+		$content = $(this).closest(".room").find('.toggleContent');
+		// when hide or show content, change the toggle button and sign
+	    if($content.css("display")=="none"){
+	    	$(this).find('.toggleSign').css("background-position","0 -860px");
+	    	$(this).find(".show").html("Hide Details");
+	    } 
+	    else{
+    		$(this).find('.toggleSign').css("background-position","0 -840px");
+    		$(this).find(".show").html("Show Details");
+	    }
+	    // toggle the content on click
+	    $content.slideToggle(500)
+	});
 });
 
 </script>
