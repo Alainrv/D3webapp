@@ -1,7 +1,4 @@
-$dark : #202334;
-$light : #9b9b9b;
 .createMeeting_wrapper {
-/* 	max-width: 420px; */
 	margin: auto auto;
 	@media (min-width: 400px) {
 		max-width: 765px;
@@ -13,13 +10,19 @@ $light : #9b9b9b;
 .centerTime{
 	margin:auto auto;	
 	border: none;
-	height: 70%;
+	height: 80%;
 	overflow: scroll;
 	input{
 		visibility:hidden;
 	}
 	label{
-	padding-left: 20px;
+		font-family: '.HelveticaNeueDeskInterface-Regular';
+		font-size: 16px;
+		letter-spacing: 1.7px;
+		text-align: center;
+		color: #9b9b9b;
+		line-height: 30px;
+		padding-left: 20px;
 	}
 }
 
@@ -28,9 +31,9 @@ $light : #9b9b9b;
 	height: 332px;
 	background-color: #ffffff;
 	border: solid 0.5px #979797;
-	 border-radius: 2px;
+ 	border-radius: 2px;
 	width: 80%;
-	margin: auto auto;
+	margin: 16px auto;
 	text-align: center;
 	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
 	
