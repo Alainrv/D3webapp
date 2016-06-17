@@ -1,11 +1,12 @@
-$dark : #202334;
-$light : #9b9b9b;
 
 .headerInfor {
-	margin: 5vh auto; 
-	width: 50%;
+	margin: 7vh auto; 
+	// width: 50%;
+	width: 100%;
 	text-align: center;
 	.signs{
+		margin: auto;
+		width: 35%;
 		@include display(flex);
 		@include justify-content(space-around);
 		.circle {
@@ -20,23 +21,31 @@ $light : #9b9b9b;
 		}
 	}
 	.title p{
-		margin-top: 3vh;
+		margin: 3vh auto;
 		font-family: ".HelveticaNeueDeskInterface-Regular";
 		font-size: 14px;
 		letter-spacing: 1.3px;
-		color: #4a4a4a;
+		color: $writting;
 	}
 }
 
-.rooms{
-	li{
-		list-style-type: none;
+.select-rooms{
+
+	input[type="radio"]{
+		position: absolute;
+		top: 15px;
+	    visibility:hidden;
+	}
+
+	.highlight{
+		background-color:#fff2dd;
+	}
+
+	.room {
+		position: relative;
 		height: 50px;
 		width: 100%;
 		
-		&:hover{
-			background-color:#fff2dd;
-		}
 		&:first-child .content{
 			border-top: 1px solid #ddd;
 		}
@@ -47,37 +56,30 @@ $light : #9b9b9b;
     	width: 90%;
     	height: 100%;
     	border-bottom: 1px solid #ddd;
-    	font-family: '.HelveticaNeueDeskInterface-Regular';
-		font-size: 14px;
-		letter-spacing: 1.3px;
-		color: #ffffff;
 		@include display(flex);
-		// @include justify-content(space-between);
-
 		.roomTag {
 			margin: auto 0;
 			width: 30px;
-			height: 30px;
 			line-height: 30px; 
 			background-color: $dark;
 			font-family: ".HelveticaNeueDeskInterface-Regular";
-			color: #ffffff;
+			font-size: 0.9em;
+			color: $white;
 			text-align: center;
 			vertical-align: middle;
 	    }
 	    .roomDetail{
 	    	margin: auto 10px;
+	    	line-height: 85%;
 		    p {
-		    	display: block;
 		    	font-family: '.HelveticaNeueDeskInterface-Bold';
-				color: #4a4a4a;
-				&.name{
-					font-size: 0.9em;
-					letter-spacing: 1.1px;
+				color: $writting;
+				&.roomName{
+					font-size: 0.7em;
 				}
-				&.capacity{
-					font-size: 10px;
-					color: lighten(#4a4a4a,20%);
+				&.roomCapacity{
+					font-size: 0.6em;
+					color: lighten($writting,20%);
 				}
 		    }
 		}
@@ -99,10 +101,7 @@ $light : #9b9b9b;
 
 	button{
 		font-family: 'Avenir-Roman';
-		font-size: 14px;
-		line-height: 1.4;
 		letter-spacing: 1.7px;
-		color: #ffffff;
 		box-shadow: 0 2px 4px 0 #b4b4b4;
 	}
 }

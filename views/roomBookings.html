@@ -61,12 +61,25 @@
 	</div>
 
 	<div class="bookingBoard">
-		<div class="upcoming">
+		<div class="tabs">
+			<div class="tab">
+				<a href="">All 10</a>
+				<div class="verticalLine"></div>
+				<a href="">Upcoming 6</a>
+				<div class="verticalLine"></div>
+				<a href="">History 4</a>
+			</div>
+			<button class="booking-btn" onclick="createBooking(this)">+ Create</button>
+		</div>
+		<div class="sectionHead">
 				<p>UPCOMING</p>
-				<button id="createButton" class="booking-btn">+ Create</button>
+				<button class="booking-btn" onclick="createBooking(this)">+ Create</button>
 		</div>
-		<form method="post">
+
+
 		<div class="upcomingBox">
+
+			<!-- new room booking 1 -->
 			<div class="booking new">
 				<div class="booking-detail">
 					<div class="name">Maker Space Room</div>
@@ -78,13 +91,20 @@
 						<div class="svg meetingClock"></div>
 						<div class="duration">45 min</div>
 					</div>
+					<div class="equipments">
+						<div>Equipment</div>
+						<div>Equipment</div>
+						<div>Equipment</div>
+					</div>
 				</div>
-
 				<div class="booking-edit">
-					<a href="">Edit</a><a class="verticalLine" href="">Cancel</a>
+					<a class="edit" href="">Edit</a>
+					<div class="verticalLine"></div>
+					<a class="cancel" href="">Cancel</a>
 				</div>
 			</div>
 
+			<!-- new room booking 2 -->
 			<div class="booking new">
 				<div class="booking-detail">
 					<div class="name">Maker Space Room</div>
@@ -96,20 +116,32 @@
 						<div class="svg meetingClock"></div>
 						<div class="duration">45 min</div>
 					</div>
+					<div class="equipments">
+						<div>Equipment</div>
+						<div>Equipment</div>
+						<div>Equipment</div>
+						<div>Equipment</div>
+						<div>Equipment</div>
+						<div>Equipment</div>
+					</div>
 				</div>
-
 				<div class="booking-edit">
-					<a href="">Edit</a><a class="verticalLine" href="">Cancel</a>
+					<!-- The line in the middle here should not be part of the second a, we do not want someone to cancel a meeting by pressing the line by mistake. The line is in between creting a space that allow for different intention for fingers on touch base devices -->
+					<a class="edit" href="">Edit</a>
+					<div class="verticalLine"></div>
+					<a class="cancel" href="">Cancel</a>
 				</div>
 			</div>
 
 		</div>
 
-		<div class="history">
+		<div class="sectionHead">
 			<p>HISTORY</p>
 		</div>
 
 		<div class="historyBox">
+
+			<!-- old room booking 1 -->
 			<div class="booking old">
 				<div class="booking-detail">
 					<div class="name">Maker Space Room</div>
@@ -121,36 +153,50 @@
 						<div class="svg meetingClock"></div>
 						<div class="duration">45 people</div>
 					</div>
+					<div class="equipments">
+						<div>Equipment</div>
+						<div>Equipment</div>
+						<div>Equipment</div>
+					</div>
 				</div>
-
 			</div>
+
+			<!-- old room booking 1 -->
+			<div class="booking old">
+				<div class="booking-detail">
+					<div class="name">Maker Space Room</div>
+					<div class="schedule">time schedule set up</div>
+					<div class="owner">owner is whom</div>
+
+					<div class="capacity">8 people</div>
+					<div class="time">
+						<div class="svg meetingClock"></div>
+						<div class="duration">45 people</div>
+					</div>
+					<div class="equipments">
+						<div>Equipment</div>
+						<div>Equipment</div>
+						<div>Equipment</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
-
 	</div>
-
 </div>
 
 
 
 <script type="text/javascript">
-    document.getElementById("createButton").onclick = function () {
-        location.href = "createBookingS1.html";
-    };
+    function createBooking(){
+    	location.href = "createBookingS1.html";
+    }
+
+// Why does this via javascript versus doing versus a simply href function?
+// You can simply wrap the button 
 </script>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
+</html>

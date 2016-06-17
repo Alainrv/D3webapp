@@ -1,41 +1,76 @@
 .booking_wrapper{
 	margin: auto auto;
 	padding: 0 0;
+	min-width: 200px;
 
-	.header {
-		width: 100%;
-		.headerNav{
-			height: 50px;
-			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) 
-
-		}
-
-		.headerPicture{
-			margin: 5vh 0;
-			text-align: center;
-			img{
-
-				border-radius: 50%;
-				box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-				height: 25vh;
-				width: 25vh;
-			}
-		}
-	}
 }
 
+
+.headerNav{
+	height: 50px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) 
+}
 
 .bookingBoard{
 	width: 100%;
 	margin: auto auto;
+	position: relative;
+	@media (min-width: 420px) {
+		min-width: 320px;
+		max-width: 550px;
+		margin-bottom: 5vh;
+		border: lighten($greyBorder, 20%) 1px solid;
+	}
+}
+
+.tabs{
+	display: none;
+	height: 56px;
+	border: none;
+	width: 100%;
+	background-color: #ffffff;
+	@media(min-width: 460px){
+		display: block;
+	}
+	button{
+		float: right;
+		margin: 13px 15px;
+		text-align: center;
+		vertical-align: middle;
+		box-shadow: 0 2px 4px 0 #b4b4b4;
+	}
+}
+
+.tab {
+	width: 60%;
+	float: left;
+	padding: 13px 10px;
+	@include display(flex);
+	@include justify-content(space-between);
+	line-height: 30px; 
+	text-align: center;
+	vertical-align: middle;
+	a{
+		padding: 0 1px;
+		font-family: '.HelveticaNeueDeskInterface-Regular';
+		font-size: 1em;
+		letter-spacing: 2.2px;
+		color: #4a4a4a;
+	}
 }
 
 
-.upcoming{
+.sectionHead{
 	width: 100%;
 	height: 50px;
 	border: lighten($greyBorder, 20%) 1px solid;
-	background-color: #f8f8f8;
+	background-color: $lightBackgroundColor;
+	@media (min-width: 460px) {
+		height: 40px;
+		border: none;
+		border-bottom: lighten($greyBorder, 20%) 1px solid;
+		border-top: lighten($greyBorder, 20%) 1px solid;
+	}
 	@include display(flex);
 	@include justify-content(space-between);
 	p {
@@ -50,25 +85,10 @@
 	button{
 		margin: auto;
 		margin-right: 15px;
-		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-	}
-}
-
-.history{
-	width: 100%;
-	height: 50px;
-	border: lighten($greyBorder, 20%) 1px solid;
-	background-color: #f8f8f8;
-	@include display(flex);
-	@include justify-content(space-between);
-	p {
-		margin: auto;
-		margin-left: 15px;
-		font-size: 16px;
-		font-family: '.HelveticaNeueDeskInterface-Regular';
-		line-height: 1.1;
-		letter-spacing: 1.9px;
-		color: lighten(#6a6a6a,10%);
+		box-shadow: 0 2px 4px 0 #b4b4b4;
+		@media(min-width:460px){
+			display: none;
+		}
 	}
 }
 
@@ -76,11 +96,8 @@
 .historyBox {
 	max-width: 100%;
 	margin: auto auto;
-
 	padding: 0 15px;
 	padding-bottom: 15px;
-
-	
 }
 
 .booking {
@@ -89,57 +106,79 @@
 	padding: 10px 10px;
 	width: 100%;
 	border-radius: 7px;
-	background-color: #ffffff;
 	box-shadow: 0 2px 4px 0 #b4b4b4;
 	border: solid 0.5px #c7c7c7;
-	display: block;
-	&.new{
-		height: 45vh;
-	}
-	&.old{
-		height: 35vh;
-	}
-	.booking-detail div{
-		font-family: 'Avenir-book';
-		font-size: 0.9em;
-		letter-spacing: 1.3px;
-		color: $writting;
-		line-height: 130%;
-		&.name{
-			font-family: 'Avenir-medium';
-			letter-spacing: 1.7px;
-			font-size: 1.2em;
-		}
-		&.capacity{
-			padding-top: 15px;
-		}
-		&.time{
-			position: relative;
-			.duration {
-				padding-left: 20px;
-			}
-			.meetingClock {
-				position: absolute;
-				width: 18px;
-				height: 18px;
-				background-position: 0 -770px;
-			}
-		}
-	}
-	.booking-edit{
-		position: absolute;
-		bottom:15px;
-		right: 15px;
-		a {	
-			font-family: '.HelveticaNeueDeskInterface-Regular';
-			font-size: 1.1em;
-			letter-spacing: 1.7px;
-			padding: 2px 8px;
-			color: $bookingWritting;
-			&.verticalLine{
-				border-left: solid 2px #979797;
-			}
-		}
+	overflow: auto;
+}
+
+
+.booking-detail {
+	font-size: 14px;
+	letter-spacing: 1.3px;
+	color: $writting;
+	line-height: 150%;
+}
+
+
+.name{
+	font-family: 'Avenir-medium';
+	letter-spacing: 1.7px;
+	font-size: 1.2em;
+}
+
+.capacity{
+	padding-top: 15px;
+}
+
+.time{
+	position: relative;
+
+}
+
+
+.duration {
+	padding-left: 20px;
+}
+
+.meetingClock {
+	position: absolute;
+	top: 2px;
+	width: 18px;
+	height: 18px;
+	background-position: 0 -770px;
+}
+.equipments{
+	max-width: 260px;
+	@include display(flex);
+	@include justify-content(space-between);
+	@include flex-wrap(wrap);
+	div {
+		margin: 5px 1px;
+		padding: 1px;
+		border: solid lighten($writting,20%) 0.5px;
 	}
 }
-	
+
+
+.booking-edit{
+	float: right;
+	@include display(flex);
+	@include justify-content(space-between);
+	@media(min-width: 460px){
+		position: absolute;
+		bottom:17px;
+		right: 15px;
+	}
+	a {	
+		font-family: '.HelveticaNeueDeskInterface-Regular';
+		font-size: 1.1em;
+		letter-spacing: 1.7px;
+		margin: 2px 10px;
+		color: $bookingWritting;
+	}
+}
+
+
+.verticalLine{
+	border-left: solid 2px #979797;
+}
