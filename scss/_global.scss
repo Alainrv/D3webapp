@@ -132,15 +132,6 @@ p {
 }
 
 
-.room-btn {
-	@include btn($bookingButtonColor, 47px, 228px);
-	font-family: 'Avenir-Roman';
-	letter-spacing: 1.7px;
-	box-shadow: 0 2px 4px 0 #b4b4b4;
-	color: lighten(white,10%);
-	font-size: 0.85em;
-}
-
 
 
 
