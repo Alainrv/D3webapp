@@ -56,8 +56,7 @@
 	vertical-align: middle;
 	&-2{
 		@include btn( #f57c00, 45px, 230px);
-		box-shadow: 0 2px 4px 0 #b4b4b4;
-		font-family: 'Avenir-Medium';
+		box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);		font-family: 'Avenir-Medium';
 		font-size: 18px;
 		letter-spacing: 1.7px;
 		color: #ffffff;

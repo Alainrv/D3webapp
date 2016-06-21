@@ -2333,7 +2333,7 @@ div[class^="edit_funds"] {
     -ms-box-shadow: 0 3px 0 #a95500;
     -o-box-shadow: 0 3px 0 #a95500;
     box-shadow: 0 3px 0 #a95500;
-    box-shadow: 0 2px 4px 0 #b4b4b4;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
     font-family: 'Avenir-Medium';
     font-size: 18px;
     letter-spacing: 1.7px;
@@ -2478,10 +2478,13 @@ div[class^="edit_funds"] {
     color: #4a4a4a; }
 
 .invitation_wrapper {
-  margin: auto 20px; }
+  width: 100%;
+  margin: auto auto; }
 
 .invitationDetails {
-  margin: 50px auto; }
+  margin: auto 20px;
+  margin-top: 120px;
+  position: relative; }
 
 .invSchedule,
 .invDescription {
@@ -2495,9 +2498,6 @@ div[class^="edit_funds"] {
   text-align: center; }
   .invDescription b {
     font-weight: bold; }
-
-.invSchedule {
-  margin-top: 10px; }
 
 .invTopic {
   font-family: 'Avenir-Roman';
@@ -2525,6 +2525,134 @@ div[class^="edit_funds"] {
     font-size: 12px;
     letter-spacing: 1.1px;
     color: #4a4a4a; }
+
+.invSchedule {
+  margin-top: 10px; }
+
+.pick_time {
+  font-family: 'Avenir-Roman';
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  line-height: 130%;
+  text-align: center;
+  color: #4a4a4a;
+  padding: 15px 0;
+  width: 100%;
+  border-bottom: solid 0.5px #c7c7c7; }
+
+.scheduleDetails {
+  position: relative;
+  margin: 15px auto;
+  padding: 15px 10px;
+  border-left: solid 0.5px #c7c7c7; }
+  .scheduleDetails div {
+    font-family: 'Avenir-LightOblique';
+    font-size: 12px;
+    letter-spacing: 1.1px;
+    color: #4a4a4a; }
+  .scheduleDetails .scheduleDate {
+    margin-bottom: 10px; }
+
+.invMark {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: solid 3px #fca20e;
+  position: absolute;
+  left: -7px;
+  top: 14px;
+  display: inline-block; }
+
+.scheduleSelection {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative; }
+  .scheduleSelection div {
+    height: 40px;
+    width: 50px;
+    border-radius: 8px;
+    border: solid 0.5px #c7c7c7;
+    font-family: Avenir-Black;
+    font-size: 10px;
+    letter-spacing: 0.9px;
+    line-height: 120%;
+    text-align: center;
+    color: #4a4a4a;
+    text-align: center;
+    padding: 8px 0; }
+  .scheduleSelection input[type="radio"] {
+    position: absolute;
+    visibility: hidden; }
+
+.invActive {
+  background-color: #fff2dd; }
+
+.respondMessage {
+  margin: 15px auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  .respondMessage .messageText {
+    width: 85%;
+    font-family: 'Avenir-Light';
+    font-size: 9px;
+    letter-spacing: 0.5px;
+    line-height: 120%;
+    color: #4a4a4a; }
+  .respondMessage .respondTime {
+    width: 22px;
+    height: 22px;
+    background-position: 0 -880px; }
+
+.invProfilePic {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: -95px; }
+  .invProfilePic .profilePic2,
+  .invProfilePic .profilePic1 {
+    margin: auto auto;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: white;
+    width: 112px;
+    height: auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+    .invProfilePic .profilePic2.profilePic1,
+    .invProfilePic .profilePic1.profilePic1 {
+      width: 100px;
+      position: relative;
+      left: 20px; }
 
 .phpdebugbar p {
   font-size: black; }
