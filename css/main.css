@@ -2351,15 +2351,6 @@ div[class^="edit_funds"] {
       -o-transform: translateY(2px);
       transform: translateY(2px); }
 
-.createMeeting_wrapper {
-  margin: auto auto; }
-  @media (min-width: 400px) {
-    .createMeeting_wrapper {
-      max-width: 765px; } }
-  @media (min-width: 770px) {
-    .createMeeting_wrapper {
-      max-width: 1270px; } }
-
 .centerTime {
   margin: auto auto;
   border: none;
@@ -2451,22 +2442,22 @@ div[class^="edit_funds"] {
   text-align: center;
   color: #4a4a4a; }
 
-.bookingDuration {
+.setDuration {
   padding: 70px 0; }
-  .bookingDuration p {
+  .setDuration p {
     font-family: '.HelveticaNeueDeskInterface-Regular';
     font-size: 18px;
     letter-spacing: 1.3px;
     text-align: center;
     color: #4a4a4a; }
-  .bookingDuration input {
+  .setDuration input {
     margin-top: 10px;
     font-family: 'Avenir-Book';
     font-size: 18px;
     letter-spacing: 0.2px;
     color: #4a4a4a;
     text-align: center; }
-  .bookingDuration .durationBorder {
+  .setDuration .durationBorder {
     margin: auto;
     width: 95px;
     border-bottom: solid 1px #979797; }
