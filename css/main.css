@@ -2477,6 +2477,55 @@ div[class^="edit_funds"] {
     line-height: 1.3;
     color: #4a4a4a; }
 
+.invitation_wrapper {
+  margin: auto 20px; }
+
+.invitationDetails {
+  margin: 50px auto; }
+
+.invSchedule,
+.invDescription {
+  padding: 0 15px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: solid 0.5px #979797;
+  overflow: auto; }
+
+.invDescription {
+  text-align: center; }
+  .invDescription b {
+    font-weight: bold; }
+
+.invSchedule {
+  margin-top: 10px; }
+
+.invTopic {
+  font-family: 'Avenir-Roman';
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  line-height: 130%;
+  text-align: center;
+  color: #4a4a4a;
+  margin-top: 27px; }
+
+.invTime {
+  margin: 10px auto;
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  .invTime div {
+    margin: auto 2px;
+    line-height: 15px;
+    vertical-align: middle;
+    font-family: 'Avenir-Book';
+    font-size: 12px;
+    letter-spacing: 1.1px;
+    color: #4a4a4a; }
+
 .phpdebugbar p {
   font-size: black; }
 

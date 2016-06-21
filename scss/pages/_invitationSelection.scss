@@ -1,0 +1,53 @@
+.invitation_wrapper{
+	margin: auto 20px;
+}
+
+
+
+
+.invitationDetails{
+	margin: 50px auto;
+}
+
+.invSchedule,
+.invDescription{
+	padding: 0 15px;
+	border-radius: 8px;
+	background-color: #ffffff;
+	border: solid 0.5px #979797;
+	overflow: auto;
+}
+.invDescription{
+	text-align: center;
+	b{
+	    font-weight: bold;
+	}
+}
+
+.invSchedule{
+	margin-top: 10px;
+}
+
+.invTopic{
+	font-family: 'Avenir-Roman';
+	font-size: 12px;
+	letter-spacing: 1.3px;
+	line-height: 130%;
+	text-align: center;
+	color: #4a4a4a;
+	margin-top: 27px;
+}
+
+.invTime{
+	margin: 10px auto;
+	@include display(inline-flex);
+	div{
+		margin: auto 2px;
+		line-height: 15px;
+		vertical-align: middle;
+		font-family: 'Avenir-Book';
+		font-size: 12px;
+		letter-spacing: 1.1px;
+		color: #4a4a4a;
+	}
+}
