@@ -162,18 +162,19 @@ $(document).ready(function(){
 		$content = $(this).closest(".bookingInfor").find('.toggleContent');
 		// if content is hiddent, show up arrow. If not show down arrwo
 	    if($content.css("display")=="none"){
-	    	$(this).css("background-position","0 -860px");
+	    	$(this).css("transform","rotateX(180deg)");
 	    } 
 	    else{
-    		$(this).css("background-position","0 -840px");
+    		$(this).css("transform","rotateX(0deg)");
 	    }
 	    // toggle the content on click
 	    $content.slideToggle(500)
 	});
 
 	// submite the form when the radio is selected
-	$('input[name=room]').change(function(e){
+	$('input[name=room]').click(function(){
 		$('form').submit();
+		location.href='roomBookingStep2.html';
 	});
 
 	// test if the correct room name was submitted

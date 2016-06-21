@@ -52,20 +52,23 @@
 <body>
 
 <div class="booking_wrapper">
-	<div class="bookingHeader">
-		<div class="headerText">
-			Room Bookings
+	<div class="bookingHeader_wrapper">
+
+		<div class="bookingHeader">
+			<div class="headerText">
+				Room Bookings
+			</div>
+			<a href="roomBookingStep1.html">
+			<button class="booking-btn">
+				<div class="horizontalLine"></div>
+				<div class="verticalLine"></div>
+			</button>
+			</a>
 		</div>
-		<a href="roomBookingStep1.html">
-		<button class="booking-btn">
-			<div class="horizontalLine"></div>
-			<div class="verticalLine"></div>
-		</button>
-		</a>
-	</div>
-	<div class="bookingTabs">
-		<div class="tab upcoming onSelect">UPCOMING</div><div class="tab history">HISTORY</div>
-		<div class="selectBorder"></div>
+		<div class="bookingTabs">
+			<div class="tab upcoming onSelect">UPCOMING</div><div class="tab history">HISTORY</div>
+			<div class="selectBorder"></div>
+		</div>
 	</div>
 
 	<div class="upcomingBox">
@@ -235,10 +238,10 @@
 		$content = $(this).closest(".bookingInfor").find('.toggleContent');
 		// if content is hiddent, show up arrow. If not show down arrwo
 	    if($content.css("display")=="none"){
-	    	$(this).css("background-position","0 -860px");
-	    } 
+			$(this).css("transform","rotateX(180deg)");	   
+		} 
 	    else{
-    		$(this).css("background-position","0 -840px");
+    		$(this).css("transform","rotateX(0deg)");
 	    }
 	    // toggle the content on click
 	    $content.slideToggle(500)
