@@ -1,0 +1,140 @@
+.roomHeaderCreateMeeting {
+	margin: auto auto; 
+	height: 120px;
+	width: 100%;
+	text-align: center;
+
+	background-color: #2979ff;
+	.signs{
+		margin: auto;
+		width: 35%;
+		@include display(flex);
+		@include justify-content(space-around);
+		[class^="circle"]{
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			background-color: darken(#ffffff, 20%);
+			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
+		}
+		.circle-active {
+				background-color: #ffffff;
+		}
+	}
+	.title {
+		padding-top: 30px;
+		padding-bottom: 20px;
+		font-family: 'Avenir-Medium';
+		font-size: 18.4px;
+		line-height: 1;
+		letter-spacing: 2.2px;
+		color: #ffffff;
+	}
+}
+.createInput {
+	width: 100%;
+	padding: 0px 12px;
+	.input {
+		width: 100%;
+		position: relative;
+		margin-bottom: 5px;
+
+		@media (min-width: 370px) {
+			margin-bottom: 12px;
+		}
+
+		@media (min-width: 410px) {
+			margin-bottom: 18px;
+		}
+		textarea, select{
+		margin-left: 7vh;
+		margin-top: 1vh;
+		}
+		select{
+			margin-left: 7vh;
+			margin-top: 1vh;
+			width: 259px;
+			option{
+				font-size: 19px;
+				letter-spacing: 1.7px;
+				text-align: center;
+				color: #9b9b9b;
+				line-height: 40px;
+				padding-left: 20px;
+			}
+		}
+		
+		input {
+			width: 100%;
+			height: 40px;
+			border: none;
+			border-bottom: 1px solid $greyBorder;
+			font-size: 1em;
+			color: $writting;
+			border-radius: 2px;
+			padding-left: 30px;
+			
+			&:active,
+			&:focus , &:hover{
+				border-bottom: solid 0.9px skyblue;
+			}
+		}
+		// change "img" to "div" to avoid the grey border when img has no src in it!
+		div {
+			position: absolute;
+			top: 10px;
+			left: 5px;
+			
+			&.emailCreate {
+				width: 15px;
+				height: 13px;
+				background-position: 0 -534px;
+			}
+			&.lockCreate {
+				width: 15px;
+				height: 17px;
+				background-position: 0 -547px;
+			}
+			&.alarmClock {
+				width: 18px;
+				height: 19px;
+				background-position: 0 -880px;
+			}
+			&.clock {
+				width: 18px;
+				height: 19px;
+				background-position: 0 -900px;
+			}
+			&.location {
+				width: 18px;
+				height: 19px;
+				background-position: 0 -940px;
+			}
+			&.notes {
+				width: 18px;
+				height: 19px;
+				background-position: 0 -920px;
+			}
+		}
+	}
+}
+
+.notesLabel{
+		display: block;
+		margin-left: 7vh;
+		padding-top: 2vh;
+		color: #4a4a4a;
+}
+.invitationValidity{
+	height: 159px;
+	background-color: #ffffff;	
+	width: 87%;
+	margin: 2vh 7vh;
+	margin-bottom: 25px;
+	text-align: center;	
+ 	border: solid 0.9px #ffffff;
+ 	&:hover {
+		border: solid 0.9px skyblue;
+	}
+ 	
+}

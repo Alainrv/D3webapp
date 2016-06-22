@@ -1,8 +1,8 @@
 .centerTime{
 	margin:auto auto;	
 	border: none;
-	height: 80%;
-	overflow: scroll;
+	height: 95%;
+	overflow-y: scroll;
 	input{
 		visibility:hidden;
 	}
@@ -17,8 +17,7 @@
 	}
 }
 
-.input_form_create_meeting {	
-	
+.input_form_create_meeting {		
 	height: 332px;
 	background-color: #ffffff;
 	border: solid 0.5px #979797;
@@ -88,6 +87,5 @@
 	margin: 30px auto;
 	text-align: center;
 }
-
 
 
