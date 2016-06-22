@@ -1,0 +1,31 @@
+.meeting_wrapper{
+	@extend .booking_wrapper;
+	.upcomingBox{
+		display: none;
+	}
+}
+.meetingTabs{
+	@extend .bookingTabs;
+	.tab{
+		width: calc(100% / 3);
+	}
+	.selectBorder{
+		width: calc(100% / 3);
+	}
+}
+
+.location{
+	display: inline-block;
+	vertical-align: middle;
+	width: 14px;
+	height: 18px;
+	background-position: 0 -885px;
+}
+
+.meetingLocation{
+	display: inline-block;
+	font-family: 'Avenir-Roman';
+	font-size: 14px;
+	letter-spacing: 1.3px;
+	color: #4a4a4a;
+}
