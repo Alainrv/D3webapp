@@ -2097,12 +2097,11 @@ div[class^="edit_funds"] {
   vertical-align: middle;
   font-size: 16px;
   font-family: '.HelveticaNeueDeskInterface-Regular';
-  color: #ffffff;
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
   cursor: pointer; }
 
 .onSelect {
-  opacity: 1;
+  color: white;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   transition: 0.5s; }
@@ -2186,6 +2185,7 @@ div[class^="edit_funds"] {
   display: flex;
   margin-top: 35px; }
   .bookingEdit a {
+    cursor: pointer;
     font-family: '.HelveticaNeueDeskInterface-MediumP4';
     font-size: 16px;
     letter-spacing: 1.5px;
@@ -2501,11 +2501,23 @@ div[class^="edit_funds"] {
 
 .meeting_wrapper .upcomingBox {
   display: none; }
+.meeting_wrapper .toggleContent {
+  line-height: 130%; }
 
 .meetingTabs .tab {
+  position: relative;
   width: calc(100% / 3); }
 .meetingTabs .selectBorder {
   width: calc(100% / 3); }
+
+#pendingCount {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #f57c00; }
 
 .location {
   display: inline-block;
@@ -2514,11 +2526,33 @@ div[class^="edit_funds"] {
   height: 18px;
   background-position: 0 -885px; }
 
+.meetingTitle {
+  font-family: 'Avenir-Heavy';
+  font-size: 14px;
+  letter-spacing: 1.3px;
+  color: #4a4a4a; }
+
+.dialogue {
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 15px;
+  background-position: 0 -905px; }
+
+.meetingNote,
 .meetingLocation {
   display: inline-block;
   font-family: 'Avenir-Roman';
   font-size: 14px;
   letter-spacing: 1.3px;
+  color: #4a4a4a; }
+
+.NoteDetails {
+  margin: auto 10px;
+  margin-left: 15px;
+  font-family: 'Avenir-Book';
+  font-size: 14px;
+  letter-spacing: 1px;
   color: #4a4a4a; }
 
 .invitation_wrapper {

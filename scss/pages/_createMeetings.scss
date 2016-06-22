@@ -3,15 +3,29 @@
 	.upcomingBox{
 		display: none;
 	}
+	.toggleContent{
+		line-height: 130%;
+	}
 }
 .meetingTabs{
 	@extend .bookingTabs;
 	.tab{
+		position: relative;
 		width: calc(100% / 3);
 	}
 	.selectBorder{
 		width: calc(100% / 3);
 	}
+}
+
+#pendingCount{
+	position: absolute;
+	top: 6px;
+	right: 8px;
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	background-color: #f57c00;
 }
 
 .location{
@@ -22,10 +36,33 @@
 	background-position: 0 -885px;
 }
 
+.meetingTitle{
+	font-family: 'Avenir-Heavy';
+	font-size: 14px;
+	letter-spacing: 1.3px;
+	color: #4a4a4a;
+}
+.dialogue{
+	display: inline-block;
+	vertical-align: middle;
+	width: 13px;
+	height: 15px;
+	background-position: 0 -905px;
+}
+.meetingNote,
 .meetingLocation{
 	display: inline-block;
 	font-family: 'Avenir-Roman';
 	font-size: 14px;
 	letter-spacing: 1.3px;
+	color: #4a4a4a;
+}
+
+.NoteDetails{
+	margin: auto 10px;
+	margin-left: 15px;
+	font-family: 'Avenir-Book';
+	font-size: 14px;
+	letter-spacing: 1px;
 	color: #4a4a4a;
 }
