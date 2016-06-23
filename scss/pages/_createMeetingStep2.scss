@@ -58,35 +58,46 @@
 }
 
 .peopleList{
-	margin-top: 5px;
-
+	margin-top: 10px;
 }
 
-.niceperson{
-	position:absolute;
+.person{
 	width: 100%;
 	height: 65px;
 	@include display(inline-flex);
-	.personPic{
-		display: inline-block;
-		height: 65px;
-		margin-right: 10px;
-		text-align: center;
-		vertical-align: middle;
-		img{
-			vertical-align: middle;
-			width: 50px;
-			height: auto;
-		}
-	}
 
-	.personDetail{
-		width: 60%;
-		vertical-align: middle;
+	&:first-child .personDetail{ 
+		border-top: solid 1px #e4e4e4;
 	}
 }
 
+.personPic{
+	margin-right: 10px;
+	position: relative;
+	line-height: 65px;
+	img{
+		vertical-align: middle;
+		width: 50px;
+		height: auto;
+	}
+}
 
+.personDetail{
+	@include flex(1);
+	padding: 12px 0;
+	border-bottom:solid 1px #e4e4e4;
+	.personName,
+	.personTitle{
+		font-family: '.HelveticaNeueDeskInterface-MediumP4';
+		font-size: 16px;
+		letter-spacing: 1.5px;
+		color: #4a4a4a;
+		line-height: 120%;
+		&.personTitle{
+			font-family: 'HelveticaNeue';
+		}
+	}
+}
 
 
 

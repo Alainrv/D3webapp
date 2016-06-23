@@ -2362,8 +2362,8 @@ div[class^="edit_funds"] {
 .centerTime {
   margin: auto auto;
   border: none;
-  height: 80%;
-  overflow: scroll; }
+  height: 95%;
+  overflow-y: scroll; }
   .centerTime input {
     visibility: hidden; }
   .centerTime label {
@@ -2551,7 +2551,7 @@ div[class^="edit_funds"] {
   vertical-align: middle;
   width: 14px;
   height: 18px;
-  background-position: 0 -885px; }
+  background-position: 0 -940px; }
 
 .meetingTitle {
   font-family: 'Avenir-Heavy';
@@ -2564,7 +2564,7 @@ div[class^="edit_funds"] {
   vertical-align: middle;
   width: 13px;
   height: 15px;
-  background-position: 0 -905px; }
+  background-position: 0 -920px; }
 
 .meetingNote,
 .meetingLocation {
@@ -2631,10 +2631,9 @@ div[class^="edit_funds"] {
   color: #4a4a4a; }
 
 .peopleList {
-  margin-top: 5px; }
+  margin-top: 10px; }
 
-.niceperson {
-  position: absolute;
+.person {
   width: 100%;
   height: 65px;
   display: -webkit-inline-box;
@@ -2644,19 +2643,38 @@ div[class^="edit_funds"] {
   display: -moz-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex; }
-  .niceperson .personPic {
-    display: inline-block;
-    height: 65px;
-    margin-right: 10px;
-    text-align: center;
-    vertical-align: middle; }
-    .niceperson .personPic img {
-      vertical-align: middle;
-      width: 50px;
-      height: auto; }
-  .niceperson .personDetail {
-    width: 60%;
-    vertical-align: middle; }
+  .person:first-child .personDetail {
+    border-top: solid 1px #e4e4e4; }
+
+.personPic {
+  margin-right: 10px;
+  position: relative;
+  line-height: 65px; }
+  .personPic img {
+    vertical-align: middle;
+    width: 50px;
+    height: auto; }
+
+.personDetail {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 12px 0;
+  border-bottom: solid 1px #e4e4e4; }
+  .personDetail .personName,
+  .personDetail .personTitle {
+    font-family: '.HelveticaNeueDeskInterface-MediumP4';
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #4a4a4a;
+    line-height: 120%; }
+    .personDetail .personName.personTitle,
+    .personDetail .personTitle.personTitle {
+      font-family: 'HelveticaNeue'; }
 
 .invitation_wrapper {
   width: 100%;
@@ -2834,6 +2852,167 @@ div[class^="edit_funds"] {
       width: 100px;
       position: relative;
       left: 20px; }
+
+.roomHeaderCreateMeeting {
+  margin: auto auto;
+  height: 120px;
+  width: 100%;
+  text-align: center;
+  background-color: #2979ff; }
+  .roomHeaderCreateMeeting .signs {
+    margin: auto;
+    width: 35%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: distribute;
+    -moz-box-pack: distribute;
+    box-pack: distribute;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: distribute; }
+    .roomHeaderCreateMeeting .signs [class^="circle"] {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: #cccccc;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33); }
+    .roomHeaderCreateMeeting .signs .circle-active {
+      background-color: #ffffff; }
+  .roomHeaderCreateMeeting .title {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-family: 'Avenir-Medium';
+    font-size: 18.4px;
+    line-height: 1;
+    letter-spacing: 2.2px;
+    color: #ffffff; }
+
+.createInput {
+  width: 100%;
+  padding: 0px 4vw; }
+  .createInput .input {
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px; }
+    @media (min-width: 370px) {
+      .createInput .input {
+        margin-bottom: 12px; } }
+    @media (min-width: 430px) {
+      .createInput .input {
+        margin-bottom: 18px; } }
+    .createInput .input textarea {
+      margin-left: 6vh;
+      margin-top: 1vh;
+      border: solid 0.9px #F5F5F5; }
+      .createInput .input textarea:hover {
+        border: solid 0.9px skyblue; }
+      @media (min-width: 370px) {
+        .createInput .input textarea {
+          margin-left: 10vh; } }
+      @media (min-width: 450px) {
+        .createInput .input textarea {
+          margin-left: 12vh; } }
+    .createInput .input select {
+      margin-left: 6vh;
+      margin-top: 1vh;
+      font-size: 19px;
+      letter-spacing: 1.7px;
+      width: 265px;
+      height: 40px;
+      border: solid 0.9px #F5F5F5; }
+      @media (min-width: 370px) {
+        .createInput .input select {
+          margin-left: 10vh; } }
+      @media (min-width: 450px) {
+        .createInput .input select {
+          margin-left: 12vh; } }
+      .createInput .input select option {
+        width: 265px;
+        font-size: 19px;
+        letter-spacing: 1.7px;
+        text-align: center;
+        color: #9b9b9b;
+        line-height: 40px;
+        padding-left: 20px; }
+    .createInput .input input {
+      display: block;
+      margin: auto auto;
+      width: 300px;
+      margin-top: 1vh;
+      height: 40px;
+      border: none;
+      border-bottom: 1px solid #F5F5F5;
+      font-size: 1em;
+      color: #4A4A4A;
+      border-radius: 2px;
+      padding-left: 30px; }
+      .createInput .input input:active, .createInput .input input:focus, .createInput .input input:hover {
+        border-bottom: solid 0.9px skyblue; }
+    .createInput .input placeholder {
+      color: black; }
+    .createInput .input div {
+      position: absolute;
+      top: 10px;
+      left: 1vw; }
+      @media (min-width: 370px) {
+        .createInput .input div {
+          left: 10vw; } }
+      @media (min-width: 450px) {
+        .createInput .input div {
+          margin-left: 2vw; } }
+      .createInput .input div.meetingPlace {
+        width: 18px;
+        height: 19px;
+        background-position: 0 -960px; }
+      .createInput .input div.alarmClock {
+        width: 15px;
+        height: 15px;
+        background-position: 0 -883px; }
+      .createInput .input div.clock {
+        width: 18px;
+        height: 19px;
+        background-position: 0 -900px; }
+      .createInput .input div.location {
+        width: 18px;
+        height: 19px;
+        background-position: 0 -940px; }
+      .createInput .input div.notes {
+        width: 18px;
+        height: 19px;
+        background-position: 0 -920px; }
+
+.notesLabel {
+  display: block;
+  margin-left: 6vh;
+  padding-top: 2vh;
+  color: #4a4a4a; }
+  @media (min-width: 370px) {
+    .notesLabel {
+      margin-left: 9.5vh;
+      padding-top: 1.5vh; } }
+  @media (min-width: 450px) {
+    .notesLabel {
+      margin-left: 12vh;
+      padding-top: 1vh; } }
+
+.invitationValidity {
+  height: 159px;
+  background-color: #ffffff;
+  width: 87%;
+  margin: 2vh 7vh;
+  margin-bottom: 25px;
+  text-align: center;
+  border: solid 0.9px #ffffff; }
+  .invitationValidity:hover {
+    border: solid 0.9px skyblue; }
 
 .phpdebugbar p {
   font-size: black; }
