@@ -7,6 +7,12 @@
 		margin-bottom: 5vh;
 		border: lighten($greyBorder, 20%) 1px solid;
 	}
+	@media (min-width: 420px) {
+		min-width: 620px;
+		max-width: 770px;
+		margin-bottom: 5vh;
+		border: lighten($greyBorder, 20%) 1px solid;
+	}
 }
 
 .bookingHeader_wrapper{
