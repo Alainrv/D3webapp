@@ -1,0 +1,94 @@
+.meetingHeader{
+	@extend .roomHeader;
+	.signs{
+		width: 45%;
+	}
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.searchBox{
+	width: 100%;
+	height: 100px;
+	margin-top: 30px;
+	padding: 10px 26px;
+}
+
+.searchTitle{
+	font-family: '.HelveticaNeueDeskInterface-Regular';
+	font-size: 14px;
+	letter-spacing: 1.3px;
+	color: #ffffff;
+	text-align: left;
+}
+
+.searchInput{
+	position: relative;
+	margin-top: 10px;
+	input{
+		width: 100%;
+		height: 35px;
+		background-color: #ffffff;
+		font-size: 14px;
+		padding: 0 15px;
+		border: none;
+		border-radius: 2px;
+	}
+}
+
+.inviteSearch{
+	position: absolute;
+	top: 10px;
+	right:10px;
+	width: 15px;
+	height: 15px;
+	background-position: 0 -920px;
+}
+
+.invitePerson{
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+.peopleTitle{
+	font-family: '.HelveticaNeueDeskInterface-MediumP4';
+	font-size: 18px;
+	letter-spacing: 1.7px;
+	color: #4a4a4a;
+}
+
+.peopleList{
+	margin-top: 5px;
+
+}
+
+.niceperson{
+	position:absolute;
+	width: 100%;
+	height: 65px;
+	@include display(inline-flex);
+	.personPic{
+		display: inline-block;
+		height: 65px;
+		margin-right: 10px;
+		text-align: center;
+		vertical-align: middle;
+		img{
+			vertical-align: middle;
+			width: 50px;
+			height: auto;
+		}
+	}
+
+	.personDetail{
+		width: 60%;
+		vertical-align: middle;
+	}
+}
+
+
+
+
+
+
+

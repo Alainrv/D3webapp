@@ -2230,13 +2230,14 @@ div[class^="edit_funds"] {
   .roomTab .toggleSign {
     top: 8px; }
 
-.roomHeader {
+.roomHeader, .meetingHeader {
   margin: auto auto;
-  height: 120px;
+  min-height: 120px;
   width: 100%;
   text-align: center;
+  overflow: auto;
   background-color: #2979ff; }
-  .roomHeader .signs {
+  .roomHeader .signs, .meetingHeader .signs {
     margin: auto;
     width: 35%;
     display: -webkit-box;
@@ -2255,16 +2256,16 @@ div[class^="edit_funds"] {
     -o-justify-content: space-around;
     justify-content: space-around;
     -ms-flex-pack: distribute; }
-    .roomHeader .signs [class^="circle"] {
+    .roomHeader .signs [class^="circle"], .meetingHeader .signs [class^="circle"] {
       height: 20px;
       width: 20px;
       border-radius: 50%;
       background-color: #ffffff;
       opacity: 0.5;
       box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33); }
-    .roomHeader .signs .circle-active {
+    .roomHeader .signs .circle-active, .meetingHeader .signs .circle-active {
       opacity: 1; }
-  .roomHeader .title {
+  .roomHeader .title, .meetingHeader .title {
     padding-top: 30px;
     padding-bottom: 20px;
     font-family: 'Avenir-Medium';
@@ -2580,6 +2581,82 @@ div[class^="edit_funds"] {
   font-size: 14px;
   letter-spacing: 1px;
   color: #4a4a4a; }
+
+.meetingHeader {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24); }
+  .meetingHeader .signs {
+    width: 45%; }
+
+.searchBox {
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  padding: 10px 26px; }
+
+.searchTitle {
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+  font-size: 14px;
+  letter-spacing: 1.3px;
+  color: #ffffff;
+  text-align: left; }
+
+.searchInput {
+  position: relative;
+  margin-top: 10px; }
+  .searchInput input {
+    width: 100%;
+    height: 35px;
+    background-color: #ffffff;
+    font-size: 14px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 2px; }
+
+.inviteSearch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background-position: 0 -920px; }
+
+.invitePerson {
+  padding-top: 10px;
+  padding-left: 10px; }
+
+.peopleTitle {
+  font-family: '.HelveticaNeueDeskInterface-MediumP4';
+  font-size: 18px;
+  letter-spacing: 1.7px;
+  color: #4a4a4a; }
+
+.peopleList {
+  margin-top: 5px; }
+
+.niceperson {
+  position: absolute;
+  width: 100%;
+  height: 65px;
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  .niceperson .personPic {
+    display: inline-block;
+    height: 65px;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle; }
+    .niceperson .personPic img {
+      vertical-align: middle;
+      width: 50px;
+      height: auto; }
+  .niceperson .personDetail {
+    width: 60%;
+    vertical-align: middle; }
 
 .invitation_wrapper {
   width: 100%;
