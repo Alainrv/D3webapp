@@ -3156,7 +3156,7 @@ div[class^="edit_funds"] {
 .centerTime {
   margin: auto auto;
   border: none;
-  height: 95%;
+  height: 80%;
   overflow-y: scroll;
 }
 /* line 6, ../scss/pages/_roomBookingStep2.scss */
@@ -3863,9 +3863,9 @@ div[class^="edit_funds"] {
 }
 /* line 124, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.alarmClock {
-  width: 18px;
-  height: 19px;
-  background-position: 0 -880px;
+  width: 15px;
+  height: 15px;
+  background-position: 0 -883px;
 }
 /* line 129, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.clock {
