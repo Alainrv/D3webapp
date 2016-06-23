@@ -3,7 +3,7 @@
 	height: 120px;
 	width: 100%;
 	text-align: center;
-	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+	// box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
 	background-color: #2979ff;
 	.signs{
 		margin: auto;
@@ -14,11 +14,12 @@
 			height: 20px;
 			width: 20px;
 			border-radius: 50%;
-			background-color: darken(#ffffff, 20%);
+			background-color: #ffffff;
+			opacity: 0.5;
 			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
 		}
 		.circle-active {
-				background-color: #ffffff;
+			opacity: 1;
 		}
 	}
 	.title {
@@ -48,6 +49,7 @@
 .room-btn {
 	@include btn( #f57c00, 34px, 134px);
 	box-shadow: 0 2px 4px 0 #b4b4b4;
+	border-bottom: 1px solid #c26200;
 	font-family: 'Avenir-Medium';
 	font-size: 18px;
 	letter-spacing: 1.7px;
@@ -56,8 +58,7 @@
 	vertical-align: middle;
 	&-2{
 		@include btn( #f57c00, 45px, 230px);
-		box-shadow: 0 2px 4px 0 #b4b4b4;
-		font-family: 'Avenir-Medium';
+		box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);		font-family: 'Avenir-Medium';
 		font-size: 18px;
 		letter-spacing: 1.7px;
 		color: #ffffff;

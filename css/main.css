@@ -2706,13 +2706,13 @@ div[class^="edit_funds"] {
 }
 
 /* line 1, ../scss/pages/_roomBookings.scss */
-.booking_wrapper {
+.booking_wrapper, .meeting_wrapper {
   margin: auto auto;
   display: block;
 }
 @media (min-width: 420px) {
   /* line 1, ../scss/pages/_roomBookings.scss */
-  .booking_wrapper {
+  .booking_wrapper, .meeting_wrapper {
     min-width: 320px;
     max-width: 550px;
     margin-bottom: 5vh;
@@ -2721,13 +2721,18 @@ div[class^="edit_funds"] {
 }
 
 /* line 12, ../scss/pages/_roomBookings.scss */
+.bookingHeader_wrapper {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* line 15, ../scss/pages/_roomBookings.scss */
 .bookingHeader {
   width: 100%;
   height: 120px;
   background-color: #2979ff;
   position: relative;
 }
-/* line 18, ../scss/pages/_roomBookings.scss */
+/* line 21, ../scss/pages/_roomBookings.scss */
 .bookingHeader .headerText {
   position: absolute;
   left: 40px;
@@ -2739,7 +2744,7 @@ div[class^="edit_funds"] {
   color: #ffffff;
 }
 
-/* line 31, ../scss/pages/_roomBookings.scss */
+/* line 33, ../scss/pages/_roomBookings.scss */
 .booking-btn {
   background: #f57c00;
   border-radius: 2px;
@@ -2784,7 +2789,7 @@ div[class^="edit_funds"] {
   transform: translateY(2px);
 }
 
-/* line 41, ../scss/pages/_roomBookings.scss */
+/* line 43, ../scss/pages/_roomBookings.scss */
 .horizontalLine {
   position: absolute;
   left: 24px;
@@ -2793,7 +2798,7 @@ div[class^="edit_funds"] {
   border-bottom: solid 2px #ffffff;
 }
 
-/* line 49, ../scss/pages/_roomBookings.scss */
+/* line 51, ../scss/pages/_roomBookings.scss */
 .verticalLine {
   position: absolute;
   left: 30px;
@@ -2802,36 +2807,36 @@ div[class^="edit_funds"] {
   border-left: #ffffff 2px solid;
 }
 
-/* line 57, ../scss/pages/_roomBookings.scss */
-.bookingTabs {
+/* line 59, ../scss/pages/_roomBookings.scss */
+.bookingTabs, .meetingTabs {
   height: 45px;
   margin: auto auto;
   position: relative;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
   background-color: #2979ff;
 }
 
-/* line 65, ../scss/pages/_roomBookings.scss */
+/* line 66, ../scss/pages/_roomBookings.scss */
 .tab {
   display: inline-block;
-  line-height: 43px;
   width: 50%;
   text-align: center;
-  vertical-align: middle;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 3.2;
+  letter-spacing: 1.7px;
   font-family: '.HelveticaNeueDeskInterface-Regular';
-  color: #b3b3b3;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
-/* line 75, ../scss/pages/_roomBookings.scss */
+/* line 77, ../scss/pages/_roomBookings.scss */
 .onSelect {
-  color: #ffffff;
+  color: white;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   transition: 0.5s;
 }
 
-/* line 80, ../scss/pages/_roomBookings.scss */
+/* line 82, ../scss/pages/_roomBookings.scss */
 .selectBorder {
   width: 50%;
   position: absolute;
@@ -2843,7 +2848,8 @@ div[class^="edit_funds"] {
   transition: 0.5s;
 }
 
-/* line 90, ../scss/pages/_roomBookings.scss */
+/* line 91, ../scss/pages/_roomBookings.scss */
+.pendingBox,
 .historyBox,
 .upcomingBox {
   max-width: 100%;
@@ -2851,31 +2857,30 @@ div[class^="edit_funds"] {
   padding-bottom: 20vh;
 }
 
-/* line 96, ../scss/pages/_roomBookings.scss */
+/* line 98, ../scss/pages/_roomBookings.scss */
 .historyBox {
   display: none;
 }
 
-/* line 100, ../scss/pages/_roomBookings.scss */
+/* line 102, ../scss/pages/_roomBookings.scss */
 .roomBooking {
   position: relative;
   margin-top: 15px;
   width: 100%;
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 #b4b4b4;
-  border: solid 0.5px #c7c7c7;
   overflow: auto;
 }
 
-/* line 110, ../scss/pages/_roomBookings.scss */
+/* line 111, ../scss/pages/_roomBookings.scss */
 .bookingTitle {
   height: 135px;
   position: relative;
-  border-radius: 2px;
   background: linear-gradient(to bottom, rgba(40, 121, 255, 0.3), rgba(40, 121, 255, 0.8)), url("../img/meetingroom.jpg");
   background-size: 100% 100%;
+  border: none;
 }
-/* line 116, ../scss/pages/_roomBookings.scss */
+/* line 117, ../scss/pages/_roomBookings.scss */
 .bookingTitle p {
   font-family: 'Avenir-Medium';
   font-size: 24px;
@@ -2887,13 +2892,13 @@ div[class^="edit_funds"] {
   bottom: 24px;
 }
 
-/* line 129, ../scss/pages/_roomBookings.scss */
+/* line 130, ../scss/pages/_roomBookings.scss */
 .bookingInfor {
   background-color: #fafafa;
   position: relative;
   padding: 15px 15px;
 }
-/* line 133, ../scss/pages/_roomBookings.scss */
+/* line 134, ../scss/pages/_roomBookings.scss */
 .bookingInfor .bookingTime,
 .bookingInfor .bookingDate,
 .bookingInfor .bookingDuration,
@@ -2904,14 +2909,14 @@ div[class^="edit_funds"] {
   letter-spacing: 1.3px;
   color: #4a4a4a;
 }
-/* line 143, ../scss/pages/_roomBookings.scss */
+/* line 144, ../scss/pages/_roomBookings.scss */
 .bookingInfor .bookingClock,
 .bookingInfor .bookingTime,
 .bookingInfor .bookingDuration {
   display: inline-block;
 }
 
-/* line 151, ../scss/pages/_roomBookings.scss */
+/* line 152, ../scss/pages/_roomBookings.scss */
 .bookingClock {
   width: 15px;
   height: 15px;
@@ -2919,7 +2924,7 @@ div[class^="edit_funds"] {
   vertical-align: middle;
 }
 
-/* line 159, ../scss/pages/_roomBookings.scss */
+/* line 160, ../scss/pages/_roomBookings.scss */
 .bookingEdit {
   position: relative;
   display: -webkit-box;
@@ -2931,19 +2936,20 @@ div[class^="edit_funds"] {
   display: flex;
   margin-top: 35px;
 }
-/* line 163, ../scss/pages/_roomBookings.scss */
+/* line 164, ../scss/pages/_roomBookings.scss */
 .bookingEdit a {
+  cursor: pointer;
   font-family: '.HelveticaNeueDeskInterface-MediumP4';
   font-size: 16px;
   letter-spacing: 1.5px;
   color: #4a4a4a;
 }
-/* line 168, ../scss/pages/_roomBookings.scss */
+/* line 170, ../scss/pages/_roomBookings.scss */
 .bookingEdit a.cancel {
   margin-left: 40px;
 }
 
-/* line 175, ../scss/pages/_roomBookings.scss */
+/* line 177, ../scss/pages/_roomBookings.scss */
 .toggleSign {
   display: inline-block;
   position: absolute;
@@ -2951,14 +2957,16 @@ div[class^="edit_funds"] {
   height: 20px;
   width: 20px;
   background-position: 0 -840px;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-/* line 185, ../scss/pages/_roomBookings.scss */
+/* line 189, ../scss/pages/_roomBookings.scss */
 .toggleContent {
   display: none;
   margin-top: 20px;
 }
-/* line 188, ../scss/pages/_roomBookings.scss */
+/* line 192, ../scss/pages/_roomBookings.scss */
 .toggleContent p,
 .toggleContent li {
   list-style-type: disc;
@@ -2969,12 +2977,12 @@ div[class^="edit_funds"] {
   letter-spacing: 1.3px;
   color: #4a4a4a;
 }
-/* line 198, ../scss/pages/_roomBookings.scss */
+/* line 202, ../scss/pages/_roomBookings.scss */
 .toggleContent .equipment {
   margin-top: 20px;
 }
 
-/* line 209, ../scss/pages/_roomBookings.scss */
+/* line 213, ../scss/pages/_roomBookings.scss */
 .roomTab {
   position: relative;
   display: -webkit-box;
@@ -2985,7 +2993,7 @@ div[class^="edit_funds"] {
   display: -ms-flexbox;
   display: flex;
 }
-/* line 212, ../scss/pages/_roomBookings.scss */
+/* line 216, ../scss/pages/_roomBookings.scss */
 .roomTab .toggleSign {
   top: 8px;
 }
@@ -2996,7 +3004,6 @@ div[class^="edit_funds"] {
   height: 120px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
   background-color: #2979ff;
 }
 /* line 8, ../scss/pages/_roomBookingStep1.scss */
@@ -3025,14 +3032,15 @@ div[class^="edit_funds"] {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: #cccccc;
+  background-color: #ffffff;
+  opacity: 0.5;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
 }
-/* line 20, ../scss/pages/_roomBookingStep1.scss */
+/* line 21, ../scss/pages/_roomBookingStep1.scss */
 .roomHeader .signs .circle-active {
-  background-color: #ffffff;
+  opacity: 1;
 }
-/* line 24, ../scss/pages/_roomBookingStep1.scss */
+/* line 25, ../scss/pages/_roomBookingStep1.scss */
 .roomHeader .title {
   padding-top: 30px;
   padding-bottom: 20px;
@@ -3043,20 +3051,20 @@ div[class^="edit_funds"] {
   color: #ffffff;
 }
 
-/* line 35, ../scss/pages/_roomBookingStep1.scss */
+/* line 36, ../scss/pages/_roomBookingStep1.scss */
 .box_wrapper {
   max-width: 100%;
   margin: auto 10px;
   margin-bottom: 30px;
 }
-/* line 41, ../scss/pages/_roomBookingStep1.scss */
+/* line 42, ../scss/pages/_roomBookingStep1.scss */
 .box_wrapper input[type="radio"] {
   position: absolute;
   top: 25px;
   visibility: hidden;
 }
 
-/* line 48, ../scss/pages/_roomBookingStep1.scss */
+/* line 49, ../scss/pages/_roomBookingStep1.scss */
 .room-btn {
   background: #f57c00;
   border-radius: 2px;
@@ -3077,6 +3085,7 @@ div[class^="edit_funds"] {
   -o-box-shadow: 0 3px 0 #a95500;
   box-shadow: 0 3px 0 #a95500;
   box-shadow: 0 2px 4px 0 #b4b4b4;
+  border-bottom: 1px solid #c26200;
   font-family: 'Avenir-Medium';
   font-size: 18px;
   letter-spacing: 1.7px;
@@ -3100,7 +3109,7 @@ div[class^="edit_funds"] {
   -o-transform: translateY(2px);
   transform: translateY(2px);
 }
-/* line 57, ../scss/pages/_roomBookingStep1.scss */
+/* line 59, ../scss/pages/_roomBookingStep1.scss */
 .room-btn-2 {
   background: #f57c00;
   border-radius: 2px;
@@ -3120,7 +3129,7 @@ div[class^="edit_funds"] {
   -ms-box-shadow: 0 3px 0 #a95500;
   -o-box-shadow: 0 3px 0 #a95500;
   box-shadow: 0 3px 0 #a95500;
-  box-shadow: 0 2px 4px 0 #b4b4b4;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
   font-family: 'Avenir-Medium';
   font-size: 18px;
   letter-spacing: 1.7px;
@@ -3246,22 +3255,39 @@ div[class^="edit_funds"] {
   text-align: center;
 }
 
-/* line 1, ../scss/pages/_roomBookingStep3.scss */
-.confirmBg {
+/* line 97, ../scss/pages/_roomBookingStep2.scss */
+.confirm_overlayer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   background-color: rgba(32, 35, 52, 0.9);
+  text-align: center;
 }
 
-/* line 5, ../scss/pages/_roomBookingStep3.scss */
+/* line 110, ../scss/pages/_roomBookingStep2.scss */
 .confirmation_wrapper {
   min-width: 280px;
-  margin: 10vh 20px;
   background-color: #ffffff;
   box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.24), 0 0 14px 0 rgba(0, 0, 0, 0.12);
   text-align: center;
   overflow: auto;
+  margin: 10vh 20px;
+}
+@media (min-width: 420px) {
+  /* line 110, ../scss/pages/_roomBookingStep2.scss */
+  .confirmation_wrapper {
+    min-width: 320px;
+    max-width: 550px;
+    margin: 10vh auto;
+  }
 }
 
-/* line 13, ../scss/pages/_roomBookingStep3.scss */
+/* line 123, ../scss/pages/_roomBookingStep2.scss */
 .confirmation_header {
   padding: 30px 15px;
   font-family: '.HelveticaNeueDeskInterface-MediumP4';
@@ -3271,11 +3297,11 @@ div[class^="edit_funds"] {
   color: #4a4a4a;
 }
 
-/* line 22, ../scss/pages/_roomBookingStep3.scss */
+/* line 132, ../scss/pages/_roomBookingStep2.scss */
 .setDuration {
   padding: 70px 0;
 }
-/* line 24, ../scss/pages/_roomBookingStep3.scss */
+/* line 134, ../scss/pages/_roomBookingStep2.scss */
 .setDuration p {
   font-family: '.HelveticaNeueDeskInterface-Regular';
   font-size: 18px;
@@ -3283,7 +3309,7 @@ div[class^="edit_funds"] {
   text-align: center;
   color: #4a4a4a;
 }
-/* line 31, ../scss/pages/_roomBookingStep3.scss */
+/* line 141, ../scss/pages/_roomBookingStep2.scss */
 .setDuration input {
   margin-top: 10px;
   font-family: 'Avenir-Book';
@@ -3291,26 +3317,27 @@ div[class^="edit_funds"] {
   letter-spacing: 0.2px;
   color: #4a4a4a;
   text-align: center;
+  border: none;
 }
-/* line 39, ../scss/pages/_roomBookingStep3.scss */
+/* line 150, ../scss/pages/_roomBookingStep2.scss */
 .setDuration .durationBorder {
   margin: auto;
   width: 95px;
   border-bottom: solid 1px #979797;
 }
 
-/* line 46, ../scss/pages/_roomBookingStep3.scss */
+/* line 157, ../scss/pages/_roomBookingStep2.scss */
 .confirmInfor {
   padding-top: 25px;
 }
-/* line 48, ../scss/pages/_roomBookingStep3.scss */
+/* line 159, ../scss/pages/_roomBookingStep2.scss */
 .confirmInfor .confirmTitle {
   font-family: 'Avenir-Medium';
   font-size: 24px;
   line-height: 1.3;
   color: #4a4a4a;
 }
-/* line 54, ../scss/pages/_roomBookingStep3.scss */
+/* line 165, ../scss/pages/_roomBookingStep2.scss */
 .confirmInfor .confirmDate,
 .confirmInfor .confirmTime {
   font-family: 'Avenir-Book';
@@ -3320,14 +3347,131 @@ div[class^="edit_funds"] {
   color: #4a4a4a;
 }
 
-/* line 1, ../scss/pages/_invitationSelection.scss */
-.invitation_wrapper {
-  margin: auto 20px;
+/* line 3, ../scss/pages/_createMeetings.scss */
+.meeting_wrapper .upcomingBox {
+  display: none;
+}
+/* line 7, ../scss/pages/_createMeetings.scss */
+.meeting_wrapper .toggleContent {
+  line-height: 130%;
+}
+/* line 11, ../scss/pages/_createMeetings.scss */
+.meeting_wrapper .bookingTitle {
+  background: none;
+  background-color: #64b5f6;
+  height: 145px;
+}
+/* line 17, ../scss/pages/_createMeetings.scss */
+.meeting_wrapper .pendingBox .bookingTitle {
+  height: 115px;
+}
+/* line 21, ../scss/pages/_createMeetings.scss */
+.meeting_wrapper .bookingEdit {
+  margin-top: 25px;
 }
 
-/* line 8, ../scss/pages/_invitationSelection.scss */
+/* line 26, ../scss/pages/_createMeetings.scss */
+.meetingProfilePics {
+  position: relative;
+}
+/* line 28, ../scss/pages/_createMeetings.scss */
+.meetingProfilePics img {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+  height: 80px;
+  width: auto;
+  top: 12px;
+  left: 16px;
+  z-index: 1;
+}
+/* line 38, ../scss/pages/_createMeetings.scss */
+.meetingProfilePics img:nth-child(2) {
+  left: 80px;
+  z-index: 0;
+}
+
+/* line 47, ../scss/pages/_createMeetings.scss */
+.meetingTabs .tab {
+  width: calc(100% / 3);
+}
+/* line 50, ../scss/pages/_createMeetings.scss */
+.meetingTabs .selectBorder {
+  width: calc(100% / 3);
+}
+
+/* line 55, ../scss/pages/_createMeetings.scss */
+#pendingCount {
+  display: none;
+  position: absolute;
+  top: 6px;
+  left: calc((100% / 3) - 25px);
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #f57c00;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* line 68, ../scss/pages/_createMeetings.scss */
+.location {
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 18px;
+  background-position: 0 -885px;
+}
+
+/* line 76, ../scss/pages/_createMeetings.scss */
+.meetingTitle {
+  font-family: 'Avenir-Heavy';
+  font-size: 14px;
+  letter-spacing: 1.3px;
+  color: #4a4a4a;
+}
+
+/* line 83, ../scss/pages/_createMeetings.scss */
+.dialogue {
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 15px;
+  background-position: 0 -905px;
+}
+
+/* line 91, ../scss/pages/_createMeetings.scss */
+.meetingNote,
+.meetingLocation {
+  display: inline-block;
+  font-family: 'Avenir-Roman';
+  font-size: 14px;
+  letter-spacing: 1.3px;
+  color: #4a4a4a;
+}
+
+/* line 100, ../scss/pages/_createMeetings.scss */
+.NoteDetails {
+  margin: auto 10px;
+  margin-left: 15px;
+  font-family: 'Avenir-Book';
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #4a4a4a;
+}
+
+/* line 1, ../scss/pages/_invitationSelection.scss */
+.invitation_wrapper {
+  width: 100%;
+  margin: auto auto;
+}
+
+/* line 6, ../scss/pages/_invitationSelection.scss */
 .invitationDetails {
-  margin: 50px auto;
+  margin: auto 20px;
+  margin-top: 120px;
+  position: relative;
 }
 
 /* line 12, ../scss/pages/_invitationSelection.scss */
@@ -3349,12 +3493,7 @@ div[class^="edit_funds"] {
   font-weight: bold;
 }
 
-/* line 27, ../scss/pages/_invitationSelection.scss */
-.invSchedule {
-  margin-top: 10px;
-}
-
-/* line 31, ../scss/pages/_invitationSelection.scss */
+/* line 28, ../scss/pages/_invitationSelection.scss */
 .invTopic {
   font-family: 'Avenir-Roman';
   font-size: 12px;
@@ -3365,7 +3504,7 @@ div[class^="edit_funds"] {
   margin-top: 27px;
 }
 
-/* line 41, ../scss/pages/_invitationSelection.scss */
+/* line 38, ../scss/pages/_invitationSelection.scss */
 .invTime {
   margin: 10px auto;
   display: -webkit-inline-box;
@@ -3376,7 +3515,7 @@ div[class^="edit_funds"] {
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
-/* line 44, ../scss/pages/_invitationSelection.scss */
+/* line 41, ../scss/pages/_invitationSelection.scss */
 .invTime div {
   margin: auto 2px;
   line-height: 15px;
@@ -3385,6 +3524,166 @@ div[class^="edit_funds"] {
   font-size: 12px;
   letter-spacing: 1.1px;
   color: #4a4a4a;
+}
+
+/* line 52, ../scss/pages/_invitationSelection.scss */
+.invSchedule {
+  margin-top: 10px;
+}
+
+/* line 58, ../scss/pages/_invitationSelection.scss */
+.pick_time {
+  font-family: 'Avenir-Roman';
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  line-height: 130%;
+  text-align: center;
+  color: #4a4a4a;
+  padding: 15px 0;
+  width: 100%;
+  border-bottom: solid 0.5px #c7c7c7;
+}
+
+/* line 70, ../scss/pages/_invitationSelection.scss */
+.scheduleDetails {
+  position: relative;
+  margin: 15px auto;
+  padding: 15px 10px;
+  border-left: solid 0.5px #c7c7c7;
+}
+/* line 75, ../scss/pages/_invitationSelection.scss */
+.scheduleDetails div {
+  font-family: 'Avenir-LightOblique';
+  font-size: 12px;
+  letter-spacing: 1.1px;
+  color: #4a4a4a;
+}
+/* line 82, ../scss/pages/_invitationSelection.scss */
+.scheduleDetails .scheduleDate {
+  margin-bottom: 10px;
+}
+
+/* line 87, ../scss/pages/_invitationSelection.scss */
+.invMark {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: solid 3px #fca20e;
+  position: absolute;
+  left: -7px;
+  top: 14px;
+  display: inline-block;
+}
+
+/* line 99, ../scss/pages/_invitationSelection.scss */
+.scheduleSelection {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+/* line 107, ../scss/pages/_invitationSelection.scss */
+.scheduleSelection div {
+  height: 40px;
+  width: 50px;
+  border-radius: 8px;
+  border: solid 0.5px #c7c7c7;
+  font-family: Avenir-Black;
+  font-size: 10px;
+  letter-spacing: 0.9px;
+  line-height: 120%;
+  text-align: center;
+  color: #4a4a4a;
+  text-align: center;
+  padding: 8px 0;
+}
+/* line 121, ../scss/pages/_invitationSelection.scss */
+.scheduleSelection input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* line 127, ../scss/pages/_invitationSelection.scss */
+.invActive {
+  background-color: #fff2dd;
+}
+
+/* line 132, ../scss/pages/_invitationSelection.scss */
+.respondMessage {
+  margin: 15px auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+/* line 136, ../scss/pages/_invitationSelection.scss */
+.respondMessage .messageText {
+  width: 85%;
+  font-family: 'Avenir-Light';
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  line-height: 120%;
+  color: #4a4a4a;
+}
+/* line 144, ../scss/pages/_invitationSelection.scss */
+.respondMessage .respondTime {
+  width: 22px;
+  height: 22px;
+  background-position: 0 -860px;
+}
+
+/* line 151, ../scss/pages/_invitationSelection.scss */
+.invProfilePic {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: -95px;
+}
+/* line 156, ../scss/pages/_invitationSelection.scss */
+.invProfilePic .profilePic2,
+.invProfilePic .profilePic1 {
+  margin: auto auto;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: white;
+  width: 112px;
+  height: auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+/* line 165, ../scss/pages/_invitationSelection.scss */
+.invProfilePic .profilePic2.profilePic1,
+.invProfilePic .profilePic1.profilePic1 {
+  width: 100px;
+  position: relative;
+  left: 20px;
 }
 
 /* line 1, ../scss/pages/_createMeetingStep1.scss */
@@ -3516,7 +3815,7 @@ div[class^="edit_funds"] {
   line-height: 40px;
   padding-left: 20px;
 }
-/* line 88, ../scss/pages/_createMeetingStep1.scss */
+/* line 87, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input input {
   display: block;
   margin: auto auto;
@@ -3530,64 +3829,64 @@ div[class^="edit_funds"] {
   border-radius: 2px;
   padding-left: 30px;
 }
-/* line 101, ../scss/pages/_createMeetingStep1.scss */
+/* line 100, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input input:active, .createInput .input input:focus, .createInput .input input:hover {
   border-bottom: solid 0.9px skyblue;
 }
-/* line 106, ../scss/pages/_createMeetingStep1.scss */
+/* line 105, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input placeholder {
   color: black;
 }
-/* line 110, ../scss/pages/_createMeetingStep1.scss */
+/* line 109, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div {
   position: absolute;
   top: 10px;
   left: 1vw;
 }
 @media (min-width: 370px) {
-  /* line 110, ../scss/pages/_createMeetingStep1.scss */
+  /* line 109, ../scss/pages/_createMeetingStep1.scss */
   .createInput .input div {
     left: 10vw;
   }
 }
 @media (min-width: 450px) {
-  /* line 110, ../scss/pages/_createMeetingStep1.scss */
+  /* line 109, ../scss/pages/_createMeetingStep1.scss */
   .createInput .input div {
     margin-left: 2vw;
   }
 }
-/* line 120, ../scss/pages/_createMeetingStep1.scss */
+/* line 119, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.meetingPlace {
   width: 18px;
   height: 19px;
   background-position: 0 -960px;
 }
-/* line 125, ../scss/pages/_createMeetingStep1.scss */
+/* line 124, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.alarmClock {
   width: 18px;
   height: 19px;
   background-position: 0 -880px;
 }
-/* line 130, ../scss/pages/_createMeetingStep1.scss */
+/* line 129, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.clock {
   width: 18px;
   height: 19px;
   background-position: 0 -900px;
 }
-/* line 135, ../scss/pages/_createMeetingStep1.scss */
+/* line 134, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.location {
   width: 18px;
   height: 19px;
   background-position: 0 -940px;
 }
-/* line 140, ../scss/pages/_createMeetingStep1.scss */
+/* line 139, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.notes {
   width: 18px;
   height: 19px;
   background-position: 0 -920px;
 }
 
-/* line 149, ../scss/pages/_createMeetingStep1.scss */
+/* line 148, ../scss/pages/_createMeetingStep1.scss */
 .notesLabel {
   display: block;
   margin-left: 6vh;
@@ -3595,21 +3894,21 @@ div[class^="edit_funds"] {
   color: #4a4a4a;
 }
 @media (min-width: 370px) {
-  /* line 149, ../scss/pages/_createMeetingStep1.scss */
+  /* line 148, ../scss/pages/_createMeetingStep1.scss */
   .notesLabel {
     margin-left: 9.5vh;
     padding-top: 1.5vh;
   }
 }
 @media (min-width: 450px) {
-  /* line 149, ../scss/pages/_createMeetingStep1.scss */
+  /* line 148, ../scss/pages/_createMeetingStep1.scss */
   .notesLabel {
     margin-left: 12vh;
     padding-top: 1vh;
   }
 }
 
-/* line 163, ../scss/pages/_createMeetingStep1.scss */
+/* line 162, ../scss/pages/_createMeetingStep1.scss */
 .invitationValidity {
   height: 159px;
   background-color: #ffffff;
@@ -3619,7 +3918,7 @@ div[class^="edit_funds"] {
   text-align: center;
   border: solid 0.9px #ffffff;
 }
-/* line 171, ../scss/pages/_createMeetingStep1.scss */
+/* line 170, ../scss/pages/_createMeetingStep1.scss */
 .invitationValidity:hover {
   border: solid 0.9px skyblue;
 }

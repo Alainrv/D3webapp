@@ -1,12 +1,12 @@
 .invitation_wrapper{
-	margin: auto 20px;
+	width: 100%;
+	margin: auto auto;
 }
 
-
-
-
 .invitationDetails{
-	margin: 50px auto;
+	margin: auto 20px;
+	margin-top: 120px;
+	position: relative;
 }
 
 .invSchedule,
@@ -24,9 +24,6 @@
 	}
 }
 
-.invSchedule{
-	margin-top: 10px;
-}
 
 .invTopic{
 	font-family: 'Avenir-Roman';
@@ -51,3 +48,129 @@
 		color: #4a4a4a;
 	}
 }
+
+.invSchedule{
+	margin-top: 10px;
+}
+
+
+
+.pick_time{
+	font-family: 'Avenir-Roman';
+	font-size: 12px;
+	letter-spacing: 1.3px;
+	line-height: 130%;
+	text-align: center;
+	color: #4a4a4a;
+	padding: 15px 0;
+	width:100%;
+	border-bottom: solid 0.5px #c7c7c7;
+}
+
+.scheduleDetails{
+	position: relative;
+	margin: 15px auto;
+	padding: 15px 10px;
+	border-left: solid 0.5px #c7c7c7;
+	div {
+		font-family: 'Avenir-LightOblique';
+		font-size: 12px;
+		letter-spacing: 1.1px;
+		color: #4a4a4a;
+
+	}
+	.scheduleDate{
+		margin-bottom: 10px;
+	}
+}
+
+.invMark{
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	border: solid 3px #fca20e;
+	position: absolute;
+	left: -7px;
+	top: 14px;
+	display: inline-block;
+}
+
+.scheduleSelection{
+	@include display(flex);
+	@include justify-content(space-between);
+	margin-top: 5px;
+	margin-bottom: 10px;
+	position: relative;
+
+
+	div{
+		height: 40px;
+		width: 50px;
+		border-radius: 8px;
+		border: solid 0.5px #c7c7c7;
+		font-family: Avenir-Black;
+		font-size: 10px;
+		letter-spacing: 0.9px;
+		line-height: 120%;
+		text-align: center;
+		color: #4a4a4a;
+		text-align: center;
+		padding: 8px 0;
+	}
+	input[type="radio"]{
+		position: absolute;
+		visibility: hidden;
+	}
+}
+
+.invActive{
+	background-color: #fff2dd;
+}
+
+
+.respondMessage{
+	margin: 15px auto;
+	@include display(flex);
+	@include justify-content(space-between);
+	.messageText{
+		width: 85%;
+		font-family: 'Avenir-Light';
+		font-size: 9px;
+		letter-spacing: 0.5px;
+		line-height: 120%;
+		color: #4a4a4a;
+	}
+	.respondTime{
+		width: 22px;
+		height: 22px;
+		background-position: 0 -860px;
+	}
+}
+
+.invProfilePic{
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	top: -95px;
+	.profilePic2,
+	.profilePic1{
+		margin:auto auto;
+		vertical-align: middle;
+		border-radius: 50%;
+		background-color: white;
+		width: 112px;
+		height: auto;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+		&.profilePic1{
+			width: 100px;
+			position: relative;
+			left: 20px;
+		}
+	}
+}
+
+
+
+
+

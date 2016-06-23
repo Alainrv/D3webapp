@@ -49,28 +49,32 @@
     
 </head>
 
+<!-- <?php include '../layout/header.php' ?> -->
 <body>
 
 <div class="booking_wrapper">
-	<div class="bookingHeader">
-		<div class="headerText">
-			Room Bookings
+	<div class="bookingHeader_wrapper">
+
+		<div class="bookingHeader">
+			<div class="headerText">
+				Room Bookings
+			</div>
+			<a href="roomBookingStep1.html">
+			<button class="booking-btn">
+				<div class="horizontalLine"></div>
+				<div class="verticalLine"></div>
+			</button>
+			</a>
 		</div>
-		<a href="roomBookingStep1.html">
-		<button class="booking-btn">
-			<div class="horizontalLine"></div>
-			<div class="verticalLine"></div>
-		</button>
-		</a>
-	</div>
-	<div class="bookingTabs">
-		<div class="tab upcoming onSelect">UPCOMING</div><div class="tab history">HISTORY</div>
-		<div class="selectBorder"></div>
+		<div class="bookingTabs">
+			<div class="tab upcoming onSelect">UPCOMING</div><div class="tab history">HISTORY</div>
+			<div class="selectBorder"></div>
+		</div>
 	</div>
 
 	<div class="upcomingBox">
 		<!-- new room booking 1 -->
-		<div class="roomBooking new">
+		<div class="roomBooking">
 			<div class="bookingTitle">
 				<p>Maker Space Room</p>
 			</div>
@@ -101,7 +105,7 @@
 		</div>
 
 		<!-- new room booking 2 -->
-		<div class="roomBooking new">
+		<div class="roomBooking">
 			<div class="bookingTitle">
 				<p>Maker Space Room</p>
 			</div>
@@ -137,7 +141,7 @@
 	<div class="historyBox">
 
 		<!-- old room booking 1 -->
-		<div class="roomBooking old">
+		<div class="roomBooking">
 			<div class="bookingTitle">
 				<p>Class room</p>
 			</div>
@@ -166,7 +170,7 @@
 		</div>
 
 		<!-- old room booking 2 -->
-		<div class="roomBooking new">
+		<div class="roomBooking">
 			<div class="bookingTitle">
 				<p>Class room</p>
 			</div>
@@ -235,10 +239,10 @@
 		$content = $(this).closest(".bookingInfor").find('.toggleContent');
 		// if content is hiddent, show up arrow. If not show down arrwo
 	    if($content.css("display")=="none"){
-	    	$(this).css("background-position","0 -860px");
-	    } 
+			$(this).css("transform","rotateX(180deg)");	   
+		} 
 	    else{
-    		$(this).css("background-position","0 -840px");
+    		$(this).css("transform","rotateX(0deg)");
 	    }
 	    // toggle the content on click
 	    $content.slideToggle(500)
@@ -248,4 +252,5 @@
 
 
 </body>
+<!-- <?php include '../layout/footer.php' ?> -->
 </html>

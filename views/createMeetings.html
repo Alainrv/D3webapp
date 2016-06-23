@@ -1,0 +1,310 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="Accelerator and Community Management" />
+<meta name="keywords" content="Accelerator, Community, Incubator, Management" />
+<meta name="google-site-verification" content="" />
+<!-- don't forget to set the site up: http://google.com/webmasters -->
+
+<meta name="author" content="D3 Web App" />
+<meta name="robots" content="all"/>
+<meta name="distribution" content="global"/>
+<meta name="resource-type" content="document"/>
+<meta name="language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content="D3 Webapp Copyright 2016. All Rights Reserved.">
+
+  <meta name="viewport" content="width=1024">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="../img/d3logosite-01.png">
+<link rel="apple-touch-icon" href="../img/d3logosite-01.png">
+<!-- The is the icon for iOS's Web Clip.
+         - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
+         - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
+         - Transparency is not recommended (iOS will put a black BG behind the icon) -->
+
+<title>D3 Web App</title>
+
+<!--  CSS   -->
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+
+<!-- Fonts -->
+<script src="https://use.typekit.net/tlr1ksi.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    
+</head>
+
+<body>
+	<div class="meeting_wrapper">
+		<div class="bookingHeader_wrapper">
+			<div class="bookingHeader">
+				<div class="headerText">
+					Your Meetings
+				</div>
+				<a href="roomBookingStep1.html">
+				<button class="booking-btn">
+					<div class="horizontalLine"></div>
+					<div class="verticalLine"></div>
+				</button>
+				</a>
+			</div>
+			<div class="meetingTabs">
+				<div class="tab pending onSelect">PENDING</div><p id="pendingCount"></p><div class="tab upcoming">UPCOMING</div><div class="tab history">HISTORY</div>
+				<div class="selectBorder"></div>
+			</div>
+		</div>
+
+
+		<div class="pendingBox">
+			<!-- pending room booking 1 -->
+			<div class="roomBooking">
+				<div class="bookingTitle">
+					<p>Pending Room</p>
+				</div>
+				<div class="bookingInfor">
+					<div class="bookingDate">Monday April 18 2016</div>
+		
+					<div class="bookingTime">7pm</div>
+					<div class="svg bookingClock"></div>
+					<div class="bookingDuration">45 min</div>
+					
+					<div class="bookingEdit">
+						<a class="edit">Edit</a>
+						<a class="cancel">Cancel</a>
+						<div class="svg toggleSign"></div>
+					</div>
+					<div class="toggleContent">
+						<div class="meetingTitle">Product Market Fit Bi-Weekly</div>
+						<div class="meetingPlace">
+							<div class="svg location"></div>
+							<div class="meetingLocation">District 3</div>
+						</div>
+						<div class="meetingDetails">
+							<div class="svg dialogue"></div>
+							<div class="meetingNote">Note:</div>
+							<div class="NoteDetails">Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- pending room booking 2 -->
+			<div class="roomBooking">
+				<div class="bookingTitle">
+					<p>Pending Room</p>
+				</div>
+				<div class="bookingInfor">
+					<div class="bookingDate">Monday April 18 2016</div>
+		
+					<div class="bookingTime">7pm</div>
+					<div class="svg bookingClock"></div>
+					<div class="bookingDuration">45 min</div>
+					
+			
+					<div class="bookingEdit">
+						<a class="edit">Edit</a>
+						<a class="cancel">Cancel</a>
+						<div class="svg toggleSign"></div>
+					</div>
+					<div class="toggleContent">
+						<div class="meetingTitle">Product Market Fit Bi-Weekly</div>
+						<div class="meetingPlace">
+							<div class="svg location"></div>
+							<div class="meetingLocation">District 3</div>
+						</div>
+						<div class="meetingDetails">
+							<div class="svg dialogue"></div>
+							<div class="meetingNote">Note:</div>
+							<div class="NoteDetails">Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<div class="upcomingBox">
+			<!-- new room booking 1 -->
+			<div class="roomBooking">
+				<div class="bookingTitle">
+					<div class="meetingProfilePics">
+						<img src="../img/profilePic1.svg" />
+						<img src="../img/profilePic2.svg" />
+					</div>
+					<p>Upcoming Room</p>
+				</div>
+				<div class="bookingInfor">
+					<div class="bookingDate">Monday April 18 2016</div>
+		
+					<div class="bookingTime">7pm</div>
+					<div class="svg bookingClock"></div>
+					<div class="bookingDuration">45 min</div>
+					
+			
+					<div class="bookingEdit">
+						<a class="edit">Edit</a>
+						<a class="cancel">Cancel</a>
+						<div class="svg toggleSign"></div>
+					</div>
+					<div class="toggleContent">
+						<div class="meetingTitle">Product Market Fit Bi-Weekly</div>
+						<div class="meetingPlace">
+							<div class="svg location"></div>
+							<div class="meetingLocation">District 3</div>
+						</div>
+						<div class="meetingDetails">
+							<div class="svg dialogue"></div>
+							<div class="meetingNote">Note:</div>
+							<div class="NoteDetails">Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="historyBox">
+
+			<!-- old room booking 1 -->
+			<div class="roomBooking">
+				<div class="bookingTitle">
+					<div class="meetingProfilePics">
+						<img src="../img/profilePic1.svg" />
+						<img src="../img/profilePic2.svg" />
+					</div>
+					<p>History Room</p>
+				</div>
+				<div class="bookingInfor">
+					<div class="bookingDate">Monday April 18 2016</div>
+		
+					<div class="bookingTime">7pm</div>
+					<div class="svg bookingClock"></div>
+					<div class="bookingDuration">45 min</div>
+			
+					<div class="bookingEdit">
+						<a class="edit">Edit</a>
+						<a class="cancel">Cancel</a>
+						<div class="svg toggleSign"></div>
+					</div>
+					<div class="toggleContent">
+						<div class="meetingTitle">Product Market Fit Bi-Weekly</div>
+						<div class="meetingPlace">
+							<div class="svg location"></div>
+							<div class="meetingLocation">District 3</div>
+						</div>
+						<div class="meetingDetails">
+							<div class="svg dialogue"></div>
+							<div class="meetingNote">Note:</div>
+							<div class="NoteDetails">Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+<script>
+
+	// function to change the booking tabs and booking displays 
+	// when click on tabs
+	$(".tab").click(function(){
+		// remove onSelect class from another tab
+		$('.onSelect').removeClass("onSelect");
+		// add onSelect class to the clicked tab
+    	$(this).addClass('onSelect');
+    	// change the bottom border position
+    	// assign bot border to a variable botBor
+    	var $botBor = $(this).closest('.meetingTabs').find('.selectBorder');
+
+    	// assign each meeting box to a variable
+    	var $pending = $(this).closest('.meeting_wrapper').find('.pendingBox');
+    	var $upcoming = $(this).closest('.meeting_wrapper').find('.upcomingBox');
+    	var $history = $(this).closest('.meeting_wrapper').find('.historyBox');
+    	
+    	// if the clicked tab is at left, move the botBor to left, 
+    	// and show upcoming box
+    	// if not move to right, and show history box
+    	if($(this).hasClass("pending")){
+    		$botBor.css("left",'0%');
+    		$history.css("display","none");
+    		$upcoming.css('display','none');
+    		$pending.css('display','block');
+
+    	} else if($(this).hasClass("upcoming")) {
+    		$botBor.css("left", "calc(100% / 3)");
+    		$history.css('display','none');
+    		$pending.css("display","none");
+    		$upcoming.css('display','block');
+
+    	} else{
+    		$botBor.css("left", "calc(100% / 3 * 2)");
+    		$upcoming.css('display','none');
+    		$pending.css("display","none");
+    		$history.css('display','block');
+    	}
+	});
+
+	$(".toggleSign").click(function (){
+		// assign booking content to a variable
+		$content = $(this).closest(".bookingInfor").find('.toggleContent');
+		// if content is hiddent, show up arrow. If not show down arrwo
+	    if($content.css("display")=="none"){
+			$(this).css("transform","rotateX(180deg)");	   
+		} 
+	    else{
+    		$(this).css("transform","rotateX(0deg)");
+	    }
+	    // toggle the content on click
+	    $content.slideToggle(500)
+	});
+
+	var countPending = function(){
+		var $pendingCount = $('.pendingBox .roomBooking').length;
+		if ($pendingCount == 0){
+			$("#pendingCount").css("display","none");
+		} else {
+			$("#pendingCount").css("display","block");
+			$('#pendingCount').html($pendingCount);
+		}
+	}
+	countPending();
+	
+	$('.cancel').click(function(){
+		$item = $(this).closest('.roomBooking');
+		$item.slideToggle(500);
+
+		setTimeout(function() {
+            $item.remove();
+            countPending();
+        }, 600);
+
+	});
+
+
+
+
+	console.log($('.pendingBox .roomBooking').length);
+</script>
+
+</body>
+</html>
