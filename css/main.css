@@ -3395,7 +3395,7 @@ div[class^="edit_funds"] {
   text-align: center;
   background-color: #2979ff;
 }
-/* line 8, ../scss/pages/_createMeetingStep1.scss */
+/* line 7, ../scss/pages/_createMeetingStep1.scss */
 .roomHeaderCreateMeeting .signs {
   margin: auto;
   width: 35%;
@@ -3416,7 +3416,7 @@ div[class^="edit_funds"] {
   justify-content: space-around;
   -ms-flex-pack: distribute;
 }
-/* line 13, ../scss/pages/_createMeetingStep1.scss */
+/* line 12, ../scss/pages/_createMeetingStep1.scss */
 .roomHeaderCreateMeeting .signs [class^="circle"] {
   height: 20px;
   width: 20px;
@@ -3424,11 +3424,11 @@ div[class^="edit_funds"] {
   background-color: #cccccc;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
 }
-/* line 20, ../scss/pages/_createMeetingStep1.scss */
+/* line 19, ../scss/pages/_createMeetingStep1.scss */
 .roomHeaderCreateMeeting .signs .circle-active {
   background-color: #ffffff;
 }
-/* line 24, ../scss/pages/_createMeetingStep1.scss */
+/* line 23, ../scss/pages/_createMeetingStep1.scss */
 .roomHeaderCreateMeeting .title {
   padding-top: 30px;
   padding-bottom: 20px;
@@ -3439,10 +3439,10 @@ div[class^="edit_funds"] {
   color: #ffffff;
 }
 
-/* line 34, ../scss/pages/_createMeetingStep1.scss */
+/* line 33, ../scss/pages/_createMeetingStep1.scss */
 .createInput {
   width: 100%;
-  padding: 0px 12px;
+  padding: 0px 4vw;
 }
 /* line 37, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input {
@@ -3456,25 +3456,59 @@ div[class^="edit_funds"] {
     margin-bottom: 12px;
   }
 }
-@media (min-width: 410px) {
+@media (min-width: 430px) {
   /* line 37, ../scss/pages/_createMeetingStep1.scss */
   .createInput .input {
     margin-bottom: 18px;
   }
 }
 /* line 49, ../scss/pages/_createMeetingStep1.scss */
-.createInput .input textarea, .createInput .input select {
-  margin-left: 7vh;
+.createInput .input textarea {
+  margin-left: 6vh;
   margin-top: 1vh;
+  border: solid 0.9px #F5F5F5;
 }
 /* line 53, ../scss/pages/_createMeetingStep1.scss */
-.createInput .input select {
-  margin-left: 7vh;
-  margin-top: 1vh;
-  width: 259px;
+.createInput .input textarea:hover {
+  border: solid 0.9px skyblue;
 }
-/* line 57, ../scss/pages/_createMeetingStep1.scss */
+@media (min-width: 370px) {
+  /* line 49, ../scss/pages/_createMeetingStep1.scss */
+  .createInput .input textarea {
+    margin-left: 10vh;
+  }
+}
+@media (min-width: 450px) {
+  /* line 49, ../scss/pages/_createMeetingStep1.scss */
+  .createInput .input textarea {
+    margin-left: 12vh;
+  }
+}
+/* line 63, ../scss/pages/_createMeetingStep1.scss */
+.createInput .input select {
+  margin-left: 6vh;
+  margin-top: 1vh;
+  font-size: 19px;
+  letter-spacing: 1.7px;
+  width: 265px;
+  height: 40px;
+  border: solid 0.9px #F5F5F5;
+}
+@media (min-width: 370px) {
+  /* line 63, ../scss/pages/_createMeetingStep1.scss */
+  .createInput .input select {
+    margin-left: 10vh;
+  }
+}
+@media (min-width: 450px) {
+  /* line 63, ../scss/pages/_createMeetingStep1.scss */
+  .createInput .input select {
+    margin-left: 12vh;
+  }
+}
+/* line 77, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input select option {
+  width: 265px;
   font-size: 19px;
   letter-spacing: 1.7px;
   text-align: center;
@@ -3482,73 +3516,100 @@ div[class^="edit_funds"] {
   line-height: 40px;
   padding-left: 20px;
 }
-/* line 67, ../scss/pages/_createMeetingStep1.scss */
+/* line 88, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input input {
-  width: 100%;
+  display: block;
+  margin: auto auto;
+  width: 300px;
+  margin-top: 1vh;
   height: 40px;
   border: none;
-  border-bottom: 1px solid #979797;
+  border-bottom: 1px solid #F5F5F5;
   font-size: 1em;
   color: #4A4A4A;
   border-radius: 2px;
   padding-left: 30px;
 }
-/* line 77, ../scss/pages/_createMeetingStep1.scss */
+/* line 101, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input input:active, .createInput .input input:focus, .createInput .input input:hover {
   border-bottom: solid 0.9px skyblue;
 }
-/* line 83, ../scss/pages/_createMeetingStep1.scss */
+/* line 106, ../scss/pages/_createMeetingStep1.scss */
+.createInput .input placeholder {
+  color: black;
+}
+/* line 110, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div {
   position: absolute;
   top: 10px;
-  left: 5px;
+  left: 1vw;
 }
-/* line 88, ../scss/pages/_createMeetingStep1.scss */
-.createInput .input div.emailCreate {
-  width: 15px;
-  height: 13px;
-  background-position: 0 -534px;
+@media (min-width: 370px) {
+  /* line 110, ../scss/pages/_createMeetingStep1.scss */
+  .createInput .input div {
+    left: 10vw;
+  }
 }
-/* line 93, ../scss/pages/_createMeetingStep1.scss */
-.createInput .input div.lockCreate {
-  width: 15px;
-  height: 17px;
-  background-position: 0 -547px;
+@media (min-width: 450px) {
+  /* line 110, ../scss/pages/_createMeetingStep1.scss */
+  .createInput .input div {
+    margin-left: 2vw;
+  }
 }
-/* line 98, ../scss/pages/_createMeetingStep1.scss */
+/* line 120, ../scss/pages/_createMeetingStep1.scss */
+.createInput .input div.meetingPlace {
+  width: 18px;
+  height: 19px;
+  background-position: 0 -960px;
+}
+/* line 125, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.alarmClock {
   width: 18px;
   height: 19px;
   background-position: 0 -880px;
 }
-/* line 103, ../scss/pages/_createMeetingStep1.scss */
+/* line 130, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.clock {
   width: 18px;
   height: 19px;
   background-position: 0 -900px;
 }
-/* line 108, ../scss/pages/_createMeetingStep1.scss */
+/* line 135, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.location {
   width: 18px;
   height: 19px;
   background-position: 0 -940px;
 }
-/* line 113, ../scss/pages/_createMeetingStep1.scss */
+/* line 140, ../scss/pages/_createMeetingStep1.scss */
 .createInput .input div.notes {
   width: 18px;
   height: 19px;
   background-position: 0 -920px;
 }
 
-/* line 122, ../scss/pages/_createMeetingStep1.scss */
+/* line 149, ../scss/pages/_createMeetingStep1.scss */
 .notesLabel {
   display: block;
-  margin-left: 7vh;
+  margin-left: 6vh;
   padding-top: 2vh;
   color: #4a4a4a;
 }
+@media (min-width: 370px) {
+  /* line 149, ../scss/pages/_createMeetingStep1.scss */
+  .notesLabel {
+    margin-left: 9.5vh;
+    padding-top: 1.5vh;
+  }
+}
+@media (min-width: 450px) {
+  /* line 149, ../scss/pages/_createMeetingStep1.scss */
+  .notesLabel {
+    margin-left: 12vh;
+    padding-top: 1vh;
+  }
+}
 
-/* line 128, ../scss/pages/_createMeetingStep1.scss */
+/* line 163, ../scss/pages/_createMeetingStep1.scss */
 .invitationValidity {
   height: 159px;
   background-color: #ffffff;
@@ -3558,7 +3619,7 @@ div[class^="edit_funds"] {
   text-align: center;
   border: solid 0.9px #ffffff;
 }
-/* line 136, ../scss/pages/_createMeetingStep1.scss */
+/* line 171, ../scss/pages/_createMeetingStep1.scss */
 .invitationValidity:hover {
   border: solid 0.9px skyblue;
 }

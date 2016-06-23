@@ -3,7 +3,6 @@
 	height: 120px;
 	width: 100%;
 	text-align: center;
-
 	background-color: #2979ff;
 	.signs{
 		margin: auto;
@@ -18,7 +17,7 @@
 			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
 		}
 		.circle-active {
-				background-color: #ffffff;
+			background-color: #ffffff;
 		}
 	}
 	.title {
@@ -33,7 +32,8 @@
 }
 .createInput {
 	width: 100%;
-	padding: 0px 12px;
+	padding: 0px 4vw;
+	
 	.input {
 		width: 100%;
 		position: relative;
@@ -43,32 +43,56 @@
 			margin-bottom: 12px;
 		}
 
-		@media (min-width: 410px) {
+		@media (min-width: 430px) {
 			margin-bottom: 18px;
 		}
-		textarea, select{
-		margin-left: 7vh;
-		margin-top: 1vh;
+		textarea{
+			margin-left: 6vh;
+			margin-top: 1vh;
+			border: solid 0.9px #F5F5F5;
+			&:hover {
+				border: solid 0.9px skyblue;
+			}
+			@media (min-width: 370px) {
+				margin-left: 10vh;
+			}
+			@media (min-width: 450px) {
+				margin-left: 12vh;
+			}
 		}
 		select{
-			margin-left: 7vh;
+			margin-left: 6vh;
 			margin-top: 1vh;
-			width: 259px;
+			font-size: 19px;
+			letter-spacing: 1.7px;
+			width: 265px;
+			height: 40px;
+			border: solid 0.9px #F5F5F5;
+			@media (min-width: 370px) {
+				margin-left: 10vh;
+			}
+			@media (min-width: 450px) {
+				margin-left: 12vh;
+			}
 			option{
-				font-size: 19px;
-				letter-spacing: 1.7px;
-				text-align: center;
-				color: #9b9b9b;
-				line-height: 40px;
-				padding-left: 20px;
+			width: 265px;
+			font-size: 19px;
+			letter-spacing: 1.7px;
+			text-align: center;
+			color: #9b9b9b;
+			line-height: 40px;
+			padding-left: 20px;
 			}
 		}
 		
 		input {
-			width: 100%;
+			display: block;
+			margin: auto auto;
+			width: 300px;
+			margin-top: 1vh;
 			height: 40px;
 			border: none;
-			border-bottom: 1px solid $greyBorder;
+			border-bottom: 1px solid #F5F5F5;
 			font-size: 1em;
 			color: $writting;
 			border-radius: 2px;
@@ -79,21 +103,24 @@
 				border-bottom: solid 0.9px skyblue;
 			}
 		}
+		placeholder{
+			color: black;
+			}
 		// change "img" to "div" to avoid the grey border when img has no src in it!
 		div {
 			position: absolute;
 			top: 10px;
-			left: 5px;
-			
-			&.emailCreate {
-				width: 15px;
-				height: 13px;
-				background-position: 0 -534px;
+			left: 1vw;
+			@media (min-width: 370px) {
+				left: 10vw;
 			}
-			&.lockCreate {
-				width: 15px;
-				height: 17px;
-				background-position: 0 -547px;
+			@media (min-width: 450px) {
+				margin-left: 2vw;
+			}
+			&.meetingPlace {
+				width: 18px;
+				height: 19px;
+				background-position: 0 -960px;
 			}
 			&.alarmClock {
 				width: 18px;
@@ -120,10 +147,18 @@
 }
 
 .notesLabel{
-		display: block;
-		margin-left: 7vh;
-		padding-top: 2vh;
-		color: #4a4a4a;
+	display: block;
+	margin-left: 6vh;
+	padding-top: 2vh;
+	color: #4a4a4a;
+	@media (min-width: 370px) {
+			margin-left: 9.5vh;
+			padding-top: 1.5vh;
+	}
+	@media (min-width: 450px) {
+			margin-left: 12vh;
+			padding-top: 1vh;
+	}
 }
 .invitationValidity{
 	height: 159px;

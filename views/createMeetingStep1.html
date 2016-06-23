@@ -62,38 +62,38 @@
 
 	<form method="post">		
 		<div class="createInput">
-			<div class="input firstName">
+			<div class="input">
 				<input type="text" placeholder="First name , Last name" name="">
 				<div class="svg personCreate"></div>
 			</div>
-			<div class="input lastName">
+			<div class="input">
 				<input type="text" placeholder="Purpose of meeting" name="">
-				<div class="svg clock"></div>
+				<div class="svg meetingPlace"></div>
 			</div>
-			<div class="input email">
+			<div class="input">
 				<input type="text" placeholder="Location" name="">
 				<div class="svg location"></div>
 			</div>
-			<div class="input password">
+			<div class="input">
 				<input type="text" placeholder="Duration" name="">
-				<div class="svg alarmClock"></div>
+				<div class="svg clock"></div>
 			</div>
 			<div class="input">
 			<label class="notesLabel">Notes</label>	
-				<textarea  cols="35" rows="7" name=""></textarea>
+				<textarea  cols="36" rows="7" name=""></textarea>
 				<div class="svg notes"></div>
 			</div>
-			<div class="input ">
+			<div class="input">
 				<label class="notesLabel">Invitation validity</label>	
 				<select >
 				  <option value="">1 day to respond</option>
-				  <option value="">2 day to respond</option>
-				  <option value="">3 day to respond</option>
-				  <option value="">4 day to respond</option>
-				  <option value="">5 day to respond</option>
+				  <option value="">2 days to respond</option>
+				  <option value="">3 days to respond</option>
+				  <option value="">4 days to respond</option>
+				  <option value="">5 days to respond</option>
 				</select>		
 				<div class="svg alarmClock"></div>			
-			</div> <br><br> <br><br>
+			</div> 
 <!-- 			<div class="invitationValidity">		 -->
 <!-- 				<div class="centerTime" >			 -->
 <!-- 					<ul> -->
@@ -109,24 +109,11 @@
 			
 <!-- 			</div> -->
 			<div class="button_container">
-				<button class="room-btn-2" type="submit">Create Account</button>			
+				<button class="room-btn-2" style="margin-top:15vh;" type="submit">Create Account</button>			
 			</div>	
 			<br>		
 		</div>
 	</form>
 </div>
-<script>
-$(document).ready(function(){
-	
-    $(".toggleSign").click(function(){
-        $(".toggleLi").toggle();
-    });
-});
-
-$("li").click(function () {
-    $(this).addClass("activeForCalender");
-    $(this).siblings().removeClass("activeForCalender");
-});
-</script>
 </body>
 </html>
