@@ -20,6 +20,9 @@
 	letter-spacing: 1.3px;
 	color: #ffffff;
 	text-align: left;
+	@media (min-width: 450px) {
+		text-align: center;
+	}
 }
 
 .searchInput{
@@ -33,6 +36,9 @@
 		padding: 0 15px;
 		border: none;
 		border-radius: 2px;
+		@media (min-width: 450px) {
+			width: 285px;
+		}
 	}
 }
 
@@ -43,11 +49,16 @@
 	width: 15px;
 	height: 15px;
 	background-position: 0 -980px;
+	@media (min-width: 450px) {
+		right:225px;
+	}
 }
 
 .invitePerson{
 	padding-top: 10px;
 	padding-left: 10px;
+	@include display(flex);
+	flex-wrap: wrap;
 }
 
 .peopleTitle{
@@ -55,10 +66,21 @@
 	font-size: 18px;
 	letter-spacing: 1.7px;
 	color: #4a4a4a;
+	@media (min-width: 450px) {
+		text-align: center;
+		margin-top:10px;
+	}
 }
 
 .peopleList{
+	position: relative;
+	width: 100%;
 	margin-top: 10px;
+	@media (min-width: 450px) {
+		width: 45%;
+		margin-top: 5px;
+		margin-left: 15px;
+	}
 }
 
 .person{
@@ -69,6 +91,7 @@
 	&:first-child .personDetail{ 
 		border-top: solid 1px #e4e4e4;
 	}
+	
 }
 
 .personPic{

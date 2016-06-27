@@ -100,18 +100,25 @@
 	max-width: 100%;
 	margin: auto 10px;
 	padding-bottom: 20vh;
+	@media (min-width: 450px) {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 .historyBox{
 	display:none;
 }
 
 .roomBooking {
-	position: relative;
+	position: relative;	
 	margin-top: 15px;
 	width: 100%;
 	border-radius: 2px;
 	box-shadow: 0 2px 4px 0 #b4b4b4;
 	overflow: auto;
+	@media (min-width: 450px) {
+		width: 50%;
+	}
 }
 
 .bookingTitle{
