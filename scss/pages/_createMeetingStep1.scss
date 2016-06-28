@@ -1,34 +1,5 @@
 .roomHeaderCreateMeeting {
-	margin: auto auto; 
-	height: 120px;
-	width: 100%;
-	text-align: center;
-	background-color: #2979ff;
-	.signs{
-		margin: auto;
-		width: 35%;
-		@include display(flex);
-		@include justify-content(space-around);
-		[class^="circle"]{
-			height: 20px;
-			width: 20px;
-			border-radius: 50%;
-			background-color: darken(#ffffff, 20%);
-			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
-		}
-		.circle-active {
-			background-color: #ffffff;
-		}
-	}
-	.title {
-		padding-top: 30px;
-		padding-bottom: 20px;
-		font-family: 'Avenir-Medium';
-		font-size: 18.4px;
-		line-height: 1;
-		letter-spacing: 2.2px;
-		color: #ffffff;
-	}
+	@extend .roomHeader;
 }
 .createInput {
 	width: 100%;

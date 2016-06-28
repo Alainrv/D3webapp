@@ -240,9 +240,12 @@
     	var $upcoming = $(this).closest('.meeting_wrapper').find('.upcomingBox');
     	var $history = $(this).closest('.meeting_wrapper').find('.historyBox');
     	
-    	// if the clicked tab is at left, move the botBor to left, 
+    	// click pending, move the botBor to left
     	// and show upcoming box
-    	// if not move to right, and show history box
+    	// click upcoming, move botBor to middle 
+    	// and show upcoming box
+    	// click history, move botBor to right
+    	// and show history box
     	if($(this).hasClass("pending")){
     		$botBor.css("left",'0%');
     		$history.css("display","none");
@@ -276,7 +279,8 @@
 	    // toggle the content on click
 	    $content.slideToggle(500)
 	});
-
+	// function used to count the pending meetings
+	// and show the number as the notification
 	var countPending = function(){
 		var $pendingCount = $('.pendingBox .roomBooking').length;
 		if ($pendingCount == 0){
@@ -288,6 +292,8 @@
 	}
 	countPending();
 	
+	// cancel the meeting when click cancel,
+	// when it is pending meeting, update the pending meeting numbers
 	$('.cancel').click(function(){
 		$item = $(this).closest('.roomBooking');
 		$item.slideToggle(500);
@@ -299,10 +305,6 @@
 
 	});
 
-
-
-
-	console.log($('.pendingBox .roomBooking').length);
 </script>
 
 </body>

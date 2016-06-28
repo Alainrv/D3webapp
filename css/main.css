@@ -2004,13 +2004,9 @@ div[class^="edit_funds"] {
 
 .booking_wrapper, .meeting_wrapper {
   margin: auto auto;
-  display: block; }
-  @media (min-width: 420px) {
-    .booking_wrapper, .meeting_wrapper {
-      min-width: 320px;
-      max-width: 550px;
-      margin-bottom: 5vh;
-      border: #cacaca 1px solid; } }
+  display: block;
+  width: 100%;
+  min-width: 300px; }
 
 .bookingHeader_wrapper {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24); }
@@ -2230,14 +2226,14 @@ div[class^="edit_funds"] {
   .roomTab .toggleSign {
     top: 8px; }
 
-.roomHeader, .meetingHeader {
+.roomHeader, .meetingHeader, .roomHeaderCreateMeeting {
   margin: auto auto;
   min-height: 120px;
   width: 100%;
   text-align: center;
   overflow: auto;
   background-color: #2979ff; }
-  .roomHeader .signs, .meetingHeader .signs {
+  .roomHeader .signs, .meetingHeader .signs, .roomHeaderCreateMeeting .signs {
     margin: auto;
     width: 35%;
     display: -webkit-box;
@@ -2256,16 +2252,16 @@ div[class^="edit_funds"] {
     -o-justify-content: space-around;
     justify-content: space-around;
     -ms-flex-pack: distribute; }
-    .roomHeader .signs [class^="circle"], .meetingHeader .signs [class^="circle"] {
+    .roomHeader .signs [class^="circle"], .meetingHeader .signs [class^="circle"], .roomHeaderCreateMeeting .signs [class^="circle"] {
       height: 20px;
       width: 20px;
       border-radius: 50%;
       background-color: #ffffff;
       opacity: 0.5;
       box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33); }
-    .roomHeader .signs .circle-active, .meetingHeader .signs .circle-active {
+    .roomHeader .signs .circle-active, .meetingHeader .signs .circle-active, .roomHeaderCreateMeeting .signs .circle-active {
       opacity: 1; }
-  .roomHeader .title, .meetingHeader .title {
+  .roomHeader .title, .meetingHeader .title, .roomHeaderCreateMeeting .title {
     padding-top: 30px;
     padding-bottom: 20px;
     font-family: 'Avenir-Medium';
@@ -2585,13 +2581,14 @@ div[class^="edit_funds"] {
 .meetingHeader {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24); }
   .meetingHeader .signs {
-    width: 45%; }
+    width: 170px; }
 
 .searchBox {
   width: 100%;
-  height: 100px;
-  margin-top: 30px;
-  padding: 10px 26px; }
+  height: 90px;
+  margin: auto auto;
+  margin-top: 40px;
+  max-width: 270px; }
 
 .searchTitle {
   font-family: '.HelveticaNeueDeskInterface-Regular';
@@ -2602,6 +2599,7 @@ div[class^="edit_funds"] {
 
 .searchInput {
   position: relative;
+  margin: auto;
   margin-top: 10px; }
   .searchInput input {
     width: 100%;
@@ -2628,26 +2626,59 @@ div[class^="edit_funds"] {
   font-family: '.HelveticaNeueDeskInterface-MediumP4';
   font-size: 18px;
   letter-spacing: 1.7px;
-  color: #4a4a4a; }
+  color: #4a4a4a;
+  margin: auto;
+  max-width: 400px; }
+  @media (min-width: 768px) {
+    .inviteTitle {
+      text-align: center; } }
 
 .peopleList {
   margin: 10px 0; }
+  @media (min-width: 420px) {
+    .peopleList {
+      margin-right: 20px; } }
+  @media (min-width: 768px) {
+    .peopleList {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-lines: multiple;
+      -moz-box-lines: multiple;
+      box-lines: multiple;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
 
 .peopleSelection {
   overflow: auto;
-  display: block;
   width: 100%;
   display: none;
-  position: relative; }
+  position: relative;
+  margin: auto;
+  max-width: 400px; }
   .peopleSelection:first-child .personDetail {
     border-top: solid 1px #e4e4e4; }
   .peopleSelection:nth-child(-n+4) {
     display: block; }
+  @media (min-width: 768px) {
+    .peopleSelection {
+      max-width: 350px; }
+      .peopleSelection:nth-child(2) .personDetail {
+        border-top: solid 1px #e4e4e4; }
+      .peopleSelection:nth-child(-n+8) {
+        display: block; } }
 
 .person {
   cursor: pointer;
   width: 100%;
   height: 65px;
+  margin: auto;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -2692,6 +2723,7 @@ input[type="checkbox"] {
     .personDetail .personTitle.personTitle {
       font-family: 'HelveticaNeue'; }
 
+.seeMoreStartups,
 .seeMorePersons {
   cursor: pointer;
   margin: 10px auto;
@@ -2699,21 +2731,44 @@ input[type="checkbox"] {
   font-size: 12px;
   letter-spacing: 1.1px;
   text-align: center;
-  color: #4a4a4a; }
+  color: #4a4a4a;
+  width: 100%; }
 
 .startupsList {
   padding: 0 10px; }
+  @media (min-width: 768px) {
+    .startupsList {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-lines: multiple;
+      -moz-box-lines: multiple;
+      box-lines: multiple;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
 
 .startupSelection {
   display: none;
-  position: relative; }
+  position: relative;
+  max-width: 400px;
+  margin: 10px auto;
+  margin-bottom: 20px; }
   .startupSelection:first-child {
     display: block; }
+  @media (min-width: 768px) {
+    .startupSelection {
+      width: 350px; }
+      .startupSelection:nth-child(2) {
+        display: block; } }
 
 .startup {
   cursor: pointer;
-  margin: 10px auto;
-  margin-bottom: 20px;
   border-radius: 2px;
   background-color: #fafafa;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12); }
@@ -2723,6 +2778,9 @@ input[type="checkbox"] {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 0 4px 2px #2979ff;
   border-style: solid;
   border-width: 0.5px; }
+
+.selectedPerson {
+  background-color: #d8d8d8; }
 
 .startupTitle {
   position: relative;
@@ -2754,15 +2812,6 @@ input[type="checkbox"] {
   padding-bottom: 5px; }
   .startupMembers .person:last-child .personDetail {
     border-bottom: none; }
-
-.seeMoreStartups {
-  cursor: pointer;
-  margin: 10px auto;
-  font-family: '.HelveticaNeueDeskInterface-Regular';
-  font-size: 12px;
-  letter-spacing: 1.1px;
-  text-align: center;
-  color: #4a4a4a; }
 
 .invitation_wrapper {
   width: 100%;
@@ -2940,48 +2989,6 @@ input[type="checkbox"] {
       width: 100px;
       position: relative;
       left: 20px; }
-
-.roomHeaderCreateMeeting {
-  margin: auto auto;
-  height: 120px;
-  width: 100%;
-  text-align: center;
-  background-color: #2979ff; }
-  .roomHeaderCreateMeeting .signs {
-    margin: auto;
-    width: 35%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: distribute;
-    -moz-box-pack: distribute;
-    box-pack: distribute;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    -o-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-pack: distribute; }
-    .roomHeaderCreateMeeting .signs [class^="circle"] {
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      background-color: #cccccc;
-      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33); }
-    .roomHeaderCreateMeeting .signs .circle-active {
-      background-color: #ffffff; }
-  .roomHeaderCreateMeeting .title {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    font-family: 'Avenir-Medium';
-    font-size: 18.4px;
-    line-height: 1;
-    letter-spacing: 2.2px;
-    color: #ffffff; }
 
 .createInput {
   width: 100%;

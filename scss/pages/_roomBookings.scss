@@ -1,12 +1,14 @@
 .booking_wrapper{
 	margin: auto auto;
 	display: block;
-	@media (min-width: 420px) {
-		min-width: 320px;
-		max-width: 550px;
-		margin-bottom: 5vh;
-		border: lighten($greyBorder, 20%) 1px solid;
-	}
+	width: 100%;
+	min-width: 300px;
+	// @media (min-width: 420px) {
+	// 	min-width: 320px;
+	// 	max-width: 550px;
+	// 	margin-bottom: 5vh;
+	// 	border: lighten($greyBorder, 20%) 1px solid;
+	// }
 }
 
 .bookingHeader_wrapper{
