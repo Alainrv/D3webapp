@@ -2009,12 +2009,12 @@ div[class^="edit_funds"] {
   min-width: 300px; }
 
 .bookingHeader_wrapper {
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24); }
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  background-color: #2979ff; }
 
 .bookingHeader {
   width: 100%;
   height: 120px;
-  background-color: #2979ff;
   position: relative; }
   .bookingHeader .headerText {
     position: absolute;
@@ -2083,7 +2083,7 @@ div[class^="edit_funds"] {
   height: 45px;
   margin: auto auto;
   position: relative;
-  background-color: #2979ff; }
+  max-width: 420px; }
 
 .tab {
   display: inline-block;
@@ -2115,20 +2115,56 @@ div[class^="edit_funds"] {
 .pendingBox,
 .historyBox,
 .upcomingBox {
-  max-width: 100%;
-  margin: auto 10px;
-  padding-bottom: 20vh; }
+  max-width: 780px;
+  margin: 10px 10px;
+  padding-bottom: 50px; }
+  @media (min-width: 768px) {
+    .pendingBox,
+    .historyBox,
+    .upcomingBox {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: justify;
+      -webkit-box-lines: multiple;
+      -moz-box-lines: multiple;
+      box-lines: multiple;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin: auto; } }
 
 .historyBox {
   display: none; }
 
 .roomBooking {
   position: relative;
-  margin-top: 15px;
+  margin: auto;
+  margin-top: 10px;
   width: 100%;
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 #b4b4b4;
-  overflow: auto; }
+  overflow: auto;
+  min-width: 300px;
+  max-width: 384px; }
+  @media (min-width: 768px) {
+    .roomBooking {
+      margin: 0 10px;
+      margin-top: 10px;
+      max-width: 370px; } }
 
 .bookingTitle {
   height: 135px;
@@ -2358,7 +2394,7 @@ div[class^="edit_funds"] {
 .centerTime {
   margin: auto auto;
   border: none;
-  height: 95%;
+  height: 80%;
   overflow-y: scroll; }
   .centerTime input {
     visibility: hidden; }
@@ -2386,7 +2422,12 @@ div[class^="edit_funds"] {
   @media (min-width: 400px) {
     .input_form_create_meeting {
       max-width: 765px;
-      height: 770px;
+      height: 500px;
+      margin: 2vh auto; } }
+  @media (min-width: 600px) {
+    .input_form_create_meeting {
+      max-width: 765px;
+      height: 900px;
       margin: 2vh auto; } }
   .input_form_create_meeting .calender_create_meeting {
     position: relative;
@@ -2445,12 +2486,15 @@ div[class^="edit_funds"] {
   box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.24), 0 0 14px 0 rgba(0, 0, 0, 0.12);
   text-align: center;
   overflow: auto;
-  margin: 10vh 20px; }
-  @media (min-width: 420px) {
+  margin: 10vh 6vw; }
+  @media (min-width: 400px) {
     .confirmation_wrapper {
-      min-width: 320px;
-      max-width: 550px;
-      margin: 10vh auto; } }
+      width: 320px;
+      margin: 17vh 11vw; } }
+  @media (min-width: 600px) {
+    .confirmation_wrapper {
+      width: 320px;
+      margin: 27vh 29vw; } }
 
 .confirmation_header {
   padding: 30px 15px;
@@ -2525,10 +2569,12 @@ div[class^="edit_funds"] {
       left: 80px;
       z-index: 0; }
 
-.meetingTabs .tab {
-  width: calc(100% / 3); }
-.meetingTabs .selectBorder {
-  width: calc(100% / 3); }
+.meetingTabs {
+  max-width: 630px; }
+  .meetingTabs .tab {
+    width: calc(100% / 3); }
+  .meetingTabs .selectBorder {
+    width: calc(100% / 3); }
 
 #pendingCount {
   display: none;
@@ -2620,9 +2666,12 @@ div[class^="edit_funds"] {
 
 .invitePerson {
   padding-top: 10px; }
+  @media (min-width: 420px) {
+    .invitePerson {
+      margin-right: 20px; } }
 
 .inviteTitle {
-  margin-left: 10px;
+  padding-left: 10px;
   font-family: '.HelveticaNeueDeskInterface-MediumP4';
   font-size: 18px;
   letter-spacing: 1.7px;
@@ -2634,10 +2683,8 @@ div[class^="edit_funds"] {
       text-align: center; } }
 
 .peopleList {
-  margin: 10px 0; }
-  @media (min-width: 420px) {
-    .peopleList {
-      margin-right: 20px; } }
+  margin: 10px auto;
+  max-width: 850px; }
   @media (min-width: 768px) {
     .peopleList {
       display: -webkit-box;
@@ -2735,7 +2782,9 @@ input[type="checkbox"] {
   width: 100%; }
 
 .startupsList {
-  padding: 0 10px; }
+  padding: 0 10px;
+  margin: auto auto;
+  max-width: 850px; }
   @media (min-width: 768px) {
     .startupsList {
       display: -webkit-box;
@@ -3014,7 +3063,7 @@ input[type="checkbox"] {
           margin-left: 10vh; } }
       @media (min-width: 450px) {
         .createInput .input textarea {
-          margin-left: 12vh; } }
+          margin-left: 23vh; } }
     .createInput .input select {
       margin-left: 6vh;
       margin-top: 1vh;
@@ -3028,7 +3077,7 @@ input[type="checkbox"] {
           margin-left: 10vh; } }
       @media (min-width: 450px) {
         .createInput .input select {
-          margin-left: 12vh; } }
+          margin-left: 23vh; } }
       .createInput .input select option {
         width: 265px;
         font-size: 19px;
@@ -3062,7 +3111,7 @@ input[type="checkbox"] {
           left: 10vw; } }
       @media (min-width: 450px) {
         .createInput .input div {
-          margin-left: 2vw; } }
+          margin-left: 16.25vw; } }
       .createInput .input div.meetingPlace {
         width: 18px;
         height: 19px;
@@ -3095,7 +3144,7 @@ input[type="checkbox"] {
       padding-top: 1.5vh; } }
   @media (min-width: 450px) {
     .notesLabel {
-      margin-left: 12vh;
+      margin-left: 23vh;
       padding-top: 1vh; } }
 
 .invitationValidity {

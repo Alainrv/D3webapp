@@ -48,10 +48,13 @@
 
 .invitePerson{
 	padding-top: 10px;
+	@media(min-width: 420px){
+		margin-right: 20px;
+	}
 }
 
 .inviteTitle{
-	margin-left: 10px;
+	padding-left: 10px;
 	font-family: '.HelveticaNeueDeskInterface-MediumP4';
 	font-size: 18px;
 	letter-spacing: 1.7px;
@@ -64,10 +67,8 @@
 }
 
 .peopleList{
-	margin: 10px 0;
-	@media(min-width: 420px){
-		margin-right: 20px;
-	}
+	margin: 10px auto;
+	max-width: 850px;
 	@media (min-width: 768px){
 		@include display(flex);
 		@include flex-wrap(wrap);
@@ -156,6 +157,8 @@ input[type="checkbox"]{
 
 .startupsList{
 	padding: 0 10px;
+	margin: auto auto;
+	max-width: 850px;
 	@media (min-width: 768px){
 		@include display(flex);
 		@include flex-wrap(wrap);
@@ -204,8 +207,8 @@ input[type="checkbox"]{
 	height: 144px;
 	background-color: #64b5f6;
 	border-radius: 2px 2px 0 0;
-
 }
+
 .startupName{
 	position: absolute;
 	left: 18px;

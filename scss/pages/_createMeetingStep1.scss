@@ -28,7 +28,7 @@
 				margin-left: 10vh;
 			}
 			@media (min-width: 450px) {
-				margin-left: 12vh;
+				margin-left: 23vh;
 			}
 		}
 		select{
@@ -43,7 +43,7 @@
 				margin-left: 10vh;
 			}
 			@media (min-width: 450px) {
-				margin-left: 12vh;
+				margin-left: 23vh;
 			}
 			option{
 			width: 265px;
@@ -85,7 +85,7 @@
 				left: 10vw;
 			}
 			@media (min-width: 450px) {
-				margin-left: 2vw;
+				margin-left: 16.25vw;
 			}
 			&.meetingPlace {
 				width: 18px;
@@ -120,13 +120,13 @@
 	display: block;
 	margin-left: 6vh;
 	padding-top: 2vh;
-	color: #4a4a4a;
+	color: #4a4a4a;	
 	@media (min-width: 370px) {
 			margin-left: 9.5vh;
 			padding-top: 1.5vh;
 	}
 	@media (min-width: 450px) {
-			margin-left: 12vh;
+			margin-left: 23vh;
 			padding-top: 1vh;
 	}
 }

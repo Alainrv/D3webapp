@@ -417,19 +417,16 @@ var selectCount = function(){
 		$('#inviteNext').html('('+ $selectCount +') Next');
 	}
 }
-
 // if click on see more persons, show more results
 $('.seeMorePersons').click(function(){
 	$('.peopleSelection').slideDown(500);
 	$('.peopleSelection').css('display','block');
 })
-
 // if click on the see more startups, show more results
 $('.seeMoreStartups').click(function(){
 	$('.startupSelection').slideDown(500);
 	$('.startupSelection').css('display','block');
 })
-
 // when a person being selected, change the background color
 // and count the selected items
 $(".peopleList input[type='checkbox']").click(function(){
@@ -440,7 +437,6 @@ $(".peopleList input[type='checkbox']").click(function(){
 	}
 	selectCount();
 })
-
 // when a startup being selected, change the border stytle 
 // and count the selected items
 $(".startupsList input[type='checkbox']").click(function(){
@@ -450,19 +446,10 @@ $(".startupsList input[type='checkbox']").click(function(){
 	} else {
 		$(this).closest('.startupSelection').removeClass('selectedStartup');
 	}
-
 	selectCount();
 })
-
-
-
-
 </script>
 
 
 </body>
 </html>
-
-
-
-

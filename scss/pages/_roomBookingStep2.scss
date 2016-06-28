@@ -1,7 +1,7 @@
 .centerTime{
 	margin:auto auto;	
 	border: none;
-	height: 95%;
+	height: 80%;
 	overflow-y: scroll;
 	input{
 		visibility:hidden;
@@ -33,7 +33,12 @@
 	}
 	@media (min-width: 400px) {
 		max-width: 765px;
-		height: 770px;
+		height: 500px;
+		margin: 2vh auto;
+	}
+	@media (min-width: 600px) {
+		max-width: 765px;
+		height: 900px;
 		margin: 2vh auto;
 	}
 
@@ -49,7 +54,7 @@
 			padding: .75em 1em;
 			width: 70%;
 			&:hover{
-			border: 1px solid #555c82;
+				border: 1px solid #555c82;
 			}
 		}	
 		:hover
@@ -113,11 +118,14 @@
 	box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.24), 0 0 14px 0 rgba(0, 0, 0, 0.12);
 	text-align: center;
 	overflow: auto;
-	margin: 10vh 20px;
-	@media (min-width: 420px) {
-		min-width: 320px;
-		max-width: 550px;
-		margin: 10vh auto;
+	margin: 10vh 6vw;
+	@media (min-width: 400px) {
+		width: 320px;		
+		margin: 17vh 11vw;
+	}
+	@media (min-width: 600px) {
+		width: 320px;		
+		margin: 27vh 29vw;
 	}
 }
 .confirmation_header{
