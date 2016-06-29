@@ -2006,7 +2006,7 @@ div[class^="edit_funds"] {
   margin: auto auto;
   display: block;
   width: 100%;
-  min-width: 300px; }
+  min-width: 350px; }
 
 .bookingHeader_wrapper {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
@@ -2018,13 +2018,19 @@ div[class^="edit_funds"] {
   position: relative; }
   .bookingHeader .headerText {
     position: absolute;
-    left: 40px;
-    bottom: 42px;
+    left: 20%;
+    top: 50%;
     font-family: 'Avenir-Medium';
     font-size: 18.4px;
     line-height: 1;
     letter-spacing: 2.2px;
     color: #ffffff; }
+    @media (min-width: 420px) {
+      .bookingHeader .headerText {
+        left: 30%; } }
+    @media (min-width: 768px) {
+      .bookingHeader .headerText {
+        left: 40%; } }
 
 .booking-btn {
   background: #f57c00;
@@ -2049,7 +2055,7 @@ div[class^="edit_funds"] {
   font-size: 0.85em;
   position: absolute;
   bottom: 23px;
-  right: 28px;
+  right: 10%;
   border-radius: 50%;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 0 8px 0 rgba(0, 0, 0, 0.12); }
   .booking-btn:active {
@@ -2117,7 +2123,8 @@ div[class^="edit_funds"] {
 .upcomingBox {
   max-width: 780px;
   margin: 10px 10px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  display: block; }
   @media (min-width: 768px) {
     .pendingBox,
     .historyBox,
@@ -2147,28 +2154,29 @@ div[class^="edit_funds"] {
       flex-wrap: wrap;
       margin: auto; } }
 
-.historyBox {
+.hideBox {
   display: none; }
 
 .roomBooking {
+  height: 0%;
   position: relative;
   margin: auto;
   margin-top: 10px;
   width: 100%;
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 #b4b4b4;
-  overflow: auto;
   min-width: 300px;
   max-width: 384px; }
   @media (min-width: 768px) {
     .roomBooking {
       margin: 0 10px;
       margin-top: 10px;
-      max-width: 370px; } }
+      max-width: 360px; } }
 
 .bookingTitle {
   height: 135px;
   position: relative;
+  border-radius: 2px 2px 0 0;
   background: linear-gradient(to bottom, rgba(40, 121, 255, 0.3), rgba(40, 121, 255, 0.8)), url("../img/meetingroom.jpg");
   background-size: 100% 100%;
   border: none; }
@@ -2185,7 +2193,8 @@ div[class^="edit_funds"] {
 .bookingInfor {
   background-color: #fafafa;
   position: relative;
-  padding: 15px 15px; }
+  padding: 15px 15px;
+  border-radius: 0 0 2px 2px; }
   .bookingInfor .bookingTime,
   .bookingInfor .bookingDate,
   .bookingInfor .bookingDuration,
@@ -2271,7 +2280,7 @@ div[class^="edit_funds"] {
   background-color: #2979ff; }
   .roomHeader .signs, .meetingHeader .signs, .roomHeaderCreateMeeting .signs {
     margin: auto;
-    width: 35%;
+    width: 170px;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -2314,6 +2323,18 @@ div[class^="edit_funds"] {
     position: absolute;
     top: 25px;
     visibility: hidden; }
+
+.roomSelecting {
+  height: 0%;
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 #b4b4b4;
+  overflow: auto;
+  min-width: 300px;
+  max-width: 400px; }
 
 .room-btn {
   background: #f57c00;
@@ -2478,23 +2499,24 @@ div[class^="edit_funds"] {
   height: 100%;
   overflow: auto;
   background-color: rgba(32, 35, 52, 0.9);
-  text-align: center; }
+  text-align: center;
+  min-width: 340px; }
 
 .confirmation_wrapper {
-  min-width: 280px;
+  max-width: 280px;
   background-color: #ffffff;
   box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.24), 0 0 14px 0 rgba(0, 0, 0, 0.12);
   text-align: center;
   overflow: auto;
-  margin: 10vh 6vw; }
+  margin: 10vh auto; }
   @media (min-width: 400px) {
     .confirmation_wrapper {
-      width: 320px;
-      margin: 17vh 11vw; } }
+      max-width: 320px;
+      margin: 15vh auto; } }
   @media (min-width: 600px) {
     .confirmation_wrapper {
-      width: 320px;
-      margin: 27vh 29vw; } }
+      max-width: 320px;
+      margin: 20vh auto; } }
 
 .confirmation_header {
   padding: 30px 15px;
@@ -2540,8 +2562,6 @@ div[class^="edit_funds"] {
     line-height: 1.3;
     color: #4a4a4a; }
 
-.meeting_wrapper .upcomingBox {
-  display: none; }
 .meeting_wrapper .toggleContent {
   line-height: 130%; }
 .meeting_wrapper .bookingTitle {
@@ -2626,8 +2646,6 @@ div[class^="edit_funds"] {
 
 .meetingHeader {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24); }
-  .meetingHeader .signs {
-    width: 170px; }
 
 .searchBox {
   width: 100%;

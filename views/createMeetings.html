@@ -135,12 +135,80 @@
 				</div>
 			</div>
 
+			<div class="roomBooking">
+				<div class="bookingTitle">
+					<p>Pending Room</p>
+				</div>
+				<div class="bookingInfor">
+					<div class="bookingDate">Monday April 18 2016</div>
+		
+					<div class="bookingTime">7pm</div>
+					<div class="svg bookingClock"></div>
+					<div class="bookingDuration">45 min</div>
+					
+			
+					<div class="bookingEdit">
+						<a class="edit">Edit</a>
+						<a class="cancel">Cancel</a>
+						<div class="svg toggleSign"></div>
+					</div>
+					<div class="toggleContent">
+						<div class="meetingTitle">Product Market Fit Bi-Weekly</div>
+						<div class="meetingPlace">
+							<div class="svg location"></div>
+							<div class="meetingLocation">District 3</div>
+						</div>
+						<div class="meetingDetails">
+							<div class="svg dialogue"></div>
+							<div class="meetingNote">Note:</div>
+							<div class="NoteDetails">Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 
 
-		<div class="upcomingBox">
+		<div class="upcomingBox hideBox">
 			<!-- new room booking 1 -->
+			<div class="roomBooking">
+				<div class="bookingTitle">
+					<div class="meetingProfilePics">
+						<img src="../img/profilePic1.svg" />
+						<img src="../img/profilePic2.svg" />
+					</div>
+					<p>Upcoming Room</p>
+				</div>
+				<div class="bookingInfor">
+					<div class="bookingDate">Monday April 18 2016</div>
+		
+					<div class="bookingTime">7pm</div>
+					<div class="svg bookingClock"></div>
+					<div class="bookingDuration">45 min</div>
+					
+			
+					<div class="bookingEdit">
+						<a class="edit">Edit</a>
+						<a class="cancel">Cancel</a>
+						<div class="svg toggleSign"></div>
+					</div>
+					<div class="toggleContent">
+						<div class="meetingTitle">Product Market Fit Bi-Weekly</div>
+						<div class="meetingPlace">
+							<div class="svg location"></div>
+							<div class="meetingLocation">District 3</div>
+						</div>
+						<div class="meetingDetails">
+							<div class="svg dialogue"></div>
+							<div class="meetingNote">Note:</div>
+							<div class="NoteDetails">Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="roomBooking">
 				<div class="bookingTitle">
 					<div class="meetingProfilePics">
@@ -180,9 +248,44 @@
 		</div>
 
 
-		<div class="historyBox">
+		<div class="historyBox hideBox">
 
 			<!-- old room booking 1 -->
+			<div class="roomBooking">
+				<div class="bookingTitle">
+					<div class="meetingProfilePics">
+						<img src="../img/profilePic1.svg" />
+						<img src="../img/profilePic2.svg" />
+					</div>
+					<p>History Room</p>
+				</div>
+				<div class="bookingInfor">
+					<div class="bookingDate">Monday April 18 2016</div>
+		
+					<div class="bookingTime">7pm</div>
+					<div class="svg bookingClock"></div>
+					<div class="bookingDuration">45 min</div>
+			
+					<div class="bookingEdit">
+						<a class="edit">Edit</a>
+						<a class="cancel">Cancel</a>
+						<div class="svg toggleSign"></div>
+					</div>
+					<div class="toggleContent">
+						<div class="meetingTitle">Product Market Fit Bi-Weekly</div>
+						<div class="meetingPlace">
+							<div class="svg location"></div>
+							<div class="meetingLocation">District 3</div>
+						</div>
+						<div class="meetingDetails">
+							<div class="svg dialogue"></div>
+							<div class="meetingNote">Note:</div>
+							<div class="NoteDetails">Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="roomBooking">
 				<div class="bookingTitle">
 					<div class="meetingProfilePics">
@@ -224,6 +327,13 @@
 
 <script>
 
+	$(document).ready(function(){
+		$(".historyBox").removeClass('hideBox');
+		$(".upcomingBox").removeClass('hideBox');
+		$(".upcomingBox").hide();
+	    $(".historyBox").hide();
+	});
+
 	// function to change the booking tabs and booking displays 
 	// when click on tabs
 	$(".tab").click(function(){
@@ -236,9 +346,9 @@
     	var $botBor = $(this).closest('.meetingTabs').find('.selectBorder');
 
     	// assign each meeting box to a variable
-    	var $pending = $(this).closest('.meeting_wrapper').find('.pendingBox');
-    	var $upcoming = $(this).closest('.meeting_wrapper').find('.upcomingBox');
-    	var $history = $(this).closest('.meeting_wrapper').find('.historyBox');
+    	var $pending = $('.pendingBox');
+    	var $upcoming = $('.upcomingBox');
+    	var $history = $('.historyBox');
     	
     	// click pending, move the botBor to left
     	// and show upcoming box
@@ -248,21 +358,24 @@
     	// and show history box
     	if($(this).hasClass("pending")){
     		$botBor.css("left",'0%');
-    		$history.css("display","none");
-    		$upcoming.css('display','none');
-    		$pending.css('display','block');
+    		$history.hide();
+    		$upcoming.hide();
+    		$pending.show();
+    		$pending.css('display','');
 
     	} else if($(this).hasClass("upcoming")) {
     		$botBor.css("left", "calc(100% / 3)");
-    		$history.css('display','none');
-    		$pending.css("display","none");
-    		$upcoming.css('display','block');
+    		$history.hide();
+    		$pending.hide();
+    		$upcoming.show();
+    		$upcoming.css('display','');
 
     	} else{
     		$botBor.css("left", "calc(100% / 3 * 2)");
-    		$upcoming.css('display','none');
-    		$pending.css("display","none");
-    		$history.css('display','block');
+    		$pending.hide();
+    		$upcoming.hide();
+    		$history.show();
+    		$history.css('display','');
     	}
 	});
 

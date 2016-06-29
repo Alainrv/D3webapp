@@ -46,7 +46,7 @@
 
 <!-- Jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    
+
 </head>
 
 <!-- <?php include '../layout/header.php' ?> -->
@@ -168,7 +168,7 @@
 	</div>
 
 
-	<div class="historyBox">
+	<div class="historyBox hideBox">
 
 		<!-- old room booking 1 -->
 		<div class="roomBooking">
@@ -233,6 +233,11 @@
 
 
 <script type="text/javascript">
+	// hide history when laoding the page
+	$(document).ready(function(){
+		$(".historyBox").removeClass('hideBox');
+	    $(".historyBox").hide();
+	});
 	// function to change the booking tabs and booking displays 
 	// when click on tabs
 	$(".tab").click(function(){
@@ -245,21 +250,23 @@
     	var $botBor = $(this).closest('.bookingTabs').find('.selectBorder');
 
     	// assign each booking box to a variable
-    	var $upcoming = $(this).closest('.booking_wrapper').find('.upcomingBox');
-    	var $history = $(this).closest('.booking_wrapper').find('.historyBox');
+    	var $upcoming = $('.upcomingBox');
+    	var $history = $('.historyBox');
     	
     	// if the clicked tab is at left, move the botBor to left, 
     	// and show upcoming box
     	// if not move to right, and show history box
     	if($(this).hasClass("upcoming")){
     		$botBor.css("left",'0%');
-    		$history.css("display","none");
-    		$upcoming.css('display','block');
+    		$history.hide();
+    		$upcoming.show();
+    		$upcoming.css('display','');
 
     	} else {
     		$botBor.css("left", "50%");
-    		$upcoming.css("display","none");
-    		$history.css('display','block');
+    		$upcoming.hide();
+    		$history.show();
+    		$history.css('display','');
     	};
 	});
 
@@ -269,7 +276,7 @@
 		$content = $(this).closest(".bookingInfor").find('.toggleContent');
 		// if content is hiddent, show up arrow. If not show down arrwo
 	    if($content.css("display")=="none"){
-			$(this).css("transform","rotateX(180deg)");	   
+			$(this).css("transform","rotateX(180deg)");	
 		} 
 	    else{
     		$(this).css("transform","rotateX(0deg)");

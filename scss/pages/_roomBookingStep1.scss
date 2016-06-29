@@ -7,7 +7,7 @@
 	background-color: #2979ff;
 	.signs{
 		margin: auto;
-		width: 35%;
+		width: 170px;
 		@include display(flex);
 		@include justify-content(space-around);
 		[class^="circle"]{
@@ -44,6 +44,19 @@
 		top: 25px;
 	    visibility:hidden;
 	}
+}
+
+.roomSelecting{
+	height: 0%;
+	position: relative;	
+	margin: auto;
+	margin-top: 10px;
+	width: 100%;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px 0 #b4b4b4;
+	overflow: auto;
+	min-width: 300px;
+	max-width: 400px;
 }
 
 .room-btn {
