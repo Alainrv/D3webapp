@@ -78,9 +78,7 @@
 	<main class="o-content">
 	    <div class="o-container">
 
-	    </div><!-- /o-container -->
-	</main><!-- /o-content -->
+	    
 
-	<footer class="o-footer">
-		<div class="o-container">
+
 	

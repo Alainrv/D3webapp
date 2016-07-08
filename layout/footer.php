@@ -1,3 +1,11 @@
+	    
+
+	    </div><!-- /o-container -->
+	</main><!-- /o-content -->
+
+	<footer class="o-footer">
+		<div class="o-container">
+
 	    </div>
 	</footer><!-- /o-footer -->
 
