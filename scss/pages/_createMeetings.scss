@@ -1,0 +1,108 @@
+.meeting_wrapper{
+	@extend .booking_wrapper;
+
+	.toggleContent{
+
+		line-height: 130%;
+	}
+
+	.bookingTitle{
+		background: none;
+		background-color: #64b5f6;
+		height: 145px;
+	}
+
+	.pendingBox .bookingTitle{
+		height: 115px;
+	}
+
+	.bookingEdit{
+		margin-top: 25px;
+	}
+}
+
+.meetingProfilePics{
+	position: relative;
+	img{
+		position: absolute;
+		border-radius: 50%;
+		background-color: #ffffff;
+		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+		height: 80px;
+		width: auto;
+		top: 12px;
+		left: 16px;
+		z-index: 1;
+		&:nth-child(2){
+			left: 80px;
+			z-index: 0;
+		}
+	}
+}
+
+.meetingTabs{
+	@extend .bookingTabs;
+	max-width: 630px;
+	.tab{
+		width: calc(100% / 3);
+	}
+	.selectBorder{
+		width: calc(100% / 3);
+	}
+}
+
+#pendingCount{
+	display: none;
+	position: absolute;
+	top: 6px;
+	left: calc((100% / 3) - 25px);
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	background-color: #f57c00;
+	color: #ffffff;
+	text-align: center;
+}
+
+.location{
+	display: inline-block;
+	vertical-align: middle;
+	width: 14px;
+	height: 18px;
+	background-position: 0 -940px;
+}
+
+.meetingTitle{
+	font-family: 'Avenir-Heavy';
+	font-size: 14px;
+	letter-spacing: 1.3px;
+	color: #4a4a4a;
+}
+
+.dialogue{
+	display: inline-block;
+	vertical-align: middle;
+	width: 13px;
+	height: 15px;
+	background-position: 0 -920px;
+}
+
+.meetingNote,
+.meetingLocation{
+	display: inline-block;
+	font-family: 'Avenir-Roman';
+	font-size: 14px;
+	letter-spacing: 1.3px;
+	color: #4a4a4a;
+}
+
+.NoteDetails{
+	margin: auto 10px;
+	margin-left: 15px;
+	font-family: 'Avenir-Book';
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: #4a4a4a;
+}
+
+

@@ -1,0 +1,145 @@
+.roomHeaderCreateMeeting {
+	@extend .roomHeader;
+}
+.createInput {
+	width: 100%;
+	padding: 0px 4vw;
+	
+	.input {
+		width: 100%;
+		position: relative;
+		margin-bottom: 5px;
+
+		@media (min-width: 370px) {
+			margin-bottom: 12px;
+		}
+
+		@media (min-width: 430px) {
+			margin-bottom: 18px;
+		}
+		textarea{
+			margin-left: 6vh;
+			margin-top: 1vh;
+			border: solid 0.9px #F5F5F5;
+			&:hover {
+				border: solid 0.9px skyblue;
+			}
+			@media (min-width: 370px) {
+				margin-left: 10vh;
+			}
+			@media (min-width: 450px) {
+				margin-left: 23vh;
+			}
+		}
+		select{
+			margin-left: 6vh;
+			margin-top: 1vh;
+			font-size: 19px;
+			letter-spacing: 1.7px;
+			width: 265px;
+			height: 40px;
+			border: solid 0.9px #F5F5F5;
+			@media (min-width: 370px) {
+				margin-left: 10vh;
+			}
+			@media (min-width: 450px) {
+				margin-left: 23vh;
+			}
+			option{
+			width: 265px;
+			font-size: 19px;
+			letter-spacing: 1.7px;
+			text-align: center;
+			color: #9b9b9b;
+			line-height: 40px;
+			padding-left: 20px;
+			}
+		}		
+		input {
+			display: block;
+			margin: auto auto;
+			width: 300px;
+			margin-top: 1vh;
+			height: 40px;
+			border: none;
+			border-bottom: 1px solid #F5F5F5;
+			font-size: 1em;
+			color: $writting;
+			border-radius: 2px;
+			padding-left: 30px;
+			
+			&:active,
+			&:focus , &:hover{
+				border-bottom: solid 0.9px skyblue;
+			}
+		}
+		placeholder{
+			color: black;
+			}
+		// change "img" to "div" to avoid the grey border when img has no src in it!
+		div {
+			position: absolute;
+			top: 10px;
+			left: 1vw;
+			@media (min-width: 370px) {
+				left: 10vw;
+			}
+			@media (min-width: 450px) {
+				margin-left: 16.25vw;
+			}
+			&.meetingPlace {
+				width: 18px;
+				height: 19px;
+				background-position: 0 -960px;
+			}
+			&.alarmClock {
+				width: 15px;
+				height: 15px;
+				background-position: 0 -883px;
+			}
+			&.clock {
+				width: 18px;
+				height: 19px;
+				background-position: 0 -900px;
+			}
+			&.location {
+				width: 18px;
+				height: 19px;
+				background-position: 0 -940px;
+			}
+			&.notes {
+				width: 18px;
+				height: 19px;
+				background-position: 0 -920px;
+			}
+		}
+	}
+}
+
+.notesLabel{
+	display: block;
+	margin-left: 6vh;
+	padding-top: 2vh;
+	color: #4a4a4a;	
+	@media (min-width: 370px) {
+			margin-left: 9.5vh;
+			padding-top: 1.5vh;
+	}
+	@media (min-width: 450px) {
+			margin-left: 23vh;
+			padding-top: 1vh;
+	}
+}
+.invitationValidity{
+	height: 159px;
+	background-color: #ffffff;	
+	width: 87%;
+	margin: 2vh 7vh;
+	margin-bottom: 25px;
+	text-align: center;	
+ 	border: solid 0.9px #ffffff;
+ 	&:hover {
+		border: solid 0.9px skyblue;
+	}
+ 	
+}

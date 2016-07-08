@@ -2002,30 +2002,35 @@ div[class^="edit_funds"] {
       background-position: 0 71.25%;
       background-size: 20vh; }
 
-.booking_wrapper {
+.booking_wrapper, .meeting_wrapper {
   margin: auto auto;
-  display: block; }
-  @media (min-width: 420px) {
-    .booking_wrapper {
-      min-width: 320px;
-      max-width: 550px;
-      margin-bottom: 5vh;
-      border: #cacaca 1px solid; } }
+  display: block;
+  width: 100%;
+  min-width: 350px; }
+
+.bookingHeader_wrapper {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  background-color: #2979ff; }
 
 .bookingHeader {
   width: 100%;
   height: 120px;
-  background-color: #2979ff;
   position: relative; }
   .bookingHeader .headerText {
     position: absolute;
-    left: 40px;
-    bottom: 42px;
+    left: 20%;
+    top: 50%;
     font-family: 'Avenir-Medium';
     font-size: 18.4px;
     line-height: 1;
     letter-spacing: 2.2px;
     color: #ffffff; }
+    @media (min-width: 420px) {
+      .bookingHeader .headerText {
+        left: 30%; } }
+    @media (min-width: 768px) {
+      .bookingHeader .headerText {
+        left: 40%; } }
 
 .booking-btn {
   background: #f57c00;
@@ -2050,7 +2055,7 @@ div[class^="edit_funds"] {
   font-size: 0.85em;
   position: absolute;
   bottom: 23px;
-  right: 28px;
+  right: 10%;
   border-radius: 50%;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 0 8px 0 rgba(0, 0, 0, 0.12); }
   .booking-btn:active {
@@ -2080,25 +2085,25 @@ div[class^="edit_funds"] {
   height: 15px;
   border-left: #ffffff 2px solid; }
 
-.bookingTabs {
+.bookingTabs, .meetingTabs {
   height: 45px;
   margin: auto auto;
   position: relative;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
-  background-color: #2979ff; }
+  max-width: 420px; }
 
 .tab {
   display: inline-block;
-  line-height: 43px;
   width: 50%;
   text-align: center;
-  vertical-align: middle;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 3.2;
+  letter-spacing: 1.7px;
   font-family: '.HelveticaNeueDeskInterface-Regular';
-  color: #b3b3b3; }
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer; }
 
 .onSelect {
-  color: #ffffff;
+  color: white;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   transition: 0.5s; }
@@ -2113,30 +2118,68 @@ div[class^="edit_funds"] {
   -moz-transition: 0.5s;
   transition: 0.5s; }
 
+.pendingBox,
 .historyBox,
 .upcomingBox {
-  max-width: 100%;
-  margin: auto 10px;
-  padding-bottom: 20vh; }
+  max-width: 780px;
+  margin: 10px 10px;
+  padding-bottom: 50px;
+  display: block; }
+  @media (min-width: 768px) {
+    .pendingBox,
+    .historyBox,
+    .upcomingBox {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: justify;
+      -webkit-box-lines: multiple;
+      -moz-box-lines: multiple;
+      box-lines: multiple;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin: auto; } }
 
-.historyBox {
+.hideBox {
   display: none; }
 
 .roomBooking {
+  height: 0%;
   position: relative;
-  margin-top: 15px;
+  margin: auto;
+  margin-top: 10px;
   width: 100%;
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 #b4b4b4;
-  border: solid 0.5px #c7c7c7;
-  overflow: auto; }
+  min-width: 300px;
+  max-width: 384px; }
+  @media (min-width: 768px) {
+    .roomBooking {
+      margin: 0 10px;
+      margin-top: 10px;
+      max-width: 360px; } }
 
 .bookingTitle {
   height: 135px;
   position: relative;
-  border-radius: 2px;
+  border-radius: 2px 2px 0 0;
   background: linear-gradient(to bottom, rgba(40, 121, 255, 0.3), rgba(40, 121, 255, 0.8)), url("../img/meetingroom.jpg");
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  border: none; }
   .bookingTitle p {
     font-family: 'Avenir-Medium';
     font-size: 24px;
@@ -2150,7 +2193,8 @@ div[class^="edit_funds"] {
 .bookingInfor {
   background-color: #fafafa;
   position: relative;
-  padding: 15px 15px; }
+  padding: 15px 15px;
+  border-radius: 0 0 2px 2px; }
   .bookingInfor .bookingTime,
   .bookingInfor .bookingDate,
   .bookingInfor .bookingDuration,
@@ -2182,6 +2226,7 @@ div[class^="edit_funds"] {
   display: flex;
   margin-top: 35px; }
   .bookingEdit a {
+    cursor: pointer;
     font-family: '.HelveticaNeueDeskInterface-MediumP4';
     font-size: 16px;
     letter-spacing: 1.5px;
@@ -2195,7 +2240,9 @@ div[class^="edit_funds"] {
   right: 10px;
   height: 20px;
   width: 20px;
-  background-position: 0 -840px; }
+  background-position: 0 -840px;
+  transition: 0.5s;
+  cursor: pointer; }
 
 .toggleContent {
   display: none;
@@ -2224,16 +2271,16 @@ div[class^="edit_funds"] {
   .roomTab .toggleSign {
     top: 8px; }
 
-.roomHeader {
+.roomHeader, .meetingHeader, .roomHeaderCreateMeeting {
   margin: auto auto;
-  height: 120px;
+  min-height: 120px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+  overflow: auto;
   background-color: #2979ff; }
-  .roomHeader .signs {
+  .roomHeader .signs, .meetingHeader .signs, .roomHeaderCreateMeeting .signs {
     margin: auto;
-    width: 35%;
+    width: 170px;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -2250,15 +2297,16 @@ div[class^="edit_funds"] {
     -o-justify-content: space-around;
     justify-content: space-around;
     -ms-flex-pack: distribute; }
-    .roomHeader .signs [class^="circle"] {
+    .roomHeader .signs [class^="circle"], .meetingHeader .signs [class^="circle"], .roomHeaderCreateMeeting .signs [class^="circle"] {
       height: 20px;
       width: 20px;
       border-radius: 50%;
-      background-color: #cccccc;
+      background-color: #ffffff;
+      opacity: 0.5;
       box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33); }
-    .roomHeader .signs .circle-active {
-      background-color: #ffffff; }
-  .roomHeader .title {
+    .roomHeader .signs .circle-active, .meetingHeader .signs .circle-active, .roomHeaderCreateMeeting .signs .circle-active {
+      opacity: 1; }
+  .roomHeader .title, .meetingHeader .title, .roomHeaderCreateMeeting .title {
     padding-top: 30px;
     padding-bottom: 20px;
     font-family: 'Avenir-Medium';
@@ -2275,6 +2323,18 @@ div[class^="edit_funds"] {
     position: absolute;
     top: 25px;
     visibility: hidden; }
+
+.roomSelecting {
+  height: 0%;
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 #b4b4b4;
+  overflow: auto;
+  min-width: 300px;
+  max-width: 400px; }
 
 .room-btn {
   background: #f57c00;
@@ -2296,6 +2356,7 @@ div[class^="edit_funds"] {
   -o-box-shadow: 0 3px 0 #a95500;
   box-shadow: 0 3px 0 #a95500;
   box-shadow: 0 2px 4px 0 #b4b4b4;
+  border-bottom: 1px solid #c26200;
   font-family: 'Avenir-Medium';
   font-size: 18px;
   letter-spacing: 1.7px;
@@ -2333,7 +2394,7 @@ div[class^="edit_funds"] {
     -ms-box-shadow: 0 3px 0 #a95500;
     -o-box-shadow: 0 3px 0 #a95500;
     box-shadow: 0 3px 0 #a95500;
-    box-shadow: 0 2px 4px 0 #b4b4b4;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
     font-family: 'Avenir-Medium';
     font-size: 18px;
     letter-spacing: 1.7px;
@@ -2355,7 +2416,7 @@ div[class^="edit_funds"] {
   margin: auto auto;
   border: none;
   height: 80%;
-  overflow: scroll; }
+  overflow-y: scroll; }
   .centerTime input {
     visibility: hidden; }
   .centerTime label {
@@ -2382,7 +2443,12 @@ div[class^="edit_funds"] {
   @media (min-width: 400px) {
     .input_form_create_meeting {
       max-width: 765px;
-      height: 770px;
+      height: 500px;
+      margin: 2vh auto; } }
+  @media (min-width: 600px) {
+    .input_form_create_meeting {
+      max-width: 765px;
+      height: 900px;
       margin: 2vh auto; } }
   .input_form_create_meeting .calender_create_meeting {
     position: relative;
@@ -2423,16 +2489,34 @@ div[class^="edit_funds"] {
   margin: 30px auto;
   text-align: center; }
 
-.confirmBg {
-  background-color: rgba(32, 35, 52, 0.9); }
+.confirm_overlayer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(32, 35, 52, 0.9);
+  text-align: center;
+  min-width: 340px; }
 
 .confirmation_wrapper {
-  min-width: 280px;
-  margin: 10vh 20px;
+  max-width: 280px;
   background-color: #ffffff;
   box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.24), 0 0 14px 0 rgba(0, 0, 0, 0.12);
   text-align: center;
-  overflow: auto; }
+  overflow: auto;
+  margin: 10vh auto; }
+  @media (min-width: 400px) {
+    .confirmation_wrapper {
+      max-width: 320px;
+      margin: 15vh auto; } }
+  @media (min-width: 600px) {
+    .confirmation_wrapper {
+      max-width: 320px;
+      margin: 20vh auto; } }
 
 .confirmation_header {
   padding: 30px 15px;
@@ -2456,7 +2540,8 @@ div[class^="edit_funds"] {
     font-size: 18px;
     letter-spacing: 0.2px;
     color: #4a4a4a;
-    text-align: center; }
+    text-align: center;
+    border: none; }
   .setDuration .durationBorder {
     margin: auto;
     width: 95px;
@@ -2477,11 +2562,332 @@ div[class^="edit_funds"] {
     line-height: 1.3;
     color: #4a4a4a; }
 
+.meeting_wrapper .toggleContent {
+  line-height: 130%; }
+.meeting_wrapper .bookingTitle {
+  background: none;
+  background-color: #64b5f6;
+  height: 145px; }
+.meeting_wrapper .pendingBox .bookingTitle {
+  height: 115px; }
+.meeting_wrapper .bookingEdit {
+  margin-top: 25px; }
+
+.meetingProfilePics {
+  position: relative; }
+  .meetingProfilePics img {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+    height: 80px;
+    width: auto;
+    top: 12px;
+    left: 16px;
+    z-index: 1; }
+    .meetingProfilePics img:nth-child(2) {
+      left: 80px;
+      z-index: 0; }
+
+.meetingTabs {
+  max-width: 630px; }
+  .meetingTabs .tab {
+    width: calc(100% / 3); }
+  .meetingTabs .selectBorder {
+    width: calc(100% / 3); }
+
+#pendingCount {
+  display: none;
+  position: absolute;
+  top: 6px;
+  left: calc((100% / 3) - 25px);
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #f57c00;
+  color: #ffffff;
+  text-align: center; }
+
+.location {
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 18px;
+  background-position: 0 -940px; }
+
+.meetingTitle {
+  font-family: 'Avenir-Heavy';
+  font-size: 14px;
+  letter-spacing: 1.3px;
+  color: #4a4a4a; }
+
+.dialogue {
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 15px;
+  background-position: 0 -920px; }
+
+.meetingNote,
+.meetingLocation {
+  display: inline-block;
+  font-family: 'Avenir-Roman';
+  font-size: 14px;
+  letter-spacing: 1.3px;
+  color: #4a4a4a; }
+
+.NoteDetails {
+  margin: auto 10px;
+  margin-left: 15px;
+  font-family: 'Avenir-Book';
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #4a4a4a; }
+
+.meetingHeader {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24); }
+
+.searchBox {
+  width: 100%;
+  height: 90px;
+  margin: auto auto;
+  margin-top: 40px;
+  max-width: 270px; }
+
+.searchTitle {
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+  font-size: 14px;
+  letter-spacing: 1.3px;
+  color: #ffffff;
+  text-align: left; }
+
+.searchInput {
+  position: relative;
+  margin: auto;
+  margin-top: 10px; }
+  .searchInput input {
+    width: 100%;
+    height: 35px;
+    background-color: #ffffff;
+    font-size: 14px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 2px; }
+
+.inviteSearch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background-position: 0 -980px; }
+
+.invitePerson {
+  padding-top: 10px; }
+  @media (min-width: 420px) {
+    .invitePerson {
+      margin-right: 20px; } }
+
+.inviteTitle {
+  padding-left: 10px;
+  font-family: '.HelveticaNeueDeskInterface-MediumP4';
+  font-size: 18px;
+  letter-spacing: 1.7px;
+  color: #4a4a4a;
+  margin: auto;
+  max-width: 400px; }
+  @media (min-width: 768px) {
+    .inviteTitle {
+      text-align: center; } }
+
+.peopleList {
+  margin: 10px auto;
+  max-width: 850px; }
+  @media (min-width: 768px) {
+    .peopleList {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-lines: multiple;
+      -moz-box-lines: multiple;
+      box-lines: multiple;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+
+.peopleSelection {
+  overflow: auto;
+  width: 100%;
+  display: none;
+  position: relative;
+  margin: auto;
+  max-width: 400px; }
+  .peopleSelection:first-child .personDetail {
+    border-top: solid 1px #e4e4e4; }
+  .peopleSelection:nth-child(-n+4) {
+    display: block; }
+  @media (min-width: 768px) {
+    .peopleSelection {
+      max-width: 350px; }
+      .peopleSelection:nth-child(2) .personDetail {
+        border-top: solid 1px #e4e4e4; }
+      .peopleSelection:nth-child(-n+8) {
+        display: block; } }
+
+.person {
+  cursor: pointer;
+  width: 100%;
+  height: 65px;
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+input[type="checkbox"] {
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.personPic {
+  margin: auto 10px;
+  position: relative;
+  line-height: 65px; }
+  .personPic img {
+    vertical-align: middle;
+    width: 50px;
+    height: auto; }
+
+.personDetail {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 12px 0;
+  border-bottom: solid 1px #e4e4e4; }
+  .personDetail .personName,
+  .personDetail .personTitle {
+    font-family: '.HelveticaNeueDeskInterface-MediumP4';
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #4a4a4a;
+    line-height: 120%; }
+    .personDetail .personName.personTitle,
+    .personDetail .personTitle.personTitle {
+      font-family: 'HelveticaNeue'; }
+
+.seeMoreStartups,
+.seeMorePersons {
+  cursor: pointer;
+  margin: 10px auto;
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+  font-size: 12px;
+  letter-spacing: 1.1px;
+  text-align: center;
+  color: #4a4a4a;
+  width: 100%; }
+
+.startupsList {
+  padding: 0 10px;
+  margin: auto auto;
+  max-width: 850px; }
+  @media (min-width: 768px) {
+    .startupsList {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-lines: multiple;
+      -moz-box-lines: multiple;
+      box-lines: multiple;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+
+.startupSelection {
+  display: none;
+  position: relative;
+  max-width: 400px;
+  margin: 10px auto;
+  margin-bottom: 20px; }
+  .startupSelection:first-child {
+    display: block; }
+  @media (min-width: 768px) {
+    .startupSelection {
+      width: 350px; }
+      .startupSelection:nth-child(2) {
+        display: block; } }
+
+.startup {
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12); }
+
+.selectedStartup {
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 0 4px 2px #2979ff;
+  border-style: solid;
+  border-width: 0.5px; }
+
+.selectedPerson {
+  background-color: #d8d8d8; }
+
+.startupTitle {
+  position: relative;
+  height: 144px;
+  background-color: #64b5f6;
+  border-radius: 2px 2px 0 0; }
+
+.startupName {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  font-family: 'Avenir-Medium';
+  font-size: 24px;
+  line-height: 0.8;
+  letter-spacing: 2.2px;
+  color: #ffffff; }
+
+.startupPic {
+  position: absolute;
+  left: 16px;
+  bottom: 50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.12); }
+
+.startupMembers {
+  padding-bottom: 5px; }
+  .startupMembers .person:last-child .personDetail {
+    border-bottom: none; }
+
 .invitation_wrapper {
-  margin: auto 20px; }
+  width: 100%;
+  margin: auto auto; }
 
 .invitationDetails {
-  margin: 50px auto; }
+  margin: auto 20px;
+  margin-top: 120px;
+  position: relative; }
 
 .invSchedule,
 .invDescription {
@@ -2495,9 +2901,6 @@ div[class^="edit_funds"] {
   text-align: center; }
   .invDescription b {
     font-weight: bold; }
-
-.invSchedule {
-  margin-top: 10px; }
 
 .invTopic {
   font-family: 'Avenir-Roman';
@@ -2525,6 +2928,253 @@ div[class^="edit_funds"] {
     font-size: 12px;
     letter-spacing: 1.1px;
     color: #4a4a4a; }
+
+.invSchedule {
+  margin-top: 10px; }
+
+.pick_time {
+  font-family: 'Avenir-Roman';
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  line-height: 130%;
+  text-align: center;
+  color: #4a4a4a;
+  padding: 15px 0;
+  width: 100%;
+  border-bottom: solid 0.5px #c7c7c7; }
+
+.scheduleDetails {
+  position: relative;
+  margin: 15px auto;
+  padding: 15px 10px;
+  border-left: solid 0.5px #c7c7c7; }
+  .scheduleDetails div {
+    font-family: 'Avenir-LightOblique';
+    font-size: 12px;
+    letter-spacing: 1.1px;
+    color: #4a4a4a; }
+  .scheduleDetails .scheduleDate {
+    margin-bottom: 10px; }
+
+.invMark {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: solid 3px #fca20e;
+  position: absolute;
+  left: -7px;
+  top: 14px;
+  display: inline-block; }
+
+.scheduleSelection {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative; }
+  .scheduleSelection div {
+    height: 40px;
+    width: 50px;
+    border-radius: 8px;
+    border: solid 0.5px #c7c7c7;
+    font-family: Avenir-Black;
+    font-size: 10px;
+    letter-spacing: 0.9px;
+    line-height: 120%;
+    text-align: center;
+    color: #4a4a4a;
+    text-align: center;
+    padding: 8px 0; }
+  .scheduleSelection input[type="radio"] {
+    position: absolute;
+    visibility: hidden; }
+
+.invActive {
+  background-color: #fff2dd; }
+
+.respondMessage {
+  margin: 15px auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  .respondMessage .messageText {
+    width: 85%;
+    font-family: 'Avenir-Light';
+    font-size: 9px;
+    letter-spacing: 0.5px;
+    line-height: 120%;
+    color: #4a4a4a; }
+  .respondMessage .respondTime {
+    width: 22px;
+    height: 22px;
+    background-position: 0 -860px; }
+
+.invProfilePic {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: -95px; }
+  .invProfilePic .profilePic2,
+  .invProfilePic .profilePic1 {
+    margin: auto auto;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: white;
+    width: 112px;
+    height: auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+    .invProfilePic .profilePic2.profilePic1,
+    .invProfilePic .profilePic1.profilePic1 {
+      width: 100px;
+      position: relative;
+      left: 20px; }
+
+.createInput {
+  width: 100%;
+  padding: 0px 4vw; }
+  .createInput .input {
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px; }
+    @media (min-width: 370px) {
+      .createInput .input {
+        margin-bottom: 12px; } }
+    @media (min-width: 430px) {
+      .createInput .input {
+        margin-bottom: 18px; } }
+    .createInput .input textarea {
+      margin-left: 6vh;
+      margin-top: 1vh;
+      border: solid 0.9px #F5F5F5; }
+      .createInput .input textarea:hover {
+        border: solid 0.9px skyblue; }
+      @media (min-width: 370px) {
+        .createInput .input textarea {
+          margin-left: 10vh; } }
+      @media (min-width: 450px) {
+        .createInput .input textarea {
+          margin-left: 23vh; } }
+    .createInput .input select {
+      margin-left: 6vh;
+      margin-top: 1vh;
+      font-size: 19px;
+      letter-spacing: 1.7px;
+      width: 265px;
+      height: 40px;
+      border: solid 0.9px #F5F5F5; }
+      @media (min-width: 370px) {
+        .createInput .input select {
+          margin-left: 10vh; } }
+      @media (min-width: 450px) {
+        .createInput .input select {
+          margin-left: 23vh; } }
+      .createInput .input select option {
+        width: 265px;
+        font-size: 19px;
+        letter-spacing: 1.7px;
+        text-align: center;
+        color: #9b9b9b;
+        line-height: 40px;
+        padding-left: 20px; }
+    .createInput .input input {
+      display: block;
+      margin: auto auto;
+      width: 300px;
+      margin-top: 1vh;
+      height: 40px;
+      border: none;
+      border-bottom: 1px solid #F5F5F5;
+      font-size: 1em;
+      color: #4A4A4A;
+      border-radius: 2px;
+      padding-left: 30px; }
+      .createInput .input input:active, .createInput .input input:focus, .createInput .input input:hover {
+        border-bottom: solid 0.9px skyblue; }
+    .createInput .input placeholder {
+      color: black; }
+    .createInput .input div {
+      position: absolute;
+      top: 10px;
+      left: 1vw; }
+      @media (min-width: 370px) {
+        .createInput .input div {
+          left: 10vw; } }
+      @media (min-width: 450px) {
+        .createInput .input div {
+          margin-left: 16.25vw; } }
+      .createInput .input div.meetingPlace {
+        width: 18px;
+        height: 19px;
+        background-position: 0 -960px; }
+      .createInput .input div.alarmClock {
+        width: 15px;
+        height: 15px;
+        background-position: 0 -883px; }
+      .createInput .input div.clock {
+        width: 18px;
+        height: 19px;
+        background-position: 0 -900px; }
+      .createInput .input div.location {
+        width: 18px;
+        height: 19px;
+        background-position: 0 -940px; }
+      .createInput .input div.notes {
+        width: 18px;
+        height: 19px;
+        background-position: 0 -920px; }
+
+.notesLabel {
+  display: block;
+  margin-left: 6vh;
+  padding-top: 2vh;
+  color: #4a4a4a; }
+  @media (min-width: 370px) {
+    .notesLabel {
+      margin-left: 9.5vh;
+      padding-top: 1.5vh; } }
+  @media (min-width: 450px) {
+    .notesLabel {
+      margin-left: 23vh;
+      padding-top: 1vh; } }
+
+.invitationValidity {
+  height: 159px;
+  background-color: #ffffff;
+  width: 87%;
+  margin: 2vh 7vh;
+  margin-bottom: 25px;
+  text-align: center;
+  border: solid 0.9px #ffffff; }
+  .invitationValidity:hover {
+    border: solid 0.9px skyblue; }
 
 .phpdebugbar p {
   font-size: black; }

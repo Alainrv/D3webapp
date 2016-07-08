@@ -46,31 +46,35 @@
 
 <!-- Jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    
+
 </head>
 
+<!-- <?php include '../layout/header.php' ?> -->
 <body>
 
 <div class="booking_wrapper">
-	<div class="bookingHeader">
-		<div class="headerText">
-			Room Bookings
+	<div class="bookingHeader_wrapper">
+
+		<div class="bookingHeader">
+			<div class="headerText">
+				Room Bookings
+			</div>
+			<a href="roomBookingStep1.html">
+			<button class="booking-btn">
+				<div class="horizontalLine"></div>
+				<div class="verticalLine"></div>
+			</button>
+			</a>
 		</div>
-		<a href="roomBookingStep1.html">
-		<button class="booking-btn">
-			<div class="horizontalLine"></div>
-			<div class="verticalLine"></div>
-		</button>
-		</a>
-	</div>
-	<div class="bookingTabs">
-		<div class="tab upcoming onSelect">UPCOMING</div><div class="tab history">HISTORY</div>
-		<div class="selectBorder"></div>
+		<div class="bookingTabs">
+			<div class="tab upcoming onSelect">UPCOMING</div><div class="tab history">HISTORY</div>
+			<div class="selectBorder"></div>
+		</div>
 	</div>
 
 	<div class="upcomingBox">
 		<!-- new room booking 1 -->
-		<div class="roomBooking new">
+		<div class="roomBooking">
 			<div class="bookingTitle">
 				<p>Maker Space Room</p>
 			</div>
@@ -101,7 +105,7 @@
 		</div>
 
 		<!-- new room booking 2 -->
-		<div class="roomBooking new">
+		<div class="roomBooking">
 			<div class="bookingTitle">
 				<p>Maker Space Room</p>
 			</div>
@@ -130,14 +134,44 @@
 				</div>
 			</div>
 		</div>
-
+		
+		<!-- new room booking 2 -->
+		<div class="roomBooking">
+			<div class="bookingTitle">
+				<p>Maker Space Room</p>
+			</div>
+			<div class="bookingInfor">
+				<div class="bookingDate">Monday April 18 2016</div>
+	
+				<div class="bookingTime">7pm</div>
+				<div class="svg bookingClock"></div>
+				<div class="bookingDuration">45 min</div>
+				
+		
+				<div class="bookingEdit">
+					<a class="edit" href="">Edit</a>
+					<a class="cancel" href="">Cancel</a>
+					<div class="svg toggleSign"></div>
+				</div>
+				<div class="toggleContent">
+					<p>Room can fit up to 8 people sitting and can accomodate around 15 people standing.</p>
+					<p class="equipment">This room is accomdated with</p>
+					<ul>
+						<li>projector with HDMI cable</li>
+						<li>1 white board</li>
+						<li>1 podium</li>
+						<li>a sound system</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
-	<div class="historyBox">
+	<div class="historyBox hideBox">
 
 		<!-- old room booking 1 -->
-		<div class="roomBooking old">
+		<div class="roomBooking">
 			<div class="bookingTitle">
 				<p>Class room</p>
 			</div>
@@ -166,7 +200,7 @@
 		</div>
 
 		<!-- old room booking 2 -->
-		<div class="roomBooking new">
+		<div class="roomBooking">
 			<div class="bookingTitle">
 				<p>Class room</p>
 			</div>
@@ -199,6 +233,11 @@
 
 
 <script type="text/javascript">
+	// hide history when laoding the page
+	$(document).ready(function(){
+		$(".historyBox").removeClass('hideBox');
+	    $(".historyBox").hide();
+	});
 	// function to change the booking tabs and booking displays 
 	// when click on tabs
 	$(".tab").click(function(){
@@ -211,21 +250,23 @@
     	var $botBor = $(this).closest('.bookingTabs').find('.selectBorder');
 
     	// assign each booking box to a variable
-    	var $upcoming = $(this).closest('.booking_wrapper').find('.upcomingBox');
-    	var $history = $(this).closest('.booking_wrapper').find('.historyBox');
+    	var $upcoming = $('.upcomingBox');
+    	var $history = $('.historyBox');
     	
     	// if the clicked tab is at left, move the botBor to left, 
     	// and show upcoming box
     	// if not move to right, and show history box
     	if($(this).hasClass("upcoming")){
     		$botBor.css("left",'0%');
-    		$history.css("display","none");
-    		$upcoming.css('display','block');
+    		$history.hide();
+    		$upcoming.show();
+    		$upcoming.css('display','');
 
     	} else {
     		$botBor.css("left", "50%");
-    		$upcoming.css("display","none");
-    		$history.css('display','block');
+    		$upcoming.hide();
+    		$history.show();
+    		$history.css('display','');
     	};
 	});
 
@@ -235,10 +276,10 @@
 		$content = $(this).closest(".bookingInfor").find('.toggleContent');
 		// if content is hiddent, show up arrow. If not show down arrwo
 	    if($content.css("display")=="none"){
-	    	$(this).css("background-position","0 -860px");
-	    } 
+			$(this).css("transform","rotateX(180deg)");	
+		} 
 	    else{
-    		$(this).css("background-position","0 -840px");
+    		$(this).css("transform","rotateX(0deg)");
 	    }
 	    // toggle the content on click
 	    $content.slideToggle(500)
@@ -248,4 +289,5 @@
 
 
 </body>
+<!-- <?php include '../layout/footer.php' ?> -->
 </html>

@@ -1,0 +1,455 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="Accelerator and Community Management" />
+<meta name="keywords" content="Accelerator, Community, Incubator, Management" />
+<meta name="google-site-verification" content="" />
+<!-- don't forget to set the site up: http://google.com/webmasters -->
+
+<meta name="author" content="D3 Web App" />
+<meta name="robots" content="all"/>
+<meta name="distribution" content="global"/>
+<meta name="resource-type" content="document"/>
+<meta name="language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content="D3 Webapp Copyright 2016. All Rights Reserved.">
+
+  <meta name="viewport" content="width=1024">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="../img/d3logosite-01.png">
+<link rel="apple-touch-icon" href="../img/d3logosite-01.png">
+<!-- The is the icon for iOS's Web Clip.
+         - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
+         - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
+         - Transparency is not recommended (iOS will put a black BG behind the icon) -->
+
+<title>D3 Web App</title>
+
+<!--  CSS   -->
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+
+<!-- Fonts -->
+<script src="https://use.typekit.net/tlr1ksi.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    
+</head>
+
+
+<body>
+<div class="meeting_wrapper">
+	<form method="post">
+	<div class="meetingHeader">
+		<div class="title">
+			Invite attendees
+		</div>
+		<div class="signs">
+			<div class="circle-active"></div>
+			<div class="circle-active"></div>
+			<div class="circle"></div>
+		</div>
+
+		<div class="searchBox">
+			<div class="searchTitle">
+				Invite a start up or person
+			</div>
+			<div class="searchInput">
+				<input type="text" id="inviteSearch" placeholder="type search" />
+				<div class="svg inviteSearch"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="searchContent">
+		<div class="invitePerson">
+
+			<div class="inviteTitle">People</div>
+
+			<div class="peopleList">
+
+				<div class="peopleSelection">
+				<label for="person1">
+				<div class="person">
+					<div class="personPic">
+						<img src="../img/profilePic1.svg">
+					</div>
+					<div class="personDetail">
+						<div class="personName">Mark Dooliare</div>
+						<div class="personTitle">CEO Company</div>
+					</div>
+				</div>
+				</label>
+				<input type="checkbox" name="personInvite" id="person1"></input>
+				</div>
+				
+				<div class="peopleSelection">
+				<label for="person2">
+				<div class="person">
+					<div class="personPic">
+						<img src="../img/profilePic1.svg">
+					</div>
+					<div class="personDetail">
+						<div class="personName">Mark Dooliare</div>
+						<div class="personTitle">CEO Company</div>
+					</div>
+				</div>
+				</label>
+				<input type="checkbox" name="personInvite" id="person2"></input>
+				</div>
+					
+				<div class="peopleSelection">
+				<label for="person3">
+				<div class="person">
+					<div class="personPic">
+						<img src="../img/profilePic1.svg">
+					</div>
+					<div class="personDetail">
+						<div class="personName">Mark Dooliare</div>
+						<div class="personTitle">CEO Company</div>
+					</div>
+				</div>
+				</label>
+				<input type="checkbox" name="personInvite" id="person3"></input>
+				</div>
+			
+				<div class="peopleSelection">
+				<label for="person4">
+				<div class="person">
+					<div class="personPic">
+						<img src="../img/profilePic2.svg">
+					</div>
+					<div class="personDetail">
+						<div class="personName">Mark Dooliare</div>
+						<div class="personTitle">CEO Company</div>
+					</div>
+				</div>
+				</label>
+				<input type="checkbox" name="personInvite" id="person4"></input>
+				</div>
+				
+				<div class="peopleSelection">
+				<label for="person5">
+				<div class="person">
+					<div class="personPic">
+						<img src="../img/profilePic2.svg">
+					</div>
+					<div class="personDetail">
+						<div class="personName">Mark Dooliare</div>
+						<div class="personTitle">CEO Company</div>
+					</div>
+				</div>
+				</label>
+				<input type="checkbox" name="personInvite" id="person5"></input>
+				</div>
+			
+				<div class="peopleSelection">
+				<label for="person6">
+				<div class="person">
+					<div class="personPic">
+						<img src="../img/profilePic2.svg">
+					</div>
+					<div class="personDetail">
+						<div class="personName">Mark Dooliare</div>
+						<div class="personTitle">CEO Company</div>
+					</div>
+				</div>
+				</label>
+				<input type="checkbox" name="personInvite" id="person6"></input>
+				</div>
+
+
+				<div class="peopleSelection">
+				<label for="person7">
+				<div class="person">
+					<div class="personPic">
+						<img src="../img/profilePic2.svg">
+					</div>
+					<div class="personDetail">
+						<div class="personName">Mark Dooliare</div>
+						<div class="personTitle">CEO Company</div>
+					</div>
+				</div>
+				</label>
+				<input type="checkbox" name="personInvite" id="person7"></input>
+				</div>
+
+				<div class="peopleSelection">
+				<label for="person8">
+				<div class="person">
+					<div class="personPic">
+						<img src="../img/profilePic2.svg">
+					</div>
+					<div class="personDetail">
+						<div class="personName">Mark Dooliare</div>
+						<div class="personTitle">CEO Company</div>
+					</div>
+				</div>
+				</label>
+				<input type="checkbox" name="personInvite" id="person8"></input>
+				</div>
+
+				<div class="peopleSelection">
+				<label for="person9">
+				<div class="person">
+					<div class="personPic">
+						<img src="../img/profilePic2.svg">
+					</div>
+					<div class="personDetail">
+						<div class="personName">Mark Dooliare</div>
+						<div class="personTitle">CEO Company</div>
+					</div>
+				</div>
+				</label>
+				<input type="checkbox" name="personInvite" id="person9"></input>
+				</div>
+
+				<div class="peopleSelection">
+				<label for="person10">
+				<div class="person">
+					<div class="personPic">
+						<img src="../img/profilePic2.svg">
+					</div>
+					<div class="personDetail">
+						<div class="personName">Mark Dooliare</div>
+						<div class="personTitle">CEO Company</div>
+					</div>
+				</div>
+				</label>
+				<input type="checkbox" name="personInvite" id="person10"></input>
+				</div>
+
+				<div class="seeMorePersons">
+					show more results	
+				</div>
+			</div>
+		</div>
+
+
+		<div class="inviteStartUp">
+			<div class="inviteTitle">Startups</div>
+
+			<div class="startupsList">
+
+				<div class="startupSelection">
+				<label for="startup1">
+				<div class="startup">
+					<div class="startupTitle">
+						<img class="startupPic" src="../img/profilePic1.svg"/>
+						<div class="startupName">
+							TraninerWorkout1
+						</div>
+					</div>
+					<div class="startupMembers">
+						<div class="person">
+							<div class="personPic">
+								<img src="../img/profilePic2.svg">
+							</div>
+							<div class="personDetail">
+								<div class="personName">Mark Dooliare</div>
+								<div class="personTitle">CEO Company</div>
+							</div>
+						</div>
+
+						<div class="person">
+							<div class="personPic">
+								<img src="../img/profilePic2.svg">
+							</div>
+							<div class="personDetail">
+								<div class="personName">Mark Dooliare</div>
+								<div class="personTitle">CEO Company</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="checkbox" name="startupInvite" id="startup1"></input>
+				</label>
+				</div>
+
+				<div class="startupSelection">
+				<label for="startup2">
+				<div class="startup">
+					<div class="startupTitle">
+						<img class="startupPic" src="../img/profilePic1.svg"/>
+						<div class="startupName">
+							TraninerWorkout2
+						</div>
+					</div>
+					<div class="startupMembers">
+						<div class="person">
+							<div class="personPic">
+								<img src="../img/profilePic2.svg">
+							</div>
+							<div class="personDetail">
+								<div class="personName">Mark Dooliare</div>
+								<div class="personTitle">CEO Company</div>
+							</div>
+						</div>
+
+						<div class="person">
+							<div class="personPic">
+								<img src="../img/profilePic2.svg">
+							</div>
+							<div class="personDetail">
+								<div class="personName">Mark Dooliare</div>
+								<div class="personTitle">CEO Company</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="checkbox" name="startupInvite" id="startup2"></input>
+				</label>
+				</div>
+
+				<div class="startupSelection">
+				<label for="startup3">
+				<div class="startup">
+					<div class="startupTitle">
+						<img class="startupPic" src="../img/profilePic1.svg"/>
+						<div class="startupName">
+							TraninerWorkout3
+						</div>
+					</div>
+					<div class="startupMembers">
+						<div class="person">
+							<div class="personPic">
+								<img src="../img/profilePic2.svg">
+							</div>
+							<div class="personDetail">
+								<div class="personName">Mark Dooliare</div>
+								<div class="personTitle">CEO Company</div>
+							</div>
+						</div>
+
+						<div class="person">
+							<div class="personPic">
+								<img src="../img/profilePic2.svg">
+							</div>
+							<div class="personDetail">
+								<div class="personName">Mark Dooliare</div>
+								<div class="personTitle">CEO Company</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="checkbox" name="startupInvite" id="startup3"></input>
+				</label>
+				</div>
+
+				<div class="startupSelection">
+				<label for="startup4">
+				<div class="startup">
+					<div class="startupTitle">
+						<img class="startupPic" src="../img/profilePic1.svg"/>
+						<div class="startupName">
+							TraninerWorkout4
+						</div>
+					</div>
+					<div class="startupMembers">
+						<div class="person">
+							<div class="personPic">
+								<img src="../img/profilePic2.svg">
+							</div>
+							<div class="personDetail">
+								<div class="personName">Mark Dooliare</div>
+								<div class="personTitle">CEO Company</div>
+							</div>
+						</div>
+
+						<div class="person">
+							<div class="personPic">
+								<img src="../img/profilePic2.svg">
+							</div>
+							<div class="personDetail">
+								<div class="personName">Mark Dooliare</div>
+								<div class="personTitle">CEO Company</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="checkbox" name="startupInvite" id="startup4"></input>
+				</label>
+				</div>
+
+
+				<div class="seeMoreStartups">
+					show more results	
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="next">
+		<button id="inviteNext" type="submit" class="room-btn-2">Next</button>
+	</div>
+
+	</form>
+
+</div>
+
+
+<script>
+// count the selected items for the submit button
+var selectCount = function(){
+	// selected items are the selected person plus selected startups
+	var $selectCount = $('.peopleList .selectedPerson').length + $('.startupsList .selectedStartup').length;
+	// if there are nothing selected, don't show the number on button
+	// if there are something selected, show the selected item number
+	if ($selectCount== 0){
+		$('#inviteNext').html('Next');
+	} else{
+		$('#inviteNext').html('('+ $selectCount +') Next');
+	}
+}
+// if click on see more persons, show more results
+$('.seeMorePersons').click(function(){
+	$('.peopleSelection').slideDown(500);
+	$('.peopleSelection').css('display','block');
+})
+// if click on the see more startups, show more results
+$('.seeMoreStartups').click(function(){
+	$('.startupSelection').slideDown(500);
+	$('.startupSelection').css('display','block');
+})
+// when a person being selected, change the background color
+// and count the selected items
+$(".peopleList input[type='checkbox']").click(function(){
+	if ($(this).is(":checked")){
+		$(this).closest('.peopleSelection').addClass('selectedPerson');
+	} else {
+		$(this).closest('.peopleSelection').removeClass('selectedPerson');
+	}
+	selectCount();
+})
+// when a startup being selected, change the border stytle 
+// and count the selected items
+$(".startupsList input[type='checkbox']").click(function(){
+	
+	if ($(this).is(":checked")){
+		$(this).closest('.startupSelection').addClass('selectedStartup');
+	} else {
+		$(this).closest('.startupSelection').removeClass('selectedStartup');
+	}
+	selectCount();
+})
+</script>
+
+
+</body>
+</html>

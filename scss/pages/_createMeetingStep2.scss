@@ -1,0 +1,238 @@
+.meetingHeader{
+	@extend .roomHeader;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+.searchBox{
+	width: 100%;
+	height: 90px;
+	margin: auto auto;
+	margin-top: 40px;
+	max-width: 270px;
+}
+
+.searchTitle{
+	font-family: '.HelveticaNeueDeskInterface-Regular';
+	font-size: 14px;
+	letter-spacing: 1.3px;
+	color: #ffffff;
+	text-align: left;
+}
+
+.searchInput{
+	position: relative;
+	margin: auto;
+	margin-top: 10px;
+	input{
+		width: 100%;
+		height: 35px;
+		background-color: #ffffff;
+		font-size: 14px;
+		padding: 0 15px;
+		border: none;
+		border-radius: 2px;
+	}
+}
+
+.inviteSearch{
+	position: absolute;
+	top: 10px;
+	right:10px;
+	width: 15px;
+	height: 15px;
+	background-position: 0 -980px;
+}
+
+.invitePerson{
+	padding-top: 10px;
+	@media(min-width: 420px){
+		margin-right: 20px;
+	}
+}
+
+.inviteTitle{
+	padding-left: 10px;
+	font-family: '.HelveticaNeueDeskInterface-MediumP4';
+	font-size: 18px;
+	letter-spacing: 1.7px;
+	color: #4a4a4a;
+	margin: auto;
+	max-width: 400px;
+	@media (min-width: 768px){
+		text-align: center;
+	}
+}
+
+.peopleList{
+	margin: 10px auto;
+	max-width: 850px;
+	@media (min-width: 768px){
+		@include display(flex);
+		@include flex-wrap(wrap);
+	}
+}
+
+.peopleSelection{
+	overflow: auto;
+	width: 100%;
+	display: none;
+	position: relative;
+	margin: auto;
+	max-width: 400px;
+	&:first-child .personDetail{ 
+		border-top: solid 1px #e4e4e4;
+	}
+	&:nth-child(-n+4){
+	    display: block;
+	}
+	@media (min-width: 768px){
+		max-width: 350px;
+		&:nth-child(2) .personDetail{ 
+			border-top: solid 1px #e4e4e4;
+		}
+		&:nth-child(-n+8){
+		    display: block;
+		}
+	}
+}
+
+.person{
+	cursor: pointer;
+	width: 100%;
+	height: 65px;
+	margin: auto;
+	@include display(flex);
+}
+
+
+input[type="checkbox"]{
+	visibility: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.personPic{
+	margin: auto 10px;
+	position: relative;
+	line-height: 65px;
+	img{
+		vertical-align: middle;
+		width: 50px;
+		height: auto;
+	}
+}
+
+.personDetail{
+	@include flex(1);
+	padding: 12px 0;
+	border-bottom:solid 1px #e4e4e4;
+	.personName,
+	.personTitle{
+		font-family: '.HelveticaNeueDeskInterface-MediumP4';
+		font-size: 16px;
+		letter-spacing: 1.5px;
+		color: #4a4a4a;
+		line-height: 120%;
+		&.personTitle{
+			font-family: 'HelveticaNeue';
+		}
+	}
+}
+
+.seeMoreStartups,
+.seeMorePersons{
+	cursor: pointer;
+	margin: 10px auto;
+	font-family: '.HelveticaNeueDeskInterface-Regular';
+	font-size: 12px;
+	letter-spacing: 1.1px;
+	text-align: center;
+	color: #4a4a4a;
+	width: 100%;
+}
+
+.startupsList{
+	padding: 0 10px;
+	margin: auto auto;
+	max-width: 850px;
+	@media (min-width: 768px){
+		@include display(flex);
+		@include flex-wrap(wrap);
+	}
+		
+}
+
+.startupSelection{
+	display: none;
+	position: relative;
+	max-width: 400px;
+	margin: 10px auto;
+	margin-bottom: 20px;
+	&:first-child{
+		display:block;
+	}
+
+	@media (min-width: 768px){
+		&:nth-child(2){
+			display: block;
+		}
+		width: 350px;
+	}
+}
+
+.startup{
+	cursor: pointer;
+	border-radius: 2px;
+	background-color: #fafafa;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.selectedStartup{
+	border-radius: 2px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 0 4px 2px #2979ff;
+	border-style: solid;
+	border-width: 0.5px;
+}
+
+.selectedPerson{
+	background-color: #d8d8d8;
+}
+
+.startupTitle{
+	position: relative;
+	height: 144px;
+	background-color: #64b5f6;
+	border-radius: 2px 2px 0 0;
+}
+
+.startupName{
+	position: absolute;
+	left: 18px;
+	bottom: 18px;
+	font-family: 'Avenir-Medium';
+	font-size: 24px;
+	line-height: 0.8;
+	letter-spacing: 2.2px;
+	color: #ffffff;
+}
+
+.startupPic{
+	position: absolute;
+	left: 16px;
+	bottom: 50px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.startupMembers{
+	padding-bottom: 5px;
+	.person:last-child .personDetail{ 
+		border-bottom: none;
+	}
+}
+
+

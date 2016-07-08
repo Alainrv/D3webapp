@@ -65,7 +65,7 @@
 	<form method="post">
 		<div class="box_wrapper">
 
-			<div class="roomBooking">
+			<div class="roomSelecting">
 				<div class="bookingTitle">
 					<p>Maker Space Room</p>
 				</div>
@@ -78,7 +78,7 @@
 					</div>
 					<div class="toggleContent">
 						<p>Room can fit up to 8 people sitting and can accomodate around 15 people standing.</p>
-						<p class="equipment">This room is accomdated with</p>
+						<p class="equipment">This room is accomodated with</p>
 						<ul>
 							<li>projector with HDMI cable</li>
 							<li>1 white board</li>
@@ -91,7 +91,7 @@
 			</div>
 
 
-	    	<div class="roomBooking">
+	    	<div class="roomSelecting">
 				<div class="bookingTitle">
 					<p>Classrooom</p>
 				</div>
@@ -117,7 +117,7 @@
 			</div>
 
 
-	    	<div class="roomBooking">
+	    	<div class="roomSelecting">
 				<div class="bookingTitle">
 					<p>Window room</p>
 				</div>
@@ -162,18 +162,19 @@ $(document).ready(function(){
 		$content = $(this).closest(".bookingInfor").find('.toggleContent');
 		// if content is hiddent, show up arrow. If not show down arrwo
 	    if($content.css("display")=="none"){
-	    	$(this).css("background-position","0 -860px");
+	    	$(this).css("transform","rotateX(180deg)");
 	    } 
 	    else{
-    		$(this).css("background-position","0 -840px");
+    		$(this).css("transform","rotateX(0deg)");
 	    }
 	    // toggle the content on click
 	    $content.slideToggle(500)
 	});
 
 	// submite the form when the radio is selected
-	$('input[name=room]').change(function(e){
+	$('input[name=room]').click(function(){
 		$('form').submit();
+		location.href='roomBookingStep2.html';
 	});
 
 	// test if the correct room name was submitted
