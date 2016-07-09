@@ -70,7 +70,7 @@
     	    <div class="notification_menu">
 
 		    </div>
-		    <?php echo $my_var; ?>
+		    <?php if(isset($my_var)) {echo $my_var;} ?>
 	    </nav>
 
 	</header><!-- /o-header -->
