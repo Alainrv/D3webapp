@@ -563,7 +563,7 @@ body.has-active-menu {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  padding: 0 20px;
+  padding: 0 15px;
   z-index: 1000; }
   .o-header-nav svg {
     cursor: pointer; }
@@ -3063,7 +3063,7 @@ input[type="checkbox"] {
   .createInput .input {
     width: 100%;
     position: relative;
-    margin-bottom: 5px; }
+    margin-bottom: 10px; }
     @media (min-width: 370px) {
       .createInput .input {
         margin-bottom: 12px; } }
@@ -3071,20 +3071,23 @@ input[type="checkbox"] {
       .createInput .input {
         margin-bottom: 18px; } }
     .createInput .input textarea {
-      margin-left: 6vh;
-      margin-top: 1vh;
+      margin-left: 9.5vw;
+      margin-top: 2vh;
       border: solid 0.9px #F5F5F5; }
       .createInput .input textarea:hover {
         border: solid 0.9px skyblue; }
       @media (min-width: 370px) {
         .createInput .input textarea {
-          margin-left: 10vh; } }
+          margin-left: 19vw; } }
       @media (min-width: 450px) {
         .createInput .input textarea {
-          margin-left: 23vh; } }
+          margin-left: 31vw; } }
+      @media only screen and (min-width: 1025px) {
+        .createInput .input textarea {
+          margin-left: 37vw; } }
     .createInput .input select {
-      margin-left: 6vh;
-      margin-top: 1vh;
+      margin-left: 9.5vw;
+      margin-top: 3vh;
       font-size: 19px;
       letter-spacing: 1.7px;
       width: 265px;
@@ -3092,10 +3095,13 @@ input[type="checkbox"] {
       border: solid 0.9px #F5F5F5; }
       @media (min-width: 370px) {
         .createInput .input select {
-          margin-left: 10vh; } }
+          margin-left: 19vw; } }
       @media (min-width: 450px) {
         .createInput .input select {
-          margin-left: 23vh; } }
+          margin-left: 31vw; } }
+      @media only screen and (min-width: 1025px) {
+        .createInput .input select {
+          margin-left: 37vw; } }
       .createInput .input select option {
         width: 265px;
         font-size: 19px;
@@ -3107,8 +3113,8 @@ input[type="checkbox"] {
     .createInput .input input {
       display: block;
       margin: auto auto;
-      width: 300px;
-      margin-top: 1vh;
+      width: 290px;
+      margin-top: 3vh;
       height: 40px;
       border: none;
       border-bottom: 1px solid #F5F5F5;
@@ -3116,6 +3122,9 @@ input[type="checkbox"] {
       color: #4A4A4A;
       border-radius: 2px;
       padding-left: 30px; }
+      @media (max-width: 320px) {
+        .createInput .input input {
+          margin-left: 0; } }
       .createInput .input input:active, .createInput .input input:focus, .createInput .input input:hover {
         border-bottom: solid 0.9px skyblue; }
     .createInput .input placeholder {
@@ -3126,10 +3135,16 @@ input[type="checkbox"] {
       left: 1vw; }
       @media (min-width: 370px) {
         .createInput .input div {
-          left: 10vw; } }
+          left: 12vw; } }
       @media (min-width: 450px) {
         .createInput .input div {
-          margin-left: 16.25vw; } }
+          margin-left: 15vw; } }
+      @media (min-width: 769px) {
+        .createInput .input div {
+          margin-left: 20vw; } }
+      @media only screen and (min-width: 1025px) {
+        .createInput .input div {
+          margin-left: 22.75vw; } }
       .createInput .input div.meetingPlace {
         width: 18px;
         height: 19px;
@@ -3137,7 +3152,8 @@ input[type="checkbox"] {
       .createInput .input div.alarmClock {
         width: 15px;
         height: 15px;
-        background-position: 0 -883px; }
+        background-position: 0 -883px;
+        margin-top: 1vh; }
       .createInput .input div.clock {
         width: 18px;
         height: 19px;
@@ -3153,17 +3169,21 @@ input[type="checkbox"] {
 
 .notesLabel {
   display: block;
-  margin-left: 6vh;
-  padding-top: 2vh;
+  margin-left: 9.5vw;
+  padding-top: 2.5vh;
   color: #4a4a4a; }
   @media (min-width: 370px) {
     .notesLabel {
-      margin-left: 9.5vh;
-      padding-top: 1.5vh; } }
+      margin-left: 19vw;
+      padding-top: 2.5vh; } }
   @media (min-width: 450px) {
     .notesLabel {
-      margin-left: 23vh;
-      padding-top: 1vh; } }
+      margin-left: 31vw;
+      padding-top: 2vh; } }
+  @media only screen and (min-width: 1025px) {
+    .notesLabel {
+      margin-left: 37vw;
+      padding-top: 2vh; } }
 
 .invitationValidity {
   height: 159px;
