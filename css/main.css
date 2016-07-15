@@ -2924,8 +2924,14 @@ input[type="checkbox"] {
 
 .invitationDetails {
   margin: auto 20px;
-  margin-top: 120px;
+  margin-top: 128px;
   position: relative; }
+  @media (min-width: 768px) {
+    .invitationDetails {
+      margin-top: 139px; } }
+  @media (min-width: 1024px) {
+    .invitationDetails {
+      margin-top: 189px; } }
 
 .invSchedule,
 .invDescription {
@@ -2957,7 +2963,7 @@ input[type="checkbox"] {
   line-height: 130%;
   text-align: center;
   color: #4a4a4a;
-  margin-top: 30px; }
+  margin-top: 27px; }
   @media (min-width: 414px) {
     .invTopic {
       height: 30px;
@@ -2979,6 +2985,9 @@ input[type="checkbox"] {
   display: -moz-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex; }
+  @media (min-width: 769px) {
+    .invTime {
+      margin-bottom: 5vh; } }
   .invTime div {
     margin: auto 2px;
     line-height: 15px;
@@ -2987,6 +2996,10 @@ input[type="checkbox"] {
     font-size: 12px;
     letter-spacing: 1.1px;
     color: #4a4a4a; }
+    @media (min-width: 768px) {
+      .invTime div {
+        font-size: 14px;
+        letter-spacing: 1.3px; } }
 
 .invSchedule {
   margin-top: 20px;
@@ -2999,6 +3012,9 @@ input[type="checkbox"] {
     .invSchedule {
       margin-top: 10px;
       height: 190px; } }
+  @media (min-width: 768px) {
+    .invSchedule {
+      padding-left: 2.5vw; } }
 
 .pick_time {
   font-family: 'Avenir-Roman';
@@ -3022,6 +3038,9 @@ input[type="checkbox"] {
   padding: 15px 10px;
   padding-left: 15px;
   border-left: solid 0.5px #c7c7c7; }
+  @media (max-width: 413px) {
+    .scheduleDetails {
+      margin: 10px auto; } }
   .scheduleDetails div {
     font-family: 'Avenir-LightOblique';
     font-size: 12px;
@@ -3029,6 +3048,9 @@ input[type="checkbox"] {
     color: #4a4a4a; }
   .scheduleDetails .scheduleDate {
     margin-bottom: 10px; }
+    @media (max-width: 413px) {
+      .scheduleDetails .scheduleDate {
+        margin-bottom: 25px; } }
 
 .invMark {
   width: 13px;
@@ -3119,7 +3141,7 @@ input[type="checkbox"] {
   -ms-flex-pack: justify; }
   @media (min-width: 320px) {
     .respondMessage {
-      width: 290px; } }
+      width: 280px; } }
   @media (min-width: 768px) {
     .respondMessage {
       width: 372px;
