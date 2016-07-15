@@ -32,7 +32,7 @@
 			</div>
 			<div class="input">
 			<label class="notesLabel">Notes</label>	
-				<textarea  cols="36" rows="7" name=""></textarea>
+				<textarea  cols="36" rows="9" name=""></textarea>
 				<div class="svg notes"></div>
 			</div>
 			<div class="input">
@@ -61,7 +61,7 @@
 			
 <!-- 			</div> -->
 			<div class="button_container">
-				<button class="room-btn-2" style="margin-top:15vh;" type="submit">Create Account</button>			
+				<button class="room-btn-2" type="submit">Create Account</button>			
 			</div>	
 			<br>		
 		</div>

@@ -3,7 +3,7 @@
 }
 .createInput {
 	width: 100%;
-	padding: 0px 4vw;
+	padding: 0px 5vw;
 	
 	.input {
 		width: 100%;
@@ -24,14 +24,14 @@
 			&:hover {
 				border: solid 0.9px skyblue;
 			}
-			@media (min-width: 370px) {
-				margin-left: 19vw;
+			@media (min-width: 414px) {
+				margin-left: 17vw;
 			}
-			@media (min-width: 450px) {
-				margin-left: 31vw;
+			@media (min-width: 768px) {
+				margin-left: 30vw;
 			}
-			@media only screen and (min-width: 1025px) {
-				margin-left: 37vw;
+			@media only screen and (min-width: 1024px) {
+				margin-left: 34vw;
 			}
 		}
 		select{
@@ -93,12 +93,12 @@
 				left: 12vw;
 			}
 			@media (min-width: 450px) {
-				margin-left: 15vw;
+				margin-left: 7vw;
 			}
-			@media (min-width: 769px) {
-          		margin-left: 20vw; } 
-      		@media only screen and (min-width : 1025px) {
-          		margin-left: 22.75vw; } 
+			@media (min-width: 768px) {
+          		margin-left: 15vw; } 
+      		@media only screen and (min-width : 1024px) {
+          		margin-left: 19vw; } 
 			&.meetingPlace {
 				width: 18px;
 				height: 19px;
@@ -108,7 +108,7 @@
 				width: 15px;
 				height: 15px;
 				background-position: 0 -883px;
-				margin-top: 1vh; 
+				margin-top: -10px; 
 			}
 			&.clock {
 				width: 18px;
@@ -124,6 +124,7 @@
 				width: 18px;
 				height: 19px;
 				background-position: 0 -920px;
+				margin-top: -10px;
 			}
 		}
 	}
@@ -131,21 +132,14 @@
 
 .notesLabel{
 	display: block;
-	margin-left: 9.5vw;
-	padding-top: 2.5vh;
-	color: #4a4a4a;	
-	@media (min-width: 370px) {
-			margin-left: 19vw;
-			padding-top: 2.5vh;
-	}
-	@media (min-width: 450px) {
-			margin-left: 31vw;
-			padding-top: 2vh;
-	}
-	@media only screen and (min-width : 1025px){
-      margin-left: 37vw;
-      padding-top: 2vh; }
+    margin: auto auto;
+    width: 290px;
+    margin-top: 3vh;
+    font-size: 1em;
+    color: #4A4A4A;
+    padding-left: 30px;
 }
+
 .invitationValidity{
 	height: 159px;
 	background-color: #ffffff;	
@@ -158,4 +152,13 @@
 		border: solid 0.9px skyblue;
 	}
  	
+}
+
+.room-btn-2 {
+	margin-top: 25vh;
+}
+
+.meetingPlace, 
+.meetingDetails {
+	margin-top : 0;
 }
