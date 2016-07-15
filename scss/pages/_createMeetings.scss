@@ -13,13 +13,30 @@
 	}
 
 	.pendingBox .bookingTitle{
-		height: 115px;
+		//height: 115px;
 	}
 
 	.bookingEdit{
 		margin-top: 25px;
 	}
 }
+
+	.profilePic2,
+	.profilePic1{
+		margin:auto auto;
+		vertical-align: middle;
+		border-radius: 50%;
+		background-color: white;
+		width: 80px;
+		height: auto;
+		margin-top: 14px;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+		&.profilePic1{
+			width: 80px;
+			position: relative;
+			left: 20px;
+		}
+	}
 
 .meetingProfilePics{
 	position: relative;

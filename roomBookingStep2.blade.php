@@ -59,7 +59,7 @@
 <div class="confirm_overlayer">
 	<div class="confirmation_wrapper">
 		<div class="confirmation_header">
-			Please select a duration for your room reservation
+			Please select a duration<br> for your room reservation
 		</div>
 		<div class="setDuration">
 			<p>Duration</p>
@@ -92,10 +92,12 @@ $("li").click(function () {
 var $overlay = $('.confirm_overlayer');
 
 // when next button is pressed, show the overlayer,
-// and make background page unscrollable
+// and make background page unscrollable,
+// and hide the top navbar
 $('#nextButton').click(function(e){
 	$('body').css('overflow','hidden');
 	$overlay.css("display","block");
+	$(".o-header-nav").hide();
 })
 
 // when the user clicks anywhere outside of the overlayer, close it

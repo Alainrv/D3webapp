@@ -22,7 +22,7 @@
 					<div class="scheduleDetails">
 						<div class="invMark"></div>
 						<div class="scheduleDate">Friday, April 15 2016</div>
-						<div>AFTERNOON</div>
+						<!-- <div>AFTERNOON</div> -->
 						<div class="scheduleSelection">
 							<input type="radio"name="selectionTime"  id="selection1" />
 							<label for="selection1"><div>3 pm EDT</div></label>
@@ -40,7 +40,7 @@
 				<div class="respondMessage">
 					<div class="svg respondTime"></div>
 
-					<div class="messageText">Real time availabilities for Alain Readman Valiquette You have 3 days to respond</div>
+					<div class="messageText">Real time availabilities for Alain Readman Valiquette<br> You have 3 days to respond</div>
 				</div>
 
 				<div class="next">

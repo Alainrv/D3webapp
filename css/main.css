@@ -318,12 +318,21 @@ p {
   padding: 12px 0;
   text-align: center; }
 
-@media all and (min-width: 480px) {
+/* @media all and ( min-width: $breakpoint--small ) {
+
   .o-footer {
-    padding: 24px 0; } }
-@media all and (min-width: 720px) {
+    padding: 24px 0;
+  }
+
+}
+
+@media all and ( min-width: $breakpoint--medium ) {
+
   .o-footer {
-    padding: 48px 0; } }
+    padding: 48px 0;
+  }
+
+} */
 /* -----------------------------------------------------------------------------
 
   SLIDE AND PUSH MENUS COMPONENT
@@ -590,6 +599,13 @@ body.has-active-menu {
     transition: transform 0.3s; }
     .nav_options a:hover {
       transform: scale(1.3) rotate(360deg); }
+  @media (max-width: 425px) {
+    .nav_options {
+      width: 25px; } }
+
+@media (max-width: 425px) {
+  #icon-loopSearchLight, #icon-powerIcon {
+    display: none; } }
 
 #notification {
   position: relative;
@@ -2005,8 +2021,7 @@ div[class^="edit_funds"] {
 .booking_wrapper, .meeting_wrapper {
   margin: auto auto;
   display: block;
-  width: 100%;
-  min-width: 350px; }
+  width: 100%; }
 
 .bookingHeader_wrapper {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
@@ -2121,8 +2136,8 @@ div[class^="edit_funds"] {
 .pendingBox,
 .historyBox,
 .upcomingBox {
-  max-width: 780px;
-  margin: 10px 10px;
+  max-width: 800px;
+  margin: 10px 3vw;
   padding-bottom: 50px;
   display: block; }
   @media (min-width: 768px) {
@@ -2161,17 +2176,18 @@ div[class^="edit_funds"] {
   height: 0%;
   position: relative;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
   width: 100%;
   border-radius: 2px;
-  box-shadow: 0 2px 4px 0 #b4b4b4;
-  min-width: 300px;
-  max-width: 384px; }
+  box-shadow: 0 2px 4px 0 #b4b4b4; }
   @media (min-width: 768px) {
     .roomBooking {
       margin: 0 10px;
       margin-top: 10px;
       max-width: 360px; } }
+  @media (min-width: 800px) {
+    .roomBooking {
+      max-width: 380px; } }
 
 .bookingTitle {
   height: 135px;
@@ -2486,7 +2502,7 @@ div[class^="edit_funds"] {
     color: #ffffff; }
 
 .next {
-  margin: 30px auto;
+  margin: 6.5vh auto;
   text-align: center; }
 
 .confirm_overlayer {
@@ -2499,8 +2515,7 @@ div[class^="edit_funds"] {
   height: 100%;
   overflow: auto;
   background-color: rgba(32, 35, 52, 0.9);
-  text-align: center;
-  min-width: 340px; }
+  text-align: center; }
 
 .confirmation_wrapper {
   max-width: 280px;
@@ -2568,10 +2583,24 @@ div[class^="edit_funds"] {
   background: none;
   background-color: #64b5f6;
   height: 145px; }
-.meeting_wrapper .pendingBox .bookingTitle {
-  height: 115px; }
 .meeting_wrapper .bookingEdit {
   margin-top: 25px; }
+
+.profilePic2,
+.profilePic1 {
+  margin: auto auto;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: white;
+  width: 80px;
+  height: auto;
+  margin-top: 14px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+  .profilePic2.profilePic1,
+  .profilePic1.profilePic1 {
+    width: 80px;
+    position: relative;
+    left: 20px; }
 
 .meetingProfilePics {
   position: relative; }
@@ -2828,6 +2857,10 @@ input[type="checkbox"] {
   margin-bottom: 20px; }
   .startupSelection:first-child {
     display: block; }
+  @media (max-width: 320px) {
+    .startupSelection {
+      width: 300px;
+      margin-left: 0px; } }
   @media (min-width: 768px) {
     .startupSelection {
       width: 350px; }
@@ -2896,6 +2929,16 @@ input[type="checkbox"] {
   background-color: #ffffff;
   border: solid 0.5px #979797;
   overflow: auto; }
+  @media (min-width: 414px) {
+    .invSchedule,
+    .invDescription {
+      width: 354px;
+      margin: auto auto; } }
+  @media (min-width: 768px) {
+    .invSchedule,
+    .invDescription {
+      width: 437px;
+      margin: auto auto; } }
 
 .invDescription {
   text-align: center; }
@@ -2909,10 +2952,21 @@ input[type="checkbox"] {
   line-height: 130%;
   text-align: center;
   color: #4a4a4a;
-  margin-top: 27px; }
+  margin-top: 30px; }
+  @media (min-width: 414px) {
+    .invTopic {
+      height: 30px;
+      padding: 0 4vh; } }
+  @media (min-width: 768px) {
+    .invTopic {
+      height: 40px;
+      padding: 0 5vh;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-top: 42px; } }
 
 .invTime {
-  margin: 10px auto;
+  margin: 7px auto 3vh auto;
   display: -webkit-inline-box;
   display: -moz-inline-box;
   display: inline-box;
@@ -2930,7 +2984,16 @@ input[type="checkbox"] {
     color: #4a4a4a; }
 
 .invSchedule {
-  margin-top: 10px; }
+  margin-top: 20px;
+  height: 254px;
+  padding-left: 4vw; }
+  @media (max-width: 425px) {
+    .invSchedule {
+      height: 227px; } }
+  @media (max-width: 321px) {
+    .invSchedule {
+      margin-top: 10px;
+      height: 190px; } }
 
 .pick_time {
   font-family: 'Avenir-Roman';
@@ -2942,11 +3005,17 @@ input[type="checkbox"] {
   padding: 15px 0;
   width: 100%;
   border-bottom: solid 0.5px #c7c7c7; }
+  @media (min-width: 768px) {
+    .pick_time {
+      font-size: 14px;
+      letter-spacing: 1.3px;
+      padding: 18px 0; } }
 
 .scheduleDetails {
   position: relative;
   margin: 15px auto;
   padding: 15px 10px;
+  padding-left: 15px;
   border-left: solid 0.5px #c7c7c7; }
   .scheduleDetails div {
     font-family: 'Avenir-LightOblique';
@@ -2987,6 +3056,9 @@ input[type="checkbox"] {
   margin-top: 5px;
   margin-bottom: 10px;
   position: relative; }
+  @media (min-width: 768px) {
+    .scheduleSelection {
+      padding-right: 5vw; } }
   .scheduleSelection div {
     height: 40px;
     width: 50px;
@@ -3000,6 +3072,21 @@ input[type="checkbox"] {
     color: #4a4a4a;
     text-align: center;
     padding: 8px 0; }
+    @media (min-width: 414px) {
+      .scheduleSelection div {
+        width: 60px;
+        height: 48px;
+        margin-top: 15px;
+        font-size: 12px;
+        letter-spacing: 1.1px; } }
+    @media (min-width: 768px) {
+      .scheduleSelection div {
+        width: 76px;
+        height: 61px;
+        margin-top: 35px;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+        padding: 12px 8px; } }
   .scheduleSelection input[type="radio"] {
     position: absolute;
     visibility: hidden; }
@@ -3025,13 +3112,23 @@ input[type="checkbox"] {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify; }
+  @media (min-width: 320px) {
+    .respondMessage {
+      width: 290px; } }
+  @media (min-width: 768px) {
+    .respondMessage {
+      width: 372px;
+      margin-top: 20px; } }
   .respondMessage .messageText {
-    width: 85%;
     font-family: 'Avenir-Light';
     font-size: 9px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     line-height: 120%;
     color: #4a4a4a; }
+    @media (min-width: 768px) {
+      .respondMessage .messageText {
+        font-size: 12px;
+        letter-spacing: 1.1px; } }
   .respondMessage .respondTime {
     width: 22px;
     height: 22px;

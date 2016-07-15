@@ -24,6 +24,8 @@
 			<!-- pending room booking 1 -->
 			<div class="roomBooking">
 				<div class="bookingTitle">
+					<img class="profilePic1" src="../img/profilePic1.svg"></img>
+					<img class="profilePic2" src="../img/profilePic2.svg"></img>
 					<p>Pending Room</p>
 				</div>
 				<div class="bookingInfor">
@@ -55,6 +57,8 @@
 			<!-- pending room booking 2 -->
 			<div class="roomBooking">
 				<div class="bookingTitle">
+					<img class="profilePic1" src="../img/profilePic1.svg"></img>
+					<img class="profilePic2" src="../img/profilePic2.svg"></img>
 					<p>Pending Room</p>
 				</div>
 				<div class="bookingInfor">
@@ -87,6 +91,8 @@
 
 			<div class="roomBooking">
 				<div class="bookingTitle">
+					<img class="profilePic1" src="../img/profilePic1.svg"></img>
+					<img class="profilePic2" src="../img/profilePic2.svg"></img>
 					<p>Pending Room</p>
 				</div>
 				<div class="bookingInfor">

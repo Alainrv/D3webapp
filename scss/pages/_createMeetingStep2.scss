@@ -173,6 +173,11 @@ input[type="checkbox"]{
 		display:block;
 	}
 
+	@media (max-width: 320px){
+		width: 300px;
+		margin-left: 0px;
+	}
+	
 	@media (min-width: 768px){
 		&:nth-child(2){
 			display: block;

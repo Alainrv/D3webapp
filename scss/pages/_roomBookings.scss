@@ -2,7 +2,7 @@
 	margin: auto auto;
 	display: block;
 	width: 100%;
-	min-width: 350px;
+	// min-width: 350px;
 	// @media (min-width: 420px) {
 	// 	min-width: 320px;
 	// 	max-width: 550px;
@@ -109,8 +109,8 @@
 .pendingBox,
 .historyBox,
 .upcomingBox{
-	max-width: 780px;
-	margin: 10px 10px;
+	max-width: 800px;
+	margin: 10px 3vw;
 	padding-bottom: 50px;
 	display:block;
 	@media (min-width: 768px) {
@@ -129,16 +129,19 @@
 	height: 0%;
 	position: relative;	
 	margin: auto;
-	margin-top: 10px;
+	margin-top: 20px;
 	width: 100%;
 	border-radius: 2px;
 	box-shadow: 0 2px 4px 0 #b4b4b4;
-	min-width: 300px;
-	max-width: 384px;
+	//min-width: 300px;
+	//max-width: 384px;
 	@media (min-width: 768px){
 		margin: 0 10px;
 		margin-top: 10px;
 		max-width: 360px;
+	}
+	@media (min-width: 800px){
+		max-width: 380px;
 	}
 
 }

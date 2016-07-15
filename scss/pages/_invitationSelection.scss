@@ -1,6 +1,7 @@
 .invitation_wrapper{
 	width: 100%;
 	margin: auto auto;
+
 }
 
 .invitationDetails{
@@ -16,6 +17,16 @@
 	background-color: #ffffff;
 	border: solid 0.5px #979797;
 	overflow: auto;
+
+	@media (min-width : 414px) {
+		width: 354px;
+		margin: auto auto;
+	}
+
+	@media (min-width : 768px) {
+		width: 437px;
+		margin: auto auto;
+	}
 }
 .invDescription{
 	text-align: center;
@@ -32,11 +43,22 @@
 	line-height: 130%;
 	text-align: center;
 	color: #4a4a4a;
-	margin-top: 27px;
+	margin-top: 30px;
+	@media (min-width : 414px){
+		height: 30px;
+		padding: 0 4vh;
+	}
+	@media (min-width : 768px){
+		height: 40px;
+		padding: 0 5vh;
+		font-size: 14px;
+    	letter-spacing: 1.5px;
+    	margin-top: 42px;
+	}
 }
 
 .invTime{
-	margin: 10px auto;
+	margin: 7px auto 3vh auto;
 	@include display(inline-flex);
 	div{
 		margin: auto 2px;
@@ -50,7 +72,16 @@
 }
 
 .invSchedule{
+	margin-top: 20px;
+	height : 254px;
+	padding-left: 4vw;
+	@media (max-width : 425px){
+	height : 227px;
+	}
+	@media (max-width : 321px){
 	margin-top: 10px;
+	height : 190px;
+	}
 }
 
 
@@ -65,19 +96,24 @@
 	padding: 15px 0;
 	width:100%;
 	border-bottom: solid 0.5px #c7c7c7;
+	@media (min-width : 768px){
+		font-size: 14px;
+    	letter-spacing: 1.3px;
+    	padding: 18px 0;
+	}
 }
 
 .scheduleDetails{
 	position: relative;
 	margin: 15px auto;
 	padding: 15px 10px;
+	padding-left: 15px;
 	border-left: solid 0.5px #c7c7c7;
 	div {
 		font-family: 'Avenir-LightOblique';
 		font-size: 12px;
 		letter-spacing: 1.1px;
 		color: #4a4a4a;
-
 	}
 	.scheduleDate{
 		margin-bottom: 10px;
@@ -102,6 +138,9 @@
 	margin-top: 5px;
 	margin-bottom: 10px;
 	position: relative;
+	@media (min-width:768px){
+		padding-right: 5vw;
+	}
 
 
 	div{
@@ -117,6 +156,21 @@
 		color: #4a4a4a;
 		text-align: center;
 		padding: 8px 0;
+		@media (min-width:414px){
+			width: 60px;
+			height: 48px;
+			margin-top: 15px;
+			font-size: 12px;
+    		letter-spacing: 1.1px;
+		}
+		@media (min-width:768px){
+			width: 76px;
+			height: 61px;
+			margin-top: 35px;
+			font-size: 14px;
+    		letter-spacing: 1.4px;
+    		padding: 12px 8px;
+		}
 	}
 	input[type="radio"]{
 		position: absolute;
@@ -131,15 +185,26 @@
 
 .respondMessage{
 	margin: 15px auto;
+	@media (min-width: 320px){
+		//width: 85%;
+		width:290px
+	}
+	@media (min-width: 768px){
+		width: 372px;
+		margin-top: 20px;
+	}
 	@include display(flex);
 	@include justify-content(space-between);
 	.messageText{
-		width: 85%;
 		font-family: 'Avenir-Light';
 		font-size: 9px;
-		letter-spacing: 0.5px;
+		letter-spacing: 0.8px;
 		line-height: 120%;
 		color: #4a4a4a;
+		@media (min-width: 768px){
+		font-size: 12px;
+    	letter-spacing:1.1px;
+	}
 	}
 	.respondTime{
 		width: 22px;
