@@ -3331,6 +3331,47 @@ input[type="checkbox"] {
 .meetingDetails {
   margin-top: 0; }
 
+.advancedSearch {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 67px;
+  height: 35px;
+  border: none;
+  background: #f57c00;
+  margin-top: 0px;
+  font-size: 14px; }
+
+.searchFilter {
+  margin-bottom: 16px; }
+  .searchFilter a {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 1.7; }
+
+.searchBox {
+  height: 75px; }
+
+.peopleSelection {
+  overflow: auto;
+  width: 100%;
+  display: none;
+  position: relative;
+  margin: auto;
+  max-width: 400px; }
+  .peopleSelection:first-child .personDetail {
+    border-top: none; }
+  .peopleSelection:nth-child(-n+4) {
+    display: block; }
+  @media (min-width: 768px) {
+    .peopleSelection {
+      max-width: 350px; }
+      .peopleSelection:nth-child(2) .personDetail {
+        border-top: none; }
+      .peopleSelection:nth-child(-n+8) {
+        display: block; } }
+
 .phpdebugbar p {
   font-size: black; }
 
