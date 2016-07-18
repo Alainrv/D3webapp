@@ -2588,6 +2588,8 @@ div[class^="edit_funds"] {
   background: none;
   background-color: #64b5f6;
   height: 145px; }
+.meeting_wrapper .pendingBox .bookingTitle {
+  height: 115px; }
 .meeting_wrapper .bookingEdit {
   margin-top: 25px; }
 

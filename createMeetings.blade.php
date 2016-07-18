@@ -24,8 +24,8 @@
 			<!-- pending room booking 1 -->
 			<div class="roomBooking">
 				<div class="bookingTitle">
-					<img class="profilePic1" src="../img/profilePic1.svg"></img>
-					<img class="profilePic2" src="../img/profilePic2.svg"></img>
+					<!-- <img class="profilePic1" src="../img/profilePic1.svg"></img>
+					<img class="profilePic2" src="../img/profilePic2.svg"></img> -->
 					<p>Pending Room</p>
 				</div>
 				<div class="bookingInfor">
@@ -35,7 +35,7 @@
 					<div class="svg bookingClock"></div>
 					<div class="bookingDuration">45 min</div>
 					<div class="bookingEdit">
-						<a class="edit">Edit</a>
+						<a class="edit">Select Time</a>
 						<a class="cancel">Cancel</a>
 						<div class="svg toggleSign"></div>
 					</div>
@@ -57,8 +57,8 @@
 			<!-- pending room booking 2 -->
 			<div class="roomBooking">
 				<div class="bookingTitle">
-					<img class="profilePic1" src="../img/profilePic1.svg"></img>
-					<img class="profilePic2" src="../img/profilePic2.svg"></img>
+					<!-- <img class="profilePic1" src="../img/profilePic1.svg"></img>
+					<img class="profilePic2" src="../img/profilePic2.svg"></img> -->
 					<p>Pending Room</p>
 				</div>
 				<div class="bookingInfor">
@@ -70,7 +70,7 @@
 					
 			
 					<div class="bookingEdit">
-						<a class="edit">Edit</a>
+						<a class="edit">Select Time</a>
 						<a class="cancel">Cancel</a>
 						<div class="svg toggleSign"></div>
 					</div>
@@ -91,8 +91,8 @@
 
 			<div class="roomBooking">
 				<div class="bookingTitle">
-					<img class="profilePic1" src="../img/profilePic1.svg"></img>
-					<img class="profilePic2" src="../img/profilePic2.svg"></img>
+					<!-- <img class="profilePic1" src="../img/profilePic1.svg"></img>
+					<img class="profilePic2" src="../img/profilePic2.svg"></img> -->
 					<p>Pending Room</p>
 				</div>
 				<div class="bookingInfor">
@@ -104,7 +104,7 @@
 					
 			
 					<div class="bookingEdit">
-						<a class="edit">Edit</a>
+						<a class="edit">Select Time</a>
 						<a class="cancel">Cancel</a>
 						<div class="svg toggleSign"></div>
 					</div>
