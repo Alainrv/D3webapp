@@ -2502,7 +2502,7 @@ div[class^="edit_funds"] {
     color: #ffffff; }
 
 .next {
-  margin: 6.5vh auto;
+  margin: 25px auto;
   text-align: center; }
 
 .confirm_overlayer {
@@ -2534,6 +2534,7 @@ div[class^="edit_funds"] {
       margin: 20vh auto; } }
 
 .confirmation_header {
+  height: 102px;
   padding: 30px 15px;
   font-family: '.HelveticaNeueDeskInterface-MediumP4';
   font-size: 18px;
@@ -2542,7 +2543,7 @@ div[class^="edit_funds"] {
   color: #4a4a4a; }
 
 .setDuration {
-  padding: 70px 0; }
+  padding: 55px 0; }
   .setDuration p {
     font-family: '.HelveticaNeueDeskInterface-Regular';
     font-size: 18px;
@@ -2550,7 +2551,8 @@ div[class^="edit_funds"] {
     text-align: center;
     color: #4a4a4a; }
   .setDuration input {
-    margin-top: 10px;
+    margin-top: 23px;
+    margin-bottom: 5px;
     font-family: 'Avenir-Book';
     font-size: 18px;
     letter-spacing: 0.2px;
@@ -2563,11 +2565,11 @@ div[class^="edit_funds"] {
     border-bottom: solid 1px #979797; }
 
 .confirmInfor {
-  padding-top: 25px; }
+  padding-top: 20px; }
   .confirmInfor .confirmTitle {
     font-family: 'Avenir-Medium';
     font-size: 24px;
-    line-height: 1.3;
+    line-height: 1.6;
     color: #4a4a4a; }
   .confirmInfor .confirmDate,
   .confirmInfor .confirmTime {
@@ -2576,6 +2578,9 @@ div[class^="edit_funds"] {
     letter-spacing: 0.2px;
     line-height: 1.3;
     color: #4a4a4a; }
+
+#confirmButton {
+  margin-top: 0px; }
 
 .meeting_wrapper .toggleContent {
   line-height: 130%; }
@@ -2680,12 +2685,14 @@ div[class^="edit_funds"] {
 
 .meetingHeader {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24); }
+  .meetingHeader .title {
+    padding-top: 42px; }
 
 .searchBox {
   width: 100%;
   height: 90px;
   margin: auto auto;
-  margin-top: 40px;
+  margin-top: 27px;
   max-width: 270px; }
 
 .searchTitle {
@@ -2917,6 +2924,9 @@ input[type="checkbox"] {
   padding-bottom: 5px; }
   .startupMembers .person:last-child .personDetail {
     border-bottom: none; }
+
+#inviteNext {
+  margin-top: 5px; }
 
 .invitation_wrapper {
   width: 100%;
