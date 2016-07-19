@@ -47,3 +47,40 @@
 		}
 	}
 }
+
+.tagFilters {
+	display: block;
+	width: 80%;
+	height: 100px;
+	//margin: 0 18px 20px 18px;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 20px;
+	@media(min-width : 390px){
+		height: 65px;
+	}
+	@media(min-width : 761px){
+		height: 30px;		
+	}
+	div {
+		float: left;
+		margin: 5px 12px 4px 0px;
+		img{
+			width: 15px;
+			height:14px;
+			float: left;
+			margin: 5px 4px;
+		}
+		div {
+			margin-right: 5px;
+			font-size: 14px;
+			letter-spacing: 0.9px;
+		}
+	}
+	
+
+	.tagFilter {
+		border: 1px solid #fff;
+		border-radius: 2px;
+	}
+}

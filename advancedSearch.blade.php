@@ -13,13 +13,39 @@
 			</div>
 		</div>
 		<div class="searchFilter">
-			<a href="">Add Search Filter</a>
+			<a>Add Search Filter</a>
 		</div>
+		<div class="tagFilters">
+			<div class="tagFilter">
+				<img src="img/svg/diploma.svg">
+				<div>Job Title</div>
+			</div>
+			<div class="tagFilter">
+				<img src="img/svg/diploma.svg">
+				<div>Experience</div>
+			</div>
+			<div class="tagFilter">
+				<img src="img/svg/diploma.svg">
+				<div>Skill</div>
+			</div>
+			<div class="tagFilter">
+				<img src="img/svg/diploma.svg">
+				<div>Stage</div>
+			</div>
+			<div class="tagFilter">
+				<img src="img/svg/diploma.svg">
+				<div>Coached By</div>
+			</div>
+			<div class="tagFilter">
+				<img src="img/svg/diploma.svg">
+				<div>Industry</div>
+			</div>
+		</div>
+		
 		<div class="meetingTabs">
 			<div class="tab pending onSelect">BOTH</div><p id="pendingCount"></p><div class="tab upcoming">PEOPLE</div><div class="tab history">STARTUP</div>
 			<div class="selectBorder"></div>
 		</div>
-		<!-- <hr> -->
 	</div>
 
 	<div class="searchContent">
@@ -355,6 +381,7 @@ $(document).ready(function(){
 		$(".upcomingBox").removeClass('hideBox');
 		$(".upcomingBox").hide();
 	    $(".historyBox").hide();
+	    $(".tagFilters").hide();
 	});
 
 	// function to change the booking tabs and booking displays 
@@ -429,8 +456,21 @@ $(".startupsList input[type='checkbox']").click(function(){
 	} else {
 		$(this).closest('.startupSelection').removeClass('selectedStartup');
 	}
-	/*selectCount();*/
 })
+
+// if click on search filter, show serach tags
+//Click again, filters will be hidden
+$('.searchFilter').click(function(){
+	$('.tagFilters').toggle(500);
+	if ($.trim($(this).text()) === 'Add Search Filter') {
+    	$(this).text('Hide Search Filter');
+	} 
+	else {
+		    $(this).text('Add Search Filter');        
+	}
+})
+
+
 </script>
 
 
