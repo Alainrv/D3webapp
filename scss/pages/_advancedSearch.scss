@@ -12,12 +12,13 @@
 
 .searchFilter {
 	margin-bottom: 16px;
-	a {
-		text-decoration: underline;
-		color: rgba(255, 255, 255, 0.5);
-		font-size: 14px;
-		line-height: 1.7;
-	}
+}
+
+.addFilter {
+	text-decoration: underline;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 14px;
+	line-height: 1.7;	
 }
 
 .searchBox {
@@ -60,7 +61,8 @@
 		height: 65px;
 	}
 	@media(min-width : 761px){
-		height: 30px;		
+		height: 30px;
+		width: 610px;		
 	}
 	div {
 		float: left;

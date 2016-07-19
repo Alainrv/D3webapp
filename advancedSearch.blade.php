@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		<div class="searchFilter">
-			<a>Add Search Filter</a>
+			<a class="addFilter">Add Search Filter</a>
 		</div>
 		<div class="tagFilters">
 			<div class="tagFilter">
@@ -464,9 +464,12 @@ $('.searchFilter').click(function(){
 	$('.tagFilters').toggle(500);
 	if ($.trim($(this).text()) === 'Add Search Filter') {
     	$(this).text('Hide Search Filter');
+    	$(this).addClass('addFilter');
+
 	} 
 	else {
-		    $(this).text('Add Search Filter');        
+		    $(this).text('Add Search Filter'); 
+		    $(this).addClass('addFilter');       
 	}
 })
 

@@ -3344,11 +3344,12 @@ input[type="checkbox"] {
 
 .searchFilter {
   margin-bottom: 16px; }
-  .searchFilter a {
-    text-decoration: underline;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 14px;
-    line-height: 1.7; }
+
+.addFilter {
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  line-height: 1.7; }
 
 .searchBox {
   height: 75px; }
@@ -3384,7 +3385,8 @@ input[type="checkbox"] {
       height: 65px; } }
   @media (min-width: 761px) {
     .tagFilters {
-      height: 30px; } }
+      height: 30px;
+      width: 610px; } }
   .tagFilters div {
     float: left;
     margin: 5px 12px 4px 0px; }
