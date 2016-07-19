@@ -9,34 +9,42 @@
 			</div>
 			<div class="searchInput">
 				<input type="text" id="inviteSearch" placeholder="type search" />
-				<button class="room-btn-2 advancedSearch" id="advancedSearch" type="submit" class="room-btn-2">Search</button>
+				<button class="room-btn-2 advancedSearch" id="advancedSearch" type="submit">Search</button>
+			</div>
+			<div class="moreSearchInput searchInput">
+				<!-- <div class="searchTitle hiddenTitle"></div>
+				<div class="svg removeTag"></div>
+				<input class="searchInput" type="text"/> -->
 			</div>
 		</div>
 		<div class="searchFilter">
-			<a class="addFilter">Add Search Filter</a>
+			<a class="addFilter" id="addFilter">Add Search Filter</a>
+		</div>
+		<div class="hiddenSearchBtn">
+			<button class="room-btn-2" id="hiddenSearchBtn" type="submit">Search</button>
 		</div>
 		<div class="tagFilters">
-			<div class="tagFilter">
+			<div class="tagFilter" id="filter1">
 				<img src="img/svg/diploma.svg">
 				<div>Job Title</div>
 			</div>
-			<div class="tagFilter">
+			<div class="tagFilter" id="filter2">
 				<img src="img/svg/diploma.svg">
 				<div>Experience</div>
 			</div>
-			<div class="tagFilter">
+			<div class="tagFilter" id="filter3">
 				<img src="img/svg/diploma.svg">
 				<div>Skill</div>
 			</div>
-			<div class="tagFilter">
+			<div class="tagFilter" id="filter4">
 				<img src="img/svg/diploma.svg">
 				<div>Stage</div>
 			</div>
-			<div class="tagFilter">
+			<div class="tagFilter" id="filter5">
 				<img src="img/svg/diploma.svg">
 				<div>Coached By</div>
 			</div>
-			<div class="tagFilter">
+			<div class="tagFilter" id="filter6">
 				<img src="img/svg/diploma.svg">
 				<div>Industry</div>
 			</div>
@@ -382,6 +390,8 @@ $(document).ready(function(){
 		$(".upcomingBox").hide();
 	    $(".historyBox").hide();
 	    $(".tagFilters").hide();
+	    $(".hiddenSearchBtn").hide();
+	    $(".moreSearchInput").hide();
 	});
 
 	// function to change the booking tabs and booking displays 
@@ -459,7 +469,7 @@ $(".startupsList input[type='checkbox']").click(function(){
 })
 
 // if click on search filter, show serach tags
-//Click again, filters will be hidden
+//Click again, tags will be hidden
 $('.searchFilter').click(function(){
 	$('.tagFilters').toggle(500);
 	if ($.trim($(this).text()) === 'Add Search Filter') {
@@ -473,6 +483,26 @@ $('.searchFilter').click(function(){
 	}
 })
 
+var i = 1;
+var tagClicked = $(".tagFilters div[class='tagFilter']");
+	tagClicked.click(function(){
+		var txt = $(this).find('div').text();
+		var newSearch = $(".moreSearchInput").append('<div class="searchTitle hiddenTitle" id="tag' + i +  '">' + '</div><svg id="icon-deleteExpertiseWhite" width="16" height="16" viewBox="0 0 32 32" x="356" y="0"><path d="M11.054 2.56c.586-.588.58-1.532-.005-2.118A1.493 1.493 0 0 0 8.93.437L5.746 3.624 2.56.437A1.494 1.494 0 0 0 .44.442 1.493 1.493 0 0 0 .437 2.56l3.187 3.186L.437 8.932c-.586.587-.58 1.53.005 2.117.59.59 1.534.587 2.117.004l3.186-3.187 3.186 3.187c.587.586 1.53.58 2.117-.005.59-.59.587-1.534.004-2.118L7.867 5.746l3.187-3.187z" fill="white" fill-rule="evenodd"/></svg><input type="text" placeholder="' + txt + '"/>');
+		$('.moreSearchInput').css({"display": "block"});
+		//$('.hiddenTitle').css({"margin-top": "20px"});
+		$('newSearch').toggle();
+		$('newSearch').css({"height": "35px"});
+		$('#tag' + i).text(txt);
+		$(".hiddenSearchBtn").css({"margin-bottom": "25px"});
+		$(".searchFilter").animate({'margin-top':'+=75px'});
+		$(".hiddenSearchBtn").show();
+		$(this).hide();
+		i++;
+		//Disable click on tagFilter Section
+		if(i == 6){
+			$('.searchFilter').prop('disabled',true);
+		}
+	});
 
 </script>
 

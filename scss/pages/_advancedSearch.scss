@@ -86,3 +86,40 @@
 		border-radius: 2px;
 	}
 }
+
+#hiddenSearchBtn {
+	width: 150px;
+	height: 35px;
+	margin-top: 0px;
+}
+
+.moreSearchInput {
+	margin: 0;
+	height: 35px;
+}
+
+.removeTag {
+	width: 15px;
+	height: 15px;
+	background-position: 0 -515px;
+}
+
+#tag1,
+#tag2,
+#tag3,
+#tag4,
+#tag5,
+#tag6
+ {
+		float: left;
+}
+
+#icon-deleteExpertiseWhite {
+	float: left;
+	margin-top: 24px;
+}
+
+.hiddenTitle {
+	margin-top: 20px;
+	margin-right: 5px;
+}
