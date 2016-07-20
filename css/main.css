@@ -3438,6 +3438,10 @@ input[type="checkbox"] {
 #advancedSearch {
   box-shadow: none; }
 
+@media (min-width: 420px) {
+  .seeMorePersons {
+    padding-left: 20px; } }
+
 .phpdebugbar p {
   font-size: black; }
 

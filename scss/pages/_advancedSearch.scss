@@ -127,3 +127,9 @@
 #advancedSearch {
 	box-shadow: none;
 }
+
+.seeMorePersons {
+	@media (min-width: 420px) {
+		padding-left: 20px;
+	}
+}
