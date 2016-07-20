@@ -23,6 +23,15 @@
 
 .searchBox {
 	height: 75px;
+	margin-left: 35px;
+	margin-right: 35px;
+	width: auto;
+	max-width: none;
+	@media(min-width: 768px){
+		width: 344px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .peopleSelection{
@@ -113,4 +122,8 @@
 	margin-top: 20px;
 	margin-right: 5px;
 	float: left;
+}
+
+#advancedSearch {
+	box-shadow: none;
 }

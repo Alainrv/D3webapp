@@ -3352,7 +3352,16 @@ input[type="checkbox"] {
   line-height: 1.7; }
 
 .searchBox {
-  height: 75px; }
+  height: 75px;
+  margin-left: 35px;
+  margin-right: 35px;
+  width: auto;
+  max-width: none; }
+  @media (min-width: 768px) {
+    .searchBox {
+      width: 344px;
+      margin-left: auto;
+      margin-right: auto; } }
 
 .peopleSelection {
   overflow: auto;
@@ -3425,6 +3434,9 @@ input[type="checkbox"] {
   margin-top: 20px;
   margin-right: 5px;
   float: left; }
+
+#advancedSearch {
+  box-shadow: none; }
 
 .phpdebugbar p {
   font-size: black; }
