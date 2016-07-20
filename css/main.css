@@ -3407,7 +3407,8 @@ input[type="checkbox"] {
     .tagFilters div div {
       margin-right: 5px;
       font-size: 14px;
-      letter-spacing: 0.9px; }
+      letter-spacing: 0.9px;
+      color: #fff; }
   .tagFilters .tagFilter {
     border: 1px solid #fff;
     border-radius: 2px; }
@@ -3415,7 +3416,10 @@ input[type="checkbox"] {
 #hiddenSearchBtn {
   width: 150px;
   height: 35px;
-  margin-top: 0px; }
+  margin-top: 0px;
+  box-shadow: none;
+  font-size: 14px;
+  letter-spacing: 1.7px; }
 
 .moreSearchInput {
   margin: 0;
