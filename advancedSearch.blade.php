@@ -487,6 +487,8 @@ $('.searchFilter').click(function(){
 var tagClicked = $(".tagFilters div[class='tagFilter']");
 	tagClicked.click(function(){
 		var i = 1;
+		$(".tagFilters").hide();
+		$('.searchFilter').text('Add Search Filter');
 		$("#advancedSearch").hide();
 		var filterName = $(this).attr('id');
 		var txt = $(this).find('div').text();
