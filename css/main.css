@@ -3343,7 +3343,8 @@ input[type="checkbox"] {
   font-size: 14px; }
 
 .searchFilter {
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  position: relative; }
 
 .addFilter {
   text-decoration: underline;
