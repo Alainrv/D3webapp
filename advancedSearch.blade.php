@@ -391,7 +391,7 @@ $(document).ready(function(){
 	    $(".historyBox").hide();
 	    $(".tagFilters").hide();
 	    $(".hiddenSearchBtn").hide();
-	    $(".moreSearchInput").hide();
+	    //$(".moreSearchInput").hide();
 	});
 
 	// function to change the booking tabs and booking displays 
@@ -471,13 +471,15 @@ $(".startupsList input[type='checkbox']").click(function(){
 // if click on search filter, show serach tags
 //Click again, tags will be hidden
 $('.searchFilter').click(function(){
-	$('.tagFilters').toggle(500);
-	if ($.trim($(this).text()) === 'Add Search Filter') {
-    	$(this).text('Hide Search Filter');
-    	$(this).addClass('addFilter');
-
-	} 
+	
+	var clicked = $(this).text().replace(/^\s+|\s+$/gm,'');
+	if(clicked === 'Add Search Filter'){
+		$('.tagFilters').show();
+		$(this).text('Hide Search Filter');
+		$(this).addClass('addFilter');
+	}
 	else {
+		$('.tagFilters').hide();
 		$(this).text('Add Search Filter'); 
 		$(this).addClass('addFilter');       
 	}
@@ -493,11 +495,11 @@ var tagClicked = $(".tagFilters div[class='tagFilter']");
 		var filterName = $(this).attr('id');
 		var txt = $(this).find('div').text();
 		var newSearch = $(".moreSearchInput").append('<div class="searchTitle hiddenTitle ' + filterName + '" id="filter' + i +  '">' + txt + '</div><svg class="' + filterName + '" id="icon-deleteExpertiseWhite" onclick="removeExperties(this)" width="16" height="16" viewBox="0 0 32 32" x="356" y="0"><path d="M11.054 2.56c.586-.588.58-1.532-.005-2.118A1.493 1.493 0 0 0 8.93.437L5.746 3.624 2.56.437A1.494 1.494 0 0 0 .44.442 1.493 1.493 0 0 0 .437 2.56l3.187 3.186L.437 8.932c-.586.587-.58 1.53.005 2.117.59.59 1.534.587 2.117.004l3.186-3.187 3.186 3.187c.587.586 1.53.58 2.117-.005.59-.59.587-1.534.004-2.118L7.867 5.746l3.187-3.187z" fill="white" fill-rule="evenodd"/></svg><input class="' + filterName + '" type="text" placeholder="' + txt + '"/>');
-		$('.moreSearchInput').css({"display": "block"});
-		$('newSearch').toggle();
-		$('newSearch').css({"height": "35px"});
+		//$('.moreSearchInput').addClass('displayBlock'); //css({"display": "block"});
+		$('newSearch').show();
+		$('newSearch').addClass('increaseHeight');//.css({"height": "35px"});
 		$('#tag' + i).text(txt);
-		$(".hiddenSearchBtn").css({"margin-bottom": "25px"});
+		$(".hiddenSearchBtn").addClass('addMarginBottom'); //.css({"margin-bottom": "25px"});
 		$(".searchFilter").animate({'margin-top':'+=75px'});
 		$(".hiddenSearchBtn").show();
 		$(this).hide();

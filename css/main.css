@@ -3447,6 +3447,15 @@ input[type="checkbox"] {
   .seeMorePersons {
     padding-left: 20px; } }
 
+.increaseHeight {
+  height: 35px; }
+
+.addMarginBottom {
+  magin-bottom: 25px; }
+
+.animateMarginTop {
+  margin-top: auto; }
+
 .phpdebugbar p {
   font-size: black; }
 

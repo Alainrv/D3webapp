@@ -13,6 +13,7 @@
 .searchFilter {
 	margin-bottom: 16px;
 	position: relative;
+
 }
 
 .addFilter {
@@ -137,4 +138,16 @@
 	@media (min-width: 420px) {
 		padding-left: 20px;
 	}
+}
+
+.increaseHeight {
+	height: 35px;
+}
+
+.addMarginBottom {
+	magin-bottom: 25px;
+}
+
+.animateMarginTop {
+	margin-top: auto;
 }
