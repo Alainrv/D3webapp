@@ -11,6 +11,7 @@
 }
 
 .searchFilter {
+	margin-top: 20px;
 	margin-bottom: 16px;
 	position: relative;
 
@@ -24,7 +25,7 @@
 }
 
 .searchBox {
-	height: 75px;
+	height: auto;
 	margin-left: 35px;
 	margin-right: 35px;
 	width: auto;
@@ -66,6 +67,7 @@
 	height: 100px;
 	//margin: 0 18px 20px 18px;
 	margin: auto;
+	margin-top: 18px;
 	text-align: center;
 	margin-bottom: 20px;
 	@media(min-width : 390px){
@@ -109,8 +111,8 @@
 }
 
 .moreSearchInput {
-	margin: 0;
-	height: 35px;
+	margin: auto;
+	height: auto;
 }
 
 .removeTag {

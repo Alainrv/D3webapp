@@ -494,24 +494,24 @@ var tagClicked = $(".tagFilters div[class='tagFilter']");
 		$("#advancedSearch").hide();
 		var filterName = $(this).attr('id');
 		var txt = $(this).find('div').text();
-		var newSearch = $(".moreSearchInput").append('<div class="searchTitle hiddenTitle ' + filterName + '" id="filter' + i +  '">' + txt + '</div><svg class="' + filterName + '" id="icon-deleteExpertiseWhite" onclick="removeExperties(this)" width="16" height="16" viewBox="0 0 32 32" x="356" y="0"><path d="M11.054 2.56c.586-.588.58-1.532-.005-2.118A1.493 1.493 0 0 0 8.93.437L5.746 3.624 2.56.437A1.494 1.494 0 0 0 .44.442 1.493 1.493 0 0 0 .437 2.56l3.187 3.186L.437 8.932c-.586.587-.58 1.53.005 2.117.59.59 1.534.587 2.117.004l3.186-3.187 3.186 3.187c.587.586 1.53.58 2.117-.005.59-.59.587-1.534.004-2.118L7.867 5.746l3.187-3.187z" fill="white" fill-rule="evenodd"/></svg><input class="' + filterName + '" type="text" placeholder="' + txt + '"/>');
+		var newSearch = $(".moreSearchInput").append('<div class="toggleableDiv"><div class="searchTitle hiddenTitle ' + filterName + '" id="filter' + i +  '">' + txt + '</div><svg class="' + filterName + '" id="icon-deleteExpertiseWhite" onclick="removeExperties(this)" width="16" height="16" viewBox="0 0 32 32" x="356" y="0"><path d="M11.054 2.56c.586-.588.58-1.532-.005-2.118A1.493 1.493 0 0 0 8.93.437L5.746 3.624 2.56.437A1.494 1.494 0 0 0 .44.442 1.493 1.493 0 0 0 .437 2.56l3.187 3.186L.437 8.932c-.586.587-.58 1.53.005 2.117.59.59 1.534.587 2.117.004l3.186-3.187 3.186 3.187c.587.586 1.53.58 2.117-.005.59-.59.587-1.534.004-2.118L7.867 5.746l3.187-3.187z" fill="white" fill-rule="evenodd"/></svg><input class="' + filterName + '" type="text" placeholder="' + txt + '"/></div>');
 		//$('.moreSearchInput').addClass('displayBlock'); //css({"display": "block"});
 		$('newSearch').show();
 		$('newSearch').addClass('increaseHeight');//.css({"height": "35px"});
 		$('#tag' + i).text(txt);
 		$(".hiddenSearchBtn").addClass('addMarginBottom'); //.css({"margin-bottom": "25px"});
-		$(".searchFilter").animate({'margin-top':'+=75px'});
+		//$(".searchFilter").animate({'margin-top':'+=75px'});
 		$(".hiddenSearchBtn").show();
 		$(this).hide();
 		i++;
 	});
 
-function removeExperties(object) {
+function removeExperties(object) {  
     var className = $(object).attr("class");
     $(object).remove();
     $("."+className).remove();
     $("div#" + className).show();
-    $(".searchFilter").animate({'margin-top':'-=75px'});  
+    //$(".searchFilter").animate({'margin-top':'-=75px'});  
 }
 
 
